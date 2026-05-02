@@ -1040,6 +1040,27 @@ function markdownToHtmlFragment(md: string): string {
   let html = md;
   // Strip the first H1 title (RSS item already shows it)
   html = html.replace(/^# .+\n\n/, '');
+  // Strip <details> blocks (terminal-only charts, not useful in RSS)
+  html = html.replace(/<details>[\s\S]*?<\/details>/g, '');
+  // Convert mermaid code blocks to plain text (RSS readers can't render mermaid)
+  html = html.replace(/```mermaid\n([\s\S]*?)```/g, (_, content) => {
+    const lines = content.trim().split('\n').filter(l => !l.startsWith('pie ') && !l.startsWith('xychart') && !l.startsWith('    title') && !l.startsWith('    x-axis') && !l.startsWith('    y-axis'));
+    return `<pre style="color:#aaa;font-size:12px;">${lines.join('\n')}</pre>`;
+  });
+  // Convert plain code blocks
+  html = html.replace(/```([\s\S]*?)```/g, '<pre style="color:#ccc;background:#1a1a2e;padding:8px 12px;border-radius:4px;font-size:13px;overflow-x:auto;">$1</pre>');
+  // Convert markdown tables to HTML tables
+  html = html.replace(/^\|(.+)\|\n\|[-| :]+\|\n((?:\|.+:\|\n?)+)/gm, (_match, headerRow, bodyRows) => {
+    const headers = headerRow.split('|').map((c: string) => c.trim()).filter(Boolean);
+    const rows = bodyRows.trim().split('\n').map((row: string) =>
+      row.split('|').map((c: string) => c.trim()).filter(Boolean)
+    );
+    let table = '<table style="border-collapse:collapse;width:100%;margin:8px 0;font-size:14px;">';
+    table += '<thead><tr>' + headers.map((h: string) => `<th style="border:1px solid #444;padding:6px 10px;text-align:center;background:#1a1a2e;">${h}</th>`).join('') + '</tr></thead>';
+    table += '<tbody>' + rows.map((row: string[]) => '<tr>' + row.map((cell: string) => `<td style="border:1px solid #444;padding:6px 10px;text-align:center;">${cell}</td>`).join('') + '</tr>').join('') + '</tbody>';
+    table += '</table>';
+    return table;
+  });
   // Headers
   html = html.replace(/^### (.+)$/gm, '<h4>$1</h4>');
   html = html.replace(/^## (.+)$/gm, '<h3>$1</h3>');
