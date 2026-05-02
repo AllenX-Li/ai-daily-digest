@@ -1,0 +1,82 @@
+name: AI Daily Digest
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # 06:00 UTC = 14:00 CST
+  workflow_dispatch:
+    inputs:
+      hours:
+        description: 'Time range in hours'
+        required: false
+        default: '48'
+        type: string
+      top_n:
+        description: 'Number of top articles'
+        required: false
+        default: '15'
+        type: string
+      lang:
+        description: 'Summary language (zh or en)'
+        required: false
+        default: 'zh'
+        type: string
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Run digest
+        env:
+          GOOGLE_VERTEX_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          HOURS="${{ github.event.inputs.hours || '48' }}"
+          TOP_N="${{ github.event.inputs.top_n || '15' }}"
+          LANG="${{ github.event.inputs.lang || 'zh' }}"
+          DATE=$(date +%Y%m%d)
+          bun scripts/digest.ts --hours "$HOURS" --top-n "$TOP_N" --lang "$LANG" --output "./docs/digest-${DATE}.md"
+
+      - name: Copy feed.xml to docs
+        run: |
+          cp docs/feed.xml docs/feed.xml 2>/dev/null || true
+          # feed.xml is already written to docs/ by the script
+
+      - name: Build index.html from latest digest
+        run: |
+          LATEST_MD=$(ls -t docs/digest-*.md 2>/dev/null | head -1)
+          if [ -n "$LATEST_MD" ]; then
+            bash scripts/convert-md-to-html.sh "$LATEST_MD" > docs/index.html
+          fi
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "digest: $(date +%Y-%m-%d) auto-generated"
+          git push
+
+  deploy:
+    needs: digest
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - id: deployment
+        uses: actions/deploy-pages@v4
