@@ -1038,6 +1038,8 @@ function toRFC822(date: Date): string {
 
 function markdownToHtmlFragment(md: string): string {
   let html = md;
+  // Strip the first H1 title (RSS item already shows it)
+  html = html.replace(/^# .+\n\n/, '');
   // Headers
   html = html.replace(/^### (.+)$/gm, '<h4>$1</h4>');
   html = html.replace(/^## (.+)$/gm, '<h3>$1</h3>');
