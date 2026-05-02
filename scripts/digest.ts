@@ -1036,10 +1036,42 @@ function toRFC822(date: Date): string {
   return `${days[date.getUTCDay()]}, ${pad(date.getUTCDate())} ${months[date.getUTCMonth()]} ${date.getUTCFullYear()} ${pad(date.getUTCHours())}:${pad(date.getUTCMinutes())}:${pad(date.getUTCSeconds())} +0000`;
 }
 
-function generateRSSFeed(articles: ScoredArticle[], highlights: string): string {
-  const now = new Date();
+function markdownToHtmlFragment(md: string): string {
+  let html = md;
+  // Headers
+  html = html.replace(/^### (.+)$/gm, '<h4>$1</h4>');
+  html = html.replace(/^## (.+)$/gm, '<h3>$1</h3>');
+  html = html.replace(/^# (.+)$/gm, '<h2>$1</h2>');
+  // Bold
+  html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+  // Italic
+  html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
+  // Links: [text](url)
+  html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+  // Blockquotes
+  html = html.replace(/^> (.+)$/gm, '<blockquote style="border-left:3px solid #555;margin:4px 0;padding:4px 12px;color:#aaa;">$1</blockquote>');
+  // Horizontal rules
+  html = html.replace(/^---$/gm, '<hr style="border:none;border-top:1px solid #333;margin:12px 0;"/>');
+  // Paragraphs: convert double newlines
+  html = html.replace(/\n\n+/g, '</p><p>');
+  html = `<p>${html}</p>`;
+  // Clean up empty paragraphs
+  html = html.replace(/<p>\s*<\/p>/g, '');
+  return html;
+}
+
+interface DigestDay {
+  date: string;        // YYYY-MM-DD
+  title: string;       // RSS item title
+  htmlContent: string;  // Full digest as HTML fragment
+  link: string;         // Link to the markdown file
+  pubDate: string;      // RFC 822 date string
+}
+
+function generateRSSFeed(todayDigest: DigestDay, pastDigests: DigestDay[]): string {
   const feedUrl = 'https://allenx-li.github.io/ai-daily-digest/feed.xml';
   const siteUrl = 'https://allenx-li.github.io/ai-daily-digest/';
+  const allDigests = [todayDigest, ...pastDigests];
 
   let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
   xml += `<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n`;
@@ -1049,30 +1081,15 @@ function generateRSSFeed(articles: ScoredArticle[], highlights: string): string 
   xml += `    <description>AI-curated daily digest from 90 top tech blogs (Karpathy's list)</description>\n`;
   xml += `    <language>zh-cn</language>\n`;
   xml += `    <atom:link href="${escapeXml(feedUrl)}" rel="self" type="application/rss+xml"/>\n`;
-  xml += `    <lastBuildDate>${toRFC822(now)}</lastBuildDate>\n`;
+  xml += `    <lastBuildDate>${escapeXml(todayDigest.pubDate)}</lastBuildDate>\n`;
   xml += `    <generator>AI Daily Digest</generator>\n`;
 
-  // Highlights item
-  if (highlights) {
+  for (const day of allDigests) {
     xml += `    <item>\n`;
-    xml += `      <title>📝 今日看点</title>\n`;
-    xml += `      <link>${escapeXml(siteUrl)}</link>\n`;
-    xml += `      <description>${escapeXml(highlights)}</description>\n`;
-    xml += `      <category>每日总结</category>\n`;
-    xml += `      <pubDate>${toRFC822(now)}</pubDate>\n`;
-    xml += `    </item>\n`;
-  }
-
-  // Article items
-  for (const a of articles) {
-    const catMeta = CATEGORY_META[a.category];
-    xml += `    <item>\n`;
-    xml += `      <title>${escapeXml(a.titleZh || a.title)}</title>\n`;
-    xml += `      <link>${escapeXml(a.link)}</link>\n`;
-    xml += `      <description>${escapeXml(a.summary)}</description>\n`;
-    xml += `      <category>${escapeXml(`${catMeta.emoji} ${catMeta.label}`)}</category>\n`;
-    xml += `      <pubDate>${toRFC822(a.pubDate)}</pubDate>\n`;
-    xml += `      <sourceName>${escapeXml(a.sourceName)}</sourceName>\n`;
+    xml += `      <title>${escapeXml(day.title)}</title>\n`;
+    xml += `      <link>${escapeXml(day.link)}</link>\n`;
+    xml += `      <description><![CDATA[${day.htmlContent}]]></description>\n`;
+    xml += `      <pubDate>${escapeXml(day.pubDate)}</pubDate>\n`;
     xml += `    </item>\n`;
   }
 
@@ -1257,10 +1274,55 @@ async function main(): Promise<void> {
   await mkdir(dirname(outputPath), { recursive: true });
   await writeFile(outputPath, report);
   
-  // Generate RSS feed alongside the markdown report
-  const rssFeed = generateRSSFeed(finalArticles, highlights);
+  // Generate RSS feed: one item per day, accumulating past digests
+  const dateStr = new Date().toISOString().slice(0, 10);
+  const mdFilename = outputPath.split('/').pop() || `digest-${dateStr}.md`;
+  const todayDigest: DigestDay = {
+    date: dateStr,
+    title: `📰 AI 博客每日精选 — ${dateStr}`,
+    htmlContent: markdownToHtmlFragment(report),
+    link: `https://allenx-li.github.io/ai-daily-digest/${mdFilename.replace('.md', '.html')}`,
+    pubDate: toRFC822(new Date()),
+  };
+
+  // Load past digest markdown files from the output directory for RSS history
+  const pastDigests: DigestDay[] = [];
+  try {
+    const outputDir = dirname(outputPath);
+    const { readdir } = await import('node:fs/promises');
+    const files = await readdir(outputDir);
+    const pastMdFiles = files
+      .filter(f => f.startsWith('digest-') && f.endsWith('.md') && f !== mdFilename)
+      .sort()
+      .reverse()
+      .slice(0, 30); // Keep last 30 days in RSS
+
+    for (const f of pastMdFiles) {
+      try {
+        const pastContent = await readFile(join(outputDir, f), 'utf-8');
+        const pastDate = f.replace('digest-', '').replace('.md', '');
+        // Extract YYYY-MM-DD from filename (digest-20260502.md → 2026-05-02)
+        const formattedDate = `${pastDate.slice(0, 4)}-${pastDate.slice(4, 6)}-${pastDate.slice(6, 8)}`;
+        pastDigests.push({
+          date: formattedDate,
+          title: `📰 AI 博客每日精选 — ${formattedDate}`,
+          htmlContent: markdownToHtmlFragment(pastContent),
+          link: `https://allenx-li.github.io/ai-daily-digest/${f.replace('.md', '.html')}`,
+          pubDate: toRFC822(new Date(formattedDate + 'T02:00:00Z')),
+        });
+      } catch {
+        // Skip unreadable files
+      }
+    }
+  } catch {
+    // Output dir listing failed, skip past digests
+  }
+
+  const rssFeed = generateRSSFeed(todayDigest, pastDigests);
   const rssPath = join(dirname(outputPath), 'feed.xml');
   await writeFile(rssPath, rssFeed);
+
+  console.log(`[digest] 📡 RSS: ${rssPath} (${1 + pastDigests.length} days)`);
   
   console.log('');
   console.log(`[digest] ✅ Done!`);
