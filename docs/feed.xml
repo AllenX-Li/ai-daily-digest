@@ -8,6 +8,11 @@
     <atom:link href="https://allenx-li.github.io/ai-daily-digest/feed.xml" rel="self" type="application/rss+xml"/>
     <lastBuildDate>Sun, 03 May 2026 07:59:06 +0000</lastBuildDate>
     <generator>AI Daily Digest</generator>
+    <image>
+      <url>https://allenx-li.github.io/ai-daily-digest/logo.png</url>
+      <title>AI 博客每日精选</title>
+      <link>https://allenx-li.github.io/ai-daily-digest/</link>
+    </image>
     <item>
       <title>📰 AI 博客每日精选 — 2026-05-03</title>
       <link>https://allenx-li.github.io/ai-daily-digest/digest-20260503.html</link>
