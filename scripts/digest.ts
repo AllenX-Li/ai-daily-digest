@@ -1106,6 +1106,11 @@ function generateRSSFeed(todayDigest: DigestDay, pastDigests: DigestDay[]): stri
   xml += `    <atom:link href="${escapeXml(feedUrl)}" rel="self" type="application/rss+xml"/>\n`;
   xml += `    <lastBuildDate>${escapeXml(todayDigest.pubDate)}</lastBuildDate>\n`;
   xml += `    <generator>AI Daily Digest</generator>\n`;
+  xml += `    <image>\n`;
+  xml += `      <url>${escapeXml(siteUrl)}logo.png</url>\n`;
+  xml += `      <title>AI 博客每日精选</title>\n`;
+  xml += `      <link>${escapeXml(siteUrl)}</link>\n`;
+  xml += `    </image>\n`;
 
   for (const day of allDigests) {
     xml += `    <item>\n`;
