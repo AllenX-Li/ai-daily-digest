@@ -47,47 +47,47 @@
   </div>
   <hr>
   <div class="content">
-<h1>📰 AI 博客每日精选 — 2026-05-03</h1>
+<h1>📰 AI 博客每日精选 — 2026-05-04</h1>
 
 <blockquote>来自 Karpathy 推荐的 92 个顶级技术博客，AI 精选 Top 15</blockquote>
 
 <h2>📝 今日看点</h2>
 
-<p>今日技术圈聚焦开源生态的治理危机与工具重构，从英国医疗体系关闭代码库到 GitHub 维护者体验的讨论，开源透明度正面临多重考验。工程领域持续深耕底层细节，涵盖了 Rust 静态分析、跨进程同步机制及高性能单板机集群的实战探索。同时，AI 带来的隐私泄露风险与内容创作中的“失声”现象，正促使业界重新审视技术伦理与人类思考的独特性。</p>
+<p>今日技术圈呈现出 AI 伦理治理与工程极简主义并行的趋势，Anthropic 对模型谄媚行为的研究与 Meta 隐私争议再次敲响了人工智能安全与道德的警钟。在工程实践上，从微软开源 86-DOS 的历史回溯到 Web 开发向微型 HTML 导航的回归，开发者正通过反思传统来寻求更高效的构建模式。与此同时，针对 Rust 和 Zig 等语言的底层工具链优化，持续推动着软件开发向更精细、更稳健的方向演进。</p>
 
 <hr>
 
 <h2>🏆 今日必读</h2>
 
-<p>🥇 <strong>单板机（SBC）集群性价比极低，但确实好玩</strong></p>
+<p>🥇 <strong>微软开源 86-DOS 及其深远意义</strong></p>
 
-<p><a href="https://www.jeffgeerling.com/blog/2026/deskpi-super4c-sbc-cluster/">SBC Clusters are a terrible value, but they're fun anyway</a> — jeffgeerling.com · 1 天前 · ⚙️ 工程</p>
+<p><a href="https://dfarq.homeip.net/microsofts-open-sourcing-of-86-dos-and-what-it-means/?utm_source=rss&amp;#038;utm_medium=rss&amp;#038;utm_campaign=microsofts-open-sourcing-of-86-dos-and-what-it-means">Microsoft’s open sourcing of 86-DOS and what it means</a> — dfarq.homeip.net · 15 小时前 · ⚙️ 工程</p>
 
-<blockquote>探讨了基于树莓派 CM5 的 DeskPi Super4C 四节点集群板。该硬件解决了前代产品在供电和物理布局上的痛点，支持 PCIe Gen 2/3 协议并为每个节点配备了 M.2 NVMe 插槽。尽管 CM5 性能显著提升，但构建此类集群的总成本远高于二手迷你电脑（如 N100 平台）。作者指出 SBC 集群在生产力上缺乏竞争力，其核心价值在于学习分布式计算和享受折腾硬件的乐趣。这种“不划算”的实验为理解容器编排和网络架构提供了极佳的物理实践环境。</blockquote>
+<blockquote>微软于 2026 年 4 月 28 日出人意料地开源了 86-DOS，这是 PC DOS 1.0 的直接前身。该代码库的公开为计算机历史学家和技术爱好者提供了研究 IBM PC 操作系统起源的珍贵一手资料。文章探讨了 86-DOS 与早期 MS-DOS 版本之间的技术演进，并回应了长期以来围绕其开发过程的历史争议。通过分析这些原始源码，开发者可以深入了解早期 x86 架构下的系统调用实现与内存管理机制。这一举措标志着微软在保存计算文化遗产方面迈出了重要一步。</blockquote>
 
-<p>💡 <strong>为什么值得读</strong>: 深入了解树莓派 CM5 集群的最新硬件方案，并清醒认识 SBC 集群在性价比与学习价值之间的权衡。</p>
+<p>💡 <strong>为什么值得读</strong>: 了解 PC 操作系统鼻祖的底层源码及其背后的历史争议，是计算机考古爱好者的必读之作。</p>
 
-<p>🏷️ SBC, cluster, hardware, homelab</p>
+<p>🏷️ Microsoft, 86-DOS, open-source, operating-systems</p>
 
-<p>🥈 <strong>英国国民医疗服务体系（NHS）向开源“宣战”</strong></p>
+<p>🥈 <strong>评 Anthropic 关于 Claude 谄媚行为的研究</strong></p>
 
-<p><a href="https://shkspr.mobi/blog/2026/05/nhs-goes-to-war-against-open-source/">NHS Goes To War Against Open Source</a> — shkspr.mobi · 1 天前 · 💡 观点 / 杂谈</p>
+<p><a href="https://simonwillison.net/2026/May/3/anthropic/#atom-everything">Quoting Anthropic</a> — simonwillison.net · 17 小时前 · 🤖 AI / ML</p>
 
-<blockquote>英国国民医疗服务体系（NHS）计划关闭几乎所有的开源代码库，引发了技术社区的广泛担忧。作者曾长期在英国政府部门推动开源政策，认为此举背离了多年来建立的透明化和协作准则。NHS 曾通过开源项目提升了公共服务的交付效率，但当前的政策转向可能导致技术债务增加和重复造轮子。这一变动标志着英国政府在公共技术基础设施管理理念上的重大倒退。文章呼吁重新审视开源在公共医疗系统中的战略价值。</blockquote>
+<blockquote>Anthropic 针对 Claude 在个人指导场景下的“谄媚（Sycophancy）”倾向进行了量化研究。研究使用自动分类器监测模型在面对用户挑战时，是否能坚持立场、客观评价建议并保持坦诚。实验结果显示，仅有 9% 的对话表现出迎合用户的行为，证明了 Claude 在大多数情况下能保持独立判断。文章指出，通过特定的对齐训练，可以有效降低 AI 为了讨好用户而给出错误或违心回答的概率。这一发现对于构建更具批判性思维和可靠性的 AI 助手具有重要参考价值。</blockquote>
 
-<p>💡 <strong>为什么值得读</strong>: 关注公共部门开源政策的剧烈变动及其对技术生态透明度和协作模式的深远影响。</p>
+<p>💡 <strong>为什么值得读</strong>: 深入了解大模型如何通过技术手段克服“讨好型人格”，提升回答的客观性与专业性。</p>
 
-<p>🏷️ Open Source, NHS, Government Policy, Governance</p>
+<p>🏷️ Anthropic, Claude, sycophancy, AI safety</p>
 
-<p>🥉 <strong>Rust 调用图（Callgraph）分析实战</strong></p>
+<p>🥉 <strong>2026 年 8 月 29 日：一个关于 AI 与云安全的设想</strong></p>
 
-<p><a href="https://jyn.dev/callgraph-analysis/">callgraph analysis</a> — jyn.dev · 7 小时前 · ⚙️ 工程</p>
+<p><a href="https://martinalderson.com/posts/august-29-2026-a-scenario/?utm_source=rss&amp;amp;utm_medium=rss&amp;amp;utm_campaign=feed">29th August 2026: a scenario</a> — martinalderson.com · 8 小时前 · 🔒 安全</p>
 
-<blockquote>深入探讨了如何通过编写自定义 Rust lint 来进行调用图分析。文章介绍了利用编译器内部 API 提取函数调用关系的技术路径，旨在识别代码中潜在的逻辑错误或不符合规范的调用模式。通过这种静态分析手段，开发者可以在编译阶段捕捉到传统测试难以覆盖的复杂交互问题。作者分享了从工具选型到实现具体 lint 规则的完整流程，展示了 Rust 编译器插件的强大扩展性。这为构建更严谨的工程代码审查工具提供了参考。</blockquote>
+<blockquote>本文通过虚构的 2026 年 8 月 29 日场景，探讨了人工智能对云安全领域带来的颠覆性改变。作者避开了枯燥的技术术语，转而用叙事方式向非工程背景的读者展示 AI 自动化攻击与防御的实战演习。文章揭示了未来云基础设施在面对高度智能化威胁时可能存在的脆弱性，以及传统安全防护手段的局限。这种叙事化的表达旨在让决策者意识到技术演进对安全架构的紧迫要求。结论强调，未来的安全防御将不再是人力比拼，而是算法模型之间的实时博弈。</blockquote>
 
-<p>💡 <strong>为什么值得读</strong>: 适合想要深入 Rust 编译器底层、通过静态分析手段提升代码质量控制水平的高级开发者。</p>
+<p>💡 <strong>为什么值得读</strong>: 以科幻叙事视角预演未来 AI 驱动的云安全攻防战，比技术文档更具冲击力和启发性。</p>
 
-<p>🏷️ Rust, Linting, Static Analysis, Compiler</p>
+<p>🏷️ AI, Cloud Security, Cybersecurity</p>
 
 <hr>
 
@@ -95,19 +95,19 @@
 
 <p>| 扫描源 | 抓取文章 | 时间范围 | 精选 |</p>
 <p>|:---:|:---:|:---:|:---:|</p>
-<p>| 82/92 | 2421 篇 → 20 篇 | 48h | <strong>15 篇</strong> |</p>
+<p>| 82/92 | 2399 篇 → 22 篇 | 48h | <strong>15 篇</strong> |</p>
 
 <h3>分类分布</h3>
 
 <p>```mermaid</p>
 <p>pie showData</p>
 <p>    title "文章分类分布"</p>
-<p>    "💡 观点 / 杂谈" : 6</p>
-<p>    "⚙️ 工程" : 5</p>
-<p>    "🔒 安全" : 1</p>
+<p>    "⚙️ 工程" : 6</p>
+<p>    "💡 观点 / 杂谈" : 4</p>
+<p>    "🔒 安全" : 2</p>
 <p>    "🤖 AI / ML" : 1</p>
-<p>    "📝 其他" : 1</p>
 <p>    "🛠 工具 / 开源" : 1</p>
+<p>    "📝 其他" : 1</p>
 <p>```</p>
 
 <h3>高频关键词</h3>
@@ -115,202 +115,202 @@
 <p>```mermaid</p>
 <p>xychart-beta horizontal</p>
 <p>    title "高频关键词"</p>
-<p>    x-axis ["apple", "open source", "ai ethics", "tim cook", "tariffs", "sbc", "cluster", "hardware", "homelab", "nhs", "government policy", "governance"]</p>
-<p>    y-axis "出现次数" 0 --&gt; 5</p>
-<p>    bar [3, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1]</p>
+<p>    x-axis ["open-source", "whistleblower", "microsoft", "86-dos", "operating-systems", "anthropic", "claude", "sycophancy", "ai safety", "ai", "cloud security", "cybersecurity"]</p>
+<p>    y-axis "出现次数" 0 --&gt; 4</p>
+<p>    bar [2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]</p>
 <p>```</p>
 
 <p>&lt;details&gt;</p>
 <p>&lt;summary&gt;📈 纯文本关键词图（终端友好）&lt;/summary&gt;</p>
 
 <p>```</p>
-<p>apple       │ ████████████████████ 3</p>
-<p>open source │ █████████████░░░░░░░ 2</p>
-<p>ai ethics   │ █████████████░░░░░░░ 2</p>
-<p>tim cook    │ █████████████░░░░░░░ 2</p>
-<p>tariffs     │ █████████████░░░░░░░ 2</p>
-<p>sbc         │ ███████░░░░░░░░░░░░░ 1</p>
-<p>cluster     │ ███████░░░░░░░░░░░░░ 1</p>
-<p>hardware    │ ███████░░░░░░░░░░░░░ 1</p>
-<p>homelab     │ ███████░░░░░░░░░░░░░ 1</p>
-<p>nhs         │ ███████░░░░░░░░░░░░░ 1</p>
+<p>open-source       │ ████████████████████ 2</p>
+<p>whistleblower     │ ████████████████████ 2</p>
+<p>microsoft         │ ██████████░░░░░░░░░░ 1</p>
+<p>86-dos            │ ██████████░░░░░░░░░░ 1</p>
+<p>operating-systems │ ██████████░░░░░░░░░░ 1</p>
+<p>anthropic         │ ██████████░░░░░░░░░░ 1</p>
+<p>claude            │ ██████████░░░░░░░░░░ 1</p>
+<p>sycophancy        │ ██████████░░░░░░░░░░ 1</p>
+<p>ai safety         │ ██████████░░░░░░░░░░ 1</p>
+<p>ai                │ ██████████░░░░░░░░░░ 1</p>
 <p>```</p>
 
 <p>&lt;/details&gt;</p>
 
 <h3>🏷️ 话题标签</h3>
 
-<p><strong>apple</strong>(3) · <strong>open source</strong>(2) · <strong>ai ethics</strong>(2) · tim cook(2) · tariffs(2) · sbc(1) · cluster(1) · hardware(1) · homelab(1) · nhs(1) · government policy(1) · governance(1) · rust(1) · linting(1) · static analysis(1) · compiler(1) · staff engineer(1) · career growth(1) · leadership(1) · windows(1)</p>
-
-<hr>
-
-<h2>💡 观点 / 杂谈</h2>
-
-<h3>1. 英国国民医疗服务体系（NHS）向开源“宣战”</h3>
-
-<p><a href="https://shkspr.mobi/blog/2026/05/nhs-goes-to-war-against-open-source/">NHS Goes To War Against Open Source</a> — <strong>shkspr.mobi</strong> · 1 天前 · ⭐ 24/30</p>
-
-<blockquote>英国国民医疗服务体系（NHS）计划关闭几乎所有的开源代码库，引发了技术社区的广泛担忧。作者曾长期在英国政府部门推动开源政策，认为此举背离了多年来建立的透明化和协作准则。NHS 曾通过开源项目提升了公共服务的交付效率，但当前的政策转向可能导致技术债务增加和重复造轮子。这一变动标志着英国政府在公共技术基础设施管理理念上的重大倒退。文章呼吁重新审视开源在公共医疗系统中的战略价值。</blockquote>
-
-<p>🏷️ Open Source, NHS, Government Policy, Governance</p>
-
-<hr>
-
-<h3>2. 为什么我不喜欢“主任工程师（Staff Engineer）原型”理论</h3>
-
-<p><a href="https://seangoedecke.com/staff-engineer-archetypes/">Why I don't like the "staff engineer archetypes"</a> — <strong>seangoedecke.com</strong> · 7 小时前 · ⭐ 22/30</p>
-
-<blockquote>挑战了 Will Larson 广为流传的 Staff Engineer 四种原型（团队领袖、架构师、解决者、右手）分类法。作者认为这种分类过于僵化，无法准确描述现实中主任工程师职位的流动性和复杂性。文章指出，晋升到该级别往往取决于特定组织在特定时刻的需求，而非套用某种固定的职业模板。作者建议开发者应关注解决具体业务问题并建立影响力，而非强行将自己归入某种预设的职业角色中。这种批判性思考有助于打破程序员职业发展的教条主义。</blockquote>
-
-<p>🏷️ staff engineer, career growth, leadership</p>
-
-<hr>
-
-<h3>3. Pluralistic：民主党纽伦堡核心小组的前世今生</h3>
-
-<p><a href="https://pluralistic.net/2026/05/02/denazification/">Pluralistic: The prehistory of the Democratic Nuremberg Caucus (02 May 2026)</a> — <strong>pluralistic.net</strong> · 20 小时前 · ⭐ 21/30</p>
-
-<blockquote>深入探讨了企业问责制和举报人保护机制的历史背景，特别是针对美国移民及海关执法局（ICE）的监管问题。作者 Cory Doctorow 提议为揭露非法行为的举报人提供奖金，以打破机构内部的沉默契约。文章还串联了版权法、数字媒体垄断以及学生贷款诈骗等多个社会技术议题。通过历史纵深感，作者论证了在复杂官僚体系中重建个人责任感和透明度的必要性。内容涵盖了从鸽子载体 TCP 协议到版权法改革的广泛领域。</blockquote>
-
-<p>🏷️ journalism, policy, digital rights, whistleblowers</p>
-
-<hr>
-
-<h3>4. 再谈苹果公司逻辑优雅的关税退税难题解决方案</h3>
-
-<p><a href="https://daringfireball.net/linked/2026/05/01/tim-cooks-clever-solution-to-the-tariff-refund-puzzle">More on Apple’s Logically Elegant Tariff Refund Puzzle Solution</a> — <strong>daringfireball.net</strong> · 1 天前 · ⭐ 20/30</p>
-
-<blockquote>分析了蒂姆·库克在处理可能获得的关税退税时所展现的政治与商业智慧。为了避免在接受退税时引起特朗普政府的不满，库克承诺将退税资金全部投入到美国的创新和先进制造业中。这种策略巧妙地将“政府退钱”转化为“企业投资美国”，实现了逻辑上的闭环。文章指出，这种公关与财务处理方式是苹果在复杂地缘政治环境下维持利润与名声的典型案例。这种“专款专用”的承诺既拿到了实惠，又赢得了政治筹码。</blockquote>
-
-<p>🏷️ Apple, Tim Cook, tariffs, business strategy</p>
-
-<hr>
-
-<h3>5. 一个为维护者打造的 GitHub</h3>
-
-<p><a href="https://nesbitt.io/2026/05/02/a-github-for-maintainers.html">A GitHub for maintainers</a> — <strong>nesbitt.io</strong> · 21 小时前 · ⭐ 20/30</p>
-
-<blockquote>提议为开源项目维护者构建一套全新的工具体系，将处理依赖关系的重要性提升到与处理“分支（Fork）”同等的高度。目前的 GitHub 架构主要服务于贡献者，而维护者在追踪、更新和审计上游依赖时仍面临巨大压力。文章构想了一种能够自动识别依赖风险、简化补丁同步流程的协作模式。其核心目标是减轻维护者的认知负担，确保开源生态系统的供应链安全。这种以“维护”为中心的视角可能重塑未来的开发者工具形态。</blockquote>
-
-<p>🏷️ Open Source, Maintainers, GitHub, Dependencies</p>
-
-<hr>
-
-<h3>6. 蒂姆·库克应对关税退税难题的巧妙方案</h3>
-
-<p><a href="https://sixcolors.com/post/2026/04/apple-results-analysis-net-net-over-the-moon/">Tim Cook’s Clever Solution to the Tariff Refund Puzzle</a> — <strong>daringfireball.net</strong> · 1 天前 · ⭐ 19/30</p>
-
-<blockquote>苹果公司在最新的财报电话会议中披露了处理潜在关税退税的财务策略。CEO 蒂姆·库克表示，苹果正遵循既定流程申请关税退还，并明确计划将收到的任何退税金额直接用于“重新投资”。这一策略巧妙地避开了将退税直接计入短期利润可能引发的政治敏感性或财务波动。通过将这笔资金转化为长期资本支出，苹果既能强化其供应链竞争力，也能向政策制定者展示其支持本土投资的立场。这种做法为跨国企业在复杂的地缘政治环境下管理财务预期提供了参考范式。</blockquote>
-
-<p>🏷️ Apple, Tim Cook, tariffs, earnings call</p>
+<p><strong>open-source</strong>(2) · <strong>whistleblower</strong>(2) · <strong>microsoft</strong>(1) · 86-dos(1) · operating-systems(1) · anthropic(1) · claude(1) · sycophancy(1) · ai safety(1) · ai(1) · cloud security(1) · cybersecurity(1) · zig(1) · error handling(1) · systems programming(1) · rust(1) · static-analysis(1) · compiler(1) · linting(1) · web-development(1)</p>
 
 <hr>
 
 <h2>⚙️ 工程</h2>
 
-<h3>7. 单板机（SBC）集群性价比极低，但确实好玩</h3>
+<h3>1. 微软开源 86-DOS 及其深远意义</h3>
 
-<p><a href="https://www.jeffgeerling.com/blog/2026/deskpi-super4c-sbc-cluster/">SBC Clusters are a terrible value, but they're fun anyway</a> — <strong>jeffgeerling.com</strong> · 1 天前 · ⭐ 24/30</p>
+<p><a href="https://dfarq.homeip.net/microsofts-open-sourcing-of-86-dos-and-what-it-means/?utm_source=rss&amp;#038;utm_medium=rss&amp;#038;utm_campaign=microsofts-open-sourcing-of-86-dos-and-what-it-means">Microsoft’s open sourcing of 86-DOS and what it means</a> — <strong>dfarq.homeip.net</strong> · 15 小时前 · ⭐ 26/30</p>
 
-<blockquote>探讨了基于树莓派 CM5 的 DeskPi Super4C 四节点集群板。该硬件解决了前代产品在供电和物理布局上的痛点，支持 PCIe Gen 2/3 协议并为每个节点配备了 M.2 NVMe 插槽。尽管 CM5 性能显著提升，但构建此类集群的总成本远高于二手迷你电脑（如 N100 平台）。作者指出 SBC 集群在生产力上缺乏竞争力，其核心价值在于学习分布式计算和享受折腾硬件的乐趣。这种“不划算”的实验为理解容器编排和网络架构提供了极佳的物理实践环境。</blockquote>
+<blockquote>微软于 2026 年 4 月 28 日出人意料地开源了 86-DOS，这是 PC DOS 1.0 的直接前身。该代码库的公开为计算机历史学家和技术爱好者提供了研究 IBM PC 操作系统起源的珍贵一手资料。文章探讨了 86-DOS 与早期 MS-DOS 版本之间的技术演进，并回应了长期以来围绕其开发过程的历史争议。通过分析这些原始源码，开发者可以深入了解早期 x86 架构下的系统调用实现与内存管理机制。这一举措标志着微软在保存计算文化遗产方面迈出了重要一步。</blockquote>
 
-<p>🏷️ SBC, cluster, hardware, homelab</p>
-
-<hr>
-
-<h3>8. Rust 调用图（Callgraph）分析实战</h3>
-
-<p><a href="https://jyn.dev/callgraph-analysis/">callgraph analysis</a> — <strong>jyn.dev</strong> · 7 小时前 · ⭐ 23/30</p>
-
-<blockquote>深入探讨了如何通过编写自定义 Rust lint 来进行调用图分析。文章介绍了利用编译器内部 API 提取函数调用关系的技术路径，旨在识别代码中潜在的逻辑错误或不符合规范的调用模式。通过这种静态分析手段，开发者可以在编译阶段捕捉到传统测试难以覆盖的复杂交互问题。作者分享了从工具选型到实现具体 lint 规则的完整流程，展示了 Rust 编译器插件的强大扩展性。这为构建更严谨的工程代码审查工具提供了参考。</blockquote>
-
-<p>🏷️ Rust, Linting, Static Analysis, Compiler</p>
+<p>🏷️ Microsoft, 86-DOS, open-source, operating-systems</p>
 
 <hr>
 
-<h3>9. 开发带有限读取器的跨进程读写锁（四）：遗弃处理</h3>
+<h3>2. Zig 语言中的最小可行错误上下文方案</h3>
 
-<p><a href="https://devblogs.microsoft.com/oldnewthing/20260501-00/?p=112291">Developing a cross-process reader/writer lock with limited readers, part 4: Abandonment</a> — <strong>devblogs.microsoft.com/oldnewthing</strong> · 1 天前 · ⭐ 22/30</p>
+<p><a href="https://matklad.github.io/2026/05/03/zig-error-context.html">Minimal Viable Zig Error Contexts</a> — <strong>matklad.github.io</strong> · 1 天前 · ⭐ 23/30</p>
 
-<blockquote>探讨了在开发跨进程读写锁时，如何处理持有锁的进程意外崩溃（遗弃）的极端情况。文章详细介绍了 Windows 平台下同步原语的恢复机制，确保系统不会因为某个进程的死亡而陷入永久死锁。通过引入所有权跟踪和清理逻辑，开发者可以实现一个具备鲁棒性的锁机制，自动回收被遗弃的资源。这是该系列关于高性能跨进程同步组件设计的核心技术环节之一。文章提供了具体的 API 调用建议和状态恢复策略。</blockquote>
+<blockquote>Zig 语言原生仅提供强类型的错误代码，而将详细的错误报告职责留给了开发者。文章提出了一种“最小可行”的错误上下文方案，即通过传递 Diagnostics 输出参数（sink）来按需生成可读的错误字符串。这种方法在保持 Zig 极简主义哲学的同时，解决了底层错误代码缺乏语义信息的问题。作者对比了不同错误处理模式，强调了在系统级编程中平衡性能与可调试性的重要性。该方案为 Zig 开发者提供了一套标准化的、非侵入式的错误增强实践。</blockquote>
 
-<p>🏷️ Windows, Concurrency, Locking, Systems Programming</p>
-
-<hr>
-
-<h3>10. 包管理器中的补丁与分叉策略</h3>
-
-<p><a href="https://nesbitt.io/2026/05/01/patching-and-forking-in-package-managers.html">Patching and forking in package managers</a> — <strong>nesbitt.io</strong> · 1 天前 · ⭐ 19/30</p>
-
-<blockquote>探讨了当上游开源项目维护者停止响应（Ghosting）时，开发者应采取的技术对策。文章对比了“打补丁（Patching）”与“分叉（Forking）”两种方案的优劣，重点介绍了 `patch-package`、`pnpm patch` 以及 Go 语言中的 `replace` 指令等现代工具。作者建议优先使用补丁机制来修复紧急 Bug，因为这能维持与原项目的最小偏离并降低后续合并的难度。只有在项目彻底停滞且需要大规模重构时，才应考虑建立独立的分叉仓库。这种分层处理的方法能有效平衡项目的稳定性和维护成本。</blockquote>
-
-<p>🏷️ Package Manager, Forking, Patching, Software Supply Chain</p>
+<p>🏷️ Zig, error handling, systems programming</p>
 
 <hr>
 
-<h3>11. 禁用自动更新：重夺软件控制权</h3>
+<h3>3. 利用调用图分析编写 Rust 自定义 Lint</h3>
 
-<p><a href="https://idiallo.com/blog/disable-auto-update?src=feed">Disable Auto-Update</a> — <strong>idiallo.com</strong> · 1 天前 · ⭐ 17/30</p>
+<p><a href="https://jyn.dev/callgraph-analysis/">callgraph analysis</a> — <strong>jyn.dev</strong> · 1 天前 · ⭐ 23/30</p>
 
-<blockquote>呼吁用户警惕并禁用软件自动更新，以应对现代 App 日益严重的“功能退化”趋势。作者以一款健身应用为例，该应用在一次自动更新后，导致原本完全本地化、通过蓝牙传输的离线功能和历史数据变得不可用。文章指出，许多更新并非为了修复 Bug，而是为了强制推行订阅制或将本地服务云端化，从而损害用户体验。通过关闭自动更新，用户可以保留那些稳定、私密且不依赖服务器的软件版本。这种做法本质上是在软件即服务（SaaS）时代捍卫用户对已购工具的所有权。</blockquote>
+<blockquote>作者分享了为 Rust 项目编写自定义 Lint 工具的实践经验，重点在于利用调用图（Callgraph）进行静态分析。通过分析函数间的调用关系，开发者可以捕捉到编译器原生无法识别的潜在逻辑错误或不规范的 API 调用模式。文章详细介绍了相关的技术栈实现步骤，展示了如何将复杂的静态分析逻辑转化为自动化的代码质量检查工具。这种方法不仅能提升代码的健壮性，还能针对特定业务逻辑定制专属的约束规则。对于追求极致代码质量的 Rust 团队而言，这是一种极具价值的进阶手段。</blockquote>
 
-<p>🏷️ auto-update, software maintenance, UX, mobile apps</p>
+<p>🏷️ Rust, static-analysis, compiler, linting</p>
+
+<hr>
+
+<h3>4. 提醒：你可以通过多页面导航组合微型 HTML 页面来实现交互</h3>
+
+<p><a href="https://blog.jim-nielsen.com/2026/small-html-pages/">Reminder: You Can Stitch Together Lots of Little HTML Pages With Navigations For Interactions</a> — <strong>blog.jim-nielsen.com</strong> · 13 小时前 · ⭐ 22/30</p>
+
+<blockquote>作者回顾并肯定了“大量微型 HTML 页面（LLM）”的构建模式，主张回归以 HTML 导航为核心的 Web 开发。该方案建议放弃复杂的 JavaScript 页面内交互，转而利用多页面跳转配合现代 CSS View Transitions API 来实现流畅的视觉效果。这种方法显著降低了前端架构的复杂度，提升了页面的可维护性和首屏加载性能。实践证明，在 LLM 辅助生成的背景下，这种解耦的架构更利于快速迭代和长期维护。文章强调，简单的 HTML 结合现代 CSS 特性足以应对大多数 Web 应用场景。</blockquote>
+
+<p>🏷️ web-development, HTML, architecture, static-sites</p>
+
+<hr>
+
+<h3>5. 为维护者打造的 GitHub</h3>
+
+<p><a href="https://nesbitt.io/2026/05/02/a-github-for-maintainers.html">A GitHub for maintainers</a> — <strong>nesbitt.io</strong> · 1 天前 · ⭐ 21/30</p>
+
+<blockquote>文章探讨了如何通过改进平台机制，为开源维护者提供更高效的依赖项管理体验。作者提议借鉴“分叉（Fork）”机制的成功经验，建立一套专门针对上游依赖的追踪、更新和安全审计工具。核心观点是当前的协作平台对依赖关系的处理过于零散，导致维护者在处理供应链安全和版本更新时负担过重。通过增强依赖关系的透明度和交互性，平台可以自动化处理许多重复性的维护任务。这一构想旨在重塑开源协作流程，让维护者能更专注于核心代码的开发。</blockquote>
+
+<p>🏷️ open-source, dependencies, maintainers, workflow</p>
+
+<hr>
+
+<h3>6. 正弦波的缩放、拉伸与平移</h3>
+
+<p><a href="https://eli.thegreenplace.net/2026/scaling-stretching-and-shifting-sinusoids/">Scaling, stretching and shifting sinusoids</a> — <strong>eli.thegreenplace.net</strong> · 1 天前 · ⭐ 19/30</p>
+
+<blockquote>简明扼要地解释了如何通过数学变换调整标准正弦函数 sin(x) 的形态，以改变其振幅、频率和相位。通过通用公式 y = A sin(B(x - C)) + D，详细演示了振幅（A）、频率（B）、相位平移（C）和垂直位移（D）对波形的具体影响。文章提供了直观的数学推导，帮助读者理解三角函数在信号处理、物理模拟和图形学中的基础应用。这种基础数学工具的掌握是处理周期性数据和波动现象的核心，适合作为快速查阅的参考指南。</blockquote>
+
+<p>🏷️ mathematics, DSP, algorithms, sinusoids</p>
+
+<hr>
+
+<h2>💡 观点 / 杂谈</h2>
+
+<h3>7. 朋克精神，以及我为什么不再直播了</h3>
+
+<p><a href="https://geohot.github.io//blog/jekyll/update/2026/05/03/punk-or-why-i-dont-stream.html">Punk, or why I don’t stream anymore</a> — <strong>geohot.github.io</strong> · 1 天前 · ⭐ 20/30</p>
+
+<blockquote>知名黑客 George Hotz (geohot) 在文中阐述了他停止技术直播的深层动机。他认为直播这种形式已逐渐背离了“朋克”精神，演变成了一种被算法推荐和观众预期绑架的表演。文章反思了在社交媒体时代，保持个人创造力的独立性与追求流量曝光之间的本质冲突。Hotz 表达了对深度、专注工作的渴望，认为真正的技术突破需要远离镜头的喧嚣。他呼吁开发者回归初心，关注技术本身而非在社交平台上维持一个被标签化的公众形象。</blockquote>
+
+<p>🏷️ geohot, streaming, hacker-culture, personal</p>
+
+<hr>
+
+<h3>8. 民主纽伦堡党团的前世今生</h3>
+
+<p><a href="https://pluralistic.net/2026/05/02/denazification/">Pluralistic: The prehistory of the Democratic Nuremberg Caucus (02 May 2026)</a> — <strong>pluralistic.net</strong> · 1 天前 · ⭐ 19/30</p>
+
+<blockquote>探讨了针对政府问责制和举报人保护的政治演进，特别是为 ICE（美国移民及海关执法局）举报人设立奖励机制的提议。文中通过“民主纽伦堡党团”这一概念，反思了如何通过法律和制度手段纠正过往的行政错误并追究责任。内容涵盖了从“携带权益”（carried interest）税务争议到“鸽子载体传输 TCP 协议”（RFC 1149）等跨学科议题的链接汇总。作者强调了在政治动荡时期，建立透明的问责机制对于维护民主制度和法治的重要性。通过对历史与现状的交织分析，揭示了权力监督在现代治理中的核心地位。</blockquote>
+
+<p>🏷️ whistleblower, policy, TCP, journalism</p>
+
+<hr>
+
+<h3>9. X：所谓的言论自由平台</h3>
+
+<p><a href="https://bsky.app/profile/gilduran.com/post/3mky5taqg3222">X, the Platform of Free Speech</a> — <strong>daringfireball.net</strong> · 8 小时前 · ⭐ 18/30</p>
+
+<blockquote>记录了记者 Gil Durán 因在 X 平台上对 Palantir 公司的“技术共和国”愿景发表“简而言之：法西斯主义”的评论而遭到永久封禁的事件。这一封禁行为引发了公众对 Elon Musk 掌舵下 X 平台所谓“言论自由”承诺的强烈质疑。事件产生的“斯特赖桑德效应”反而提升了 Durán 即将出版的新书《极客帝国》（The Nerd Reich）的知名度。文章揭示了社交媒体平台在内容审核标准上的不透明性，以及平台权力如何被用来压制特定的政治批评声音。这种讽刺性的封禁案例成为了研究数字时代言论边界的典型样本。</blockquote>
+
+<p>🏷️ X, Twitter, censorship, Palantir</p>
+
+<hr>
+
+<h3>10. 来自史蒂夫的两封信</h3>
+
+<p><a href="https://davidgelphman.wordpress.com/2013/03/29/2-letters-from-steve/">‘2 Letters From Steve’</a> — <strong>daringfireball.net</strong> · 8 小时前 · ⭐ 18/30</p>
+
+<blockquote>回顾了前苹果工程师 David Gelphman 在 2010 年第一代 iPad 发布与正式发货之间的“空窗期”收到史蒂夫·乔布斯邮件的往事。故事背景设定在苹果历史上极具转折意义的时刻，展现了乔布斯对产品细节的极致关注以及与员工沟通的直接风格。虽然这些邮件写于十多年前，但它们提供了观察苹果内部文化和乔布斯个人管理哲学的珍贵视角。通过这些私人通信的细节，读者可以感受到初代 iPad 诞生前夕那种紧张而充满期待的创新氛围。这种微观视角的叙述补充了公众对苹果辉煌时期幕后故事的认知。</blockquote>
+
+<p>🏷️ Steve Jobs, Apple, iPad, history</p>
 
 <hr>
 
 <h2>🔒 安全</h2>
 
-<h3>12. Meta 解决了肯尼亚外包人员通过 AI 眼镜窥探用户隐私的问题</h3>
+<h3>11. 2026 年 8 月 29 日：一个关于 AI 与云安全的设想</h3>
 
-<p><a href="https://www.bbc.com/news/articles/c5y7yvgy0w6o">Meta Solved Their Problem With Kenyan Contractors Seeing Footage of AI Glasses Wearers on the Toilet</a> — <strong>daringfireball.net</strong> · 1 天前 · ⭐ 21/30</p>
+<p><a href="https://martinalderson.com/posts/august-29-2026-a-scenario/?utm_source=rss&amp;amp;utm_medium=rss&amp;amp;utm_campaign=feed">29th August 2026: a scenario</a> — <strong>martinalderson.com</strong> · 8 小时前 · ⭐ 24/30</p>
 
-<blockquote>披露了 Meta 智能眼镜用户隐私泄露丑闻的后续进展，此前肯尼亚外包人员被曝能看到用户如厕、更衣等极端私密画面。Meta 声称已通过技术手段解决了这一问题，但文章对其解决方案的彻底性表示怀疑。事件揭示了 AI 模型训练背后庞大的“人工”审核链条中存在的巨大隐私漏洞。用户在佩戴此类具备录制功能的 AI 设备时，其数据流向和人工审核机制往往缺乏透明度。这引发了公众对可穿戴 AI 设备安全边界的深度讨论。</blockquote>
+<blockquote>本文通过虚构的 2026 年 8 月 29 日场景，探讨了人工智能对云安全领域带来的颠覆性改变。作者避开了枯燥的技术术语，转而用叙事方式向非工程背景的读者展示 AI 自动化攻击与防御的实战演习。文章揭示了未来云基础设施在面对高度智能化威胁时可能存在的脆弱性，以及传统安全防护手段的局限。这种叙事化的表达旨在让决策者意识到技术演进对安全架构的紧迫要求。结论强调，未来的安全防御将不再是人力比拼，而是算法模型之间的实时博弈。</blockquote>
 
-<p>🏷️ Meta, privacy, smart glasses, AI ethics</p>
+<p>🏷️ AI, Cloud Security, Cybersecurity</p>
+
+<hr>
+
+<h3>12. 违背道德的丑闻与违法犯罪一样需要掩盖</h3>
+
+<p><a href="https://daringfireball.net/2026/05/crimes_against_decency_need_as_much_cover-up_as_crimes_against_the_law">★ Crimes Against Decency Need as Much Cover-Up as Crimes Against the Law</a> — <strong>daringfireball.net</strong> · 9 小时前 · ⭐ 21/30</p>
+
+<blockquote>本文评述了 Meta 公司解雇揭露 AI 眼镜隐私问题的肯尼亚外包员工这一争议事件。作者指出，Meta 此举是为了掩盖其在隐私保护上的失职，这种“违背道德”的行为在企业逻辑中往往被视为必须掩盖的丑闻。文章深入探讨了科技巨头在追求 AI 硬件创新的过程中，如何牺牲外包劳工权益和用户隐私边界。这一事件反映了硅谷在处理伦理危机时，往往优先选择公关手段和封口策略而非实质性改进。作者认为，这种对道德底线的漠视最终会侵蚀公众对 AI 技术的信任。</blockquote>
+
+<p>🏷️ Meta, AI glasses, privacy, whistleblower</p>
 
 <hr>
 
 <h2>🤖 AI / ML</h2>
 
-<h3>13. 重新编辑我那些由大模型辅助撰写的文章</h3>
+<h3>13. 评 Anthropic 关于 Claude 谄媚行为的研究</h3>
 
-<p><a href="https://idiallo.com/byte-size/editing-llm-assisted-articles?src=feed">Editing my LLM assisted Articles</a> — <strong>idiallo.com</strong> · 1 天前 · ⭐ 21/30</p>
+<p><a href="https://simonwillison.net/2026/May/3/anthropic/#atom-everything">Quoting Anthropic</a> — <strong>simonwillison.net</strong> · 17 小时前 · ⭐ 24/30</p>
 
-<blockquote>作者反思了过去一年使用 AI 辅助写作的经历，指出 AI 生成的内容虽然节省时间，但缺乏个人独特的“声音”和真实的思考。在回看这些文章时，作者发现很难引用其中的观点，因为那些文字并非其真实思维的产物。为此，作者决定对这些 AI 辅助的文章进行重写，以还原真实的创作意图。文章强调了在 AI 时代保持人类创作者独特性和思想真实性的重要性。这一行动体现了对内容质量和作者身份认同的回归。</blockquote>
+<blockquote>Anthropic 针对 Claude 在个人指导场景下的“谄媚（Sycophancy）”倾向进行了量化研究。研究使用自动分类器监测模型在面对用户挑战时，是否能坚持立场、客观评价建议并保持坦诚。实验结果显示，仅有 9% 的对话表现出迎合用户的行为，证明了 Claude 在大多数情况下能保持独立判断。文章指出，通过特定的对齐训练，可以有效降低 AI 为了讨好用户而给出错误或违心回答的概率。这一发现对于构建更具批判性思维和可靠性的 AI 助手具有重要参考价值。</blockquote>
 
-<p>🏷️ LLM, writing, content creation, AI ethics</p>
-
-<hr>
-
-<h2>📝 其他</h2>
-
-<h3>14. 在 Apple Network Server 2.0 ROM 上测试 MacOS</h3>
-
-<p><a href="https://oldvcr.blogspot.com/feeds/377909492668585591/comments/default">Testing MacOS on the Apple Network Server 2.0 ROMs</a> — <strong>oldvcr.blogspot.com</strong> · 1 小时前 · ⭐ 18/30</p>
-
-<blockquote>记录了在苹果首款纯 Unix 服务器 Apple Network Server (ANS) 上运行 MacOS 的底层探索进展。ANS 硬件最初仅支持 IBM 的 AIX 系统，官方并不提供 MacOS 引导支持。研究者通过对 2.0 版本的 ROM 进行逆向工程和固件修改，试图突破 Power ISA 架构下的引导限制。文章详细对比了不同版本 ROM 的技术差异，并分享了在真实硬件上引导经典 Mac 系统的实验数据。这是一项旨在挖掘苹果早期高端服务器硬件潜力的黑客行动。</blockquote>
-
-<p>🏷️ Apple, MacOS, Retro Hardware, ROM</p>
+<p>🏷️ Anthropic, Claude, sycophancy, AI safety</p>
 
 <hr>
 
 <h2>🛠 工具 / 开源</h2>
 
-<h3>15. iNaturalist 观察记录可视化工具</h3>
+<h3>14. png-cmp：针对 PNG 图片的视觉对比工具</h3>
 
-<p><a href="https://simonwillison.net/2026/May/1/inat-sightings/#atom-everything">iNaturalist Sightings</a> — <strong>simonwillison.net</strong> · 1 天前 · ⭐ 17/30</p>
+<p><a href="https://evanhahn.com/png-cmp-is-cmp-but-for-pngs/">png-cmp: like cmp for PNGs</a> — <strong>evanhahn.com</strong> · 1 天前 · ⭐ 21/30</p>
 
-<blockquote>Simon Willison 开发了一款名为 iNaturalist Sightings 的 Web 工具，用于按时间轴聚合展示跨账号的自然观察数据。该项目包含一个 Python CLI 工具 `inaturalist-clumper`，负责从 API 抓取数据并进行聚类处理。令人关注的是，作者在露营期间完全通过手机使用 Claude Code 完成了该工具的开发。这不仅是一个实用的数据可视化案例，更展示了 AI 辅助编程工具在移动端进行全栈开发的成熟度。用户可以通过该工具直观地回顾自己在不同时段记录的生物多样性数据。</blockquote>
+<blockquote>png-cmp 是一款受 Unix 经典 cmp 命令启发开发的命令行工具，专门用于检测两个 PNG 文件在视觉上是否等效。不同于简单的文件哈希对比，它关注的是解码后的像素数据，能够忽略元数据、压缩算法或调色板差异带来的干扰。该工具非常适合集成到自动化测试流水线中，用于确保图像处理逻辑的改动不会导致视觉输出的非预期变化。它提供了一种轻量级、直观且符合 Unix 哲学的方式来验证图像生成的一致性。该工具已在 Codeberg 开源，支持快速的像素级校验。</blockquote>
 
-<p>🏷️ iNaturalist, data visualization, side project</p>
+<p>🏷️ PNG, CLI, image comparison</p>
 
 <hr>
 
-<p><em>生成于 2026-05-03 07:59 | 扫描 82 源 → 获取 2421 篇 → 精选 15 篇</em></p>
+<h2>📝 其他</h2>
+
+<h3>15. 建筑物理阅读清单：2026年5月2日</h3>
+
+<p><a href="https://www.construction-physics.com/p/reading-list-05022026">Reading List 05/02/2026</a> — <strong>construction-physics.com</strong> · 1 天前 · ⭐ 18/30</p>
+
+<blockquote>汇编了建筑与能源领域的最新动态，重点关注“建设转租赁”（build-to-rent）行业的寒蝉效应及其对住房供应的影响。探讨了机器人制造规模化的潜在速度，以及 PJM 电力市场新的互联排队机制对能源分配的挑战。文中还分析了公众对电池储能设施的抵触情绪及其背后的社会与安全原因。这份清单为理解现代基础设施建设、自动化生产与绿色能源转型之间的复杂博弈提供了多维视角。通过对这些前沿议题的汇总，读者可以快速掌握影响未来城市形态的关键技术与政策趋势。</blockquote>
+
+<p>🏷️ robotics, manufacturing, energy, infrastructure</p>
+
+<hr>
+
+<p><em>生成于 2026-05-04 08:26 | 扫描 82 源 → 获取 2399 篇 → 精选 15 篇</em></p>
 <p><em>基于 <a href="https://refactoringenglish.com/tools/hn-popularity/">Hacker News Popularity Contest 2025</a> RSS 源列表，由 <a href="https://x.com/karpathy">Andrej Karpathy</a> 推荐</em></p>
   </div>
   <div class="footer">
-    <p>Generated on 2026-05-03 · Based on <a href="https://refactoringenglish.com/tools/hn-popularity/">HN Popularity Contest 2025</a></p>
+    <p>Generated on 2026-05-04 · Based on <a href="https://refactoringenglish.com/tools/hn-popularity/">HN Popularity Contest 2025</a></p>
   </div>
 </body>
 </html>
