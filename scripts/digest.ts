@@ -918,7 +918,7 @@ function generateDigestReport(articles: ScoredArticle[], highlights: string, sta
   const now = new Date();
   const dateStr = now.toISOString().split('T')[0];
   
-  let report = `# 📰 AI 博客每日精选 — ${dateStr}\n\n`;
+  let report = `# 📰 AI Blog Daily Picks — ${dateStr}\n\n`;
   report += `> 来自 Karpathy 推荐的 ${stats.totalFeeds} 个顶级技术博客，AI 精选 Top ${articles.length}\n\n`;
 
   // ── Today's Highlights ──
@@ -1099,7 +1099,7 @@ function generateRSSFeed(todayDigest: DigestDay, pastDigests: DigestDay[]): stri
   let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
   xml += `<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n`;
   xml += `  <channel>\n`;
-  xml += `    <title>AI 博客每日精选</title>\n`;
+  xml += `    <title>AI Blog Daily Picks</title>\n`;
   xml += `    <link>${escapeXml(siteUrl)}</link>\n`;
   xml += `    <description>AI-curated daily digest from 90 top tech blogs (Karpathy's list)</description>\n`;
   xml += `    <language>zh-cn</language>\n`;
@@ -1108,7 +1108,7 @@ function generateRSSFeed(todayDigest: DigestDay, pastDigests: DigestDay[]): stri
   xml += `    <generator>AI Daily Digest</generator>\n`;
   xml += `    <image>\n`;
   xml += `      <url>${escapeXml(siteUrl)}logo.png</url>\n`;
-  xml += `      <title>AI 博客每日精选</title>\n`;
+  xml += `      <title>AI Blog Daily Picks</title>\n`;
   xml += `      <link>${escapeXml(siteUrl)}</link>\n`;
   xml += `    </image>\n`;
 
@@ -1307,7 +1307,7 @@ async function main(): Promise<void> {
   const mdFilename = outputPath.split('/').pop() || `digest-${dateStr}.md`;
   const todayDigest: DigestDay = {
     date: dateStr,
-    title: `📰 AI 博客每日精选 — ${dateStr}`,
+    title: `📰 AI Blog Daily Picks — ${dateStr}`,
     htmlContent: markdownToHtmlFragment(report),
     link: `https://allenx-li.github.io/ai-daily-digest/${mdFilename.replace('.md', '.html')}`,
     pubDate: toRFC822(new Date()),
@@ -1333,7 +1333,7 @@ async function main(): Promise<void> {
         const formattedDate = `${pastDate.slice(0, 4)}-${pastDate.slice(4, 6)}-${pastDate.slice(6, 8)}`;
         pastDigests.push({
           date: formattedDate,
-          title: `📰 AI 博客每日精选 — ${formattedDate}`,
+          title: `📰 AI Blog Daily Picks — ${formattedDate}`,
           htmlContent: markdownToHtmlFragment(pastContent),
           link: `https://allenx-li.github.io/ai-daily-digest/${f.replace('.md', '.html')}`,
           pubDate: toRFC822(new Date(formattedDate + 'T02:00:00Z')),
@@ -1373,3 +1373,4 @@ await main().catch((err) => {
   console.error(`[digest] Fatal error: ${err instanceof Error ? err.message : String(err)}`);
   process.exit(1);
 });
+
