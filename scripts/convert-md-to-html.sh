@@ -37,11 +37,11 @@ BEGIN { in_block = 0 }
 
 cat <<EOF
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI 博客每日精选</title>
+  <title>AI Blog Daily Picks</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -79,9 +79,9 @@ cat <<EOF
 </head>
 <body>
   <div class="header">
-    <h1>📰 AI 博客每日精选</h1>
+    <h1>📰 AI Blog Daily Picks</h1>
     <p style="color:#8b949e; margin:0.5rem 0 1rem">AI-curated daily digest from 90 top tech blogs</p>
-    <a class="rss" href="feed.xml">📡 RSS 订阅</a>
+    <a class="rss" href="feed.xml">📡 RSS Feed</a>
   </div>
   <hr>
   <div class="content">
