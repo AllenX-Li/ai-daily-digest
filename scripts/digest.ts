@@ -801,6 +801,11 @@ function humanizeTime(pubDate: Date): string {
   return pubDate.toISOString().slice(0, 10);
 }
 
+function formatDateReadable(dateStr: string): string {
+  const d = new Date(dateStr + 'T00:00:00Z');
+  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' });
+}
+
 function generateKeywordBarChart(articles: ScoredArticle[]): string {
   const kwCount = new Map<string, number>();
   for (const a of articles) {
@@ -917,8 +922,9 @@ function generateDigestReport(articles: ScoredArticle[], highlights: string, sta
 }): string {
   const now = new Date();
   const dateStr = now.toISOString().split('T')[0];
+  const dateReadable = formatDateReadable(dateStr);
   
-  let report = `# 📰 AI Blog Daily Picks — ${dateStr}\n\n`;
+  let report = `# 📰 AI Blog Daily Picks — ${dateReadable}\n\n`;
   report += `> 来自 Karpathy 推荐的 ${stats.totalFeeds} 个顶级技术博客，AI 精选 Top ${articles.length}\n\n`;
 
   // ── Today's Highlights ──
@@ -1307,7 +1313,7 @@ async function main(): Promise<void> {
   const mdFilename = outputPath.split('/').pop() || `digest-${dateStr}.md`;
   const todayDigest: DigestDay = {
     date: dateStr,
-    title: `📰 AI Blog Daily Picks — ${dateStr}`,
+    title: `📰 AI Blog Daily Picks — ${formatDateReadable(dateStr)}`,
     htmlContent: markdownToHtmlFragment(report),
     link: `https://allenx-li.github.io/ai-daily-digest/${mdFilename.replace('.md', '.html')}`,
     pubDate: toRFC822(new Date()),
@@ -1333,7 +1339,7 @@ async function main(): Promise<void> {
         const formattedDate = `${pastDate.slice(0, 4)}-${pastDate.slice(4, 6)}-${pastDate.slice(6, 8)}`;
         pastDigests.push({
           date: formattedDate,
-          title: `📰 AI Blog Daily Picks — ${formattedDate}`,
+          title: `📰 AI Blog Daily Picks — ${formatDateReadable(formattedDate)}`,
           htmlContent: markdownToHtmlFragment(pastContent),
           link: `https://allenx-li.github.io/ai-daily-digest/${f.replace('.md', '.html')}`,
           pubDate: toRFC822(new Date(formattedDate + 'T02:00:00Z')),
