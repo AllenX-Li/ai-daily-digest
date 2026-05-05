@@ -924,7 +924,7 @@ function generateDigestReport(articles: ScoredArticle[], highlights: string, sta
   const dateStr = now.toISOString().split('T')[0];
   const dateReadable = formatDateReadable(dateStr);
   
-  let report = `# 📰 AI Blog Daily Picks — ${dateReadable}\n\n`;
+  let report = `# 📰 ${dateReadable}\n\n`;
   report += `> 来自 Karpathy 推荐的 ${stats.totalFeeds} 个顶级技术博客，AI 精选 Top ${articles.length}\n\n`;
 
   // ── Today's Highlights ──
