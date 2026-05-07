@@ -77,10 +77,14 @@ jobs:
     if: failure() && (github.event.inputs.retry_count || '0') != '2'
     runs-on: ubuntu-latest
     steps:
+      - name: Calculate next retry
+        id: calc_retry
+        run: echo "next=$((${{ github.event.inputs.retry_count || '0' }} + 1))" >> "$GITHUB_OUTPUT"
+
       - name: Retry workflow
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NEXT_RETRY: ${{ (github.event.inputs.retry_count || '0') + 1 }}
+          NEXT_RETRY: ${{ steps.calc_retry.outputs.next }}
         run: |
           echo "Retrying (attempt ${NEXT_RETRY}/2)..."
           gh workflow run digest.yml \
