@@ -47,47 +47,47 @@
   </div>
   <hr>
   <div class="content">
-<h1>📰 May 17, 2026</h1>
+<h1>📰 May 18, 2026</h1>
 
 <blockquote>来自 Karpathy 推荐的 92 个顶级技术博客，AI 精选 Top 15</blockquote>
 
 <h2>📝 今日看点</h2>
 
-<p>今日技术圈呈现出从技术狂热向工程落地与理性反思转型的态势。大模型研发正深入底层架构与并行策略的实战复盘，推动资深工程师工作流向高度集成化演进。与此同时，学术界对AI垃圾论文的严厉制裁与业界对AI泡沫的深度质疑，标志着行业正进入一个治理趋严且认知重构的新阶段。此外，OpenAI等头部机构的架构重组也预示着AI产品战略正走向高度统一。</p>
+<p>今日技术圈呈现出从狂热转向理性的治理与回归趋势。ArXiv 严惩 AI 垃圾论文与业界对“AI 是技术而非产品”的讨论，标志着 AI 正在经历从应用噱头向底层基础设施的范式转移。与此同时，NHS 退出开源引发的政策博弈以及开发者重拾原生 CSS，映射出工程领域在面对安全与效率挑战时，正重新审视透明度与技术底座的价值。此外，Reddit 强制引流 App 等行为也再次引发了关于平台控制权与用户体验边界的广泛讨论。</p>
 
 <hr>
 
 <h2>🏆 今日必读</h2>
 
-<p>🥇 <strong>2026年资深工程师如何使用大模型</strong></p>
+<p>🥇 <strong>ArXiv 将对提交 AI 垃圾论文的研究员处以一年禁令</strong></p>
 
-<p><a href="https://seangoedecke.com/how-i-use-llms-in-2026/">How I use LLMs as a staff engineer in 2026</a> — seangoedecke.com · 8 小时前 · 🤖 AI / ML</p>
+<p><a href="https://www.404media.co/new-arxiv-rules-ai-generated-papers-ban/">ArXiv to Ban Researchers for a Year if They Submit AI Slop</a> — daringfireball.net · 1 天前 · 🤖 AI / ML</p>
 
-<blockquote>本文探讨了资深工程师在 2026 年如何深度集成大模型（LLM）到日常工作流。从最初的 Copilot 自动补全演进到处理复杂重构、跨模块代码审查及快速理解遗留系统。通过构建上下文感知的 Agent 模式，LLM 能够协助处理非核心领域的战术变更，并生成可抛弃的研究性代码。作者强调，虽然 LLM 提升了效率，但关键逻辑仍需领域专家（SME）严格把关以规避幻觉。LLM 已从辅助工具转变为工程生命周期的核心组成部分。</blockquote>
+<blockquote>ArXiv 计算机科学板块主席 Thomas Dietterich 宣布了针对 AI 生成内容的新规。如果提交的论文包含由生成式 AI 产生的错误引用、剽窃内容、偏见或误导性信息，作者将承担全部责任。一旦发现论文中存在不可辩驳的“AI 垃圾（AI Slop）”证据，相关研究人员将被禁止在 ArXiv 提交文章一年。此举旨在维护学术诚信，防止低质量、未经审核的 AI 内容充斥预印本平台。ArXiv 强调 AI 只是工具，不能作为产生学术错误的借口。</blockquote>
 
-<p>💡 <strong>为什么值得读</strong>: 提供了从初级使用到资深架构视角的 AI 协作演进路径，对职业规划极具参考价值。</p>
+<p>💡 <strong>为什么值得读</strong>: 了解学术界如何通过严厉惩罚措施应对 AI 生成内容带来的学术诚信危机。</p>
 
-<p>🏷️ LLM, Productivity, Staff Engineering, AI Workflow</p>
+<p>🏷️ ArXiv, AI slop, research, LLM</p>
 
-<p>🥈 <strong>DeepSeek-V4-Flash 让模型转向技术重获关注</strong></p>
+<p>🥈 <strong>关于预训练并行化与训练失败案例的笔记</strong></p>
 
-<p><a href="https://seangoedecke.com/steering-vectors/">DeepSeek-V4-Flash means LLM steering is interesting again</a> — seangoedecke.com · 1 天前 · 🤖 AI / ML</p>
+<p><a href="https://www.dwarkesh.com/p/notes-on-pretraining-parallelisms">Notes on pretraining parallelisms and failed training runs.</a> — dwarkesh.com · 1 天前 · 🤖 AI / ML</p>
 
-<blockquote>探讨通过直接操纵模型中间层激活值（Steering）来引导 LLM 输出的技术回归。受 antirez 的 DwarfStar 4 项目启发，文章分析了 DeepSeek V4 Flash 模型在激活操纵方面的潜力。相比于传统的 Prompt 工程，这种“转向向量”技术能更精准地控制模型语气、风格或知识偏解。作者认为这种底层干预手段将成为未来模型微调和行为对齐的重要补充。该技术有望解决模型在特定任务中难以通过提示词纠正的顽固偏见。</blockquote>
+<blockquote>本文深入探讨了大语言模型（LLM）预训练中的多种并行策略，包括数据并行、张量并行和流水线并行。作者通过调研揭示了大规模训练任务失败的常见原因，如硬件故障、损失函数激增（Loss Spikes）以及互联带宽瓶颈。文中详细记录了在数千个 GPU 集群上维持训练稳定性的工程细节。这些笔记强调了在追求模型规模的同时，底层基础设施的鲁棒性才是决定训练成败的关键。对于从事大规模分布式训练的工程师具有极高的参考价值。</blockquote>
 
-<p>💡 <strong>为什么值得读</strong>: 深入探讨了除 Prompt 之外的另一种模型控制范式，适合对模型底层原理感兴趣的开发者。</p>
+<p>💡 <strong>为什么值得读</strong>: 深入理解大规模模型训练背后的工程复杂性，以及如何应对实际生产中的训练中断。</p>
 
-<p>🏷️ DeepSeek, LLM Steering, AI Research, Model Activation</p>
+<p>🏷️ Pretraining, Parallelism, LLM, Training</p>
 
-<p>🥉 <strong>预训练并行策略与训练失败案例笔记</strong></p>
+<p>🥉 <strong>RLVR 在科学研究领域可能表现极差</strong></p>
 
-<p><a href="https://www.dwarkesh.com/p/notes-on-pretraining-parallelisms">Notes on pretraining parallelisms and failed training runs.</a> — dwarkesh.com · 13 小时前 · 🤖 AI / ML</p>
+<p><a href="https://www.dwarkesh.com/p/rlvr-might-be-disproportionately">RLVR might be disproportionately bad at science</a> — dwarkesh.com · 1 天前 · 🤖 AI / ML</p>
 
-<blockquote>深度剖析大模型预训练中的并行计算策略及训练失败的实战教训。文章详细介绍了数据并行、张量并行和流水线并行等核心技术栈，以及在数千个 GPU 集群上维持训练稳定性的挑战。通过复盘失败的训练案例，揭示了硬件故障、梯度爆炸和通信瓶颈等导致项目中断的常见诱因。作者指出，预训练的成功不仅取决于算法，更取决于对分布式系统工程细节的极致掌控。这对于理解大模型背后的基础设施成本至关重要。</blockquote>
+<blockquote>文章分析了基于可验证奖励的强化学习（RLVR）在科学发现中的局限性。RLVR 在数学证明或代码生成等具有即时、客观验证反馈的领域表现优异。然而，科学理论的验证周期往往长达数十年甚至数世纪，且当前的“最佳理论”在短期预测上可能反而不如旧理论。这种反馈延迟和验证的复杂性使得 RLVR 难以捕捉科学探索中的深层逻辑。作者认为，过度依赖短期可验证性可能会阻碍真正的科学突破。</blockquote>
 
-<p>💡 <strong>为什么值得读</strong>: 揭秘了大模型背后昂贵且复杂的工程实现细节，是了解 AI 基础设施的硬核指南。</p>
+<p>💡 <strong>为什么值得读</strong>: 探讨强化学习在科学发现中的本质局限，反思 AI 评估机制与科学规律的错位。</p>
 
-<p>🏷️ pretraining, parallelism, LLM training</p>
+<p>🏷️ RLVR, Reinforcement Learning, Science</p>
 
 <hr>
 
@@ -95,16 +95,18 @@
 
 <p>| 扫描源 | 抓取文章 | 时间范围 | 精选 |</p>
 <p>|:---:|:---:|:---:|:---:|</p>
-<p>| 82/92 | 2415 篇 → 32 篇 | 48h | <strong>15 篇</strong> |</p>
+<p>| 79/92 | 2179 篇 → 21 篇 | 48h | <strong>15 篇</strong> |</p>
 
 <h3>分类分布</h3>
 
 <p>```mermaid</p>
 <p>pie showData</p>
 <p>    title "文章分类分布"</p>
-<p>    "🤖 AI / ML" : 7</p>
-<p>    "⚙️ 工程" : 4</p>
-<p>    "💡 观点 / 杂谈" : 3</p>
+<p>    "⚙️ 工程" : 5</p>
+<p>    "🤖 AI / ML" : 4</p>
+<p>    "💡 观点 / 杂谈" : 2</p>
+<p>    "📝 其他" : 2</p>
+<p>    "🔒 安全" : 1</p>
 <p>    "🛠 工具 / 开源" : 1</p>
 <p>```</p>
 
@@ -113,198 +115,202 @@
 <p>```mermaid</p>
 <p>xychart-beta horizontal</p>
 <p>    title "高频关键词"</p>
-<p>    x-axis ["reinforcement learning", "llm", "productivity", "staff engineering", "ai workflow", "deepseek", "llm steering", "ai research", "model activation", "pretraining", "parallelism", "llm training"]</p>
-<p>    y-axis "出现次数" 0 --&gt; 4</p>
-<p>    bar [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]</p>
+<p>    x-axis ["open source", "llm", "web development", "python", "arxiv", "ai slop", "research", "pretraining", "parallelism", "training", "rlvr", "reinforcement learning"]</p>
+<p>    y-axis "出现次数" 0 --&gt; 5</p>
+<p>    bar [3, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1]</p>
 <p>```</p>
 
 <p>&lt;details&gt;</p>
 <p>&lt;summary&gt;📈 纯文本关键词图（终端友好）&lt;/summary&gt;</p>
 
 <p>```</p>
-<p>reinforcement learning │ ████████████████████ 2</p>
-<p>llm                    │ ██████████░░░░░░░░░░ 1</p>
-<p>productivity           │ ██████████░░░░░░░░░░ 1</p>
-<p>staff engineering      │ ██████████░░░░░░░░░░ 1</p>
-<p>ai workflow            │ ██████████░░░░░░░░░░ 1</p>
-<p>deepseek               │ ██████████░░░░░░░░░░ 1</p>
-<p>llm steering           │ ██████████░░░░░░░░░░ 1</p>
-<p>ai research            │ ██████████░░░░░░░░░░ 1</p>
-<p>model activation       │ ██████████░░░░░░░░░░ 1</p>
-<p>pretraining            │ ██████████░░░░░░░░░░ 1</p>
+<p>open source     │ ████████████████████ 3</p>
+<p>llm             │ █████████████░░░░░░░ 2</p>
+<p>web development │ █████████████░░░░░░░ 2</p>
+<p>python          │ █████████████░░░░░░░ 2</p>
+<p>arxiv           │ ███████░░░░░░░░░░░░░ 1</p>
+<p>ai slop         │ ███████░░░░░░░░░░░░░ 1</p>
+<p>research        │ ███████░░░░░░░░░░░░░ 1</p>
+<p>pretraining     │ ███████░░░░░░░░░░░░░ 1</p>
+<p>parallelism     │ ███████░░░░░░░░░░░░░ 1</p>
+<p>training        │ ███████░░░░░░░░░░░░░ 1</p>
 <p>```</p>
 
 <p>&lt;/details&gt;</p>
 
 <h3>🏷️ 话题标签</h3>
 
-<p><strong>reinforcement learning</strong>(2) · <strong>llm</strong>(1) · <strong>productivity</strong>(1) · staff engineering(1) · ai workflow(1) · deepseek(1) · llm steering(1) · ai research(1) · model activation(1) · pretraining(1) · parallelism(1) · llm training(1) · arxiv(1) · ai slop(1) · research ethics(1) · academic integrity(1) · openai(1) · greg brockman(1) · product strategy(1) · rlvr(1)</p>
-
-<hr>
-
-<h2>🤖 AI / ML</h2>
-
-<h3>1. 2026年资深工程师如何使用大模型</h3>
-
-<p><a href="https://seangoedecke.com/how-i-use-llms-in-2026/">How I use LLMs as a staff engineer in 2026</a> — <strong>seangoedecke.com</strong> · 8 小时前 · ⭐ 28/30</p>
-
-<blockquote>本文探讨了资深工程师在 2026 年如何深度集成大模型（LLM）到日常工作流。从最初的 Copilot 自动补全演进到处理复杂重构、跨模块代码审查及快速理解遗留系统。通过构建上下文感知的 Agent 模式，LLM 能够协助处理非核心领域的战术变更，并生成可抛弃的研究性代码。作者强调，虽然 LLM 提升了效率，但关键逻辑仍需领域专家（SME）严格把关以规避幻觉。LLM 已从辅助工具转变为工程生命周期的核心组成部分。</blockquote>
-
-<p>🏷️ LLM, Productivity, Staff Engineering, AI Workflow</p>
-
-<hr>
-
-<h3>2. DeepSeek-V4-Flash 让模型转向技术重获关注</h3>
-
-<p><a href="https://seangoedecke.com/steering-vectors/">DeepSeek-V4-Flash means LLM steering is interesting again</a> — <strong>seangoedecke.com</strong> · 1 天前 · ⭐ 28/30</p>
-
-<blockquote>探讨通过直接操纵模型中间层激活值（Steering）来引导 LLM 输出的技术回归。受 antirez 的 DwarfStar 4 项目启发，文章分析了 DeepSeek V4 Flash 模型在激活操纵方面的潜力。相比于传统的 Prompt 工程，这种“转向向量”技术能更精准地控制模型语气、风格或知识偏解。作者认为这种底层干预手段将成为未来模型微调和行为对齐的重要补充。该技术有望解决模型在特定任务中难以通过提示词纠正的顽固偏见。</blockquote>
-
-<p>🏷️ DeepSeek, LLM Steering, AI Research, Model Activation</p>
-
-<hr>
-
-<h3>3. 预训练并行策略与训练失败案例笔记</h3>
-
-<p><a href="https://www.dwarkesh.com/p/notes-on-pretraining-parallelisms">Notes on pretraining parallelisms and failed training runs.</a> — <strong>dwarkesh.com</strong> · 13 小时前 · ⭐ 26/30</p>
-
-<blockquote>深度剖析大模型预训练中的并行计算策略及训练失败的实战教训。文章详细介绍了数据并行、张量并行和流水线并行等核心技术栈，以及在数千个 GPU 集群上维持训练稳定性的挑战。通过复盘失败的训练案例，揭示了硬件故障、梯度爆炸和通信瓶颈等导致项目中断的常见诱因。作者指出，预训练的成功不仅取决于算法，更取决于对分布式系统工程细节的极致掌控。这对于理解大模型背后的基础设施成本至关重要。</blockquote>
-
-<p>🏷️ pretraining, parallelism, LLM training</p>
-
-<hr>
-
-<h3>4. ArXiv 将对提交 AI 垃圾论文的研究者处以一年禁投处罚</h3>
-
-<p><a href="https://www.404media.co/new-arxiv-rules-ai-generated-papers-ban/">ArXiv to Ban Researchers for a Year if They Submit AI Slop</a> — <strong>daringfireball.net</strong> · 13 小时前 · ⭐ 24/30</p>
-
-<blockquote>ArXiv 针对 AI 生成的低质量论文（AI Slop）出台严厉新规。计算机科学板块主席 Thomas Dietterich 宣布，若提交的论文包含 AI 生成的错误引用、剽窃内容或误导性信息，作者将面临禁投一年的处罚。该政策强调作者对论文中任何 AI 输出负有最终责任，旨在遏制学术界日益严重的 AI 滥用现象。这一举措标志着预印本平台开始通过制度化手段维护科研诚信。此举反映了学术界对生成式 AI 污染科研成果的深度担忧。</blockquote>
-
-<p>🏷️ ArXiv, AI Slop, Research Ethics, Academic Integrity</p>
-
-<hr>
-
-<h3>5. Greg Brockman 正式掌管 OpenAI 产品部门</h3>
-
-<p><a href="https://www.wired.com/story/openai-reorg-greg-brockman-product/">Greg Brockman Officially Takes Control of Products at OpenAI, a Very Stable Well-Run Company</a> — <strong>daringfireball.net</strong> · 1 天前 · ⭐ 24/30</p>
-
-<blockquote>OpenAI 宣布重组，联合创始人兼总裁 Greg Brockman 正式接管产品部门。Brockman 将在负责 AI 基础设施的基础上，全面领导公司的产品战略，旨在统一 OpenAI 的产品线。此前该职位由 Fidji Simo 临时担任，此次变动反映了公司在追求通用人工智能（AGI）过程中对产品与技术整合的迫切需求。这一人事调整被视为 OpenAI 在经历管理层动荡后，试图通过核心元老回归来稳固产品方向。公司正致力于将研究成果更快速地转化为商业化产品。</blockquote>
-
-<p>🏷️ OpenAI, Greg Brockman, product strategy</p>
-
-<hr>
-
-<h3>6. RLVR 在科学发现领域可能表现极差</h3>
-
-<p><a href="https://www.dwarkesh.com/p/rlvr-might-be-disproportionately">RLVR might be disproportionately bad at science</a> — <strong>dwarkesh.com</strong> · 13 小时前 · ⭐ 24/30</p>
-
-<blockquote>探讨基于可验证奖励的强化学习（RLVR）在科学研究领域可能存在的局限性。RLVR 在代码编写和数学证明等反馈周期短的领域表现优异，但科学理论的验证往往跨越数十年。文章指出，这种学习机制可能导致模型过度优化短期可验证性，而忽视了那些初期预测较差但长远来看更正确的理论。作者认为，科学发现的本质与目前主流的强化学习反馈回路存在天然的错位。这暗示了 AI 在处理深层科学创新时需要全新的训练范式。</blockquote>
-
-<p>🏷️ RLVR, reinforcement learning, scientific discovery</p>
-
-<hr>
-
-<h3>7. Eric Jang：从零构建 AlphaGo</h3>
-
-<p><a href="https://www.dwarkesh.com/p/eric-jang">Eric Jang – Building AlphaGo from scratch</a> — <strong>dwarkesh.com</strong> · 1 天前 · ⭐ 24/30</p>
-
-<blockquote>通过从零构建 AlphaGo 的视角，重新审视智能的三大核心原语：搜索、经验学习和自我博弈。文章回顾了蒙特卡洛树搜索（MCTS）与神经网络结合的经典架构，认为这是目前最纯粹的智能实现案例。Eric Jang 详细解析了 AlphaGo 如何通过海量对局自我进化，并讨论了这些原始技术在当今大模型时代的延续与演变。作者强调，即便在 LLM 盛行的今天，AlphaGo 的底层逻辑依然是理解复杂决策系统的基石。这种基于搜索的强化学习思路正重新成为提升 LLM 推理能力的关键。</blockquote>
-
-<p>🏷️ AlphaGo, reinforcement learning, search</p>
+<p><strong>open source</strong>(3) · <strong>llm</strong>(2) · <strong>web development</strong>(2) · python(2) · arxiv(1) · ai slop(1) · research(1) · pretraining(1) · parallelism(1) · training(1) · rlvr(1) · reinforcement learning(1) · science(1) · security(1) · ransomware(1) · data breach(1) · css(1) · tailwind(1) · frontend(1) · ai(1)</p>
 
 <hr>
 
 <h2>⚙️ 工程</h2>
 
-<h3>8. CreateFileMapping 始终报告 ERROR_ALREADY_EXISTS 的案例分析</h3>
+<h3>1. 引用 Julia Evans：从 Tailwind 回归原生 CSS 的思考</h3>
 
-<p><a href="https://devblogs.microsoft.com/oldnewthing/20260515-00/?p=112327">The case of the Create­File­Mapping that always reported ERROR_ALREADY_EXISTS</a> — <strong>devblogs.microsoft.com/oldnewthing</strong> · 1 天前 · ⭐ 23/30</p>
+<p><a href="https://simonwillison.net/2026/May/16/julia-evans/#atom-everything">Quoting Julia Evans</a> — <strong>simonwillison.net</strong> · 1 天前 · ⭐ 23/30</p>
 
-<blockquote>深入解析 Windows API 中 CreateFileMapping 函数始终返回 ERROR_ALREADY_EXISTS 错误的底层原因。文章指出，当开发者尝试创建一个已存在的命名内核对象时，系统会返回现有对象的句柄并设置该错误码，这通常源于命名冲突或对共享内存生命周期的误解。通过具体的调试案例，作者演示了如何正确处理这种“非错误型错误”以确保多进程协作的稳定性。这是典型的 Windows 系统编程陷阱，涉及内核对象命名空间的细微差别。理解这一机制对于编写健壮的底层并发程序至关重要。</blockquote>
+<blockquote>Julia Evans 分享了她从依赖 Tailwind CSS 框架回归到深入学习原生 CSS 的心路历程。她指出，过去十年中 CSS 发生了巨大变化，Flexbox 和 Grid 等现代特性已经解决了“居中难”等历史痛点。通过放弃抽象框架并认真对待 CSS 技术，她发现能够更优雅地构建页面结构并减少挫败感。文章强调了掌握底层技术标准的重要性，而非仅仅依赖工具层。这种转变让她重新获得了对前端开发的掌控感和尊重。</blockquote>
 
-<p>🏷️ Windows API, debugging, systems programming</p>
-
-<hr>
-
-<h3>9. 语言包管理器注册表默认是不稳定的</h3>
-
-<p><a href="https://nesbitt.io/2026/05/15/language-registries-are-unstable-by-default.html">Language Registries Are Unstable by Default</a> — <strong>nesbitt.io</strong> · 1 天前 · ⭐ 22/30</p>
-
-<blockquote>现代编程语言的包管理器注册表（如 npm、PyPI、Cargo）在设计哲学上倾向于快速迭代，导致其默认状态具有高度的不稳定性。开发者在依赖这些注册表时，本质上是将整个开发环境置于类似于 Debian 'unstable' 分支的风险之中。文章探讨了这种“默认不稳定”现状如何破坏软件的长期维护性与构建的可重复性。虽然这种机制加速了新特性的分发，但也迫使开发者必须投入大量精力去应对频繁的依赖冲突和版本漂移问题。</blockquote>
-
-<p>🏷️ package manager, dependency, stability</p>
+<p>🏷️ CSS, Tailwind, frontend, web development</p>
 
 <hr>
 
-<h3>10. 引用 Julia Evans：从 Tailwind 回归原生 CSS 的反思</h3>
+<h3>2. GDS 评英国国民医疗服务体系（NHS）退出开源的决策</h3>
 
-<p><a href="https://simonwillison.net/2026/May/16/julia-evans/#atom-everything">Quoting Julia Evans</a> — <strong>simonwillison.net</strong> · 15 小时前 · ⭐ 21/30</p>
+<p><a href="https://simonwillison.net/2026/May/17/gds-weighs-in/#atom-everything">GDS weighs in on the NHS's decision to retreat from Open Source</a> — <strong>simonwillison.net</strong> · 18 小时前 · ⭐ 21/30</p>
 
-<blockquote>知名技术博主 Julia Evans 分享了她从依赖 Tailwind CSS 转向深入学习并尊重原生 CSS 的心路历程。她指出，过去十年中 CSS 已经发生了巨大演进，许多曾经被诟病的难题（如垂直居中）早已通过 Flexbox 和 Grid 等现代特性得到了优雅解决。通过将 CSS 视为一门严肃的技术而非“难以捉摸的麻烦”，开发者可以构建更具结构化且易于维护的代码库。这种转变不仅减少了对外部框架的依赖，也显著提升了对 Web 基础技术的掌握深度。</blockquote>
+<blockquote>英国政府数字服务局（GDS）对 NHS 因安全漏洞报告而关闭开源代码库的行为表示关切。NHS 的这一决策被批评为“通过隐晦实现安全”的倒退，违背了政府“默认开源”的原则。Terence Eden 指出，关闭代码库不仅无法消除漏洞，反而阻碍了社区贡献和透明度。GDS 介入此事暗示了政府内部对于如何平衡安全风险与开源策略存在严重分歧。此事件引发了关于公共部门软件开发透明度的广泛讨论。</blockquote>
 
-<p>🏷️ CSS, Tailwind, Frontend, Web Development</p>
+<p>🏷️ open source, NHS, GDS, government tech</p>
 
 <hr>
 
-<h3>11. 还原 xorshift128 伪随机数生成器的内部状态</h3>
+<h3>3. GDS 介入 NHS 退出开源事件：一场“没有饼干的会议”</h3>
 
-<p><a href="https://www.johndcook.com/blog/2026/05/15/xorshift128-state/">Recovering the state of xorshift128</a> — <strong>johndcook.com</strong> · 1 天前 · ⭐ 21/30</p>
+<p><a href="https://shkspr.mobi/blog/2026/05/gds-weighs-in-on-the-nhss-decision-to-retreat-from-open-source/">GDS weighs in on the NHS's decision to retreat from Open Source</a> — <strong>shkspr.mobi</strong> · 22 小时前 · ⭐ 21/30</p>
 
-<blockquote>本文深入探讨了如何通过观察输出序列来逆向推导 xorshift128 伪随机数生成器（RNG）的 128 位内部状态。作者继分析 Mersenne Twister 和 lehmer64 之后，展示了针对 xorshift 算法的数学攻击方法。通过建立线性方程组并利用位运算的特性，可以从极少量的连续随机数输出中完全恢复种子状态。这一研究再次强调了在安全敏感场景下，非加密级随机数生成器所面临的可预测性风险。</blockquote>
+<blockquote>本文详细描述了英国 GDS 与 NHS 之间就开源政策发生的公开冲突。NHS 在收到漏洞报告后选择关闭其 GitHub 仓库，这一举动被 GDS 视为对现代开发实践的背叛。文中使用了“没有饼干的会议”这一英国公务员术语，暗示双方讨论气氛极其冷淡且严肃。GDS 强调，公开代码是发现并修复漏洞的最佳途径，而非掩盖它们。这场争论标志着英国政府内部在数字化转型路径上的核心矛盾公开化。</blockquote>
 
-<p>🏷️ cryptography, RNG, reverse engineering</p>
+<p>🏷️ Open Source, Government IT, Policy</p>
+
+<hr>
+
+<h3>4. FediMeteo、HAProxy 与节省 snac 线程的艺术</h3>
+
+<p><a href="https://it-notes.dragas.net/2026/05/18/fedimeteo-haproxy-and-the-art-of-not-wasting-snac-threads/">FediMeteo, HAProxy, and the art of not wasting snac threads</a> — <strong>it-notes.dragas.net</strong> · 36 分钟前 · ⭐ 21/30</p>
+
+<blockquote>作者分享了在极低配置的 FreeBSD VPS 上运行全球天气服务 FediMeteo 的优化经验。该服务基于 snac（一种轻量级 ActivityPub 服务器），但在高并发下容易耗尽线程资源。通过引入 HAProxy 作为前置代理，作者实现了对请求的精细化调度和线程复用。这种架构调整显著降低了 CPU 和内存占用，使微型服务器也能稳定处理数千名用户的请求。文章提供了具体的配置思路，展示了如何通过精巧的运维手段压榨硬件性能。</blockquote>
+
+<p>🏷️ HAProxy, FreeBSD, Fediverse, Performance</p>
+
+<hr>
+
+<h3>5. SQLAlchemy 2 实战 - 第 8 章：SQLAlchemy 与 Web 开发</h3>
+
+<p><a href="https://blog.miguelgrinberg.com/post/sqlalchemy-2-in-practice---chapter-8-sqlalchemy-and-the-web">SQLAlchemy 2 In Practice - Chapter 8: SQLAlchemy and the Web</a> — <strong>miguelgrinberg.com</strong> · 1 天前 · ⭐ 21/30</p>
+
+<blockquote>在 Web 应用程序中集成 SQLAlchemy 2 需要妥善处理数据库会话（Session）的生命周期，以确保连接池的高效利用和事务一致性。在 Flask 等同步框架中，推荐使用 scoped_session 实现线程安全的会话管理；而在 FastAPI 等异步框架中，则需利用 AsyncSession 配合依赖注入机制。文章详细演示了如何通过中间件或装饰器在请求开始时创建会话并在响应结束时自动关闭，避免连接泄露。针对高并发场景，作者还探讨了连接池配置优化及异常回滚的最佳实践。</blockquote>
+
+<p>🏷️ Python, SQLAlchemy, ORM, Web Development</p>
+
+<hr>
+
+<h2>🤖 AI / ML</h2>
+
+<h3>6. ArXiv 将对提交 AI 垃圾论文的研究员处以一年禁令</h3>
+
+<p><a href="https://www.404media.co/new-arxiv-rules-ai-generated-papers-ban/">ArXiv to Ban Researchers for a Year if They Submit AI Slop</a> — <strong>daringfireball.net</strong> · 1 天前 · ⭐ 26/30</p>
+
+<blockquote>ArXiv 计算机科学板块主席 Thomas Dietterich 宣布了针对 AI 生成内容的新规。如果提交的论文包含由生成式 AI 产生的错误引用、剽窃内容、偏见或误导性信息，作者将承担全部责任。一旦发现论文中存在不可辩驳的“AI 垃圾（AI Slop）”证据，相关研究人员将被禁止在 ArXiv 提交文章一年。此举旨在维护学术诚信，防止低质量、未经审核的 AI 内容充斥预印本平台。ArXiv 强调 AI 只是工具，不能作为产生学术错误的借口。</blockquote>
+
+<p>🏷️ ArXiv, AI slop, research, LLM</p>
+
+<hr>
+
+<h3>7. 关于预训练并行化与训练失败案例的笔记</h3>
+
+<p><a href="https://www.dwarkesh.com/p/notes-on-pretraining-parallelisms">Notes on pretraining parallelisms and failed training runs.</a> — <strong>dwarkesh.com</strong> · 1 天前 · ⭐ 26/30</p>
+
+<blockquote>本文深入探讨了大语言模型（LLM）预训练中的多种并行策略，包括数据并行、张量并行和流水线并行。作者通过调研揭示了大规模训练任务失败的常见原因，如硬件故障、损失函数激增（Loss Spikes）以及互联带宽瓶颈。文中详细记录了在数千个 GPU 集群上维持训练稳定性的工程细节。这些笔记强调了在追求模型规模的同时，底层基础设施的鲁棒性才是决定训练成败的关键。对于从事大规模分布式训练的工程师具有极高的参考价值。</blockquote>
+
+<p>🏷️ Pretraining, Parallelism, LLM, Training</p>
+
+<hr>
+
+<h3>8. RLVR 在科学研究领域可能表现极差</h3>
+
+<p><a href="https://www.dwarkesh.com/p/rlvr-might-be-disproportionately">RLVR might be disproportionately bad at science</a> — <strong>dwarkesh.com</strong> · 1 天前 · ⭐ 24/30</p>
+
+<blockquote>文章分析了基于可验证奖励的强化学习（RLVR）在科学发现中的局限性。RLVR 在数学证明或代码生成等具有即时、客观验证反馈的领域表现优异。然而，科学理论的验证周期往往长达数十年甚至数世纪，且当前的“最佳理论”在短期预测上可能反而不如旧理论。这种反馈延迟和验证的复杂性使得 RLVR 难以捕捉科学探索中的深层逻辑。作者认为，过度依赖短期可验证性可能会阻碍真正的科学突破。</blockquote>
+
+<p>🏷️ RLVR, Reinforcement Learning, Science</p>
+
+<hr>
+
+<h3>9. 混淆智能与权力的误区</h3>
+
+<p><a href="https://www.dwarkesh.com/p/the-mistake-of-conflating-intelligence">The mistake of conflating intelligence and power</a> — <strong>dwarkesh.com</strong> · 1 天前 · ⭐ 20/30</p>
+
+<blockquote>将“智能”简单定义为“在广泛领域实现目标的能力”会导致逻辑偏差，因为这模糊了认知能力与社会权力之间的界限。如果仅以目标达成度衡量智能，斯大林可能会被视为史上最聪明的人，但这忽略了社会资源、政治手段和暴力工具在权力运作中的核心作用。真正的智能应侧重于认知、推理和解决问题的复杂性，而非单纯的执行结果或影响力。作者指出，高智能并不等同于必然获得高权力，厘清两者边界有助于更理性地评估 AI 的潜在风险。</blockquote>
+
+<p>🏷️ Intelligence, Power, Philosophy</p>
 
 <hr>
 
 <h2>💡 观点 / 杂谈</h2>
 
-<h3>12. 如果我们正处于 AI 泡沫中会怎样？（第一部分）</h3>
+<h3>10. AI 是技术，而非产品</h3>
 
-<p><a href="https://www.wheresyoured.at/premium-what-if-were-in-an-ai-bubble-part-1/">Premium: What If...We're In An AI Bubble? (Part 1)</a> — <strong>wheresyoured.at</strong> · 1 天前 · ⭐ 24/30</p>
+<p><a href="https://daringfireball.net/2026/05/ai_is_technology_not_a_product">★ AI Is Technology, Not a Product</a> — <strong>daringfireball.net</strong> · 1 天前 · ⭐ 23/30</p>
 
-<blockquote>深度质疑当前 AI 热潮是否存在泡沫，并反驳了关于 AGI 将导致“永久底层阶级”的激进预测。文章批评了将当前模型能力进行盲目线性外推的逻辑谬误，指出这种预测忽略了技术落地的实际阻力。作者分析了 AI 行业在软件开发和就业市场上的真实影响，认为目前的估值与实际产出之间存在巨大鸿沟。第一部分重点讨论了市场对 AI 替代人类能力的过度乐观情绪及其潜在风险。作者呼吁回归商业本质，审视 AI 技术的实际投资回报率。</blockquote>
+<blockquote>John Gruber 提出 AI 不应被视为独立的产品或功能，而是一种底层技术。他类比了电力和互联网，认为 AI 最终将无感地融入到所有软件和服务中。目前市场上将其作为噱头推销的做法是阶段性的误区，真正的价值在于 AI 如何增强现有工作流。文章批评了那些为了 AI 而 AI 的产品设计，主张开发者应关注解决具体问题。结论是，当 AI 变得不再是新闻时，它才真正发挥了作为技术的潜力。</blockquote>
 
-<p>🏷️ AI bubble, economics, hype</p>
-
-<hr>
-
-<h3>13. 混淆“智能”与“权力”的错误</h3>
-
-<p><a href="https://www.dwarkesh.com/p/the-mistake-of-conflating-intelligence">The mistake of conflating intelligence and power</a> — <strong>dwarkesh.com</strong> · 13 小时前 · ⭐ 23/30</p>
-
-<blockquote>探讨将“智能”与“权力”混为一谈的认知误区。文章挑战了将智能定义为“在多领域实现目标的能力”的流行观点，指出若以此为标准，历史上的独裁者可能被视为最聪明的人。作者主张将认知层面的解决问题能力与社会/物理层面的支配权力区分开来，认为这种混淆误导了我们对 AGI 风险的评估。通过哲学思辨，文章呼吁重新定义智能，以更准确地预测 AI 对人类社会的潜在影响。这种区分有助于我们更理性地讨论 AI 的安全边界与治理。 </blockquote>
-
-<p>🏷️ intelligence, AI alignment, philosophy</p>
+<p>🏷️ AI, product strategy, technology</p>
 
 <hr>
 
-<h3>14. Reddit 开始阻止部分移动端用户访问其网页版</h3>
+<h3>11. 间隔重复法的适用性探讨</h3>
 
-<p><a href="https://arstechnica.com/information-technology/2026/05/why-reddit-blocked-my-daily-visit-to-its-mobile-website/">Reddit Is Blocking Some Users From Accessing Its Website From Mobile Devices</a> — <strong>daringfireball.net</strong> · 11 小时前 · ⭐ 21/30</p>
+<p><a href="https://borretti.me/article/the-applicability-of-spaced-repetition">The Applicability of Spaced Repetition</a> — <strong>borretti.me</strong> · 1 天前 · ⭐ 18/30</p>
 
-<blockquote>Reddit 正在采取激进措施强制移动端用户下载其官方 App，通过在移动网页版上设置无法跳过、无法关闭的弹窗遮罩来阻断正常访问。这种“围墙花园”策略剥夺了用户在浏览器中自由阅读内容的权利，且没有提供任何绕过选项或替代方案。Ars Technica 的作者指出，这种做法严重破坏了 Web 的开放性体验，旨在将流量强行导向受控的 App 环境以利于商业变现。这一举动引发了用户对于平台中心化控制和移动端网页生态持续恶化的广泛担忧。</blockquote>
+<blockquote>间隔重复（Spaced Repetition）在记忆事实性知识方面效果显著，但在处理复杂的概念性知识时面临挑战。文章探讨了如何将这种记忆技术应用于需要深度理解的领域，强调了将复杂概念拆解为原子化事实的重要性。作者指出，单纯的记忆并不能替代理解，但通过合理的卡片设计，可以利用间隔重复来巩固思维模型和逻辑框架。有效的学习策略应当结合主动召回与知识关联，使间隔重复成为构建长期知识体系的辅助工具而非唯一手段。</blockquote>
 
-<p>🏷️ Reddit, Mobile Web, User Experience, Dark Patterns</p>
+<p>🏷️ Spaced Repetition, Learning, Knowledge Management</p>
+
+<hr>
+
+<h2>📝 其他</h2>
+
+<h3>12. Reddit 阻止部分移动端用户访问其网页版</h3>
+
+<p><a href="https://arstechnica.com/information-technology/2026/05/why-reddit-blocked-my-daily-visit-to-its-mobile-website/">Reddit Is Blocking Some Users From Accessing Its Website From Mobile Devices</a> — <strong>daringfireball.net</strong> · 1 天前 · ⭐ 21/30</p>
+
+<blockquote>Reddit 近期开始强制部分移动端网页用户使用其原生 App，通过不可跳过的全屏遮罩层阻断访问。用户在移动浏览器访问时会收到“获取 App 以继续使用”的提示，且没有任何关闭或绕过选项。这种激进的引流策略引起了广泛不满，被认为是对开放 Web 生态的破坏。Ars Technica 的报道指出，这是平台为了提高用户留存和广告收入而采取的“围墙花园”策略。此举反映了大型社交平台在用户体验与商业利益之间的极端取舍。</blockquote>
+
+<p>🏷️ Reddit, mobile web, UX, dark patterns</p>
+
+<hr>
+
+<h3>13. 圣克拉拉县起诉 Meta：指控其纵容诈骗广告牟利</h3>
+
+<p><a href="https://sanjosespotlight.com/santa-clara-county-sues-meta-over-alleged-scam-ads/">Santa Clara County Sues Meta Over Alleged Scam Ads</a> — <strong>daringfireball.net</strong> · 1 天前 · ⭐ 19/30</p>
+
+<blockquote>圣克拉拉县对 Meta 提起诉讼，指控其为了每年高达 70 亿美元的诈骗广告收入，蓄意削弱内部反欺诈团队并协助虚假公司绕过过滤机制。起诉书指出，Meta 不仅未能履行打击误导性广告的责任，反而通过技术手段帮助诈骗者规避监管，导致大量用户遭受经济损失。该诉讼要求法院禁止 Meta 继续违反虚假广告法，并支付律师费及相关赔偿。这一案件揭示了大型社交平台在广告营收压力下，可能存在的系统性监管缺失和道德风险。</blockquote>
+
+<p>🏷️ Meta, lawsuit, advertising, fraud</p>
+
+<hr>
+
+<h2>🔒 安全</h2>
+
+<h3>14. Troy Hunt 每周更新 504 期</h3>
+
+<p><a href="https://www.troyhunt.com/weekly-update-504/">Weekly Update 504</a> — <strong>troyhunt.com</strong> · 6 小时前 · ⭐ 24/30</p>
+
+<blockquote>本期更新重点讨论了企业在面对黑客勒索时是否应该支付赎金以防止数据泄露。知名安全专家 Troy Hunt 引用了 Grafana 最近采取的“拒绝支付”策略作为案例。文章分析了支付赎金并不能保证数据不被二次泄露的风险，以及这种行为对黑客产业的助长作用。此外，文中还涵盖了近期多起重大数据泄露事件的后续影响和行业应对措施。Hunt 呼吁企业应转向透明化管理，而非通过私下交易掩盖安全漏洞。</blockquote>
+
+<p>🏷️ Security, Ransomware, Data Breach</p>
 
 <hr>
 
 <h2>🛠 工具 / 开源</h2>
 
-<h3>15. 使用 ZIP Shrinker 缩小 ZIP 文件体积</h3>
+<h3>15. 从 Warelay 到 OpenClaw：追踪项目更名历程</h3>
 
-<p><a href="https://evanhahn.com/make-zip-files-smaller-with-zip-shrinker/">Make ZIP files smaller with ZIP Shrinker</a> — <strong>evanhahn.com</strong> · 1 天前 · ⭐ 22/30</p>
+<p><a href="https://simonwillison.net/2026/May/16/openclaw-names/#atom-everything">Warelay -&gt; OpenClaw</a> — <strong>simonwillison.net</strong> · 1 天前 · ⭐ 18/30</p>
 
-<blockquote>ZIP Shrinker 是一款基于浏览器的轻量级工具，专门用于优化 ZIP 及其衍生格式（如 APK、EPUB、JAR）的存储效率。该工具通过三个核心步骤实现瘦身：使用更高强度的压缩算法重新压缩归档内的每个文件、彻底移除冗余的元数据、以及删除目录条目。由于它完全在浏览器本地运行，用户无需上传文件即可完成操作，兼顾了隐私与处理速度。这种方法能在不改变文件内容的前提下，通过消除 ZIP 结构的冗余开销实现极致压缩。</blockquote>
+<blockquote>开发者 Simon Willison 在准备 PyCon US 演讲时，回顾了其开源项目 OpenClaw（原名 Warelay）自去年 11 月首次提交以来的更名历程。通过使用自研的 first_line_history.py 脚本，他精确追踪了项目代码库中名称演变的每一个节点。OpenClaw 作为一个旨在简化 LLM 交互的工具，其命名变化反映了项目定位的不断迭代与清晰化。文章展示了如何利用 Python 自动化工具挖掘 Git 历史中的元数据，为项目演进提供数据支撑。</blockquote>
 
-<p>🏷️ compression, ZIP, web tool</p>
+<p>🏷️ Python, PyCon, OpenClaw, open source</p>
 
 <hr>
 
-<p><em>生成于 2026-05-17 08:30 | 扫描 82 源 → 获取 2415 篇 → 精选 15 篇</em></p>
+<p><em>生成于 2026-05-18 10:20 | 扫描 79 源 → 获取 2179 篇 → 精选 15 篇</em></p>
 <p><em>基于 <a href="https://refactoringenglish.com/tools/hn-popularity/">Hacker News Popularity Contest 2025</a> RSS 源列表，由 <a href="https://x.com/karpathy">Andrej Karpathy</a> 推荐</em></p>
   </div>
   <div class="footer">
-    <p>Generated on 2026-05-17 · Based on <a href="https://refactoringenglish.com/tools/hn-popularity/">HN Popularity Contest 2025</a></p>
+    <p>Generated on 2026-05-18 · Based on <a href="https://refactoringenglish.com/tools/hn-popularity/">HN Popularity Contest 2025</a></p>
   </div>
 </body>
 </html>
