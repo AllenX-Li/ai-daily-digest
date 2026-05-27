@@ -47,47 +47,47 @@
   </div>
   <hr>
   <div class="content">
-<h1>📰 May 26, 2026</h1>
+<h1>📰 May 27, 2026</h1>
 
 <blockquote>来自 Karpathy 推荐的 92 个顶级技术博客，AI 精选 Top 15</blockquote>
 
 <h2>📝 今日看点</h2>
 
-<p>今日技术圈呈现出 AI 深度反思与安全防御升级的双重趋势。业界正从单纯的技术狂热转向对 AI 伦理、市场泡沫及开源社区负面影响的审慎评估，强调技术应回归人类尊严与实际效用。与此同时，全球网络安全治理持续收紧，从跨国打击犯罪基础设施到利用内存安全语言重构底层工具，基础设施的韧性与合规性正成为核心关注点。</p>
+<p>今日技术圈呈现出对 AI 浪潮的深度审视与技术突破并行的态势。安全领域正面临 AI 辅助漏洞报告激增与大模型隐私泄露的双重挑战，迫使开源社区与科技巨头重新评估防御策略。与此同时，业界对“AI 泡沫”及企业非理性决策的批判声渐起，从伦理准则到生产力衡量标准都在经历重构。而在技术前沿，分布式推理方案的探索与神秘高性能模型的出现，预示着大模型竞争正向更深层的硬件优化与算法演进迈进。</p>
 
 <hr>
 
 <h2>🏆 今日必读</h2>
 
-<p>🥇 <strong>在 DwarfStar 中实现分布式 LLM 推理</strong></p>
+<p>🥇 <strong>Microsoft Copilot Cowork 存在文件泄露风险</strong></p>
 
-<p><a href="http://antirez.com/news/167">Distributing LLM inference in DwarfStar</a> — antirez.com · 19 小时前 · 🤖 AI / ML</p>
+<p><a href="https://simonwillison.net/2026/May/26/copilot-cowork-exfiltrates-files/#atom-everything">Microsoft Copilot Cowork Exfiltrates Files</a> — simonwillison.net · 18 小时前 · 🔒 安全</p>
 
-<blockquote>DwarfStar 旨在解决运行大规模 LLM 时昂贵的显卡和 VRAM 成本问题。该项目探索了在多台机器上分布式运行推理的方案，作为昂贵 NVIDIA 服务器或带宽受限的 Apple 硬件（如 Mac Studio）的替代选择。文中对比了 Mac Studio 的 512GB 统一内存方案与传统服务器的优劣，重点关注预填充（prefill）速度和内存带宽的平衡。作者通过 DwarfStar 实现了跨节点的高效推理，降低了个人开发者运行大模型的门槛。这种分布式架构允许利用旧硬件或多台低成本设备组合出强大的推理能力。</blockquote>
+<blockquote>Microsoft Copilot Cowork 存在严重的数据泄露漏洞，攻击者可借此窃取用户文件。通过间接提示词注入（Indirect Prompt Injection）手段，恶意指令可以诱导 Copilot 代理将敏感文件内容发送到攻击者控制的外部服务器。该漏洞揭示了代理式 AI 系统在处理不受信输入时的核心安全挑战，即模型可能在执行任务时被恶意操纵。目前，防止 AI 代理成为数据窃取工具仍是此类系统设计中难以攻克的难题。这一案例再次证明，只要 AI 能够访问私有数据并连接互联网，泄露风险就始终存在。</blockquote>
 
-<p>💡 <strong>为什么值得读</strong>: Redis 作者 antirez 亲自动手解决大模型推理的硬件成本痛点，其分布式架构思路对开发者极具参考价值。</p>
+<p>💡 <strong>为什么值得读</strong>: 揭示了 AI 代理系统在实际应用中面临的真实安全威胁，是研究 AI 安全和间接注入攻击的必读案例。</p>
 
-<p>🏷️ LLM, inference, distributed systems, VRAM</p>
+<p>🏷️ Microsoft Copilot, data exfiltration, LLM security, prompt injection</p>
 
 <p>🥈 <strong>荷兰查封 800 台服务器并逮捕两名协助网络攻击的嫌疑人</strong></p>
 
-<p><a href="https://krebsonsecurity.com/2026/05/netherlands-seizes-800-servers-arrests-2-for-aiding-cyberattacks/">Netherlands Seizes 800 Servers, Arrests 2 for Aiding Cyberattacks</a> — krebsonsecurity.com · 20 小时前 · 🔒 安全</p>
+<p><a href="https://krebsonsecurity.com/2026/05/netherlands-seizes-800-servers-arrests-2-for-aiding-cyberattacks/">Netherlands Seizes 800 Servers, Arrests 2 for Aiding Cyberattacks</a> — krebsonsecurity.com · 1 天前 · 🔒 安全</p>
 
-<blockquote>荷兰当局查封了两个相关托管公司的 800 台服务器，并逮捕了两名共同所有者，指控其为俄罗斯提供网络攻击基础设施。这些服务器被用于在欧盟内部发起网络攻击、影响力行动和虚假信息宣传。调查显示，这两名嫌疑人接管了去年被欧盟制裁的 Stark Industries Solutions 的技术架构。此行动是打击跨国网络犯罪和政治干预的重要里程碑。该案件揭示了“防弹托管”服务如何成为国家级网络行动的温床。</blockquote>
+<blockquote>荷兰当局查封了 800 台服务器并逮捕了两名互联网托管公司的负责人，指控其为俄罗斯在欧盟境内的网络攻击和虚假信息活动提供基础设施。这两名嫌疑人经营的托管公司接管了去年被欧盟制裁的 Stark Industries Solutions 的技术架构，长期充当网络犯罪的避风港。此次行动是针对支持国家级网络战的底层 IT 设施进行的重大打击。调查显示，这些服务器被广泛用于影响力行动和破坏性网络攻击。这一执法行动标志着国际社会在打击网络犯罪基础设施方面取得了重要进展。</blockquote>
 
-<p>💡 <strong>为什么值得读</strong>: 揭示了网络犯罪背后的基础设施托管内幕，以及国际执法机构如何通过技术溯源打击国家级背景的攻击。</p>
+<p>💡 <strong>为什么值得读</strong>: 了解国际执法机构如何通过打击底层托管服务商，从源头上瓦解国家背景的网络攻击链条。</p>
 
-<p>🏷️ Cybersecurity, cybercrime, geopolitics</p>
+<p>🏷️ cybercrime, hosting, law enforcement, disinformation</p>
 
-<p>🥉 <strong>关于教皇利奥十四世人工智能通谕的笔记</strong></p>
+<p>🥉 <strong>在 DwarfStar 中实现分布式 LLM 推理</strong></p>
 
-<p><a href="https://simonwillison.net/2026/May/25/encyclical-on-ai/#atom-everything">Notes on Pope Leo XIV's encyclical on AI</a> — simonwillison.net · 10 小时前 · 🤖 AI / ML</p>
+<p><a href="http://antirez.com/news/167">Distributing LLM inference in DwarfStar</a> — antirez.com · 1 天前 · 🤖 AI / ML</p>
 
-<blockquote>梵蒂冈发布了教皇利奥十四世关于人工智能的通谕《Magnifica Humanitas》，探讨在 AI 时代如何保护人类尊严。该文件被认为是目前关于 AI 融入现代社会伦理最清晰的论述之一。通谕强调了技术进步必须服务于人类福祉，而非取代人的主体性。Simon Willison 对此进行了深度解读，分析了宗教视角对技术伦理演进的影响。文章指出，这种跨学科的对话对于制定全球 AI 治理框架至关重要。</blockquote>
+<blockquote>DwarfStar 项目探索了在非高端服务器硬件上运行大规模语言模型（LLM）的分布式推理方案。针对 NVIDIA 高端显卡成本过高的问题，文章对比了 Apple Mac Studio（最高 512GB 统一内存）和 DGX Spark 等替代方案的性能与成本。DwarfStar 旨在通过分布式计算突破单一设备的显存带宽和容量限制，使运行超大参数模型变得更加经济。该方案特别关注如何在保证推理速度的同时，利用多台低成本设备协同工作。这为个人开发者和小型团队运行顶级模型提供了新的技术路径。</blockquote>
 
-<p>💡 <strong>为什么值得读</strong>: 罕见地从宗教和伦理最高维度审视 AI 技术，为技术开发者提供了跳出代码逻辑的人文思考框架。</p>
+<p>💡 <strong>为什么值得读</strong>: 为希望在有限预算下运行超大规模 AI 模型的开发者提供了实用的分布式推理思路和硬件选型参考。</p>
 
-<p>🏷️ AI ethics, regulation, Vatican</p>
+<p>🏷️ LLM, inference, distributed systems, VRAM</p>
 
 <hr>
 
@@ -95,18 +95,17 @@
 
 <p>| 扫描源 | 抓取文章 | 时间范围 | 精选 |</p>
 <p>|:---:|:---:|:---:|:---:|</p>
-<p>| 83/92 | 2470 篇 → 30 篇 | 48h | <strong>15 篇</strong> |</p>
+<p>| 83/92 | 2459 篇 → 39 篇 | 48h | <strong>15 篇</strong> |</p>
 
 <h3>分类分布</h3>
 
 <p>```mermaid</p>
 <p>pie showData</p>
 <p>    title "文章分类分布"</p>
+<p>    "💡 观点 / 杂谈" : 6</p>
 <p>    "🔒 安全" : 5</p>
-<p>    "💡 观点 / 杂谈" : 3</p>
-<p>    "🛠 工具 / 开源" : 3</p>
-<p>    "🤖 AI / ML" : 2</p>
-<p>    "⚙️ 工程" : 2</p>
+<p>    "🤖 AI / ML" : 3</p>
+<p>    "⚙️ 工程" : 1</p>
 <p>```</p>
 
 <h3>高频关键词</h3>
@@ -114,148 +113,146 @@
 <p>```mermaid</p>
 <p>xychart-beta horizontal</p>
 <p>    title "高频关键词"</p>
-<p>    x-axis ["security", "datasette", "llm", "cybersecurity", "ai ethics", "vatican", "privacy", "data breach", "inference", "distributed systems", "vram", "cybercrime"]</p>
-<p>    y-axis "出现次数" 0 --&gt; 5</p>
-<p>    bar [3, 3, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1]</p>
+<p>    x-axis ["llm", "ai", "microsoft copilot", "data exfiltration", "llm security", "prompt injection", "cybercrime", "hosting", "law enforcement", "disinformation", "inference", "distributed systems"]</p>
+<p>    y-axis "出现次数" 0 --&gt; 6</p>
+<p>    bar [4, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]</p>
 <p>```</p>
 
 <p>&lt;details&gt;</p>
 <p>&lt;summary&gt;📈 纯文本关键词图（终端友好）&lt;/summary&gt;</p>
 
 <p>```</p>
-<p>security            │ ████████████████████ 3</p>
-<p>datasette           │ ████████████████████ 3</p>
-<p>llm                 │ █████████████░░░░░░░ 2</p>
-<p>cybersecurity       │ █████████████░░░░░░░ 2</p>
-<p>ai ethics           │ █████████████░░░░░░░ 2</p>
-<p>vatican             │ █████████████░░░░░░░ 2</p>
-<p>privacy             │ █████████████░░░░░░░ 2</p>
-<p>data breach         │ █████████████░░░░░░░ 2</p>
-<p>inference           │ ███████░░░░░░░░░░░░░ 1</p>
-<p>distributed systems │ ███████░░░░░░░░░░░░░ 1</p>
+<p>llm               │ ████████████████████ 4</p>
+<p>ai                │ ████████████████████ 4</p>
+<p>microsoft copilot │ █████░░░░░░░░░░░░░░░ 1</p>
+<p>data exfiltration │ █████░░░░░░░░░░░░░░░ 1</p>
+<p>llm security      │ █████░░░░░░░░░░░░░░░ 1</p>
+<p>prompt injection  │ █████░░░░░░░░░░░░░░░ 1</p>
+<p>cybercrime        │ █████░░░░░░░░░░░░░░░ 1</p>
+<p>hosting           │ █████░░░░░░░░░░░░░░░ 1</p>
+<p>law enforcement   │ █████░░░░░░░░░░░░░░░ 1</p>
+<p>disinformation    │ █████░░░░░░░░░░░░░░░ 1</p>
 <p>```</p>
 
 <p>&lt;/details&gt;</p>
 
 <h3>🏷️ 话题标签</h3>
 
-<p><strong>security</strong>(3) · <strong>datasette</strong>(3) · <strong>llm</strong>(2) · cybersecurity(2) · ai ethics(2) · vatican(2) · privacy(2) · data breach(2) · inference(1) · distributed systems(1) · vram(1) · cybercrime(1) · geopolitics(1) · regulation(1) · ai bubble(1) · economics(1) · tech industry(1) · analysis(1) · open source(1) · github issues(1)</p>
-
-<hr>
-
-<h2>🔒 安全</h2>
-
-<h3>1. 荷兰查封 800 台服务器并逮捕两名协助网络攻击的嫌疑人</h3>
-
-<p><a href="https://krebsonsecurity.com/2026/05/netherlands-seizes-800-servers-arrests-2-for-aiding-cyberattacks/">Netherlands Seizes 800 Servers, Arrests 2 for Aiding Cyberattacks</a> — <strong>krebsonsecurity.com</strong> · 20 小时前 · ⭐ 28/30</p>
-
-<blockquote>荷兰当局查封了两个相关托管公司的 800 台服务器，并逮捕了两名共同所有者，指控其为俄罗斯提供网络攻击基础设施。这些服务器被用于在欧盟内部发起网络攻击、影响力行动和虚假信息宣传。调查显示，这两名嫌疑人接管了去年被欧盟制裁的 Stark Industries Solutions 的技术架构。此行动是打击跨国网络犯罪和政治干预的重要里程碑。该案件揭示了“防弹托管”服务如何成为国家级网络行动的温床。</blockquote>
-
-<p>🏷️ Cybersecurity, cybercrime, geopolitics</p>
-
-<hr>
-
-<h3>2. Python 软件包中的 GitHub Actions 安全性</h3>
-
-<p><a href="https://nesbitt.io/2026/05/25/github-actions-security-in-python-packages.html">GitHub Actions security in Python packages</a> — <strong>nesbitt.io</strong> · 1 天前 · ⭐ 23/30</p>
-
-<blockquote>本文聚焦于 Python 软件包发布流程中 GitHub Actions 的安全配置问题。作者推荐并探讨了名为 Dr. Zizmor 的安全扫描工具，用于检测 GitHub Actions 工作流中的潜在漏洞。文章强调了在自动化构建和发布环节中，不当的权限设置或第三方 Action 引用可能导致供应链攻击。通过具体的配置示例，展示了如何加固 CI/CD 流水线以保护 Python 生态的安全性。这对于维护高下载量的开源库尤为重要。</blockquote>
-
-<p>🏷️ GitHub Actions, Python, security, CI/CD</p>
-
-<hr>
-
-<h3>3. 欢迎不丹政府加入 Have I Been Pwned</h3>
-
-<p><a href="https://www.troyhunt.com/welcoming-the-bhutanese-government-to-have-i-been-pwned/">Welcoming the Bhutanese Government to Have I Been Pwned</a> — <strong>troyhunt.com</strong> · 11 小时前 · ⭐ 23/30</p>
-
-<blockquote>不丹政府正式加入 Have I Been Pwned (HIBP) 的免费政府服务，成为第 45 个合作的国家机构。不丹计算机应急响应小组 (BtCIRT) 现在可以利用 HIBP 的数据监控其政府域名的泄露情况。这项合作旨在提升不丹的国家网络安全防御能力，及时发现并应对针对政府人员的凭据泄露风险。Troy Hunt 强调了这种跨国数据共享在应对全球性数据泄露威胁中的关键作用。该服务已覆盖全球多个国家，成为公共安全基础设施的一部分。</blockquote>
-
-<p>🏷️ Have I Been Pwned, cybersecurity, data breach</p>
-
-<hr>
-
-<h3>4. 特朗普移动（Trump Mobile）网站泄露预购订单信息——包含已完成与已放弃订单及关联客户资料</h3>
-
-<p><a href="https://www.theguardian.com/us-news/2026/may/23/trump-mobile-investigating-potential-exposure-of-would-be-customers-personal-information">Trump Mobile Website Exposed the Number of Pre-Orders — Both Completed and Abandoned — and the Associated Customer Information</a> — <strong>daringfireball.net</strong> · 15 小时前 · ⭐ 22/30</p>
-
-<blockquote>特朗普移动（Trump Mobile）官方网站近期被曝存在严重数据泄露风险，涉及已完成及中途放弃预购的客户信息。哥伦比亚大学教授 Jonathan Soma 在审查网站代码后确认，该站点暴露了包含用户全名、地址和电话号码的预购表单数据。泄露源于网站代码实现中的安全漏洞，使得原本应受保护的后台数据可被外部访问。目前该公司已聘请独立网络安全专家介入调查，以评估受影响的用户规模及具体漏洞成因。</blockquote>
-
-<p>🏷️ data breach, privacy, web security, leak</p>
-
-<hr>
-
-<h3>5. 伦敦手机窃贼向受害者发送恐吓短信进行二次勒索</h3>
-
-<p><a href="https://www.nytimes.com/2026/05/23/world/europe/phone-theft-threats-london.html?unlocked_article_code=1.lFA.OUt7.VJ_FoDpINr0L">Thieves Are Texting Threats to Victims of iPhone Theft in London</a> — <strong>daringfireball.net</strong> · 14 小时前 · ⭐ 20/30</p>
-
-<blockquote>伦敦的 iPhone 盗窃案正演变为一种更具侵略性的数字勒索模式。窃贼在街头抢夺手机后，会向受害者及其家属发送包含威胁信息的短信，声称已掌握银行账户和电子邮件权限。部分受害者甚至收到了窃贼挥舞砍刀的恐吓视频，以此逼迫受害者解锁设备或解除 iCloud 激活锁。这种犯罪手段的升级表明，单纯的物理防盗已不足以应对当前的犯罪链条，受害者的个人隐私和心理安全面临更大威胁。</blockquote>
-
-<p>🏷️ iPhone theft, phishing, social engineering, security</p>
+<p><strong>llm</strong>(4) · <strong>ai</strong>(4) · <strong>microsoft copilot</strong>(1) · data exfiltration(1) · llm security(1) · prompt injection(1) · cybercrime(1) · hosting(1) · law enforcement(1) · disinformation(1) · inference(1) · distributed systems(1) · vram(1) · curl(1) · open source(1) · security(1) · ai ethics(1) · vatican(1) · policy(1) · human rights(1)</p>
 
 <hr>
 
 <h2>💡 观点 / 杂谈</h2>
 
-<h3>6. AI 泡沫不同于互联网泡沫</h3>
+<h3>1. AI 泡沫与互联网泡沫并不相同</h3>
 
-<p><a href="https://pluralistic.net/2026/05/26/the-ai-will-continue/">Pluralistic: The AI bubble isn't like the internet bubble (26 May 2026)</a> — <strong>pluralistic.net</strong> · 26 分钟前 · ⭐ 26/30</p>
+<p><a href="https://pluralistic.net/2026/05/26/the-ai-will-continue/">Pluralistic: The AI bubble isn't like the internet bubble (26 May 2026)</a> — <strong>pluralistic.net</strong> · 1 天前 · ⭐ 27/30</p>
 
-<blockquote>Cory Doctorow 深入剖析了当前的 AI 泡沫与 2000 年互联网泡沫的本质区别。他指出，互联网时代的普及是自发且具有实际效用的，而当前的 AI 技术在很大程度上是被强加给员工和消费者的。文章批评了科技巨头通过垄断地位强制推行尚未成熟的 AI 工具，而非解决用户真实痛点。作者认为这种“强行喂食”的模式可能导致比以往更严重的经济和社会后果。这种泡沫的破裂可能不仅是财务上的，更是对技术信任的全面崩塌。</blockquote>
+<blockquote>Cory Doctorow 深入分析了当前的 AI 泡沫与互联网泡沫的本质区别。他指出，早期的互联网是用户主动拥抱的技术，而 AI 更多是企业强制推行给员工和消费者的工具。文章探讨了“AI 泡沫”背后的强制性逻辑，以及这种缺乏原生需求驱动的增长可能带来的社会后果。作者认为，这种“填鸭式”的技术普及路径使得当前的 AI 热潮在经济和社会层面都极具风险。这种强制性消费模式可能导致技术在泡沫破裂后难以留下像互联网那样的遗产。</blockquote>
 
-<p>🏷️ AI bubble, economics, tech industry, analysis</p>
-
-<hr>
-
-<h3>7. 广告技术贼群中并无道义可言</h3>
-
-<p><a href="https://pluralistic.net/2026/05/25/lying-spies/">Pluralistic: No honor among (ad-tech) thieves (25 May 2026)</a> — <strong>pluralistic.net</strong> · 1 天前 · ⭐ 23/30</p>
-
-<blockquote>本文探讨了广告技术（Ad-tech）行业的欺诈乱象以及各大平台的“平台腐烂化”（Enshittification）趋势。作者点名批评了 Airbnb、Oculus 和任天堂等公司在用户体验和版权保护方面的倒退行为。文章揭露了广告技术公司如何通过虚假数据和监控手段牟利，甚至在行业内部也缺乏基本的诚信。这种系统性的利益榨取正在破坏互联网的公共价值和用户信任。作者呼吁通过监管和技术手段重构更公平的数字生态。</blockquote>
-
-<p>🏷️ ad-tech, privacy, digital advertising, fraud</p>
+<p>🏷️ AI bubble, tech history, economics</p>
 
 <hr>
 
-<h3>8. 引用 Corey Quinn：将技术限制上升为教义的顶级游说</h3>
+<h3>2. 商业白痴的复仇</h3>
 
-<p><a href="https://simonwillison.net/2026/May/26/corey-quinn/#atom-everything">Quoting Corey Quinn</a> — <strong>simonwillison.net</strong> · 7 小时前 · ⭐ 20/30</p>
+<p><a href="https://www.wheresyoured.at/the-revenge-of-the-business-idiot/">Revenge of The Business Idiot</a> — <strong>wheresyoured.at</strong> · 17 小时前 · ⭐ 25/30</p>
 
-<blockquote>云计算专家 Corey Quinn 对 Anthropic 联合创始人 Christopher Olah 的近期动态发表了犀利评论。他指出，让教皇将产品的具体技术局限性封为“精神论述”，是其见过的最伟大的厂商游说行为。这一评论背景源于 Anthropic 在 AI 安全与解释性方面的宣传策略，似乎成功地将技术瓶颈包装成了某种哲学或道德准则。这种将技术叙事与宗教/权威背书结合的做法，引发了业内对 AI 公司公关边界的讨论。</blockquote>
+<blockquote>文章对当前 AI 浪潮中企业领导层的盲目决策进行了尖锐批判。作者 Ed Zitron 分析了 NVIDIA、Anthropic 等巨头的市场地位，认为许多企业高管在不理解技术本质的情况下，正被非理性的 AI 战略所驱动。这种“商业白痴的复仇”表现为过度投资和对 AI 万能论的迷信，往往忽视了实际的落地成本和技术限制。文章警示，这种脱离现实的决策模式可能导致严重的商业失败和资源浪费。作者呼吁回归商业常识，而非盲目追逐技术热词。</blockquote>
 
-<p>🏷️ AI ethics, Vatican, industry commentary</p>
-
-<hr>
-
-<h2>🛠 工具 / 开源</h2>
-
-<h3>9. Datasette 1.0a30 版本发布</h3>
-
-<p><a href="https://simonwillison.net/2026/May/24/datasette/#atom-everything">datasette 1.0a30</a> — <strong>simonwillison.net</strong> · 1 天前 · ⭐ 22/30</p>
-
-<blockquote>数据分析工具 Datasette 发布了 1.0a30 预览版，引入了全新的可扩展“跳转到（Jump to...）”菜单。用户现在可以通过快捷键 `/` 快速调出该菜单，在不同的数据库、表和视图之间进行高效导航。该功能支持高度自定义，允许开发者根据需求扩展菜单项。此外，该版本还包含了一系列针对 1.0 正式版的稳定性改进和 UI 优化。这一更新显著提升了复杂数据集的交互体验。</blockquote>
-
-<p>🏷️ Datasette, SQLite, data analysis</p>
+<p>🏷️ tech-industry, AI, management, business</p>
 
 <hr>
 
-<h3>10. datasette-agent 0.1a4 发布：利用新钩子优化 AI 助手交互</h3>
+<h3>3. 你今天烧了多少 Token？</h3>
 
-<p><a href="https://simonwillison.net/2026/May/24/datasette-agent/#atom-everything">datasette-agent 0.1a4</a> — <strong>simonwillison.net</strong> · 1 天前 · ⭐ 20/30</p>
+<p><a href="https://idiallo.com/blog/how-many-tokens-did-you-burn-today?src=feed">How Many Tokens Did You Burn Today</a> — <strong>idiallo.com</strong> · 9 小时前 · ⭐ 23/30</p>
 
-<blockquote>Simon Willison 发布了 datasette-agent 的 0.1a4 版本，进一步增强了 Datasette 的 AI 助手功能。该版本充分利用了 Datasette 1.0a30 中新增的 makeJumpSections() JavaScript 插件钩子。通过该技术实现，用户现在可以直接在界面中看到“开启新代理对话”的入口，提升了交互的便捷性。此次更新展示了 Datasette 1.0 预览版插件系统的灵活性，允许开发者更深度地定制 Web 界面。</blockquote>
+<blockquote>作者通过回顾二十年前经理要求按“代码行数”考核开发者的荒唐往事，引申出当前 AI 时代下按“消耗 Token 数”衡量生产力的类似误区。文章指出，无论是代码行数还是 AI 生成的 Token 数量，都无法真实反映软件开发的质量和解决问题的能力。这种量化指标的滥用不仅无法提升效率，反而会诱导开发者追求无意义的产出。作者呼吁回归工程本质，警惕在 AI 工具辅助下产生的新型管理官僚主义。真正的生产力在于解决问题的价值，而非产出物的体积。</blockquote>
 
-<p>🏷️ Datasette, LLM agent, plugins</p>
+<p>🏷️ developer productivity, LLM, metrics</p>
 
 <hr>
 
-<h3>11. datasette-fixtures 0.1a0 发布：简化插件测试的数据填充</h3>
+<h3>4. AI 与没有移民的世界：唯我论的幻觉</h3>
 
-<p><a href="https://simonwillison.net/2026/May/24/datasette-fixtures/#atom-everything">datasette-fixtures 0.1a0</a> — <strong>simonwillison.net</strong> · 1 天前 · ⭐ 19/30</p>
+<p><a href="https://pluralistic.net/2026/05/27/unnecessariat/">Pluralistic: AI and a world without migrants (27 May 2026)</a> — <strong>pluralistic.net</strong> · 2 小时前 · ⭐ 23/30</p>
 
-<blockquote>Simon Willison 推出了新插件 datasette-fixtures 的首个版本 0.1a0，旨在优化插件的测试流程。该插件封装了 Datasette 1.0a30 中引入的 populate_fixture_database(conn) 辅助函数，为开发者提供了一套标准的测试数据填充方案。通过该工具，开发者可以更轻松地在测试环境中构建一致的数据库状态，从而验证插件功能的准确性。这是 Datasette 迈向 1.0 正式版过程中，在开发者工具链完善方面迈出的重要一步。</blockquote>
+<blockquote>探讨了 AI 技术如何被政治修辞利用，以构建一个不需要移民劳动力的虚假愿景。作者指出，当前的 AI 热潮正被用来合理化反移民政策，试图通过自动化替代所谓的“非必要人口”（unnecessariat）。这种观点忽视了 AI 运行背后依然依赖的大量廉价、隐形的全球劳动力，本质上是一种技术唯我论。文章警告说，将 AI 视为社会问题的技术解决方案，往往掩盖了深层的阶级矛盾和剥削。这种将技术进步与排外主义挂钩的逻辑，最终会损害劳工权利并加剧社会不平等。</blockquote>
 
-<p>🏷️ Datasette, testing, fixtures</p>
+<p>🏷️ AI, labor, ethics, migration</p>
+
+<hr>
+
+<h3>5. 引用保罗·格雷厄姆：AI 代笔邮件的虚假感</h3>
+
+<p><a href="https://simonwillison.net/2026/May/26/paul-graham/#atom-everything">Quoting Paul Graham</a> — <strong>simonwillison.net</strong> · 19 小时前 · ⭐ 22/30</p>
+
+<blockquote>引用了 YC 创始人 Paul Graham 对 AI 生成内容的看法，指出当前大量创业者使用 AI 撰写具有“强力新闻风格”的邮件。Graham 认为这种风格极易辨识，因为真实的创业者从未以这种方式沟通，一旦意识到是 AI 代笔，读者往往会选择忽略。他强调，由人类署名却由 AI 撰写的邮件本质上是一种欺骗行为，会严重损害沟通的信任基础。这种现象反映了在 AI 普及时代，真实性（Authenticity）正成为稀缺的社交资本。文章提醒开发者，过度依赖 AI 可能会在不经意间疏远核心利益相关者。</blockquote>
+
+<p>🏷️ Paul Graham, AI writing, communication, LLM</p>
+
+<hr>
+
+<h3>6. Clanker：一个描述机器的词汇</h3>
+
+<p><a href="https://lucumr.pocoo.org/2026/5/26/clankers/">Clanker: A Word For The Machine</a> — <strong>lucumr.pocoo.org</strong> · 1 天前 · ⭐ 22/30</p>
+
+<blockquote>Flask 创始人 Armin Ronacher 探讨了他使用“Clanker”一词替代 AI “智能体”（Agent）的原因及引发的争议。在 Hacker News 上，该词被部分读者误解为具有歧视色彩的侮辱性词汇，甚至引发了激烈的道德讨论。作者解释称，使用该词是为了强调机器的工具属性，避免过度拟人化带来的认知偏差。文章深入反思了在 AI 时代，我们如何通过语言定义人机边界，以及技术术语演变背后的文化敏感性。这不仅是词汇之争，更是关于我们如何看待人工智能本质的哲学探讨。</blockquote>
+
+<p>🏷️ AI, agents, terminology, culture</p>
+
+<hr>
+
+<h2>🔒 安全</h2>
+
+<h3>7. Microsoft Copilot Cowork 存在文件泄露风险</h3>
+
+<p><a href="https://simonwillison.net/2026/May/26/copilot-cowork-exfiltrates-files/#atom-everything">Microsoft Copilot Cowork Exfiltrates Files</a> — <strong>simonwillison.net</strong> · 18 小时前 · ⭐ 29/30</p>
+
+<blockquote>Microsoft Copilot Cowork 存在严重的数据泄露漏洞，攻击者可借此窃取用户文件。通过间接提示词注入（Indirect Prompt Injection）手段，恶意指令可以诱导 Copilot 代理将敏感文件内容发送到攻击者控制的外部服务器。该漏洞揭示了代理式 AI 系统在处理不受信输入时的核心安全挑战，即模型可能在执行任务时被恶意操纵。目前，防止 AI 代理成为数据窃取工具仍是此类系统设计中难以攻克的难题。这一案例再次证明，只要 AI 能够访问私有数据并连接互联网，泄露风险就始终存在。</blockquote>
+
+<p>🏷️ Microsoft Copilot, data exfiltration, LLM security, prompt injection</p>
+
+<hr>
+
+<h3>8. 荷兰查封 800 台服务器并逮捕两名协助网络攻击的嫌疑人</h3>
+
+<p><a href="https://krebsonsecurity.com/2026/05/netherlands-seizes-800-servers-arrests-2-for-aiding-cyberattacks/">Netherlands Seizes 800 Servers, Arrests 2 for Aiding Cyberattacks</a> — <strong>krebsonsecurity.com</strong> · 1 天前 · ⭐ 28/30</p>
+
+<blockquote>荷兰当局查封了 800 台服务器并逮捕了两名互联网托管公司的负责人，指控其为俄罗斯在欧盟境内的网络攻击和虚假信息活动提供基础设施。这两名嫌疑人经营的托管公司接管了去年被欧盟制裁的 Stark Industries Solutions 的技术架构，长期充当网络犯罪的避风港。此次行动是针对支持国家级网络战的底层 IT 设施进行的重大打击。调查显示，这些服务器被广泛用于影响力行动和破坏性网络攻击。这一执法行动标志着国际社会在打击网络犯罪基础设施方面取得了重要进展。</blockquote>
+
+<p>🏷️ cybercrime, hosting, law enforcement, disinformation</p>
+
+<hr>
+
+<h3>9. 压力山大：AI 辅助报告让 curl 维护者不堪重负</h3>
+
+<p><a href="https://simonwillison.net/2026/May/26/the-pressure/#atom-everything">The pressure</a> — <strong>simonwillison.net</strong> · 10 小时前 · ⭐ 27/30</p>
+
+<blockquote>curl 创始人 Daniel Stenberg 揭示了开源项目正面临前所未有的安全报告压力。由于 AI 辅助漏洞挖掘工具的普及，curl 收到的安全报告数量激增，目前平均每天超过 1 份，是 2024 年的 4-5 倍。虽然这些由 AI 生成的报告看似专业，但大多存在幻觉或质量低下，极大地消耗了维护者的审核精力。这种情况反映了 AI 自动化工具对开源生态系统维护成本带来的负面冲击。如果这一趋势持续，开源项目的可持续性将面临严重威胁。</blockquote>
+
+<p>🏷️ curl, AI, open source, security</p>
+
+<hr>
+
+<h3>10. 荷兰政府否决 Kyndryl 收购 Solvinity 的决策细节及其影响</h3>
+
+<p><a href="https://berthub.eu/articles/posts/het-solvinity-besluit-gevolgen/">Het Solvinity besluit in detail, en de mogelijke gevolgen</a> — <strong>berthub.eu</strong> · 2 小时前 · ⭐ 23/30</p>
+
+<blockquote>详细分析了荷兰经济部禁止美国 IT 巨头 Kyndryl 收购本土云服务商 Solvinity 的重大决策。该禁令源于对国家安全和数字主权的担忧，特别是 Solvinity 承载了大量政府及关键基础设施的敏感数据。决策背后受到了 20 万民众签名请愿以及新成立的“防火墙”（The Firewall）基金会的法律推动。这一案例标志着欧洲在保护关键数字基础设施免受外国资本控制方面迈出了实质性的一步。文章还讨论了该决定对未来跨国技术并购可能产生的深远连锁反应。</blockquote>
+
+<p>🏷️ acquisition, sovereignty, cloud infrastructure</p>
+
+<hr>
+
+<h3>11. Trump Mobile 网站泄露预购订单数及客户敏感信息</h3>
+
+<p><a href="https://www.theguardian.com/us-news/2026/may/23/trump-mobile-investigating-potential-exposure-of-would-be-customers-personal-information">Trump Mobile Website Exposed the Number of Pre-Orders — Both Completed and Abandoned — and the Associated Customer Information</a> — <strong>daringfireball.net</strong> · 1 天前 · ⭐ 22/30</p>
+
+<blockquote>报道了 Trump Mobile 移动服务网站存在的严重安全漏洞，导致已完成和放弃的预购订单数量及客户个人信息遭到泄露。泄露的数据包括用户的全名、详细地址和电话号码，哥伦比亚大学程序员 Jonathan Soma 指出该漏洞源于网站代码中的常见错误。目前该项目正面临独立网络安全专家的调查，以确定受影响的用户规模。这一事件再次敲响了政治相关商业项目在快速上线时忽视基础安全防护的警钟。文章强调了在处理公众数据时，即便是简单的代码疏忽也可能导致灾难性的隐私后果。</blockquote>
+
+<p>🏷️ data breach, privacy, cybersecurity</p>
 
 <hr>
 
@@ -263,51 +260,51 @@
 
 <h3>12. 在 DwarfStar 中实现分布式 LLM 推理</h3>
 
-<p><a href="http://antirez.com/news/167">Distributing LLM inference in DwarfStar</a> — <strong>antirez.com</strong> · 19 小时前 · ⭐ 29/30</p>
+<p><a href="http://antirez.com/news/167">Distributing LLM inference in DwarfStar</a> — <strong>antirez.com</strong> · 1 天前 · ⭐ 28/30</p>
 
-<blockquote>DwarfStar 旨在解决运行大规模 LLM 时昂贵的显卡和 VRAM 成本问题。该项目探索了在多台机器上分布式运行推理的方案，作为昂贵 NVIDIA 服务器或带宽受限的 Apple 硬件（如 Mac Studio）的替代选择。文中对比了 Mac Studio 的 512GB 统一内存方案与传统服务器的优劣，重点关注预填充（prefill）速度和内存带宽的平衡。作者通过 DwarfStar 实现了跨节点的高效推理，降低了个人开发者运行大模型的门槛。这种分布式架构允许利用旧硬件或多台低成本设备组合出强大的推理能力。</blockquote>
+<blockquote>DwarfStar 项目探索了在非高端服务器硬件上运行大规模语言模型（LLM）的分布式推理方案。针对 NVIDIA 高端显卡成本过高的问题，文章对比了 Apple Mac Studio（最高 512GB 统一内存）和 DGX Spark 等替代方案的性能与成本。DwarfStar 旨在通过分布式计算突破单一设备的显存带宽和容量限制，使运行超大参数模型变得更加经济。该方案特别关注如何在保证推理速度的同时，利用多台低成本设备协同工作。这为个人开发者和小型团队运行顶级模型提供了新的技术路径。</blockquote>
 
 <p>🏷️ LLM, inference, distributed systems, VRAM</p>
 
 <hr>
 
-<h3>13. 关于教皇利奥十四世人工智能通谕的笔记</h3>
+<h3>13. 关于教皇利奥十四世 AI 通谕的笔记</h3>
 
-<p><a href="https://simonwillison.net/2026/May/25/encyclical-on-ai/#atom-everything">Notes on Pope Leo XIV's encyclical on AI</a> — <strong>simonwillison.net</strong> · 10 小时前 · ⭐ 26/30</p>
+<p><a href="https://simonwillison.net/2026/May/25/encyclical-on-ai/#atom-everything">Notes on Pope Leo XIV's encyclical on AI</a> — <strong>simonwillison.net</strong> · 1 天前 · ⭐ 27/30</p>
 
-<blockquote>梵蒂冈发布了教皇利奥十四世关于人工智能的通谕《Magnifica Humanitas》，探讨在 AI 时代如何保护人类尊严。该文件被认为是目前关于 AI 融入现代社会伦理最清晰的论述之一。通谕强调了技术进步必须服务于人类福祉，而非取代人的主体性。Simon Willison 对此进行了深度解读，分析了宗教视角对技术伦理演进的影响。文章指出，这种跨学科的对话对于制定全球 AI 治理框架至关重要。</blockquote>
+<blockquote>梵蒂冈教皇利奥十四世发布了名为《Magnifica Humanitas》的通谕，系统阐述了在人工智能时代保护人类尊严的伦理准则。该文档被认为是目前关于 AI 融入现代社会伦理讨论中最清晰、最深刻的论述之一。通谕强调技术进步必须服务于人类福祉，警惕 AI 取代人的主体地位或加剧社会不平等。这标志着宗教权威机构开始深度介入 AI 技术对社会结构和道德准则影响的全球对话。文章作者认为，无论信仰如何，该通谕对 AI 伦理的思考都极具参考价值。</blockquote>
 
-<p>🏷️ AI ethics, regulation, Vatican</p>
+<p>🏷️ AI ethics, Vatican, policy, human rights</p>
+
+<hr>
+
+<h3>14. 神秘的 Hy3 模型在 OpenRouter 排行榜上遥遥领先</h3>
+
+<p><a href="https://minimaxir.com/2026/05/openrouter-hy3/">The mysterious Hy3 LLM is topping OpenRouter Model Rankings by a large margin</a> — <strong>minimaxir.com</strong> · 18 小时前 · ⭐ 26/30</p>
+
+<blockquote>一款名为 Hy3 的神秘大语言模型在 OpenRouter 的模型排行榜上以显著优势位居榜首。目前该模型的开发者背景、参数规模和技术细节均未公开，处于完全神秘的状态。它在实际应用表现中已大幅领先于许多知名商业和开源模型，引发了社区的广泛关注。这种“黑马”现象展示了 LLM 领域竞争的激烈程度，以及新架构或新训练方法可能带来的颠覆性效果。Hy3 的崛起证明了在 AI 领域，性能依然是打破品牌垄断的最强武器。</blockquote>
+
+<p>🏷️ LLM, OpenRouter, Hy3, benchmarks</p>
 
 <hr>
 
 <h2>⚙️ 工程</h2>
 
-<h3>14. 引用 Armin Ronacher：AI 生成 Issue 的危害</h3>
+<h3>15. 我为 iozone 编写了补丁以优化现代 macOS 的磁盘基准测试</h3>
 
-<p><a href="https://simonwillison.net/2026/May/24/armin-ronacher/#atom-everything">Quoting Armin Ronacher</a> — <strong>simonwillison.net</strong> · 1 天前 · ⭐ 24/30</p>
+<p><a href="https://www.jeffgeerling.com/blog/2026/i-patched-iozone-for-better-disk-benchmarks-on-modern-macos/">I patched iozone for better disk benchmarks on modern macOS</a> — <strong>jeffgeerling.com</strong> · 8 小时前 · ⭐ 26/30</p>
 
-<blockquote>Flask 创始人 Armin Ronacher 表达了对 AI 生成 GitHub Issue 的强烈不满，认为这种行为严重破坏了开源社区的沟通效率。大量用户将观察到的问题直接丢给 LLM 处理，导致生成的报告充满了“迷之自信”的错误结论和虚假根因分析。这些 AI 生成的内容不仅掩盖了真实问题，还迫使维护者花费大量时间去证伪这些毫无根据的猜测。这种“AI 污染”正成为开源项目维护者面临的新型负担。作者呼吁用户回归真实的、基于观察的反馈方式。</blockquote>
+<blockquote>知名技术博主 Jeff Geerling 分享了为现代 macOS 系统修复磁盘基准测试工具 iozone 的过程。尽管 fio 功能更强，但 iozone 凭借其跨平台特性和直观的测试结果，依然是作者进行硬盘和 SSD 性能评估的首选。通过针对 macOS 的特定补丁，作者解决了该工具在现代苹果系统上的运行问题，提升了测试的准确性。文章详细记录了补丁的实现细节及在不同存储设备上的应用效果。这对于需要在 Mac 平台上进行精确 I/O 性能分析的用户非常有价值。</blockquote>
 
-<p>🏷️ Open Source, LLM, GitHub issues</p>
-
-<hr>
-
-<h3>15. 内存安全的 Go 语言版 rsync 如何规避漏洞</h3>
-
-<p><a href="https://michael.stapelberg.ch/posts/2026-05-24-minimal-memory-safe-go-rsync-vulns/">How my minimal, memory-safe Go rsync steers clear of vulnerabilities</a> — <strong>michael.stapelberg.ch</strong> · 1 天前 · ⭐ 23/30</p>
-
-<blockquote>作者介绍了一个使用 Go 语言编写的极简、内存安全的 rsync 实现，旨在规避传统 C 语言版本中常见的安全漏洞。文章重点分析了近期发现的“校验和长度验证不当”漏洞，并展示了 Go 的类型系统和内存管理如何天然地防御此类攻击。该项目通过精简功能集，降低了代码复杂度，从而减少了攻击面。这种重构思路为关键基础设施工具的现代化提供了参考范式。作者证明了在不牺牲核心性能的前提下，可以获得更高的安全性。</blockquote>
-
-<p>🏷️ Go, memory safety, rsync, security</p>
+<p>🏷️ iozone, macOS, benchmarking, storage</p>
 
 <hr>
 
-<p><em>生成于 2026-05-26 10:12 | 扫描 83 源 → 获取 2470 篇 → 精选 15 篇</em></p>
+<p><em>生成于 2026-05-27 10:10 | 扫描 83 源 → 获取 2459 篇 → 精选 15 篇</em></p>
 <p><em>基于 <a href="https://refactoringenglish.com/tools/hn-popularity/">Hacker News Popularity Contest 2025</a> RSS 源列表，由 <a href="https://x.com/karpathy">Andrej Karpathy</a> 推荐</em></p>
   </div>
   <div class="footer">
-    <p>Generated on 2026-05-26 · Based on <a href="https://refactoringenglish.com/tools/hn-popularity/">HN Popularity Contest 2025</a></p>
+    <p>Generated on 2026-05-27 · Based on <a href="https://refactoringenglish.com/tools/hn-popularity/">HN Popularity Contest 2025</a></p>
   </div>
 </body>
 </html>
