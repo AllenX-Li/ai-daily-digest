@@ -47,47 +47,47 @@
   </div>
   <hr>
   <div class="content">
-<h1>📰 May 31, 2026</h1>
+<h1>📰 Jun 1, 2026</h1>
 
 <blockquote>来自 Karpathy 推荐的 92 个顶级技术博客，AI 精选 Top 15</blockquote>
 
 <h2>📝 今日看点</h2>
 
-<p>今日技术圈聚焦 AI 范式的演进与反思，从智能体架构的兴起到对行业泡沫及搜索体验劣化的深度审视，反映了市场在狂热后的理性回归。同时，高性能计算与底层工程依然是核心，涵盖了从 JAX 数值计算到浏览器端运行 Python 的前沿实践。此外，针对系统安全隔离与硬件可维修性的讨论，展现了开发者对构建稳健、透明技术生态的持续追求。</p>
+<p>AI 浪潮正从简单的代码辅助转向复杂的智能体范式演进，但在极大地降低实验成本的同时，也引发了开发者对“项目过载”与搜索内容冗余的深度反思。安全领域依然是核心焦点，Anthropic 披露了其多层沙箱防御机制，而全球数据泄露披露的严重滞后则再次敲响了隐私保护的警钟。此外，WebAssembly 与 JAX 等底层技术的突破，正持续拓宽浏览器端应用与高性能计算的边界。</p>
 
 <hr>
 
 <h2>🏆 今日必读</h2>
 
-<p>🥇 <strong>Anthropic 如何在不同产品中隔离 Claude</strong></p>
+<p>🥇 <strong>我们如何在不同产品中构建 Claude 的安全沙箱</strong></p>
 
-<p><a href="https://simonwillison.net/2026/May/30/how-we-contain-claude/#atom-everything">How we contain Claude across products</a> — simonwillison.net · 11 小时前 · 🔒 安全</p>
+<p><a href="https://simonwillison.net/2026/May/30/how-we-contain-claude/#atom-everything">How we contain Claude across products</a> — simonwillison.net · 1 天前 · 🔒 安全</p>
 
-<blockquote>探讨了 Anthropic 为 Claude.ai、Claude Code 和 Computer Use 等产品构建的安全沙箱机制。在服务器端，Claude.ai 利用 gVisor 实现多租户隔离，防止恶意代码访问宿主机资源。针对本地运行的 Claude Code，系统通过 Docker 容器或轻量级虚拟机（如 Firecracker）来限制模型对用户文件系统的访问权限。对于具备“计算机操作”能力的模型，则采用了屏幕截图分析与受限输入流的组合方案。作者强调，详尽的沙箱技术文档是建立用户对 AI 代理信任的关键。</blockquote>
+<blockquote>Anthropic 详细披露了其在 Claude.ai、Claude Code 和 Model Context Protocol (MCP) 中采用的多层沙箱安全方案。针对 Web 端，利用 V8 隔离和 Web Workers 限制模型生成的代码执行；在 Claude Code CLI 中，则通过容器化技术（如 Docker 或 gVisor）防止恶意代码访问宿主机系统。文章深入探讨了如何在保证模型功能（如代码执行、文件编辑）的同时，通过最小权限原则和网络隔离来防御潜在的提示注入攻击。作者强调了详尽文档对于建立沙箱信任的重要性，并分享了应对复杂攻击向量的工程实践。</blockquote>
 
-<p>💡 <strong>为什么值得读</strong>: 深入了解顶级 AI 公司如何平衡大模型的代码执行能力与系统安全性。</p>
+<p>💡 <strong>为什么值得读</strong>: 深入了解顶级 AI 厂商如何平衡大模型代码执行能力与系统安全性，是构建安全 AI 应用的必读指南。</p>
 
-<p>🏷️ sandboxing, Claude, security, LLM</p>
+<p>🏷️ sandboxing, Claude, security</p>
 
 <p>🥈 <strong>构建智能体，而非流水线</strong></p>
 
-<p><a href="https://seangoedecke.com/build-agents-not-pipelines/">Build agents, not pipelines</a> — seangoedecke.com · 8 小时前 · 🤖 AI / ML</p>
+<p><a href="https://seangoedecke.com/build-agents-not-pipelines/">Build agents, not pipelines</a> — seangoedecke.com · 1 天前 · ⚙️ 工程</p>
 
-<blockquote>剖析了在程序中使用大语言模型（LLM）的两种范式：流水线（Pipeline）与智能体（Agent）。流水线模式由开发者在代码中预设控制流，虽然可预测但面对复杂逻辑时极易变得臃肿且难以维护。智能体模式则赋予 LLM 工具使用权，由模型自主决定执行步骤，能更好地处理非结构化任务和边缘情况。作者认为，随着任务复杂度的提升，过度依赖硬编码的流水线会阻碍开发效率。转向智能体架构是提升 LLM 应用灵活性和鲁棒性的核心路径。</blockquote>
+<blockquote>本文对比了使用大语言模型（LLM）的两种核心范式：确定性管道（Pipelines）与自主智能体（Agents）。管道模式将控制流硬编码在程序中，适合结构化、可预测的任务；而智能体模式则赋予 LLM 工具调用权限，由模型自主决定执行步骤。作者认为，随着模型推理能力的提升，构建智能体能更好地处理模糊需求并降低代码维护成本。文章通过一个简单的“总结并发送邮件”示例，展示了从硬编码逻辑向模型自主决策转变的代码实现差异。</blockquote>
 
-<p>💡 <strong>为什么值得读</strong>: 重新思考 LLM 应用的架构设计，帮助开发者从繁琐的条件判断中解脱出来。</p>
+<p>💡 <strong>为什么值得读</strong>: 帮助开发者跳出传统的线性编程思维，理解何时该让 AI 接管程序的控制权以应对复杂逻辑。</p>
 
-<p>🏷️ AI agents, LLM, architecture</p>
+<p>🏷️ LLM, agents, architecture</p>
 
-<p>🥉 <strong>深度分析：如果我们正处于 AI 泡沫中会怎样？（第三部分）</strong></p>
+<p>🥉 <strong>通过 Pyodide 和 Service Worker 在浏览器中运行 Python ASGI 应用</strong></p>
 
-<p><a href="https://www.wheresyoured.at/premium-what-if-were-in-an-ai-bubble-part-3/">Premium: What If...We're In An AI Bubble? (Part 3)</a> — wheresyoured.at · 1 天前 · 🤖 AI / ML</p>
+<p><a href="https://simonwillison.net/2026/May/30/pyodide-asgi-browser/#atom-everything">Running Python ASGI apps in the browser via Pyodide + a service worker</a> — simonwillison.net · 1 天前 · ⚙️ 工程</p>
 
-<blockquote>本文是探讨 AI 产业是否存在泡沫及其破裂风险系列文章的第三部分。核心关注点在于当前 AI 基础设施的巨额投入与实际商业产出之间的严重脱节。作者分析了导致泡沫破裂的潜在触发因素，包括企业级应用落地缓慢、推理成本居高不下以及资本市场对 AI 变现能力的耐心流失。通过对比历史上的技术泡沫，文章揭示了当前 AI 繁荣背后的脆弱性。最终指出，如果 AI 无法在短期内证明其能带来实质性的生产力革命，行业将面临剧烈的估值回调。</blockquote>
+<blockquote>开发者 Simon Willison 分享了利用 Pyodide 和 WebAssembly 在浏览器中运行完整 Python ASGI 应用的技术演进。通过引入 Service Worker 拦截网络请求，应用可以直接在浏览器端处理 HTTP 流量，而无需后端服务器支持。这种方案解决了 Datasette Lite 早期版本中 Web Worker 通信的局限性，实现了更接近原生 Web 应用的交互体验。该研究展示了如何将原本依赖服务器的 Python Web 框架（如 Datasette）完全迁移到客户端执行。</blockquote>
 
-<p>💡 <strong>为什么值得读</strong>: 批判性地审视当前 AI 热潮，为投资者和从业者提供冷静的风险预警。</p>
+<p>💡 <strong>为什么值得读</strong>: 探索 WebAssembly 的前沿应用，了解如何在零服务器成本下部署复杂的 Python 数据工具。</p>
 
-<p>🏷️ AI bubble, market analysis, LLM</p>
+<p>🏷️ Python, Pyodide, WebAssembly, ASGI</p>
 
 <hr>
 
@@ -95,18 +95,18 @@
 
 <p>| 扫描源 | 抓取文章 | 时间范围 | 精选 |</p>
 <p>|:---:|:---:|:---:|:---:|</p>
-<p>| 84/92 | 2491 篇 → 30 篇 | 48h | <strong>15 篇</strong> |</p>
+<p>| 82/92 | 2462 篇 → 35 篇 | 48h | <strong>15 篇</strong> |</p>
 
 <h3>分类分布</h3>
 
 <p>```mermaid</p>
 <p>pie showData</p>
 <p>    title "文章分类分布"</p>
-<p>    "⚙️ 工程" : 5</p>
-<p>    "🤖 AI / ML" : 4</p>
-<p>    "🛠 工具 / 开源" : 3</p>
-<p>    "🔒 安全" : 1</p>
-<p>    "💡 观点 / 杂谈" : 1</p>
+<p>    "⚙️ 工程" : 4</p>
+<p>    "🔒 安全" : 3</p>
+<p>    "🤖 AI / ML" : 3</p>
+<p>    "💡 观点 / 杂谈" : 3</p>
+<p>    "🛠 工具 / 开源" : 1</p>
 <p>    "📝 其他" : 1</p>
 <p>```</p>
 
@@ -115,202 +115,202 @@
 <p>```mermaid</p>
 <p>xychart-beta horizontal</p>
 <p>    title "高频关键词"</p>
-<p>    x-axis ["llm", "security", "python", "hardware", "sandboxing", "claude", "ai agents", "architecture", "ai bubble", "market analysis", "pyodide", "asgi"]</p>
-<p>    y-axis "出现次数" 0 --&gt; 5</p>
-<p>    bar [3, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1]</p>
+<p>    x-axis ["llm", "python", "data-breach", "sandboxing", "claude", "security", "agents", "architecture", "pyodide", "webassembly", "asgi", "hibp"]</p>
+<p>    y-axis "出现次数" 0 --&gt; 4</p>
+<p>    bar [2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1]</p>
 <p>```</p>
 
 <p>&lt;details&gt;</p>
 <p>&lt;summary&gt;📈 纯文本关键词图（终端友好）&lt;/summary&gt;</p>
 
 <p>```</p>
-<p>llm             │ ████████████████████ 3</p>
-<p>security        │ █████████████░░░░░░░ 2</p>
-<p>python          │ █████████████░░░░░░░ 2</p>
-<p>hardware        │ █████████████░░░░░░░ 2</p>
-<p>sandboxing      │ ███████░░░░░░░░░░░░░ 1</p>
-<p>claude          │ ███████░░░░░░░░░░░░░ 1</p>
-<p>ai agents       │ ███████░░░░░░░░░░░░░ 1</p>
-<p>architecture    │ ███████░░░░░░░░░░░░░ 1</p>
-<p>ai bubble       │ ███████░░░░░░░░░░░░░ 1</p>
-<p>market analysis │ ███████░░░░░░░░░░░░░ 1</p>
+<p>llm          │ ████████████████████ 2</p>
+<p>python       │ ████████████████████ 2</p>
+<p>data-breach  │ ████████████████████ 2</p>
+<p>sandboxing   │ ██████████░░░░░░░░░░ 1</p>
+<p>claude       │ ██████████░░░░░░░░░░ 1</p>
+<p>security     │ ██████████░░░░░░░░░░ 1</p>
+<p>agents       │ ██████████░░░░░░░░░░ 1</p>
+<p>architecture │ ██████████░░░░░░░░░░ 1</p>
+<p>pyodide      │ ██████████░░░░░░░░░░ 1</p>
+<p>webassembly  │ ██████████░░░░░░░░░░ 1</p>
 <p>```</p>
 
 <p>&lt;/details&gt;</p>
 
 <h3>🏷️ 话题标签</h3>
 
-<p><strong>llm</strong>(3) · <strong>security</strong>(2) · <strong>python</strong>(2) · hardware(2) · sandboxing(1) · claude(1) · ai agents(1) · architecture(1) · ai bubble(1) · market analysis(1) · pyodide(1) · asgi(1) · webassembly(1) · jax(1) · machine learning(1) · performance(1) · microcode(1) · intel 8087(1) · reverse engineering(1) · google search(1)</p>
+<p><strong>llm</strong>(2) · <strong>python</strong>(2) · <strong>data-breach</strong>(2) · sandboxing(1) · claude(1) · security(1) · agents(1) · architecture(1) · pyodide(1) · webassembly(1) · asgi(1) · hibp(1) · privacy-regulation(1) · security-disclosure(1) · coding(1) · side-projects(1) · ai(1) · productivity(1) · burnout(1) · jax(1)</p>
 
 <hr>
 
 <h2>⚙️ 工程</h2>
 
-<h3>1. 通过 Pyodide 和 Service Worker 在浏览器中运行 Python ASGI 应用</h3>
+<h3>1. 构建智能体，而非流水线</h3>
 
-<p><a href="https://simonwillison.net/2026/May/30/pyodide-asgi-browser/#atom-everything">Running Python ASGI apps in the browser via Pyodide + a service worker</a> — <strong>simonwillison.net</strong> · 11 小时前 · ⭐ 24/30</p>
+<p><a href="https://seangoedecke.com/build-agents-not-pipelines/">Build agents, not pipelines</a> — <strong>seangoedecke.com</strong> · 1 天前 · ⭐ 28/30</p>
 
-<blockquote>介绍了如何利用 Pyodide 和 WebAssembly 技术在浏览器端直接运行 Python ASGI Web 应用。作者分享了 Datasette Lite 的架构演进，从最初使用 Web Worker 拦截请求转向更高效的 Service Worker 方案。通过 Service Worker，浏览器可以将发往特定 URL 的请求直接路由到 Pyodide 运行环境，实现无服务器的后端逻辑。这种方案支持标准的 Python Web 框架，无需修改代码即可在客户端处理复杂的数据库查询和页面渲染。这一技术突破极大降低了 Python 工具的分发成本和服务器运维压力。</blockquote>
+<blockquote>本文对比了使用大语言模型（LLM）的两种核心范式：确定性管道（Pipelines）与自主智能体（Agents）。管道模式将控制流硬编码在程序中，适合结构化、可预测的任务；而智能体模式则赋予 LLM 工具调用权限，由模型自主决定执行步骤。作者认为，随着模型推理能力的提升，构建智能体能更好地处理模糊需求并降低代码维护成本。文章通过一个简单的“总结并发送邮件”示例，展示了从硬编码逻辑向模型自主决策转变的代码实现差异。</blockquote>
 
-<p>🏷️ Pyodide, ASGI, WebAssembly, Python</p>
-
-<hr>
-
-<h3>2. 揭秘 Intel 8087 浮点芯片内部微码：寄存器交换机制</h3>
-
-<p><a href="http://www.righto.com/feeds/5917097192784199241/comments/default">Microcode inside the Intel 8087 floating-point chip: register exchange</a> — <strong>righto.com</strong> · 15 小时前 · ⭐ 23/30</p>
-
-<blockquote>深入剖析了 1980 年发布的 Intel 8087 浮点协处理器的底层微码实现。作为现代浮点运算标准的奠基者，8087 通过复杂的微码算法将运算速度提升了近 100 倍。文章详细介绍了芯片内部如何通过低级微码指令实现寄存器交换，这是执行平方根、正切和指数等高级数学函数的核心步骤。作者通过逆向工程展示了早期芯片设计者如何在极有限的硬件资源下，构建出精确的数值计算逻辑。这一研究不仅揭示了硬件历史，也阐明了现代 CPU 浮点运算单元的演进路径。</blockquote>
-
-<p>🏷️ microcode, Intel 8087, reverse engineering, hardware</p>
+<p>🏷️ LLM, agents, architecture</p>
 
 <hr>
 
-<h3>3. 在多个协程间共享 Windows 运行时 IAsyncOperation 的结果（第三部分）</h3>
+<h3>2. 通过 Pyodide 和 Service Worker 在浏览器中运行 Python ASGI 应用</h3>
 
-<p><a href="https://devblogs.microsoft.com/oldnewthing/20260529-00/?p=112368">Sharing the result of a single Windows Runtime IAsyncOperation among multiple coroutines, part 3</a> — <strong>devblogs.microsoft.com/oldnewthing</strong> · 1 天前 · ⭐ 22/30</p>
+<p><a href="https://simonwillison.net/2026/May/30/pyodide-asgi-browser/#atom-everything">Running Python ASGI apps in the browser via Pyodide + a service worker</a> — <strong>simonwillison.net</strong> · 1 天前 · ⭐ 27/30</p>
 
-<blockquote>本文是关于 Windows 异步编程的高阶技巧系列文章的第三篇，重点讨论了“仅尝试一次”的执行模式。在 C++/WinRT 开发中，当多个协程需要同时等待同一个异步操作（如网络请求或文件 IO）的结果时，如何避免重复触发该操作是一个常见难题。作者展示了一种改进的实现方案，确保无论有多少个调用者，底层的 IAsyncOperation 只会执行一次，并将结果缓存以供后续协程直接读取。这种模式不仅优化了系统资源利用率，还避免了并发竞争导致的潜在状态错误。文章提供了详细的代码示例，解决了异步操作在多线程环境下的同步与生命周期管理问题。</blockquote>
+<blockquote>开发者 Simon Willison 分享了利用 Pyodide 和 WebAssembly 在浏览器中运行完整 Python ASGI 应用的技术演进。通过引入 Service Worker 拦截网络请求，应用可以直接在浏览器端处理 HTTP 流量，而无需后端服务器支持。这种方案解决了 Datasette Lite 早期版本中 Web Worker 通信的局限性，实现了更接近原生 Web 应用的交互体验。该研究展示了如何将原本依赖服务器的 Python Web 框架（如 Datasette）完全迁移到客户端执行。</blockquote>
 
-<p>🏷️ C++, Windows, asynchronous, coroutines</p>
-
-<hr>
-
-<h3>4. 在线（单次遍历）算法解析</h3>
-
-<p><a href="https://www.johndcook.com/blog/2026/05/29/online-one-pass-algorithms/">Online (one-pass) algorithms</a> — <strong>johndcook.com</strong> · 1 天前 · ⭐ 20/30</p>
-
-<blockquote>探讨了在处理大规模或流式数据时至关重要的“在线算法”或“单次遍历算法”。以样本方差计算为例，传统方法需要先算均值再算平方差，而在线算法允许在数据流经时动态更新结果。这种方法避免了对数据集的二次读取，极大地提升了处理效率并节省了存储空间。掌握此类算法是将复杂的统计公式转化为适合实时计算增量形式的关键。</blockquote>
-
-<p>🏷️ algorithms, statistics, data processing</p>
+<p>🏷️ Python, Pyodide, WebAssembly, ASGI</p>
 
 <hr>
 
-<h3>5. Composer 的依赖策略管理</h3>
+<h3>3. Intel 8087 浮点芯片内部微代码：寄存器交换</h3>
 
-<p><a href="https://nesbitt.io/2026/05/29/composer-dependency-policies.html">Composer’s dependency policies</a> — <strong>nesbitt.io</strong> · 1 天前 · ⭐ 19/30</p>
+<p><a href="http://www.righto.com/feeds/5917097192784199241/comments/default">Microcode inside the Intel 8087 floating-point chip: register exchange</a> — <strong>righto.com</strong> · 1 天前 · ⭐ 22/30</p>
 
-<blockquote>探讨了 PHP 包管理器 Composer 的依赖策略，重点介绍了如何在执行 `composer install` 时实施精细化的拦截和过滤。文章将这种机制类比为针对依赖安装的“uBlock Origin”，允许开发者限制不安全或不合规的包进入项目。通过配置特定的策略，可以有效防止供应链攻击和恶意代码注入。这种方法为 PHP 项目提供了额外的安全层，增强了开发流程的健壮性。</blockquote>
+<blockquote>硬件考古专家 Ken Shirriff 深入解析了 1980 年代经典的 Intel 8087 浮点协处理器的微代码实现。文章聚焦于寄存器交换（Register Exchange）这一底层操作，揭示了芯片如何通过复杂的微指令序列在有限的硬件资源下实现高效的数学运算。通过对晶体管级电路的逆向工程，作者展示了现代 IEEE 754 浮点标准最初是如何在硅片上落地的。该研究为理解早期高性能计算硬件的设计思路提供了珍贵的细节。</blockquote>
 
-<p>🏷️ PHP, Composer, dependency management</p>
-
-<hr>
-
-<h2>🤖 AI / ML</h2>
-
-<h3>6. 构建智能体，而非流水线</h3>
-
-<p><a href="https://seangoedecke.com/build-agents-not-pipelines/">Build agents, not pipelines</a> — <strong>seangoedecke.com</strong> · 8 小时前 · ⭐ 26/30</p>
-
-<blockquote>剖析了在程序中使用大语言模型（LLM）的两种范式：流水线（Pipeline）与智能体（Agent）。流水线模式由开发者在代码中预设控制流，虽然可预测但面对复杂逻辑时极易变得臃肿且难以维护。智能体模式则赋予 LLM 工具使用权，由模型自主决定执行步骤，能更好地处理非结构化任务和边缘情况。作者认为，随着任务复杂度的提升，过度依赖硬编码的流水线会阻碍开发效率。转向智能体架构是提升 LLM 应用灵活性和鲁棒性的核心路径。</blockquote>
-
-<p>🏷️ AI agents, LLM, architecture</p>
+<p>🏷️ Intel 8087, Microcode, Reverse Engineering, CPU Architecture</p>
 
 <hr>
 
-<h3>7. 深度分析：如果我们正处于 AI 泡沫中会怎样？（第三部分）</h3>
+<h3>4. 请不要破坏链接的原始功能</h3>
 
-<p><a href="https://www.wheresyoured.at/premium-what-if-were-in-an-ai-bubble-part-3/">Premium: What If...We're In An AI Bubble? (Part 3)</a> — <strong>wheresyoured.at</strong> · 1 天前 · ⭐ 26/30</p>
+<p><a href="https://maurycyz.com/misc/real_links/">Please don't mess with links:</a> — <strong>maurycyz.com</strong> · 1 天前 · ⭐ 21/30</p>
 
-<blockquote>本文是探讨 AI 产业是否存在泡沫及其破裂风险系列文章的第三部分。核心关注点在于当前 AI 基础设施的巨额投入与实际商业产出之间的严重脱节。作者分析了导致泡沫破裂的潜在触发因素，包括企业级应用落地缓慢、推理成本居高不下以及资本市场对 AI 变现能力的耐心流失。通过对比历史上的技术泡沫，文章揭示了当前 AI 繁荣背后的脆弱性。最终指出，如果 AI 无法在短期内证明其能带来实质性的生产力革命，行业将面临剧烈的估值回调。</blockquote>
+<blockquote>现代 Web 开发中常用 span 标签配合 onclick 事件来模拟链接，但这只是对链接功能的浅薄模仿。真正的 a 标签原生支持 Ctrl+点击在新标签页打开、Shift+点击在新窗口打开、Alt+点击保存文件以及右键复制 URL 等交互。这种“伪链接”破坏了用户的操作预期，降低了网页的可访问性和功能完整性。开发者应当回归语义化 HTML，尊重浏览器内置的链接处理机制，而不是用 JavaScript 去重新发明一个残缺的轮子。</blockquote>
 
-<p>🏷️ AI bubble, market analysis, LLM</p>
-
-<hr>
-
-<h3>8. 初探 JAX：高性能数值计算的新境界</h3>
-
-<p><a href="https://www.gilesthomas.com/2026/05/on-first-looking-into-jax">On first looking into JAX</a> — <strong>gilesthomas.com</strong> · 14 小时前 · ⭐ 24/30</p>
-
-<blockquote>记录了作者初次接触 Google 推出的高性能数值计算库 JAX 的深刻印象。JAX 结合了 NumPy 的易用性与 Autograd 的自动微分能力，并利用 XLA 编译器在 GPU 和 TPU 上实现极致性能。文章重点讨论了 JAX 的函数式编程范式，强调其无副作用的函数设计对于并行计算和即时编译（JIT）的重要性。通过对比传统的深度学习框架，作者展示了 JAX 在处理复杂数学模型时的简洁与高效。对于追求底层控制和计算效率的开发者来说，JAX 提供了一种全新的编程视角。</blockquote>
-
-<p>🏷️ JAX, machine learning, Python, performance</p>
-
-<hr>
-
-<h3>9. Anthropic 的“运行率收入”计算公式揭秘</h3>
-
-<p><a href="https://simonwillison.net/2026/May/31/anthropic-run-rate/#atom-everything">Quoting Karen Kwok for Reuters Breakingviews</a> — <strong>simonwillison.net</strong> · 7 小时前 · ⭐ 20/30</p>
-
-<blockquote>Anthropic 披露了其独特的“运行率收入”（run-rate revenue）计算逻辑，旨在向投资者展示其商业化潜力。针对按需计费的消耗型客户，该公司取过去 28 天的销售额并乘以 13 进行年化处理；针对月度订阅用户，则将月收入乘以 12，最后将两者相加。这种计算方式将波动性较大的消耗性收入强行年化，反映了 AI 初创公司在财务指标定义上的灵活性。这种“收入幻觉”警示市场在评估大模型公司的真实营收规模时需保持审慎。</blockquote>
-
-<p>🏷️ Anthropic, revenue, AI business</p>
-
-<hr>
-
-<h2>🛠 工具 / 开源</h2>
-
-<h3>10. 逃离 AI 搜索：&amp;udm=14 参数的流行与反思</h3>
-
-<p><a href="https://feed.tedium.co/link/15204/17351430/google-ai-udm14-reflection">One &amp;udm After Another</a> — <strong>tedium.co</strong> · 8 小时前 · ⭐ 23/30</p>
-
-<blockquote>探讨了 Google 搜索中 &amp;udm=14 URL 参数意外走红背后的用户情绪。随着 Google 强制推行 AI 概览（AI Overviews）导致搜索结果变得臃肿且充满干扰，大量用户开始寻找回归传统搜索的方法。通过在搜索链接后添加该参数，用户可以强制浏览器显示纯粹的网页链接列表，过滤掉 AI 生成的内容和各类推广组件。文章反映了用户对搜索引擎过度“智能化”的反弹，以及对简洁、直接信息获取方式的渴望。这不仅是一个技术技巧，更是对当前互联网搜索体验恶化的无声抗议。</blockquote>
-
-<p>🏷️ Google Search, SEO, web search</p>
-
-<hr>
-
-<h3>11. 为什么现在很难有理由购买 Framework 12 笔记本</h3>
-
-<p><a href="https://www.jeffgeerling.com/blog/2026/its-hard-to-justify-framework-12/">It's hard to justify buying a Framework 12</a> — <strong>jeffgeerling.com</strong> · 1 天前 · ⭐ 22/30</p>
-
-<blockquote>科技博主 Jeff Geerling 探讨了在当前市场环境下，主打可维修性的 Framework 12 笔记本面临的价值挑战。尽管 Framework 以模块化和易于升级著称，但在与 Apple 新推出的 MacBook Neo 对比时，其性价比显得捉襟见肘。Apple 通过垂直整合实现了极高的性能功耗比，使得入门级 MacBook 在价格相近的情况下提供了更优的使用体验。文章指出，对于预算有限的学生群体，Framework 的“环保和可维修”溢价难以抵消其在电池续航和基础性能上的劣势。作者认为，Framework 需要在保持开放性的同时，显著提升产品的核心竞争力。</blockquote>
-
-<p>🏷️ Framework, MacBook, hardware</p>
-
-<hr>
-
-<h3>12. 包管理周报：2026 年 5 月 30 日</h3>
-
-<p><a href="https://nesbitt.io/2026/05/30/this-week-in-package-management.html">This Week in Package Management: 30 May 2026</a> — <strong>nesbitt.io</strong> · 22 小时前 · ⭐ 20/30</p>
-
-<blockquote>汇集了截至 2026 年 5 月 30 日当周全球包管理领域的关键更新。内容涵盖了各大主流包管理器的版本发布、安全预警以及深度技术文章。该汇总旨在帮助开发者和运维人员追踪软件供应链的最新变化，确保开发环境的安全与高效。通过阅读此类周报，可以快速补齐在依赖管理和工具链优化方面的知识短板。</blockquote>
-
-<p>🏷️ package management, security, devops</p>
+<p>🏷️ HTML, Web Standards, UX, Accessibility</p>
 
 <hr>
 
 <h2>🔒 安全</h2>
 
-<h3>13. Anthropic 如何在不同产品中隔离 Claude</h3>
+<h3>5. 我们如何在不同产品中构建 Claude 的安全沙箱</h3>
 
-<p><a href="https://simonwillison.net/2026/May/30/how-we-contain-claude/#atom-everything">How we contain Claude across products</a> — <strong>simonwillison.net</strong> · 11 小时前 · ⭐ 26/30</p>
+<p><a href="https://simonwillison.net/2026/May/30/how-we-contain-claude/#atom-everything">How we contain Claude across products</a> — <strong>simonwillison.net</strong> · 1 天前 · ⭐ 28/30</p>
 
-<blockquote>探讨了 Anthropic 为 Claude.ai、Claude Code 和 Computer Use 等产品构建的安全沙箱机制。在服务器端，Claude.ai 利用 gVisor 实现多租户隔离，防止恶意代码访问宿主机资源。针对本地运行的 Claude Code，系统通过 Docker 容器或轻量级虚拟机（如 Firecracker）来限制模型对用户文件系统的访问权限。对于具备“计算机操作”能力的模型，则采用了屏幕截图分析与受限输入流的组合方案。作者强调，详尽的沙箱技术文档是建立用户对 AI 代理信任的关键。</blockquote>
+<blockquote>Anthropic 详细披露了其在 Claude.ai、Claude Code 和 Model Context Protocol (MCP) 中采用的多层沙箱安全方案。针对 Web 端，利用 V8 隔离和 Web Workers 限制模型生成的代码执行；在 Claude Code CLI 中，则通过容器化技术（如 Docker 或 gVisor）防止恶意代码访问宿主机系统。文章深入探讨了如何在保证模型功能（如代码执行、文件编辑）的同时，通过最小权限原则和网络隔离来防御潜在的提示注入攻击。作者强调了详尽文档对于建立沙箱信任的重要性，并分享了应对复杂攻击向量的工程实践。</blockquote>
 
-<p>🏷️ sandboxing, Claude, security, LLM</p>
+<p>🏷️ sandboxing, Claude, security</p>
+
+<hr>
+
+<h3>6. 1000 次数据泄露之后，披露滞后问题比以往任何时候都严重</h3>
+
+<p><a href="https://www.troyhunt.com/1000-data-breaches-later-the-disclosure-lag-is-worse-than-ever/">1,000 Data Breaches Later, the Disclosure Lag is Worse Than Ever</a> — <strong>troyhunt.com</strong> · 3 小时前 · ⭐ 27/30</p>
+
+<blockquote>Have I Been Pwned 创始人 Troy Hunt 在录入第 1000 起数据泄露事件之际，指出企业披露数据泄露的滞后问题正日益严重。尽管有 GDPR 等严格的隐私法规，许多组织在发现漏洞后仍倾向于隐瞒数月甚至数年，导致受害者无法及时采取保护措施。文章通过历史数据对比，揭示了合规压力并未能有效缩短“泄露到披露”的时间差。作者反思了在监管加强的今天，为什么公众获取泄露信息的透明度反而没有显著提升。</blockquote>
+
+<p>🏷️ data-breach, HIBP, privacy-regulation, security-disclosure</p>
+
+<hr>
+
+<h3>7. 每周更新 506 期</h3>
+
+<p><a href="https://www.troyhunt.com/weekly-update-506/">Weekly Update 506</a> — <strong>troyhunt.com</strong> · 8 小时前 · ⭐ 23/30</p>
+
+<blockquote>在第 506 期周报中，Troy Hunt 重点关注了黑客组织 ShinyHunters 近期发起的一系列大规模数据泄露事件，包括备受瞩目的 Ticketmaster 案例。文章分析了这些泄露数据在黑客论坛上的流转过程，以及涉事企业在面对数亿用户信息泄露时迟缓且混乱的应对机制。此外，作者还探讨了现代数据泄露中勒索与公开披露之间日益复杂的博弈关系。周报还涵盖了近期安全工具的更新和行业动态观察。</blockquote>
+
+<p>🏷️ ShinyHunters, data-breach, cybersecurity</p>
+
+<hr>
+
+<h2>🤖 AI / ML</h2>
+
+<h3>8. 我用 AI 交付的那些“奇怪”项目</h3>
+
+<p><a href="https://seangoedecke.com/weird-projects-i-shipped-with-ai/">Weird projects I shipped with AI</a> — <strong>seangoedecke.com</strong> · 11 小时前 · ⭐ 25/30</p>
+
+<blockquote>针对“AI 既然能写代码，为何没出现应用潮”的质疑，作者分享了多款利用 LLM 快速构建的非典型项目。文章指出，编写代码仅是产品交付的环节之一，AI 的真正价值在于极大地降低了从创意到原型的实验成本。通过展示这些 AI 生成的个性化工具，作者论证了 AI 如何赋能个人开发者在短时间内完成过去需要团队协作的工作。这些项目虽然未必具有商业规模，但证明了 AI 在填补细分需求方面的巨大潜力。</blockquote>
+
+<p>🏷️ LLM, coding, side-projects</p>
+
+<hr>
+
+<h3>9. 初探 JAX 框架有感</h3>
+
+<p><a href="https://www.gilesthomas.com/2026/05/on-first-looking-into-jax">On first looking into JAX</a> — <strong>gilesthomas.com</strong> · 1 天前 · ⭐ 23/30</p>
+
+<blockquote>作者分享了初次接触 Google JAX 框架的体验，将其比作发现新大陆般的范式转变。JAX 通过结合 NumPy 风格的 API 与 XLA 编译技术，在高性能数值计算和自动微分方面展现出显著优势。文章重点讨论了 JAX 的函数式编程哲学，以及它如何通过 jit、vmap 和 grad 等变换简化复杂的机器学习模型开发。相比 PyTorch，JAX 提供了更纯粹的数学表达方式，适合对性能和灵活性有极致要求的场景。</blockquote>
+
+<p>🏷️ JAX, machine learning, Python, performance</p>
+
+<hr>
+
+<h3>10. 再次尝试：苹果 AI 核心员工跳槽 OpenAI</h3>
+
+<p><a href="https://x.com/markgurman/status/2061236259843182813">Take Two</a> — <strong>daringfireball.net</strong> · 11 小时前 · ⭐ 21/30</p>
+
+<blockquote>苹果公司负责 2024 年 Siri 重塑演示的关键员工 Kelsey Peterson 已正式入职 OpenAI。这意味着在即将到来的 WWDC 上，苹果将不得不更换新人来主持“下一代 Siri”的第二次发布尝试。此前 2024 年的 Siri 演示被外界视为未能如期发布的失败原型，作者将其讽刺为如同“泰坦尼克二号”的下水仪式需要新主持人。此次人事变动暗示了苹果在 AI 战略执行层面的动荡，以及在追赶生成式 AI 浪潮中的紧迫感。</blockquote>
+
+<p>🏷️ Apple, OpenAI, Siri, Talent</p>
 
 <hr>
 
 <h2>💡 观点 / 杂谈</h2>
 
-<h3>14. 失去卡尼的卡尼主义：垄断、专利与社会变革</h3>
+<h3>11. 解决方案可能是取消我的 AI 订阅</h3>
 
-<p><a href="https://pluralistic.net/2026/05/30/rupture/">Pluralistic: Carneyism without Carney (30 May 2026)</a> — <strong>pluralistic.net</strong> · 23 小时前 · ⭐ 22/30</p>
+<p><a href="https://simonwillison.net/2026/May/31/the-solution-might-be-cancelling-my-ai-subscription/#atom-everything">The solution might be cancelling my AI subscription</a> — <strong>simonwillison.net</strong> · 19 小时前 · ⭐ 24/30</p>
 
-<blockquote>著名作家 Cory Doctorow 在本文中探讨了打破企业垄断和重新定义经济激励机制的多重议题。文章重点介绍了一种替代制药专利的新方案：通过政府奖金（Bounties）激励研发，从而降低白血病等重症药物的价格。同时，作者观察到亚马逊仓库工人正在转型为编码员的社会现象，并以此分析劳动力市场的结构性变化。文中还猛烈抨击了富豪阶层通过财富隔离规避社会责任的行为，以及大数据背景下的隐私匿名化骗局。作者呼吁通过制度性改革，将技术红利从少数垄断者手中夺回，还给普通大众。</blockquote>
+<blockquote>本文探讨了 AI 编程工具带来的副作用：极低的上手门槛导致开发者陷入“项目过载”的困境。作者引用 David Wilson 的经历指出，原本简单的脚本任务常在 Claude 的辅助下演变成复杂的半成品应用，消耗了大量精力却未解决核心问题。这种现象引发了对 AI 订阅价值的反思，即过度依赖 AI 可能会削弱开发者对项目目标的专注度。文章警示开发者，AI 带来的高产出有时只是“忙碌的假象”，而非真正的生产力提升。</blockquote>
 
-<p>🏷️ privacy, monopoly, policy, metadata</p>
+<p>🏷️ AI, productivity, burnout</p>
+
+<hr>
+
+<h3>12. 自动计票机：软件行业的博彩化转向</h3>
+
+<p><a href="https://computer.rip/2026-05-31-totalisator.html">the totalisator</a> — <strong>computer.rip</strong> · 1 天前 · ⭐ 20/30</p>
+
+<blockquote>软件行业正经历一个不幸的转折，在线博彩和预测市场正成为其核心驱动引擎之一。随着全美范围内体育博彩的合法化，利用算法制定赔率并榨取用户资金的技术已不再局限于离岸岛国，而是成为了主流技术追求。现代电视体育转播与互联网平台深度融合，将博彩包装成大众娱乐。这种趋势反映了技术从创造生产力价值向榨取剩余价值的异化，引发了对行业道德和长期健康发展的深刻担忧。</blockquote>
+
+<p>🏷️ gambling, fintech, industry-trends, prediction-markets</p>
+
+<hr>
+
+<h3>13. 我将退出技术圈，回归线下生活</h3>
+
+<p><a href="https://simonwillison.net/2026/May/30/retiring-from-tech-to-live-offline/#atom-everything">I Am Retiring from Tech to Live Offline</a> — <strong>simonwillison.net</strong> · 1 天前 · ⭐ 19/30</p>
+
+<blockquote>资深开发者 Chad Whitacre 正式宣布退出技术行业及开源社区，转而追求完全的线下生活。与许多因 AI 威胁而口头宣称辞职的人不同，他采取了实质性行动，甚至通过打字机书写并扫描信件的方式发布了告别信。他将这一过程描述为“远离技术”而非简单的退休，反映了开发者在数字化过度饱和时代对生活本质的重新思考。这一举动在开源社区引发了关于职业倦怠、技术依赖以及开发者生存现状的广泛讨论。</blockquote>
+
+<p>🏷️ career, retirement, culture</p>
+
+<hr>
+
+<h2>🛠 工具 / 开源</h2>
+
+<h3>14. 一个接一个的 &amp;udm=14</h3>
+
+<p><a href="https://feed.tedium.co/link/15204/17351430/google-ai-udm14-reflection">One &amp;udm After Another</a> — <strong>tedium.co</strong> · 1 天前 · ⭐ 23/30</p>
+
+<blockquote>随着 Google 强制推行 AI 搜索摘要（AI Overviews），用户群体中掀起了使用 &amp;udm=14 参数回归纯净搜索的热潮。该参数能过滤掉 AI 生成内容、广告和冗余的小组件，强制显示传统的网页链接列表。这一现象反映了用户对搜索引擎过度“智能化”的反弹，以及对简洁、直接信息获取方式的渴望。文章探讨了这种技术手段如何成为用户在 AI 时代夺回搜索控制权的临时方案。</blockquote>
+
+<p>🏷️ Google, search engine, SEO, web</p>
 
 <hr>
 
 <h2>📝 其他</h2>
 
-<h3>15. Meta 为旗下社交应用推出“趣味功能”付费订阅服务</h3>
+<h3>15. Meta 为旗下社交平台推出“趣味功能”付费订阅服务</h3>
 
-<p><a href="https://techcrunch.com/2026/05/27/meta-officially-launches-instagram-facebook-and-whatsapp-subscriptions-with-more-to-come-including-ai-plans/">Meta Is Launching Instagram, Facebook, and WhatsApp Subscriptions for ‘Fun Features’</a> — <strong>daringfireball.net</strong> · 17 小时前 · ⭐ 20/30</p>
+<p><a href="https://techcrunch.com/2026/05/27/meta-officially-launches-instagram-facebook-and-whatsapp-subscriptions-with-more-to-come-including-ai-plans/">Meta Is Launching Instagram, Facebook, and WhatsApp Subscriptions for ‘Fun Features’</a> — <strong>daringfireball.net</strong> · 1 天前 · ⭐ 19/30</p>
 
-<blockquote>Meta 宣布在全球范围内为其旗舰应用 Instagram、Facebook 和 WhatsApp 推出消费者订阅计划。Instagram Plus 和 Facebook Plus 定价为每月 3.99 美元，WhatsApp Plus 为每月 2.99 美元，旨在提供增值的“趣味功能”和增强体验。此外，Meta 还在同步测试针对企业、创作者及 Meta AI 用户的专项订阅服务。这一举措标志着社交媒体巨头正加速从单一广告模式向直接向用户收费的订阅模式转型。</blockquote>
+<blockquote>Meta 宣布在全球范围内为其核心应用 Instagram、Facebook 和 WhatsApp 推出消费者订阅计划。订阅费用分别为 Instagram Plus 和 Facebook Plus 每月 3.99 美元，WhatsApp Plus 每月 2.99 美元。付费用户将获得专属的“趣味功能”，同时 Meta 也在同步测试针对企业、创作者及 Meta AI 用户的进阶订阅方案。此举标志着 Meta 正在从依赖广告的单一模式，加速向多元化的 C 端订阅收入模式转型，以应对市场环境的变化。</blockquote>
 
-<p>🏷️ Meta, subscription, social media</p>
+<p>🏷️ Meta, Subscription, Social Media, Business Model</p>
 
 <hr>
 
-<p><em>生成于 2026-05-31 08:57 | 扫描 84 源 → 获取 2491 篇 → 精选 15 篇</em></p>
+<p><em>生成于 2026-06-01 11:50 | 扫描 82 源 → 获取 2462 篇 → 精选 15 篇</em></p>
 <p><em>基于 <a href="https://refactoringenglish.com/tools/hn-popularity/">Hacker News Popularity Contest 2025</a> RSS 源列表，由 <a href="https://x.com/karpathy">Andrej Karpathy</a> 推荐</em></p>
   </div>
   <div class="footer">
-    <p>Generated on 2026-05-31 · Based on <a href="https://refactoringenglish.com/tools/hn-popularity/">HN Popularity Contest 2025</a></p>
+    <p>Generated on 2026-06-01 · Based on <a href="https://refactoringenglish.com/tools/hn-popularity/">HN Popularity Contest 2025</a></p>
   </div>
 </body>
 </html>
