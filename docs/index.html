@@ -47,47 +47,47 @@
   </div>
   <hr>
   <div class="content">
-<h1>📰 Jun 25, 2026</h1>
+<h1>📰 Jun 26, 2026</h1>
 
 <blockquote>来自 Karpathy 推荐的 92 个顶级技术博客，AI 精选 Top 15</blockquote>
 
 <h2>📝 今日看点</h2>
 
-<p>今日技术圈聚焦于 AI 智能体的标准化演进与底层缺陷，WorkOS 提出的 auth.md 试图解决 Agent 身份验证难题，而 LLM 角色混淆及内容同质化现象则引发了对模型可靠性的深度反思。底层安全与工程质量仍是核心议题，libssh2 严重漏洞再次推高了 C 语言内存安全的争议热度，同时 Safari 迎来史上最大规模的 WebKit 修复更新。此外，行业开始警惕“货船崇拜”式的盲目扩张，呼吁初创企业回归技术逻辑而非单纯模仿巨头表象。</p>
+<p>随着 AI 代理深度介入社会，法律界正明确生成内容的责任归属，技术端则通过新规范与安全研究应对模型混淆与身份验证挑战。与此同时，内存安全漏洞与硬件协议的复杂性再次引发行业对工程底座可靠性的反思。此外，苹果大幅调价与科技媒体老兵的离去，标志着行业生态正在经历深刻的更迭。</p>
 
 <hr>
 
 <h2>🏆 今日必读</h2>
 
-<p>🥇 <strong>WorkOS 推出 auth.md：AI Agent 身份验证的新标准</strong></p>
+<p>🥇 <strong>AI 与法律责任</strong></p>
 
-<p>[[Sponsor] WorkOS: Agents Need Auth. There’s Now a Spec for It.](http://workos.com/auth-md?utm_source=daringfireball&amp;amp;utm_medium=newsletter&amp;amp;utm_campaign=q32026) — daringfireball.net · 14 小时前 · 🤖 AI / ML</p>
+<p><a href="https://simonwillison.net/2026/Jun/25/ai-and-liability/#atom-everything">AI and Liability</a> — simonwillison.net · 11 小时前 · 🤖 AI / ML</p>
 
-<blockquote>AI Agent 在代表用户执行任务时，常因无法自动处理应用注册和登录流程而受阻。WorkOS 提出了 auth.md 规范，这是一种托管在域名下的配置文件，功能类似于 robots.txt，专门用于指导 Agent 如何进行用户注册。该文件定义了应用支持的身份验证流、公开的权限范围（Scopes）以及凭证发放方式。它通过组合现有的 OAuth 标准，解决了 Agent 自动创建账户的兼容性问题。目前 Cloudflare、Firecrawl 和 Resend 等服务商已率先采用此标准。</blockquote>
+<blockquote>探讨 AI 代理人产生错误信息时的法律归属问题，重点关注德国法院对 Google AI Overviews 的最新裁决。该裁决认定 AI 生成的内容属于 Google 自己的言论，因此 Google 需对其中的错误答案承担法律责任。安全专家 Bruce Schneier 指出，AI 代理应被视为部署者或组织的代理人，其行为后果应由所属机构负责。这一判例打破了技术平台免责的传统认知，预示着 AI 开发者将面临更严格的监管和问责。文章强调，将 AI 视为独立实体是错误的，法律应聚焦于背后的运营主体。</blockquote>
 
-<p>💡 <strong>为什么值得读</strong>: 随着 AI Agent 逐渐普及，该规范有望成为解决 Agent 跨平台身份验证难题的行业标准。</p>
+<p>💡 <strong>为什么值得读</strong>: 深入理解 AI 法律责任的全球首个重大判例及其对未来 AI 产品部署的深远影响。</p>
 
-<p>🏷️ AI agents, authentication, standard, SaaS</p>
+<p>🏷️ AI, liability, legal, Google</p>
 
-<p>🥈 <strong>Framework 10G 以太网模块：揭示 USB-C 的复杂性</strong></p>
+<p>🥈 <strong>关于角色混淆的思考</strong></p>
 
-<p><a href="https://www.jeffgeerling.com/blog/2026/framework-10g-ethernet-module-usb-c-complexity/">Framework's 10G Ethernet module exposes USB-C's complexity</a> — jeffgeerling.com · 19 小时前 · ⚙️ 工程</p>
+<p><a href="https://www.gilesthomas.com/2026/06/role-confusion">Thoughts on Role Confusion</a> — gilesthomas.com · 1 天前 · 🤖 AI / ML</p>
 
-<blockquote>知名硬件博主 Jeff Geerling 深入探讨了 WisdPi 为 Framework 笔记本开发的 10G 以太网扩展模块。该模块的研发过程暴露了 USB-C 接口在处理高带宽、高功耗设备时的极端复杂性。文章对比了 5Gbps 与 10Gbps 适配器在散热设计、体积控制及成本方面的权衡。作者指出，尽管 USB-C 理论上支持高速传输，但要在紧凑的模块空间内实现稳定的 10GbE 连接仍面临巨大的工程挑战。</blockquote>
+<blockquote>深入分析 LLM 提示词注入攻击的本质，即模型无法严格区分指令来源的“角色混淆”问题。研究发现，LLM 往往会忽略 &lt;system&gt;、&lt;user&gt; 或 &lt;think&gt; 等结构化标签，转而根据文本的语气和格式来判断指令优先级。这意味着攻击者可以通过模仿系统语气轻松绕过安全限制，实现提示词注入。文章指出，目前的角色标签机制并非可靠的安全边界，开发者需要更底层的防御策略。这种现象揭示了当前模型架构在处理多源指令时的根本性缺陷。</blockquote>
 
-<p>💡 <strong>为什么值得读</strong>: 硬件爱好者必读，深入了解高性能外设在 USB-C 协议限制下的设计难点与权衡。</p>
+<p>💡 <strong>为什么值得读</strong>: 揭示了 LLM 安全漏洞的底层逻辑，是构建防御提示词注入方案的必读参考。</p>
 
-<p>🏷️ USB-C, Ethernet, hardware, Framework</p>
+<p>🏷️ LLM, prompt injection, AI security</p>
 
-<p>🥉 <strong>Scattered Spider 黑客组织成员在审判首日认罪</strong></p>
+<p>🥉 <strong>“无法预防”：唯有使用此类语言的开发者常发此言</strong></p>
 
-<p><a href="https://krebsonsecurity.com/2026/06/scattered-spider-hackers-plead-guilty-on-day-1-of-trial/">Scattered Spider Hackers Plead Guilty on Day 1 of Trial</a> — krebsonsecurity.com · 1 天前 · 🔒 安全</p>
+<p><a href="https://xeiaso.net/shitposts/no-way-to-prevent-this/memory-safety/CVE-2026-8461/">"No way to prevent this" say users of only language where this regularly happens</a> — xeiaso.net · 1 天前 · 🔒 安全</p>
 
-<blockquote>两名 Scattered Spider 犯罪集团成员在英国法庭上承认了针对伦敦交通局（TfL）的网络攻击指控。该攻击发生在 2024 年 8 月，曾导致大伦敦地区公共交通网络系统严重瘫痪。这两名被告是该臭名昭著的黑客组织的核心成员，其认罪发生在原定为期六周的审判首日。此案标志着执法部门在打击这类针对关键基础设施的跨国网络犯罪方面取得了重大进展。</blockquote>
+<blockquote>针对 FFmpeg 项目中新发现的 CVE-2026-8461 漏洞进行技术剖析，该漏洞源于 MagicYUV 解码器中的越界写入。由于 C 语言缺乏内存安全保障，不当的边界检查导致了堆损坏、拒绝服务甚至远程代码执行风险。文章讽刺地指出，这类内存安全漏洞在 C/C++ 项目中反复出现，而开发者往往将其视为不可避免的意外。作者强调，转向内存安全语言是彻底解决此类系统性风险的唯一途径。这再次引发了关于关键基础设施是否应强制使用 Rust 等安全语言的讨论。</blockquote>
 
-<p>💡 <strong>为什么值得读</strong>: 关注网络安全动态，了解针对关键基础设施的大型黑客组织及其法律后果。</p>
+<p>💡 <strong>为什么值得读</strong>: 以 FFmpeg 漏洞为例，深刻反思内存安全在现代系统开发中的核心地位及语言选型的重要性。</p>
 
-<p>🏷️ cybercrime, Scattered Spider, hacking, security</p>
+<p>🏷️ memory safety, CVE, FFmpeg, C++</p>
 
 <hr>
 
@@ -95,17 +95,18 @@
 
 <p>| 扫描源 | 抓取文章 | 时间范围 | 精选 |</p>
 <p>|:---:|:---:|:---:|:---:|</p>
-<p>| 81/92 | 2453 篇 → 25 篇 | 48h | <strong>15 篇</strong> |</p>
+<p>| 79/92 | 2418 篇 → 30 篇 | 48h | <strong>15 篇</strong> |</p>
 
 <h3>分类分布</h3>
 
 <p>```mermaid</p>
 <p>pie showData</p>
 <p>    title "文章分类分布"</p>
-<p>    "⚙️ 工程" : 4</p>
-<p>    "🔒 安全" : 4</p>
-<p>    "💡 观点 / 杂谈" : 3</p>
-<p>    "🤖 AI / ML" : 2</p>
+<p>    "🤖 AI / ML" : 3</p>
+<p>    "⚙️ 工程" : 3</p>
+<p>    "📝 其他" : 3</p>
+<p>    "🔒 安全" : 2</p>
+<p>    "💡 观点 / 杂谈" : 2</p>
 <p>    "🛠 工具 / 开源" : 2</p>
 <p>```</p>
 
@@ -114,200 +115,202 @@
 <p>```mermaid</p>
 <p>xychart-beta horizontal</p>
 <p>    title "高频关键词"</p>
-<p>    x-axis ["security", "llm", "safari", "webkit", "sqlite", "ai agents", "authentication", "standard", "saas", "usb-c", "ethernet", "hardware"]</p>
+<p>    x-axis ["apple", "ai", "llm", "cve", "hardware", "pricing", "ai agents", "liability", "legal", "google", "prompt injection", "ai security"]</p>
 <p>    y-axis "出现次数" 0 --&gt; 5</p>
-<p>    bar [3, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1]</p>
+<p>    bar [3, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1]</p>
 <p>```</p>
 
 <p>&lt;details&gt;</p>
 <p>&lt;summary&gt;📈 纯文本关键词图（终端友好）&lt;/summary&gt;</p>
 
 <p>```</p>
-<p>security       │ ████████████████████ 3</p>
-<p>llm            │ █████████████░░░░░░░ 2</p>
-<p>safari         │ █████████████░░░░░░░ 2</p>
-<p>webkit         │ █████████████░░░░░░░ 2</p>
-<p>sqlite         │ █████████████░░░░░░░ 2</p>
-<p>ai agents      │ ███████░░░░░░░░░░░░░ 1</p>
-<p>authentication │ ███████░░░░░░░░░░░░░ 1</p>
-<p>standard       │ ███████░░░░░░░░░░░░░ 1</p>
-<p>saas           │ ███████░░░░░░░░░░░░░ 1</p>
-<p>usb-c          │ ███████░░░░░░░░░░░░░ 1</p>
+<p>apple     │ ████████████████████ 3</p>
+<p>ai        │ █████████████░░░░░░░ 2</p>
+<p>llm       │ █████████████░░░░░░░ 2</p>
+<p>cve       │ █████████████░░░░░░░ 2</p>
+<p>hardware  │ █████████████░░░░░░░ 2</p>
+<p>pricing   │ █████████████░░░░░░░ 2</p>
+<p>ai agents │ █████████████░░░░░░░ 2</p>
+<p>liability │ ███████░░░░░░░░░░░░░ 1</p>
+<p>legal     │ ███████░░░░░░░░░░░░░ 1</p>
+<p>google    │ ███████░░░░░░░░░░░░░ 1</p>
 <p>```</p>
 
 <p>&lt;/details&gt;</p>
 
 <h3>🏷️ 话题标签</h3>
 
-<p><strong>security</strong>(3) · <strong>llm</strong>(2) · <strong>safari</strong>(2) · webkit(2) · sqlite(2) · ai agents(1) · authentication(1) · standard(1) · saas(1) · usb-c(1) · ethernet(1) · hardware(1) · framework(1) · cybercrime(1) · scattered spider(1) · hacking(1) · prompt injection(1) · hiring(1) · ai-generated content(1) · career(1)</p>
-
-<hr>
-
-<h2>⚙️ 工程</h2>
-
-<h3>1. Framework 10G 以太网模块：揭示 USB-C 的复杂性</h3>
-
-<p><a href="https://www.jeffgeerling.com/blog/2026/framework-10g-ethernet-module-usb-c-complexity/">Framework's 10G Ethernet module exposes USB-C's complexity</a> — <strong>jeffgeerling.com</strong> · 19 小时前 · ⭐ 25/30</p>
-
-<blockquote>知名硬件博主 Jeff Geerling 深入探讨了 WisdPi 为 Framework 笔记本开发的 10G 以太网扩展模块。该模块的研发过程暴露了 USB-C 接口在处理高带宽、高功耗设备时的极端复杂性。文章对比了 5Gbps 与 10Gbps 适配器在散热设计、体积控制及成本方面的权衡。作者指出，尽管 USB-C 理论上支持高速传输，但要在紧凑的模块空间内实现稳定的 10GbE 连接仍面临巨大的工程挑战。</blockquote>
-
-<p>🏷️ USB-C, Ethernet, hardware, Framework</p>
-
-<hr>
-
-<h3>2. Safari 27 Beta 中的 WebKit 更新：质量与修复的飞跃</h3>
-
-<p><a href="https://webkit.org/blog/17967/news-from-wwdc26-webkit-in-safari-27-beta/">WebKit in Safari 27 Beta</a> — <strong>daringfireball.net</strong> · 14 小时前 · ⭐ 23/30</p>
-
-<blockquote>苹果在 WWDC26 期间发布了 Safari 27 Beta，其核心 WebKit 引擎迎来了重大更新。本次发布包含 58 项新功能和高达 525 项错误修复，是近年来修复数量最多的一次版本更新。更新的重点并非堆砌新特性，而是显著提升了现有功能的正确性、边缘情况处理能力以及功能间的协同表现。开发团队致力于通过提高代码质量，确保 Web 标准在 Safari 上的实现更加稳定和一致。</blockquote>
-
-<p>🏷️ Safari, WebKit, browser, web development</p>
-
-<hr>
-
-<h3>3. OPFS + Pyodide 测试工具</h3>
-
-<p><a href="https://simonwillison.net/2026/Jun/23/opfs-pyodide/#atom-everything">OPFS + Pyodide test harness</a> — <strong>simonwillison.net</strong> · 1 天前 · ⭐ 22/30</p>
-
-<blockquote>探讨 Datasette Lite（基于 Pyodide 和 WASM 的浏览器端 Python 应用）是否能直接编辑用户本地持久化的 SQLite 文件。通过引入 Origin Private File System (OPFS) 技术，开发者构建了一个测试工具来验证浏览器沙盒环境下的文件读写能力。该方案旨在解决 WebAssembly 应用在处理大型数据库时面临的持久化存储限制，让浏览器端应用具备接近原生应用的性能和数据管理体验。测试结果证明了利用 OPFS 提升 Web 端数据处理工具实用性的可行性。</blockquote>
-
-<p>🏷️ Pyodide, WASM, OPFS, browser storage</p>
-
-<hr>
-
-<h3>4. WebKit 导致所有相关应用中的“复制”菜单项始终处于激活状态</h3>
-
-<p><a href="https://lapcatsoftware.com/articles/2026/6/5.html">WebKit Always Enables the Copy Menu Item in Every App</a> — <strong>daringfireball.net</strong> · 11 小时前 · ⭐ 21/30</p>
-
-<blockquote>开发者 Jeff Johnson 证实了 WebKit 引擎存在一个长期存在的 UI 逻辑缺陷，导致 Safari 和 Mail 等应用在未选中任何内容时，“复制”菜单项也始终显示为可用状态。该问题源于 WebKit 对系统菜单状态的错误接管，打破了 macOS 标准的 UI 交互规范。由于 WebKit 是苹果平台的公共 API，这一行为会影响所有嵌入 Web 视图的第三方应用程序。文章深入探讨了该 Bug 的表现形式及其对用户体验一致性的破坏。</blockquote>
-
-<p>🏷️ WebKit, Safari, UI, browser bug</p>
-
-<hr>
-
-<h2>🔒 安全</h2>
-
-<h3>5. Scattered Spider 黑客组织成员在审判首日认罪</h3>
-
-<p><a href="https://krebsonsecurity.com/2026/06/scattered-spider-hackers-plead-guilty-on-day-1-of-trial/">Scattered Spider Hackers Plead Guilty on Day 1 of Trial</a> — <strong>krebsonsecurity.com</strong> · 1 天前 · ⭐ 25/30</p>
-
-<blockquote>两名 Scattered Spider 犯罪集团成员在英国法庭上承认了针对伦敦交通局（TfL）的网络攻击指控。该攻击发生在 2024 年 8 月，曾导致大伦敦地区公共交通网络系统严重瘫痪。这两名被告是该臭名昭著的黑客组织的核心成员，其认罪发生在原定为期六周的审判首日。此案标志着执法部门在打击这类针对关键基础设施的跨国网络犯罪方面取得了重大进展。</blockquote>
-
-<p>🏷️ cybercrime, Scattered Spider, hacking, security</p>
-
-<hr>
-
-<h3>6. “无法防范”：libssh2 严重漏洞再次引发 C 语言内存安全争议</h3>
-
-<p><a href="https://xeiaso.net/shitposts/no-way-to-prevent-this/memory-safety/CVE-2026-55200/">"No way to prevent this" say users of only language where this regularly happens</a> — <strong>xeiaso.net</strong> · 1 天前 · ⭐ 24/30</p>
-
-<blockquote>libssh2 项目近期发布了 CVE-2026-55200 漏洞补丁，该漏洞源于 ssh2_transport_read() 函数中缺少对数据包长度的上限检查。这一缺陷导致了越界写入，进而引发堆损坏，并可能导致远程代码执行（RCE）。作者以讽刺的口吻指出，这类内存安全漏洞在 C 语言编写的组件中频繁发生，几乎成了该语言的“特产”。文章强调，尽管运维人员忙于修补，但根源在于编程语言本身缺乏现代化的内存保护机制。</blockquote>
-
-<p>🏷️ Memory Safety, CVE, C, libssh2</p>
-
-<hr>
-
-<h3>7. Cory Doctorow：以保护之名行监控之实是极其愚蠢的</h3>
-
-<p><a href="https://pluralistic.net/2026/06/23/destroy-the-village/">Pluralistic: Spying on kids to save kids from spying is very, very stupid (23 Jun 2026)</a> — <strong>pluralistic.net</strong> · 1 天前 · ⭐ 23/30</p>
-
-<blockquote>著名作家 Cory Doctorow 猛烈抨击了以“保护儿童”为借口加强网络监控的政策。文章讨论了从封禁 VPN 到 ISP 建立“版权监狱”等一系列侵犯隐私的行为，认为这些手段最终会损害所有人的数字权利。作者还串联了 Google 的机器学习转型、公平竞争环境的恶化以及财富税等多个社会技术议题。其核心观点是，通过破坏隐私和安全来寻求保护是一种逻辑谬误，只会导致更严重的社会控制。</blockquote>
-
-<p>🏷️ Privacy, Surveillance, VPN, Policy</p>
-
-<hr>
-
-<h3>8. Troy Hunt 每周更新第 509 期</h3>
-
-<p><a href="https://www.troyhunt.com/weekly-update-509/">Weekly Update 509</a> — <strong>troyhunt.com</strong> · 1 天前 · ⭐ 21/30</p>
-
-<blockquote>网络安全专家 Troy Hunt 在本周更新中分享了他在家庭影院视听系统方面的探索，并借此讨论了“有意识的无能”与“无意识的无能”之间的认知差异。虽然他在该领域自认不够专业，但这种认知状态有助于更严谨地学习复杂系统。除了个人生活分享，更新通常还涵盖了近期网络安全领域的重大事件和 Have I Been Pwned 项目的最新动态。这种跨界的思考为技术人员理解自身知识边界提供了有趣的视角。</blockquote>
-
-<p>🏷️ Troy Hunt, security, home-cinema, learning</p>
-
-<hr>
-
-<h2>💡 观点 / 杂谈</h2>
-
-<h3>9. 汤姆·麦克赖特谈 LLM 导致的“意外匿名性”</h3>
-
-<p><a href="https://simonwillison.net/2026/Jun/24/tom-macwright/#atom-everything">Quoting Tom MacWright</a> — <strong>simonwillison.net</strong> · 15 小时前 · ⭐ 24/30</p>
-
-<blockquote>Tom MacWright 观察到近期求职申请中出现了一个令人不安的趋势：从简历、个人作品集网站到 GitHub 项目及其提交记录，全部由 LLM 生成。这种现象导致了申请人的“意外匿名化”，招聘者完全无法从中获取关于候选人的真实信息或独特见解。作者表达了对这种缺乏真实性的担忧，认为这种过度依赖 AI 的行为抹杀了个人特色。这种趋势正在改变招聘市场的信任基础，使得筛选真实人才变得愈发困难。</blockquote>
-
-<p>🏷️ LLM, hiring, AI-generated content, career</p>
-
-<hr>
-
-<h3>10. 科技行业的货船崇拜</h3>
-
-<p><a href="https://www.wheresyoured.at/cargo-culture/">Cargo Culture</a> — <strong>wheresyoured.at</strong> · 1 天前 · ⭐ 24/30</p>
-
-<blockquote>文章深入探讨了科技行业中普遍存在的“货船崇拜”现象，即盲目模仿成功企业的表象而非理解其核心逻辑。作者通过对 NVIDIA、Anthropic 等行业巨头的分析，揭示了这种思维模式如何误导初创公司和投资者。文章指出，许多企业在不具备相应基础设施或技术积累的情况下，试图复制 AI 巨头的成功路径，最终导致资源浪费。这种批判性的视角旨在提醒从业者回归技术本质，而非沉迷于行业泡沫。</blockquote>
-
-<p>🏷️ AI, NVIDIA, Tech Industry</p>
-
-<hr>
-
-<h3>11. The Talk Show 播客：WWDC 2026 回顾与苹果历史新节目</h3>
-
-<p><a href="https://daringfireball.net/thetalkshow/2026/06/23/ep-450">The Talk Show: ‘Perp Walk for Selfies’</a> — <strong>daringfireball.net</strong> · 1 天前 · ⭐ 22/30</p>
-
-<blockquote>知名科技博主 John Gruber 与 Jason Snell 在本期播客中回顾了 WWDC 2026 的核心发布内容。节目重点讨论了苹果最新的技术走向，并预告了即将推出的 50 集大型苹果历史纪录片式播客《Designed in California》。两人深入剖析了苹果在后 WWDC 时代的战略布局，以及这些变化对开发者生态的深远影响。此外，节目还涉及了对苹果产品设计哲学和历史演进的独到见解。</blockquote>
-
-<p>🏷️ Apple, WWDC, Podcast</p>
+<p><strong>apple</strong>(3) · <strong>ai</strong>(2) · <strong>llm</strong>(2) · cve(2) · hardware(2) · pricing(2) · ai agents(2) · liability(1) · legal(1) · google(1) · prompt injection(1) · ai security(1) · memory safety(1) · ffmpeg(1) · c++(1) · hiring(1) · career(1) · ai-generated(1) · usb-c(1) · ethernet(1)</p>
 
 <hr>
 
 <h2>🤖 AI / ML</h2>
 
-<h3>12. WorkOS 推出 auth.md：AI Agent 身份验证的新标准</h3>
+<h3>1. AI 与法律责任</h3>
 
-<p>[[Sponsor] WorkOS: Agents Need Auth. There’s Now a Spec for It.](http://workos.com/auth-md?utm_source=daringfireball&amp;amp;utm_medium=newsletter&amp;amp;utm_campaign=q32026) — <strong>daringfireball.net</strong> · 14 小时前 · ⭐ 27/30</p>
+<p><a href="https://simonwillison.net/2026/Jun/25/ai-and-liability/#atom-everything">AI and Liability</a> — <strong>simonwillison.net</strong> · 11 小时前 · ⭐ 27/30</p>
 
-<blockquote>AI Agent 在代表用户执行任务时，常因无法自动处理应用注册和登录流程而受阻。WorkOS 提出了 auth.md 规范，这是一种托管在域名下的配置文件，功能类似于 robots.txt，专门用于指导 Agent 如何进行用户注册。该文件定义了应用支持的身份验证流、公开的权限范围（Scopes）以及凭证发放方式。它通过组合现有的 OAuth 标准，解决了 Agent 自动创建账户的兼容性问题。目前 Cloudflare、Firecrawl 和 Resend 等服务商已率先采用此标准。</blockquote>
+<blockquote>探讨 AI 代理人产生错误信息时的法律归属问题，重点关注德国法院对 Google AI Overviews 的最新裁决。该裁决认定 AI 生成的内容属于 Google 自己的言论，因此 Google 需对其中的错误答案承担法律责任。安全专家 Bruce Schneier 指出，AI 代理应被视为部署者或组织的代理人，其行为后果应由所属机构负责。这一判例打破了技术平台免责的传统认知，预示着 AI 开发者将面临更严格的监管和问责。文章强调，将 AI 视为独立实体是错误的，法律应聚焦于背后的运营主体。</blockquote>
 
-<p>🏷️ AI agents, authentication, standard, SaaS</p>
+<p>🏷️ AI, liability, legal, Google</p>
 
 <hr>
 
-<h3>13. 关于 LLM 角色混淆现象的思考</h3>
+<h3>2. 关于角色混淆的思考</h3>
 
-<p><a href="https://www.gilesthomas.com/2026/06/role-confusion">Thoughts on Role Confusion</a> — <strong>gilesthomas.com</strong> · 13 小时前 · ⭐ 25/30</p>
+<p><a href="https://www.gilesthomas.com/2026/06/role-confusion">Thoughts on Role Confusion</a> — <strong>gilesthomas.com</strong> · 1 天前 · ⭐ 26/30</p>
 
-<blockquote>文章探讨了“提示词注入即角色混淆”的研究，指出 LLM 在处理指令时存在严重缺陷。研究发现，大模型往往会忽略如 system、user 或 think 等明确的角色标签，转而根据文本的语气和语境来判断指令来源。这意味着攻击者可以通过模仿系统语气，轻易绕过安全限制实施提示词注入。作者认为这种机制上的弱点使得现有的基于标签的防御手段在面对高级攻击时显得力不从心。</blockquote>
+<blockquote>深入分析 LLM 提示词注入攻击的本质，即模型无法严格区分指令来源的“角色混淆”问题。研究发现，LLM 往往会忽略 &lt;system&gt;、&lt;user&gt; 或 &lt;think&gt; 等结构化标签，转而根据文本的语气和格式来判断指令优先级。这意味着攻击者可以通过模仿系统语气轻松绕过安全限制，实现提示词注入。文章指出，目前的角色标签机制并非可靠的安全边界，开发者需要更底层的防御策略。这种现象揭示了当前模型架构在处理多源指令时的根本性缺陷。</blockquote>
 
-<p>🏷️ LLM, Prompt Injection, Security</p>
+<p>🏷️ LLM, prompt injection, AI security</p>
+
+<hr>
+
+<h3>3. WorkOS：AI 代理需要身份验证，新规范 auth.md 问世</h3>
+
+<p>[[Sponsor] WorkOS: Agents Need Auth. There’s Now a Spec for It.](http://workos.com/auth-md?utm_source=daringfireball&amp;amp;utm_medium=newsletter&amp;amp;utm_campaign=q32026) — <strong>daringfireball.net</strong> · 1 天前 · ⭐ 23/30</p>
+
+<blockquote>介绍一种名为 auth.md 的新开源规范，旨在解决 AI 代理在自动执行任务时遇到的注册和登录障碍。该文件类似于 robots.txt，托管在域名根目录下，用于告知 AI 代理如何代表用户进行注册、支持的 OAuth 流程及权限范围。目前 Cloudflare、Firecrawl 和 Resend 等公司已率先采用该标准。这一方案通过组合现有的 OAuth 标准，为 AI 代理与 Web 应用的无缝交互铺平了道路。它解决了 AI 自动化流程中最后一个关键的身份识别环节。</blockquote>
+
+<p>🏷️ AI agents, authentication, spec, auth.md</p>
+
+<hr>
+
+<h2>⚙️ 工程</h2>
+
+<h3>4. Framework 的 10G 以太网模块揭示了 USB-C 的复杂性</h3>
+
+<p><a href="https://www.jeffgeerling.com/blog/2026/framework-10g-ethernet-module-usb-c-complexity/">Framework's 10G Ethernet module exposes USB-C's complexity</a> — <strong>jeffgeerling.com</strong> · 1 天前 · ⭐ 23/30</p>
+
+<blockquote>评测 WisdPi 为 Framework 笔记本开发的 10Gbps 以太网扩展模块，探讨其背后的硬件挑战。该模块在实现高速网络传输的同时，暴露了 USB-C 协议在电力传输、信号完整性和散热管理方面的极高复杂度。相比之前的 5Gbps 版本，10G 模块需要更精密的电路设计以应对巨大的发热量和功耗需求。文章通过这一具体案例，展示了在紧凑型设备上实现顶级外设性能的技术门槛。这证明了 USB-C 虽然万能，但在极限性能下对硬件设计提出了严苛要求。</blockquote>
+
+<p>🏷️ USB-C, Ethernet, hardware, Framework</p>
+
+<hr>
+
+<h3>5. 苹果 Journal 应用的严重撤销 Bug 已修复（SwiftUI 本身并非元凶）</h3>
+
+<p><a href="https://daringfireball.net/2026/06/swiftui_only_makes_it_easy_to_develop_bad_apps">Apple Journal’s Atrocious Undo Bug Has Been Fixed (and SwiftUI, Per Se, Is Not to Blame)</a> — <strong>daringfireball.net</strong> · 10 小时前 · ⭐ 22/30</p>
+
+<blockquote>关注 macOS 26 Tahoe 中 Apple Journal 应用一个严重撤销（Undo）逻辑错误的修复情况。此前该 Bug 会导致用户在撤销删除单个单词的操作时，错误地删除整段句子。作者澄清虽然该应用使用 SwiftUI 开发，但此类低级逻辑错误不能简单归咎于框架本身。文章指出，SwiftUI 虽然降低了开发门槛，但也可能让开发者更容易忽略基础的交互质量。目前该问题已在最新测试版中得到解决，反映了苹果在提升原生应用稳定性方面的努力。</blockquote>
+
+<p>🏷️ SwiftUI, iOS, bug-fix, Apple</p>
+
+<hr>
+
+<h3>6. DLL 离奇失踪案：未被正式卸载却从内存中消失（第一部分）</h3>
+
+<p><a href="https://devblogs.microsoft.com/oldnewthing/20260625-00/?p=112467">The case of the DLL that was not present in memory despite not being formally unloaded, part 1</a> — <strong>devblogs.microsoft.com/oldnewthing</strong> · 19 小时前 · ⭐ 22/30</p>
+
+<blockquote>调查一个诡异的 Windows 内存问题：某个 DLL 在没有被显式调用 FreeLibrary 的情况下，从进程内存空间中彻底消失了。通过 WinDbg 调试器检查模块列表发现该 DLL 确实不在其中，但代码逻辑中并未包含任何卸载指令。调查重点转向了加载器（Loader）的内部状态和引用计数机制，试图寻找“幽灵卸载”的根源。第一部分详细展示了如何利用调试命令排查模块加载状态，并为后续揭开底层加载器逻辑冲突埋下伏笔。作者通过实战演示了在复杂系统环境下，如何追踪那些不留痕迹的模块移除行为。</blockquote>
+
+<p>🏷️ Windows, DLL, debugging, memory</p>
+
+<hr>
+
+<h2>📝 其他</h2>
+
+<h3>7. 纪念 Om Malik (1966-2026)</h3>
+
+<p><a href="https://om.co/2026/06/24/1966-2026/">Om Malik, 1966-2026</a> — <strong>daringfireball.net</strong> · 13 小时前 · ⭐ 23/30</p>
+
+<blockquote>讣告确认了著名科技记者、Gigaom 创始人 Om Malik 于 2026 年 6 月 24 日在斯坦福医院因心脏疾病去世。Om Malik 在科技行业拥有深远影响力，以其敏锐的洞察力和对技术趋势的深刻理解而闻名。他在长期与病魔斗争的过程中保持了极高的隐私，因此这一消息令科技界感到震惊和悲痛。家人和朋友邀请公众在社交平台上分享对他的缅怀，以纪念这位科技报道领域的先驱。他的离去标志着科技媒体一个时代的终结。</blockquote>
+
+<p>🏷️ Om Malik, obituary, tech-industry</p>
+
+<hr>
+
+<h3>8. 苹果上调多数产品价格 15-25%，iPhone、Apple Watch 和 AirPods 除外</h3>
+
+<p><a href="https://www.wsj.com/tech/apple-raises-prices-on-macs-ipads-by-200-or-more-on-some-models-a7463f99?st=zse57R">Apple Raises Prices on Most Products by 15–25 Percent, but Not iPhones, Watches, or AirPods</a> — <strong>daringfireball.net</strong> · 16 小时前 · ⭐ 23/30</p>
+
+<blockquote>报道苹果公司近期的大规模调价行为，Mac 和 iPad 全线产品价格显著上涨。其中 Mac 电脑涨幅约为 15% 至 20%，iPad 涨幅则高达 15% 至 25%。具体而言，基础款 MacBook Air 涨价 200 美元至 1299 美元，MacBook Pro 涨价 300 美元至 1999 美元，入门级 MacBook Neo 也上涨了 100 美元。值得注意的是，iPhone、Apple Watch 和 AirPods 等核心移动设备此次并未调整价格。这次调价反映了供应链成本压力或苹果产品策略的重大转向。</blockquote>
+
+<p>🏷️ Apple, pricing, iPad, Mac</p>
+
+<hr>
+
+<h3>9. 关于苹果硬件调价的深度思考</h3>
+
+<p><a href="https://daringfireball.net/2026/06/spensive_thoughts">★ Spensive Thoughts</a> — <strong>daringfireball.net</strong> · 11 小时前 · ⭐ 21/30</p>
+
+<blockquote>分析苹果公司近期对其硬件产品线进行价格调整背后的逻辑与市场策略。文章详细对比了涨价产品与维持原价产品的差异，探讨了供应链成本、通货膨胀以及产品生命周期对定价的影响。作者指出，某些高端型号的涨价反映了苹果对利润率的坚持，而入门级产品的价格稳定则是为了在经济波动期维持市场占有率。通过对具体硬件配置与价格变动的拆解，揭示了苹果如何利用其强大的品牌定价权来应对全球经济环境的变化。文章还简要评价了这些价格变动对普通消费者和专业用户的不同影响。</blockquote>
+
+<p>🏷️ Apple, pricing, hardware</p>
+
+<hr>
+
+<h2>🔒 安全</h2>
+
+<h3>10. “无法预防”：唯有使用此类语言的开发者常发此言</h3>
+
+<p><a href="https://xeiaso.net/shitposts/no-way-to-prevent-this/memory-safety/CVE-2026-8461/">"No way to prevent this" say users of only language where this regularly happens</a> — <strong>xeiaso.net</strong> · 1 天前 · ⭐ 24/30</p>
+
+<blockquote>针对 FFmpeg 项目中新发现的 CVE-2026-8461 漏洞进行技术剖析，该漏洞源于 MagicYUV 解码器中的越界写入。由于 C 语言缺乏内存安全保障，不当的边界检查导致了堆损坏、拒绝服务甚至远程代码执行风险。文章讽刺地指出，这类内存安全漏洞在 C/C++ 项目中反复出现，而开发者往往将其视为不可避免的意外。作者强调，转向内存安全语言是彻底解决此类系统性风险的唯一途径。这再次引发了关于关键基础设施是否应强制使用 Rust 等安全语言的讨论。</blockquote>
+
+<p>🏷️ memory safety, CVE, FFmpeg, C++</p>
+
+<hr>
+
+<h3>11. 事故报告：CVE-2026-LGTM 漏洞始末</h3>
+
+<p><a href="https://nesbitt.io/2026/06/26/incident-report-cve-2026-lgtm.html">Incident Report: CVE-2026-LGTM</a> — <strong>nesbitt.io</strong> · 5 小时前 · ⭐ 21/30</p>
+
+<blockquote>以正式事故报告的形式复盘了一个名为 CVE-2026-LGTM 的安全事件，讽刺了现代开发中流于形式的审查文化。该事件源于一系列自动化代理（Agents）在缺乏实质性人工干预的情况下，盲目批准了带有严重隐患的代码变更。报告详细记录了从代码提交到自动化工具链“误报”通过的完整过程，揭示了“看起来没问题（LGTM）”心态在自动化时代的危害。作者通过这个虚构案例警示，过度依赖 AI 和自动化审批流可能导致灾难性的安全漏洞。结论呼吁在追求开发效率的同时，必须保留关键的人工审计环节。</blockquote>
+
+<p>🏷️ AI agents, vulnerability, CVE</p>
+
+<hr>
+
+<h2>💡 观点 / 杂谈</h2>
+
+<h3>12. 引用 Tom MacWright：AI 生成时代的“意外匿名”</h3>
+
+<p><a href="https://simonwillison.net/2026/Jun/24/tom-macwright/#atom-everything">Quoting Tom MacWright</a> — <strong>simonwillison.net</strong> · 1 天前 · ⭐ 23/30</p>
+
+<blockquote>讨论招聘过程中日益严重的 AI 泛滥现象，求职者从简历、作品集到 GitHub 项目代码及提交信息均由 LLM 生成。这种高度同质化的 AI 内容导致了“意外匿名”现象，招聘方无法从中识别出候选人的真实个性和技术实力。作者 Tom MacWright 表达了对这种缺乏真实性沟通的担忧，认为求职者正在失去自我表达的机会。这反映了 AI 工具在提高效率的同时，也削弱了人与人之间建立信任的基础。文章呼吁在 AI 时代重新审视“真实性”的价值。</blockquote>
+
+<p>🏷️ LLM, hiring, career, AI-generated</p>
+
+<hr>
+
+<h3>13. 越狱并非窃取：数字所有权与企业垄断的博弈</h3>
+
+<p><a href="https://pluralistic.net/2026/06/25/thieve-different/">Pluralistic: Jailbreaking isn't theft (25 Jun 2026)</a> — <strong>pluralistic.net</strong> · 1 天前 · ⭐ 21/30</p>
+
+<blockquote>深入探讨越狱（Jailbreaking）的合法性与道德性，严厉驳斥了科技巨头将越狱等同于盗版的商业论调。作者 Cory Doctorow 认为，用户对自己购买的硬件拥有完全控制权是基本财产权的体现，而非犯罪行为。文章串联了 AI 目标永恒性突破、监控定价（Surveillance pricing）以及企业对互联网生态的侵蚀等多个前沿议题。核心观点呼吁公众从法律和技术层面反抗封闭生态，保护开放的 Web 环境免受其创始人和巨头公司的破坏。结论强调，重新夺回设备控制权是维护数字时代公民权利的关键一步。</blockquote>
+
+<p>🏷️ jailbreaking, piracy, AI, policy</p>
 
 <hr>
 
 <h2>🛠 工具 / 开源</h2>
 
-<h3>14. browser-compat-db：将 MDN 浏览器兼容性数据转换为 SQLite</h3>
+<h3>14. Safari 27 Beta 中的 WebKit 更新</h3>
 
-<p><a href="https://simonwillison.net/2026/Jun/24/browser-compat-db/#atom-everything">simonw/browser-compat-db</a> — <strong>simonwillison.net</strong> · 9 小时前 · ⭐ 22/30</p>
+<p><a href="https://webkit.org/blog/17967/news-from-wwdc26-webkit-in-safari-27-beta/">WebKit in Safari 27 Beta</a> — <strong>daringfireball.net</strong> · 1 天前 · ⭐ 22/30</p>
 
-<blockquote>受 Mozilla 新发布的 MDN MCP 服务启发，开发者 Simon Willison 创建了 browser-compat-db 项目。该项目旨在将 MDN 庞大的 browser-compat-data 仓库（通常为复杂的 JSON 格式）转换为易于查询的 SQLite 数据库。通过这种方式，开发者可以利用 SQL 语句快速检索不同浏览器对特定 Web 特性的支持情况。这一工具极大地简化了兼容性数据的二次开发和集成流程，为构建相关开发工具提供了便利。</blockquote>
+<blockquote>详细介绍 Safari 27 Beta 版本中 WebKit 引擎的重大改进，包含 58 项新功能和多达 525 项错误修复。本次更新的重点并非盲目追求新特性，而是致力于提升现有功能的正确性、处理边缘情况以及增强功能间的协同工作。这是近年来 Safari 修复数量最多的一次发布，显著提升了浏览器的稳定性和标准兼容性。开发者可以期待在 CSS 渲染和 JavaScript 执行方面获得更一致的体验。这标志着 WebKit 团队工作重心向“质量与互操作性”的回归。</blockquote>
 
-<p>🏷️ MCP, browser compatibility, MDN, SQLite</p>
-
-<hr>
-
-<h3>15. Datasette 1.0a35 版本发布</h3>
-
-<p><a href="https://simonwillison.net/2026/Jun/23/datasette/#atom-everything">datasette 1.0a35</a> — <strong>simonwillison.net</strong> · 1 天前 · ⭐ 21/30</p>
-
-<blockquote>数据探索工具 Datasette 发布了 1.0a35 重要预览版，引入了全新的“创建表”交互界面。该功能由后端的 /-/create JSON API 驱动，允许用户直接在数据库菜单中定义列、设置主键并进行自定义配置。新版本进一步强化了 Datasette 从单纯的只读工具向具备数据写入和结构管理能力的平台转型。这一更新显著降低了用户在浏览器中动态构建和管理 SQLite 数据库的门槛。</blockquote>
-
-<p>🏷️ Datasette, database, SQLite, open source</p>
+<p>🏷️ Safari, WebKit, browser, beta</p>
 
 <hr>
 
-<p><em>生成于 2026-06-25 09:36 | 扫描 81 源 → 获取 2453 篇 → 精选 15 篇</em></p>
+<h3>15. Scrutineer：在不干扰维护者的前提下扫描开源漏洞</h3>
+
+<p><a href="https://nesbitt.io/2026/06/25/scrutineer.html">Scrutineer: scanning open source without flooding maintainers</a> — <strong>nesbitt.io</strong> · 23 小时前 · ⭐ 22/30</p>
+
+<blockquote>探讨开源软件漏洞扫描中普遍存在的“警报疲劳”问题，并介绍了 Scrutineer 工具的设计初衷。该工具旨在解决自动化扫描器向维护者发送大量低质量、误报或无关紧要报告的现状。通过引入更精细的上下文感知筛选机制，Scrutineer 试图在发现安全隐患与保护维护者精力之间取得平衡。作者强调，漏洞扫描的技术门槛正在降低，但负责任地披露和推动修复才是真正的挑战。结论指出，安全工具应当成为开发者的助力而非负担，以维护健康的开源生态。</blockquote>
+
+<p>🏷️ open source, security, vulnerability scanning</p>
+
+<hr>
+
+<p><em>生成于 2026-06-26 09:42 | 扫描 79 源 → 获取 2418 篇 → 精选 15 篇</em></p>
 <p><em>基于 <a href="https://refactoringenglish.com/tools/hn-popularity/">Hacker News Popularity Contest 2025</a> RSS 源列表，由 <a href="https://x.com/karpathy">Andrej Karpathy</a> 推荐</em></p>
   </div>
   <div class="footer">
-    <p>Generated on 2026-06-25 · Based on <a href="https://refactoringenglish.com/tools/hn-popularity/">HN Popularity Contest 2025</a></p>
+    <p>Generated on 2026-06-26 · Based on <a href="https://refactoringenglish.com/tools/hn-popularity/">HN Popularity Contest 2025</a></p>
   </div>
 </body>
 </html>
