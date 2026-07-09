@@ -47,47 +47,47 @@
   </div>
   <hr>
   <div class="content">
-<h1>📰 Jul 8, 2026</h1>
+<h1>📰 Jul 9, 2026</h1>
 
 <blockquote>来自 Karpathy 推荐的 92 个顶级技术博客，AI 精选 Top 15</blockquote>
 
 <h2>📝 今日看点</h2>
 
-<p>今日技术圈呈现出大模型竞赛与行业反思并行的态势，腾讯发布295B参数开源模型的同时，市场对AI泡沫及软银式愿景的质疑声不断。苹果OS 27在标准化Markdown与增强Siri交互上持续发力，但其固化的设计规范正引发开发者对创意自由的讨论。此外，sqlite-utils 4.0等基础工具的重大迭代与全球反垄断监管的加强，共同构成了技术演进与合规治理的新常态。</p>
+<p>今日技术圈呈现出 AI 极速演进与理性反思并存的局面：OpenAI 发布 GPT-Live 刷新实时交互体验，而资深架构师开始带头抵制 AI 生成的低质量开发文档。工程领域迎来架构级重塑，Bun 借助智能体工程完成 Rust 重写，sqlite-utils 4.0 则补齐了数据库迁移的关键短板。此外，关于 AI 经济泡沫的质疑与网络安全行业的诚信危机，也为当前的技术热潮敲响了警钟。</p>
 
 <hr>
 
 <h2>🏆 今日必读</h2>
 
-<p>🥇 <strong>sqlite-utils 4.0 发布：现已支持数据库模式迁移</strong></p>
+<p>🥇 <strong>用 Rust 重写 Bun</strong></p>
 
-<p><a href="https://simonwillison.net/2026/Jul/7/sqlite-utils-4/#atom-everything">sqlite-utils 4.0, now with database schema migrations</a> — simonwillison.net · 13 小时前 · 🛠 工具 / 开源</p>
+<p><a href="https://simonwillison.net/2026/Jul/8/rewriting-bun-in-rust/#atom-everything">Rewriting Bun in Rust</a> — simonwillison.net · 9 小时前 · ⚙️ 工程</p>
 
-<blockquote>sqlite-utils 发布了 4.0 重大版本更新，这是该项目自 2020 年 11 月 v3.0 以来首次主版本升级。新版本最核心的特性是引入了数据库模式迁移（schema migrations）机制，允许开发者更系统地管理数据库结构的演进。此外，4.0 版本包含了一些破坏性变更，并同步发布了详细的升级指南。该工具目前已累计发布 124 个版本，进一步巩固了其作为 SQLite 生态中全能型操作工具的地位。</blockquote>
+<blockquote>Bun 的创始人 Jarred Sumner 完成了将 Bun 从 Zig 语言向 Rust 语言的大规模迁移。这次重写并非完全手动完成，而是采用了一种极其复杂的“智能体工程（Agentic Engineering）”方法。通过构建动态工作流、试运行和 AI 驱动的自动化代码转换，Sumner 在极短的时间内完成了这一壮举。这不仅是 Bun 架构的重大演进，更展示了 AI 智能体在处理大规模底层系统重构时的巨大潜力。目前该过程的详细技术细节已在博客中公开，涵盖了从内存管理到类型系统转换的实战经验。</blockquote>
 
-<p>💡 <strong>为什么值得读</strong>: SQLite 用户的必备工具迎来里程碑更新，终于补齐了模式迁移这一生产环境开发的关键短板。</p>
+<p>💡 <strong>为什么值得读</strong>: 这是目前利用 AI 智能体进行大规模底层系统重构的最前沿案例，值得所有关注 AI 辅助编程和高性能运行时的开发者阅读。</p>
 
-<p>🏷️ SQLite, database, migrations, Python</p>
+<p>🏷️ Bun, Rust, Zig, runtime</p>
 
-<p>🥈 <strong>腾讯发布 Hy3：拥有 295B 参数的开源混合专家模型</strong></p>
+<p>🥈 <strong>从零开始编写 LLM（第 34b 部分）：使用 JAX 逐步构建 GPT-2</strong></p>
 
-<p><a href="https://simonwillison.net/2026/Jul/6/hy3/#atom-everything">tencent/Hy3</a> — simonwillison.net · 1 天前 · 🤖 AI / ML</p>
+<p><a href="https://www.gilesthomas.com/2026/07/llm-from-scratch-34b-building-and-training-gpt-2-small-in-jax">Writing an LLM from scratch, part 34b -- from bigrams to GPT-2, one component at a time (in JAX)</a> — gilesthomas.com · 15 小时前 · 🤖 AI / ML</p>
 
-<blockquote>腾讯 Hy 团队正式发布了采用 Apache 2.0 协议开源的 Hy3 混合专家（MoE）模型。该模型总参数量达 295B，其中激活参数为 21B，并包含 3.8B 的 MTP 层参数。Hy3 在 4 月份预览版的基础上，结合 50 多个产品的反馈并使用更高质量的数据进行了大规模后训练。评测数据显示，Hy3 的性能表现超越了同等规模的其他主流模型。</blockquote>
+<blockquote>这是作者长期连载系列的收官之作，旨在通过 JAX 框架从头实现一个 GPT-2 Small 模型。文章严格遵循 Sebastian Raschka 的课程，详细演示了从最简单的二元语法（Bigram）模型演进到拥有 1.63 亿参数的 Transformer 架构的全过程。开发者可以跟随教程逐一实现注意力机制、层归一化和前馈网络等核心组件。该项目不仅提供了完整的代码实现，还深入探讨了在 JAX 中进行高效张量运算的技术细节。最终产出的模型能够完成基本的文本生成任务，验证了从零构建生产级架构的可行性。</blockquote>
 
-<p>💡 <strong>为什么值得读</strong>: 了解国产大模型在 MoE 架构上的最新开源进展，以及 295B 规模下的参数激活效率。</p>
+<p>💡 <strong>为什么值得读</strong>: 如果你想通过动手实践彻底理解 GPT 架构，这个基于 JAX 的保姆级教程是目前最扎实的参考资料之一。</p>
 
-<p>🏷️ LLM, MoE, Tencent, open-source</p>
+<p>🏷️ LLM, JAX, GPT-2, machine learning</p>
 
-<p>🥉 <strong>Markdown 在苹果 OS 27 系统中获得统一类型标识符 (UTI)</strong></p>
+<p>🥉 <strong>GPT-Live 正式发布</strong></p>
 
-<p><a href="https://developer.apple.com/documentation/uniformtypeidentifiers/uttype-swift.struct/markdown">Markdown Now Has a Uniform Type Identifer (UTI) in Apple’s Version 27 OSes</a> — daringfireball.net · 1 天前 · ⚙️ 工程</p>
+<p><a href="https://simonwillison.net/2026/Jul/8/introducing-gptlive/#atom-everything">Introducing GPT‑Live</a> — simonwillison.net · 10 小时前 · 🤖 AI / ML</p>
 
-<blockquote>苹果在最新的 OS 27 开发者测试版中，为 Markdown 数据引入了官方内置的统一类型标识符（UTI）。该标识符被定义为 `net.daringfireball.markdown`，并明确遵循 `public.utf8-plain-text` 标准。这一变动意味着 Markdown 在苹果生态系统中正式获得了系统级的身份识别。开发者现在可以弃用通用的纯文本标识，转而使用这一更精确的标准来处理文档交换。</blockquote>
+<blockquote>OpenAI 终于升级了 ChatGPT 的语音模式模型，并将其命名为 GPT-Live。新模型在 iPhone 应用中表现出极高的响应速度和更自然的交互感，显著降低了对话延迟。最核心的改进在于其后台调度机制：当遇到需要联网搜索、深度推理或复杂计算的任务时，它会自动将任务委派给更强大的 GPT-5.5 模型处理。这种“前端轻量交互+后端强力推理”的混合架构，使得语音助手在保持流畅的同时具备了处理尖端问题的能力。目前该功能已向部分预览用户开放。</blockquote>
 
-<p>💡 <strong>为什么值得读</strong>: Markdown 开发者必看，苹果终于在系统层面标准化了 Markdown 的文件类型定义，有助于提升跨应用协作体验。</p>
+<p>💡 <strong>为什么值得读</strong>: 揭示了 OpenAI 语音模式的最新架构演进，以及备受期待的 GPT-5.5 模型是如何在幕后发挥作用的。</p>
 
-<p>🏷️ Markdown, Apple, standards, macOS</p>
+<p>🏷️ OpenAI, GPT-Live, Voice Mode, LLM</p>
 
 <hr>
 
@@ -95,18 +95,18 @@
 
 <p>| 扫描源 | 抓取文章 | 时间范围 | 精选 |</p>
 <p>|:---:|:---:|:---:|:---:|</p>
-<p>| 83/92 | 2498 篇 → 30 篇 | 48h | <strong>15 篇</strong> |</p>
+<p>| 84/92 | 2516 篇 → 36 篇 | 48h | <strong>15 篇</strong> |</p>
 
 <h3>分类分布</h3>
 
 <p>```mermaid</p>
 <p>pie showData</p>
 <p>    title "文章分类分布"</p>
-<p>    "💡 观点 / 杂谈" : 6</p>
-<p>    "⚙️ 工程" : 4</p>
+<p>    "⚙️ 工程" : 3</p>
+<p>    "🤖 AI / ML" : 3</p>
+<p>    "🔒 安全" : 3</p>
 <p>    "🛠 工具 / 开源" : 3</p>
-<p>    "🤖 AI / ML" : 1</p>
-<p>    "📝 其他" : 1</p>
+<p>    "💡 观点 / 杂谈" : 3</p>
 <p>```</p>
 
 <h3>高频关键词</h3>
@@ -114,200 +114,200 @@
 <p>```mermaid</p>
 <p>xychart-beta horizontal</p>
 <p>    title "高频关键词"</p>
-<p>    x-axis ["apple", "llm", "macos", "ios", "sqlite", "database", "migrations", "python", "moe", "tencent", "open-source", "markdown"]</p>
+<p>    x-axis ["llm", "ai", "cybersecurity", "ios", "bun", "rust", "zig", "runtime", "jax", "gpt-2", "machine learning", "openai"]</p>
 <p>    y-axis "出现次数" 0 --&gt; 5</p>
-<p>    bar [3, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1]</p>
+<p>    bar [3, 3, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1]</p>
 <p>```</p>
 
 <p>&lt;details&gt;</p>
 <p>&lt;summary&gt;📈 纯文本关键词图（终端友好）&lt;/summary&gt;</p>
 
 <p>```</p>
-<p>apple      │ ████████████████████ 3</p>
-<p>llm        │ █████████████░░░░░░░ 2</p>
-<p>macos      │ █████████████░░░░░░░ 2</p>
-<p>ios        │ █████████████░░░░░░░ 2</p>
-<p>sqlite     │ ███████░░░░░░░░░░░░░ 1</p>
-<p>database   │ ███████░░░░░░░░░░░░░ 1</p>
-<p>migrations │ ███████░░░░░░░░░░░░░ 1</p>
-<p>python     │ ███████░░░░░░░░░░░░░ 1</p>
-<p>moe        │ ███████░░░░░░░░░░░░░ 1</p>
-<p>tencent    │ ███████░░░░░░░░░░░░░ 1</p>
+<p>llm           │ ████████████████████ 3</p>
+<p>ai            │ ████████████████████ 3</p>
+<p>cybersecurity │ █████████████░░░░░░░ 2</p>
+<p>ios           │ █████████████░░░░░░░ 2</p>
+<p>bun           │ ███████░░░░░░░░░░░░░ 1</p>
+<p>rust          │ ███████░░░░░░░░░░░░░ 1</p>
+<p>zig           │ ███████░░░░░░░░░░░░░ 1</p>
+<p>runtime       │ ███████░░░░░░░░░░░░░ 1</p>
+<p>jax           │ ███████░░░░░░░░░░░░░ 1</p>
+<p>gpt-2         │ ███████░░░░░░░░░░░░░ 1</p>
 <p>```</p>
 
 <p>&lt;/details&gt;</p>
 
 <h3>🏷️ 话题标签</h3>
 
-<p><strong>apple</strong>(3) · <strong>llm</strong>(2) · <strong>macos</strong>(2) · ios(2) · sqlite(1) · database(1) · migrations(1) · python(1) · moe(1) · tencent(1) · open-source(1) · markdown(1) · standards(1) · ai bubble(1) · tech industry(1) · critique(1) · antitrust(1) · big tech(1) · regulation(1) · monopoly(1)</p>
-
-<hr>
-
-<h2>💡 观点 / 杂谈</h2>
-
-<h3>1. 让 AI 泡沫破裂吧</h3>
-
-<p><a href="https://www.wheresyoured.at/let-ai-burn/">Let AI Burn</a> — <strong>wheresyoured.at</strong> · 15 小时前 · ⭐ 25/30</p>
-
-<blockquote>文章对当前人工智能行业的狂热现状提出了深度质疑，呼吁让不可持续的 AI 投资泡沫自行破裂。作者通过对 NVIDIA、Anthropic 等行业巨头的详细分析，揭示了高昂运营成本与实际产出价值之间的巨大鸿沟。文中指出，当前的 AI 发展模式过于依赖资本输血而非真实的商业逻辑。这种批判性视角旨在提醒从业者重新审视 AI 技术的真实落地前景与潜在财务风险。</blockquote>
-
-<p>🏷️ AI bubble, tech industry, critique</p>
-
-<hr>
-
-<h3>2. Pluralistic：美国各州与国际反垄断者如何击败科技巨头</h3>
-
-<p><a href="https://pluralistic.net/2026/07/07/going-global/">Pluralistic: How US states and international trustbusters can beat Big Tech (07 Jul 2026)</a> — <strong>pluralistic.net</strong> · 20 小时前 · ⭐ 24/30</p>
-
-<blockquote>本文探讨了美国各州政府与国际监管机构联手对抗大型科技公司垄断行为的策略。作者分析认为，跨区域的法律协作是制约科技巨头滥用市场地位的有效手段。文章还涉及了版权保护、隐私监管以及自我出版等多个领域的社会观察。通过对具体案例的剖析，展示了监管力量如何通过法律手段重塑数字市场的竞争格局。</blockquote>
-
-<p>🏷️ antitrust, Big Tech, regulation, monopoly</p>
-
-<hr>
-
-<h3>3. 写博客去探索你还不理解的事物</h3>
-
-<p><a href="https://seangoedecke.com/blog-about-things-you-dont-understand-yet/">Blog about things you don't understand yet</a> — <strong>seangoedecke.com</strong> · 1 天前 · ⭐ 23/30</p>
-
-<blockquote>作者提倡将撰写博客作为一种学习工具，去探索和梳理那些自己尚未完全掌握的技术领域。文章认为，每篇博文都应包含作者在写作过程中新习得的知识，这种“以写促学”的方式能有效提升思维深度。以 o3 geoguessr 提示词的研究为例，作者展示了如何从一个简单的假设出发，最终挖掘出深层的技术细节。这种方法不仅能产出高质量内容，更能加速个人的技术成长。</blockquote>
-
-<p>🏷️ learning, writing, career</p>
-
-<hr>
-
-<h3>4. 苹果应该打破应用图标的“超椭圆监狱”</h3>
-
-<p><a href="https://daringfireball.net/2026/07/eliminate_app_icon_squircle_jail">★ Apple Should Eliminate the App Icon ‘Squircle Jail’</a> — <strong>daringfireball.net</strong> · 1 天前 · ⭐ 22/30</p>
-
-<blockquote>文章尖锐地批评了苹果强制所有应用图标必须遵循“超椭圆”（Squircle）形状的限制，称其抹杀了设计的多样性。作者指出，形状曾是图标最具辨识度的特征，而现在的统一化设计让品牌个性变得模糊。文中呼吁苹果放开这一视觉枷锁，允许开发者在图标外形上拥有更多创意空间。这种设计上的反思挑战了苹果长期以来坚持的视觉一致性原则。</blockquote>
-
-<p>🏷️ iOS, design, UI, Apple</p>
-
-<hr>
-
-<h3>5. 软银黑粉指南：透视孙正义的愿景泡沫</h3>
-
-<p><a href="https://www.wheresyoured.at/premium-the-haters-guide-to-softbank/">Premium: The Hater's Guide To SoftBank</a> — <strong>wheresyoured.at</strong> · 1 天前 · ⭐ 22/30</p>
-
-<blockquote>本文对软银第 46 届年度股东大会及孙正义的演讲内容进行了辛辣讽刺。作者重点分析了会上展示的逻辑跳跃的演示幻灯片，质疑其所谓“进化”愿景的真实性。文章回顾了软银在 WeWork 等项目上的失败历史，剖析了其在当前 AI 浪潮中激进策略背后的巨大风险。这是一份针对软银财务现状与未来战略的深度批判性报告。</blockquote>
-
-<p>🏷️ SoftBank, venture capital, Masayoshi Son</p>
-
-<hr>
-
-<h3>6. 我真的对 AI 感到厌烦了</h3>
-
-<p><a href="https://shkspr.mobi/blog/2026/07/im-just-so-bored-of-ai/">I'm just so bored of AI</a> — <strong>shkspr.mobi</strong> · 1 天前 · ⭐ 20/30</p>
-
-<blockquote>作者表达了对当前泛滥且同质化的 AI 讨论的极度审美疲劳，将其比作听人反复吹嘘电子烟的口味。文章批评了目前将所有事物都强行与 AI 挂钩的趋势，认为这种“自动化一切”的狂热正在消解真正的创造力。这种无休止的、浅薄的 LLM 讨论已经变成了社交噪音，掩盖了技术本身应有的价值。作者呼吁回归到更有意义的人类对话和实际问题的解决上，而不是沉溺于计算机生成的平庸内容。这反映了技术圈内对于 AI 泡沫化和信息过载的一种清醒反思。</blockquote>
-
-<p>🏷️ AI hype, AI fatigue, industry trends</p>
+<p><strong>llm</strong>(3) · <strong>ai</strong>(3) · <strong>cybersecurity</strong>(2) · ios(2) · bun(1) · rust(1) · zig(1) · runtime(1) · jax(1) · gpt-2(1) · machine learning(1) · openai(1) · gpt-live(1) · voice mode(1) · zero-day(1) · startup(1) · investigation(1) · sqlite(1) · database(1) · migrations(1)</p>
 
 <hr>
 
 <h2>⚙️ 工程</h2>
 
-<h3>7. Markdown 在苹果 OS 27 系统中获得统一类型标识符 (UTI)</h3>
+<h3>1. 用 Rust 重写 Bun</h3>
 
-<p><a href="https://developer.apple.com/documentation/uniformtypeidentifiers/uttype-swift.struct/markdown">Markdown Now Has a Uniform Type Identifer (UTI) in Apple’s Version 27 OSes</a> — <strong>daringfireball.net</strong> · 1 天前 · ⭐ 25/30</p>
+<p><a href="https://simonwillison.net/2026/Jul/8/rewriting-bun-in-rust/#atom-everything">Rewriting Bun in Rust</a> — <strong>simonwillison.net</strong> · 9 小时前 · ⭐ 27/30</p>
 
-<blockquote>苹果在最新的 OS 27 开发者测试版中，为 Markdown 数据引入了官方内置的统一类型标识符（UTI）。该标识符被定义为 `net.daringfireball.markdown`，并明确遵循 `public.utf8-plain-text` 标准。这一变动意味着 Markdown 在苹果生态系统中正式获得了系统级的身份识别。开发者现在可以弃用通用的纯文本标识，转而使用这一更精确的标准来处理文档交换。</blockquote>
+<blockquote>Bun 的创始人 Jarred Sumner 完成了将 Bun 从 Zig 语言向 Rust 语言的大规模迁移。这次重写并非完全手动完成，而是采用了一种极其复杂的“智能体工程（Agentic Engineering）”方法。通过构建动态工作流、试运行和 AI 驱动的自动化代码转换，Sumner 在极短的时间内完成了这一壮举。这不仅是 Bun 架构的重大演进，更展示了 AI 智能体在处理大规模底层系统重构时的巨大潜力。目前该过程的详细技术细节已在博客中公开，涵盖了从内存管理到类型系统转换的实战经验。</blockquote>
 
-<p>🏷️ Markdown, Apple, standards, macOS</p>
-
-<hr>
-
-<h3>8. 关于 FILE_FLAG_DELETE_ON_CLOSE 标志的误区与对策</h3>
-
-<p><a href="https://devblogs.microsoft.com/oldnewthing/20260706-00/?p=112506">I opened a file with FILE_FLAG_DELETE_ON_CLOSE, but now I changed my mind</a> — <strong>devblogs.microsoft.com/oldnewthing</strong> · 1 天前 · ⭐ 21/30</p>
-
-<blockquote>在 Windows 开发中，使用 `FILE_FLAG_DELETE_ON_CLOSE` 标志打开文件意味着句柄关闭时文件将被自动删除。文章明确指出，一旦以此标志打开文件，开发者无法在中途撤销删除决定。作者详细解释了这一 Win32 API 的底层行为逻辑，并提供了一种替代方案来实现更灵活的文件生命周期管理。这对于需要处理临时文件或底层文件操作的开发者具有重要的避坑参考价值。</blockquote>
-
-<p>🏷️ Win32 API, file system, C++, Windows</p>
+<p>🏷️ Bun, Rust, Zig, runtime</p>
 
 <hr>
 
-<h3>9. 包管理器中的内容寻址</h3>
+<h3>2. 包管理器中的内容寻址机制</h3>
 
-<p><a href="https://nesbitt.io/2026/07/07/content-addressing-in-package-managers.html">Content addressing in package managers</a> — <strong>nesbitt.io</strong> · 22 小时前 · ⭐ 21/30</p>
+<p><a href="https://nesbitt.io/2026/07/07/content-addressing-in-package-managers.html">Content addressing in package managers</a> — <strong>nesbitt.io</strong> · 1 天前 · ⭐ 22/30</p>
 
-<blockquote>现代包管理器面临着名称冲突、版本漂移和供应链攻击等固有风险。内容寻址（Content Addressing）通过将包的哈希值作为其唯一标识符，从根本上解决了这些问题，确保了代码的不可变性。Nix、Unison 和 IPFS 等系统已经证明了这种模式在实现 100% 可复现构建方面的巨大优势。相比传统的语义化版本（SemVer），内容寻址让依赖关系变得透明且可验证，消除了“在我机器上能跑”的玄学问题。这种从“名称寻址”向“内容寻址”的转变，是构建更安全、更可靠的软件分发系统的关键演进。</blockquote>
+<blockquote>本文深入探讨了包管理器中“内容寻址（Content Addressing）”的核心价值，强调“名称供人阅读，哈希供系统识别”。通过对比传统的基于名称或版本的寻址方式，作者阐述了哈希校验如何确保依赖项的不可变性与安全性。内容寻址能够有效避免依赖冲突（Dependency Hell）并显著提升构建的可重复性。作者认为，现代包管理器的演进方向应是全面转向以内容哈希为核心的存储与分发架构。</blockquote>
 
 <p>🏷️ package manager, content addressing, hashing</p>
 
 <hr>
 
-<h3>10. Windows 95 是如何判断安装程序正在运行的？</h3>
+<h3>3. Agent 即单子（Monad），但不是你想的那种</h3>
 
-<p><a href="https://devblogs.microsoft.com/oldnewthing/20260707-00/?p=112508">How did Windows 95 decide that a setup program ran?</a> — <strong>devblogs.microsoft.com/oldnewthing</strong> · 18 小时前 · ⭐ 20/30</p>
+<p><a href="https://xeiaso.net/blog/2026/hyle-pneuma/">Agents are monads (but not that kind)</a> — <strong>xeiaso.net</strong> · 1 天前 · ⭐ 21/30</p>
 
-<blockquote>Windows 95 为了实现“添加/删除程序”等系统管理功能，必须能够准确识别用户何时运行了安装软件。系统采用了一套复杂的启发式算法（Heuristics），通过检测文件名（如 setup.exe 或 install.exe）、窗口标题以及特定的 API 调用序列来做出判断。这种机制在当时缺乏统一安装标准的环境下，是确保系统兼容性和注册表清理的关键。Raymond Chen 揭示了这些看似简单的判断背后隐藏的工程考量和历史背景。这展示了操作系统如何在底层通过“猜测”来弥补应用程序行为的不规范，是典型的向后兼容性设计。</blockquote>
+<blockquote>文章尝试从函数式编程的角度重新定义 AI Agent 的行为模式，将其类比为一种特殊的“单子（Monad）”。作者避开了晦涩的范畴论术语，重点讨论了 Agent 在处理状态转换、副作用以及链式调用时的逻辑结构。这种视角有助于开发者理解 Agent 如何在不确定的环境中维持上下文并进行复杂的任务编排。最终指出，将 Agent 视为一种计算抽象而非简单的脚本，是构建健壮 AI 应用的关键。</blockquote>
 
-<p>🏷️ Windows 95, heuristics, operating systems, legacy code</p>
-
-<hr>
-
-<h2>🛠 工具 / 开源</h2>
-
-<h3>11. sqlite-utils 4.0 发布：现已支持数据库模式迁移</h3>
-
-<p><a href="https://simonwillison.net/2026/Jul/7/sqlite-utils-4/#atom-everything">sqlite-utils 4.0, now with database schema migrations</a> — <strong>simonwillison.net</strong> · 13 小时前 · ⭐ 27/30</p>
-
-<blockquote>sqlite-utils 发布了 4.0 重大版本更新，这是该项目自 2020 年 11 月 v3.0 以来首次主版本升级。新版本最核心的特性是引入了数据库模式迁移（schema migrations）机制，允许开发者更系统地管理数据库结构的演进。此外，4.0 版本包含了一些破坏性变更，并同步发布了详细的升级指南。该工具目前已累计发布 124 个版本，进一步巩固了其作为 SQLite 生态中全能型操作工具的地位。</blockquote>
-
-<p>🏷️ SQLite, database, migrations, Python</p>
-
-<hr>
-
-<h3>12. github-code Web 组件：直接嵌入 GitHub 代码片段</h3>
-
-<p><a href="https://simonwillison.net/2026/Jul/7/github-code-component/#atom-everything">github-code Web Component</a> — <strong>simonwillison.net</strong> · 16 小时前 · ⭐ 20/30</p>
-
-<blockquote>这是一个利用 GPT-5.5 实验性构建的 Web 组件，旨在简化从 GitHub 仓库直接嵌入代码的过程。开发者只需使用 &lt;github-code&gt; 标签并传入 GitHub 文件 URL，即可在网页中展示特定行号的代码片段。该组件利用了 GitHub 的原始文件 API，并集成了语法高亮功能，无需复杂的后端配置或第三方插件。这种基于 AI 提示词生成的组件开发模式，展示了 Web Components 在微前端和文档工具中的高效应用潜力。它为技术博客和文档站提供了一种极其轻量且标准化的代码引用方案。</blockquote>
-
-<p>🏷️ Web Components, LLM, frontend</p>
-
-<hr>
-
-<h3>13. Backblaze 与 Dropbox 的博弈：云备份的失效危机</h3>
-
-<p><a href="https://mjtsai.com/blog/2025/12/19/backblaze-no-longer-backs-up-dropbox/">Backblaze Versus Dropbox</a> — <strong>daringfireball.net</strong> · 1 天前 · ⭐ 19/30</p>
-
-<blockquote>Backblaze 近期停止了对 Dropbox、iCloud Drive 和 OneDrive 等云存储服务同步文件夹的备份，引发了用户的广泛担忧。这一变化源于苹果 FileProvider API 的调整，导致同步文件被移动到 Backblaze 默认排除的隐藏路径中。许多用户曾将 Backblaze 视为云同步之外的“二次保险”，但现在的技术限制打破了这一安全链条。文章深入探讨了本地备份软件与云同步服务在文件系统层面的冲突，以及这种变化对个人数据安全策略的影响。这提醒用户，云同步并不等同于真正的离线或异地备份，依赖单一链条存在巨大风险。</blockquote>
-
-<p>🏷️ backup, cloud storage, macOS, file provider</p>
+<p>🏷️ monads, software agents, functional programming</p>
 
 <hr>
 
 <h2>🤖 AI / ML</h2>
 
-<h3>14. 腾讯发布 Hy3：拥有 295B 参数的开源混合专家模型</h3>
+<h3>4. 从零开始编写 LLM（第 34b 部分）：使用 JAX 逐步构建 GPT-2</h3>
 
-<p><a href="https://simonwillison.net/2026/Jul/6/hy3/#atom-everything">tencent/Hy3</a> — <strong>simonwillison.net</strong> · 1 天前 · ⭐ 25/30</p>
+<p><a href="https://www.gilesthomas.com/2026/07/llm-from-scratch-34b-building-and-training-gpt-2-small-in-jax">Writing an LLM from scratch, part 34b -- from bigrams to GPT-2, one component at a time (in JAX)</a> — <strong>gilesthomas.com</strong> · 15 小时前 · ⭐ 27/30</p>
 
-<blockquote>腾讯 Hy 团队正式发布了采用 Apache 2.0 协议开源的 Hy3 混合专家（MoE）模型。该模型总参数量达 295B，其中激活参数为 21B，并包含 3.8B 的 MTP 层参数。Hy3 在 4 月份预览版的基础上，结合 50 多个产品的反馈并使用更高质量的数据进行了大规模后训练。评测数据显示，Hy3 的性能表现超越了同等规模的其他主流模型。</blockquote>
+<blockquote>这是作者长期连载系列的收官之作，旨在通过 JAX 框架从头实现一个 GPT-2 Small 模型。文章严格遵循 Sebastian Raschka 的课程，详细演示了从最简单的二元语法（Bigram）模型演进到拥有 1.63 亿参数的 Transformer 架构的全过程。开发者可以跟随教程逐一实现注意力机制、层归一化和前馈网络等核心组件。该项目不仅提供了完整的代码实现，还深入探讨了在 JAX 中进行高效张量运算的技术细节。最终产出的模型能够完成基本的文本生成任务，验证了从零构建生产级架构的可行性。</blockquote>
 
-<p>🏷️ LLM, MoE, Tencent, open-source</p>
-
-<hr>
-
-<h2>📝 其他</h2>
-
-<h3>15. iOS 27 Beta 3 为 Siri 新语音启用“语速”与“表现力”调节滑块</h3>
-
-<p><a href="https://techcrunch.com/2026/07/06/you-can-now-customize-siris-pace-and-expressivity-in-the-latest-ios-27-beta/">OS 27 Developer Beta 3 Enables New ‘Pace’ and ‘Expressivity’ Sliders for Siri’s New Voices</a> — <strong>daringfireball.net</strong> · 17 小时前 · ⭐ 23/30</p>
-
-<blockquote>苹果在 iOS 27 开发者测试版 Beta 3 中，正式启用了 Siri 语音的自定义控制功能。用户现在可以通过新增的“语速”（Pace）和“表现力”（Expressivity）滑块，手动调节 AI 助手的说话风格。这些功能在之前的测试版中仅为占位符，此次更新标志着苹果在提升 Siri 交互自然度方面迈出了实质性一步。这为用户提供了更精细的个性化语音合成体验。</blockquote>
-
-<p>🏷️ iOS, Siri, Apple, UX</p>
+<p>🏷️ LLM, JAX, GPT-2, machine learning</p>
 
 <hr>
 
-<p><em>生成于 2026-07-08 08:40 | 扫描 83 源 → 获取 2498 篇 → 精选 15 篇</em></p>
+<h3>5. GPT-Live 正式发布</h3>
+
+<p><a href="https://simonwillison.net/2026/Jul/8/introducing-gptlive/#atom-everything">Introducing GPT‑Live</a> — <strong>simonwillison.net</strong> · 10 小时前 · ⭐ 26/30</p>
+
+<blockquote>OpenAI 终于升级了 ChatGPT 的语音模式模型，并将其命名为 GPT-Live。新模型在 iPhone 应用中表现出极高的响应速度和更自然的交互感，显著降低了对话延迟。最核心的改进在于其后台调度机制：当遇到需要联网搜索、深度推理或复杂计算的任务时，它会自动将任务委派给更强大的 GPT-5.5 模型处理。这种“前端轻量交互+后端强力推理”的混合架构，使得语音助手在保持流畅的同时具备了处理尖端问题的能力。目前该功能已向部分预览用户开放。</blockquote>
+
+<p>🏷️ OpenAI, GPT-Live, Voice Mode, LLM</p>
+
+<hr>
+
+<h3>6. iOS 27 测试版为 Siri 启用“语速”与“表现力”调节滑块</h3>
+
+<p><a href="https://techcrunch.com/2026/07/06/you-can-now-customize-siris-pace-and-expressivity-in-the-latest-ios-27-beta/">OS 27 Developer Beta 3 Enables New ‘Pace’ and ‘Expressivity’ Sliders for Siri’s New Voices</a> — <strong>daringfireball.net</strong> · 1 天前 · ⭐ 22/30</p>
+
+<blockquote>在最新的 iOS 27 开发者测试版 Beta 3 中，苹果正式启用了此前预告的 Siri 语音自定义功能。用户现在可以通过新增的“语速（Pace）”和“表现力（Expressivity）”滑块，精细调整 AI 助手的说话节奏和情感起伏。这一更新标志着苹果在 AI 语音合成领域从“预设音色”向“个性化交互”的转变。通过赋予用户对语音细节的控制权，Siri 的交互体验将变得更加自然且符合个人偏好。</blockquote>
+
+<p>🏷️ iOS, Siri, AI, Beta</p>
+
+<hr>
+
+<h2>🔒 安全</h2>
+
+<h3>7. 重罪犯与骗子经营的攻击性网络安全初创公司</h3>
+
+<p><a href="https://krebsonsecurity.com/2026/07/felons-fraudsters-flog-offensive-cybersecurity-startup/">Felons, Fraudsters Flog Offensive Cybersecurity Startup</a> — <strong>krebsonsecurity.com</strong> · 21 小时前 · ⭐ 26/30</p>
+
+<blockquote>一家声称斥资数百万美元收购主流软件 0-day 漏洞的初创公司被曝存在严重背景问题。调查显示，该公司的运营者是两名极右翼阴谋论者及重罪犯，他们曾多次经营虚假情报公司。两人此前还运营过一个现已倒闭的 AI 游说平台，并使用假名来掩盖其犯罪前科。该公司在网络安全社区中大肆宣传，试图吸引安全研究人员出售高价值漏洞。这一事件引发了业界对 0-day 交易市场缺乏监管以及中间商信用风险的深度担忧。</blockquote>
+
+<p>🏷️ cybersecurity, zero-day, startup, investigation</p>
+
+<hr>
+
+<h3>8. Troy Hunt 每周更新 511：来自马拉喀什的现场报道</h3>
+
+<p><a href="https://www.troyhunt.com/weekly-update-511/">Weekly Update 511: Live from my Riad in Marrakech</a> — <strong>troyhunt.com</strong> · 19 小时前 · ⭐ 24/30</p>
+
+<blockquote>安全专家 Troy Hunt 在本周更新中讨论了近期发生的多起重大数据泄露事件。他提出了一个生动的比喻：试图从互联网上删除已泄露的数据，就像试图“从游泳池里捞出尿液”一样徒劳。文章强调，一旦敏感信息进入公共领域或黑客论坛，任何补救措施都无法完全消除风险。此外，他还分享了自己在摩洛哥旅行期间对全球网络安全态势的观察。本期更新再次提醒企业和个人，预防泄露的价值远高于事后清理。</blockquote>
+
+<p>🏷️ data breach, cybersecurity, privacy, HIBP</p>
+
+<hr>
+
+<h3>9. 另一种控制流守卫检查：验证与调用的合并</h3>
+
+<p><a href="https://devblogs.microsoft.com/oldnewthing/20260708-00/?p=112510">The other kind of control flow guard check: The combined validate and call</a> — <strong>devblogs.microsoft.com/oldnewthing</strong> · 19 小时前 · ⭐ 23/30</p>
+
+<blockquote>本文深入探讨了 Windows 控制流守卫（Control Flow Guard, CFG）的一项性能优化技术。传统的 CFG 在进行间接调用前需要执行独立的验证检查，这会带来一定的性能开销。微软引入了“验证与调用合并（Combined Validate and Call）”机制，通过 `__guard_check_icall_setup` 等指令将安全检查与跳转操作整合。文章详细解析了编译器如何生成此类代码，以及底层汇编指令如何实现高效的安全防御。这种方法在不牺牲安全性的前提下，显著提升了系统底层防御的执行效率。</blockquote>
+
+<p>🏷️ Windows, CFG, low-level, security</p>
+
+<hr>
+
+<h2>🛠 工具 / 开源</h2>
+
+<h3>10. sqlite-utils 4.0 发布：现已支持数据库模式迁移</h3>
+
+<p><a href="https://simonwillison.net/2026/Jul/7/sqlite-utils-4/#atom-everything">sqlite-utils 4.0, now with database schema migrations</a> — <strong>simonwillison.net</strong> · 1 天前 · ⭐ 25/30</p>
+
+<blockquote>sqlite-utils 4.0 是该项目自 2020 年 3.0 版本以来的首个重大版本更新。本次更新最核心的特性是引入了正式的数据库模式（Schema）迁移系统，解决了 SQLite 长期以来难以处理结构变更的痛点。除了新功能，4.0 版本还包含了一些必要的破坏性变更，旨在优化 API 的一致性和长期可维护性。作者同步发布了详细的升级指南，帮助用户从旧版本平滑过渡。该工具进一步巩固了其作为 SQLite 数据处理和管理首选 CLI 工具的地位。</blockquote>
+
+<p>🏷️ SQLite, database, migrations, Python</p>
+
+<hr>
+
+<h3>11. Poppy 训练箱（一）：起步篇</h3>
+
+<p><a href="https://www.gilesthomas.com/2026/07/poppy-the-training-box-1-the-beginnings">poppy the training box, part 1: the beginnings</a> — <strong>gilesthomas.com</strong> · 8 小时前 · ⭐ 23/30</p>
+
+<blockquote>作者分享了构建专用本地 LLM 训练机器“Poppy”的初衷与过程。此前作者一直使用配备 RTX 3090 的主力 PC 进行训练，但发现长达数天的训练任务严重影响了日常办公和系统响应。为了解决这一矛盾，作者决定组装一台独立的深度学习工作站，专门用于运行 JAX 等框架的训练任务。本篇作为系列的第一部分，重点讨论了硬件选型的考量，特别是显存容量与散热对训练稳定性的影响。这为希望在本地进行模型微调或实验的开发者提供了实用的参考方案。</blockquote>
+
+<p>🏷️ GPU, LLM training, hardware</p>
+
+<hr>
+
+<h3>12. github-code Web 组件：直接嵌入 GitHub 代码片段</h3>
+
+<p><a href="https://simonwillison.net/2026/Jul/7/github-code-component/#atom-everything">github-code Web Component</a> — <strong>simonwillison.net</strong> · 1 天前 · ⭐ 22/30</p>
+
+<blockquote>该工具是一个用于在网页中直接嵌入 GitHub 代码的实验性 Web 组件，由作者利用 GPT-5.5 辅助开发完成。用户只需在 HTML 中使用 &lt;github-code&gt; 标签并传入 GitHub 文件的 URL，即可实现代码的自动抓取与展示。该组件支持通过 URL 参数指定特定的分支、提交哈希以及行号范围，并利用 Shadow DOM 确保样式隔离。这种方案解决了手动复制粘贴代码导致的版本同步滞后问题，展示了 AI 驱动下 Web 组件开发的极高效率。</blockquote>
+
+<p>🏷️ Web Components, GPT, frontend, AI-generated</p>
+
+<hr>
+
+<h2>💡 观点 / 杂谈</h2>
+
+<h3>13. 让 AI 燃烧吧</h3>
+
+<p><a href="https://www.wheresyoured.at/let-ai-burn/">Let AI Burn</a> — <strong>wheresyoured.at</strong> · 1 天前 · ⭐ 25/30</p>
+
+<blockquote>这篇文章对当前 AI 行业的经济可持续性提出了尖锐批评，重点分析了 NVIDIA 和 Anthropic 等巨头的财务逻辑。作者认为，当前的 AI 热潮建立在不可持续的资本支出之上，投入的巨额资金与实际产出的商业价值严重脱节。文章详细剖析了训练超大规模模型所带来的环境成本和财务风险，并将其比作一场即将破裂的泡沫。作者呼吁市场回归理性，停止盲目追求参数规模，转而关注真正的效率和实用性。其核心观点是，目前的 AI 发展模式更像是一种资源消耗竞赛而非技术革命。</blockquote>
+
+<p>🏷️ AI, tech industry, economic bubble, NVIDIA</p>
+
+<hr>
+
+<h3>14. 引用 Kenton Varda：禁止 AI 生成代码变更说明</h3>
+
+<p><a href="https://simonwillison.net/2026/Jul/8/kenton-varda/#atom-everything">Quoting Kenton Varda</a> — <strong>simonwillison.net</strong> · 13 小时前 · ⭐ 23/30</p>
+
+<blockquote>Cloudflare Workers 的架构师 Kenton Varda 宣布在其团队中禁止使用 AI 编写 PR（拉取请求）和 Commit 消息。他指出，AI 生成的描述往往“比没用更糟糕”，因为它们只会机械地描述代码表面的变化，而这些变化通过阅读代码本身就能轻易发现。AI 描述缺失了最关键的“高层框架感”，即解释代码为什么要这样改以及背后的设计意图。Varda 认为，这种自动化的文档降低了代码审查的质量，阻碍了团队成员之间的有效沟通。这一观点引发了关于 AI 是否在降低工程文档质量的广泛讨论。</blockquote>
+
+<p>🏷️ AI, code review, engineering culture, LLM</p>
+
+<hr>
+
+<h3>15. 适用于 iOS 的设计准则往往并不适用于 macOS</h3>
+
+<p><a href="https://daringfireball.net/2026/07/whats_good_for_the_ios_goose_is_often_not_good_for_the_macos_gander">★ What’s Good for the iOS Goose Is Often Not Good for the MacOS Gander</a> — <strong>daringfireball.net</strong> · 8 小时前 · ⭐ 22/30</p>
+
+<blockquote>文章探讨了 macOS 与 iOS 在应用图标设计哲学上的本质差异。作者指出，macOS 图标不仅是启动按钮，更是可拖拽、可承载文件投放的交互对象，具备更复杂的交互逻辑。相比 iOS 追求的扁平化与统一性，macOS 需要更丰富的视觉语言来体现其作为“桌面对象”的属性。结论认为，强行将移动端的设计规范套用到桌面端会削弱操作系统的功能直观性，开发者应尊重不同平台的交互直觉。</blockquote>
+
+<p>🏷️ UI/UX, macOS, iOS, design philosophy</p>
+
+<hr>
+
+<p><em>生成于 2026-07-09 09:52 | 扫描 84 源 → 获取 2516 篇 → 精选 15 篇</em></p>
 <p><em>基于 <a href="https://refactoringenglish.com/tools/hn-popularity/">Hacker News Popularity Contest 2025</a> RSS 源列表，由 <a href="https://x.com/karpathy">Andrej Karpathy</a> 推荐</em></p>
   </div>
   <div class="footer">
-    <p>Generated on 2026-07-08 · Based on <a href="https://refactoringenglish.com/tools/hn-popularity/">HN Popularity Contest 2025</a></p>
+    <p>Generated on 2026-07-09 · Based on <a href="https://refactoringenglish.com/tools/hn-popularity/">HN Popularity Contest 2025</a></p>
   </div>
 </body>
 </html>
