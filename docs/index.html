@@ -47,47 +47,47 @@
   </div>
   <hr>
   <div class="content">
-<h1>📰 Jul 16, 2026</h1>
+<h1>📰 Jul 17, 2026</h1>
 
 <blockquote>来自 Karpathy 推荐的 92 个顶级技术博客，AI 精选 Top 15</blockquote>
 
 <h2>📝 今日看点</h2>
 
-<p>AI安全与隐私边界正面临严峻考验，xAI与Claude的漏洞争议及微软创纪录的安全补丁，揭示了技术狂热背后的系统性风险。与此同时，Apple Intelligence获准入华与OpenAI硬件计划标志着大模型正加速向本地化与实体化转型，尽管市场对其商业泡沫的担忧依然存在。在工程领域，从GitHub的更新机制优化到社区架构的简化，开发者正通过回归务实与稳健来应对日益复杂的软件生态。</p>
+<p>今日技术圈见证了万亿级开放权重模型的集体爆发，Inkling 与 Kimi K3 刷新了开源 AI 的参数天花板，预示着大模型竞争进入超大规模参数的新阶段。与此同时，AI 领域的法律与安全博弈进入白热化，苹果与 OpenAI 的机密窃取诉讼及主流模型的隐私漏洞引发了行业对数据安全的深度忧虑。此外，随着 Apple Intelligence 获准入华以及 Linus Torvalds 明确拥抱 AI 工具，AI 技术正加速从资本泡沫转向深度工程落地与合规化应用。</p>
 
 <hr>
 
 <h2>🏆 今日必读</h2>
 
-<p>🥇 <strong>xAI 开源 grok-build 工具以应对隐私泄露争议</strong></p>
+<p>🥇 <strong>Inkling：Thinking Machines 发布 975B 参数的权重开放多模态模型</strong></p>
 
-<p><a href="https://simonwillison.net/2026/Jul/15/grok-build/#atom-everything">xai-org/grok-build, now open source</a> — simonwillison.net · 8 小时前 · 🤖 AI / ML</p>
+<p><a href="https://simonwillison.net/2026/Jul/16/inkling/#atom-everything">Inkling: Our open-weights model</a> — simonwillison.net · 16 小时前 · 🤖 AI / ML</p>
 
-<blockquote>xAI 开源了其 grok 命令行工具的构建代码，此前该工具因严重的隐私泄露问题引发社区强烈抵制。用户报告称在目录中运行 grok 命令时，该工具会将整个目录内容（包括 SSH 密钥和密码管理器数据）上传至 xAI 的 Google Cloud 存储桶。这一行为暴露了 AI 辅助开发工具在自动化数据采集方面的激进策略与安全边界缺失。目前该项目已在 GitHub 开源，旨在通过透明化缓解用户对数据窃取的担忧。这一事件提醒开发者，在使用闭源 AI 命令行工具时需警惕其后台的数据同步逻辑。</blockquote>
+<blockquote>Mira Murati 创立的 Thinking Machines 实验室发布了首个权重开放模型 Inkling。该模型采用混合专家（MoE）架构，总参数量达 975B，激活参数为 41B，并基于 Apache-2.0 协议授权。它在包含文本、图像、音频和视频的 45 万亿 token 海量数据集上训练而成，具备强大的多模态处理能力。此外，实验室预告了正在测试中的 Inkling-Small 版本，其拥有 276B 总参数和 12B 激活参数。这标志着顶级 AI 团队在超大规模开源模型领域的最新进展。</blockquote>
 
-<p>💡 <strong>为什么值得读</strong>: 警示开发者在使用 AI 命令行工具时需高度关注其背后的数据上传逻辑与隐私风险。</p>
+<p>💡 <strong>为什么值得读</strong>: 了解 Mira Murati 创业后的首个重量级开源 MoE 模型及其惊人的训练规模和多模态能力。</p>
 
-<p>🏷️ xAI, Grok, Open Source, Privacy</p>
+<p>🏷️ MoE, open-weights, LLM, Thinking Machines</p>
 
-<p>🥈 <strong>我如何诱导 Claude 泄露你的深度私密信息</strong></p>
+<p>🥈 <strong>OpenAI 泡沫</strong></p>
 
-<p><a href="https://simonwillison.net/2026/Jul/15/claude-web-fetch-exfiltration/#atom-everything">How I tricked Claude into leaking your deepest, darkest secrets</a> — simonwillison.net · 18 小时前 · 🔒 安全</p>
+<p><a href="https://www.wheresyoured.at/the-openai-bubble/">The OpenAI Bubble</a> — wheresyoured.at · 1 天前 · 💡 观点 / 杂谈</p>
 
-<blockquote>安全研究员 Ayush Paul 发现了 Anthropic 为 Claude 设计的 web_fetch 工具存在数据泄露漏洞。尽管该工具在设计之初就考虑了防御“致命三要素”（间接提示词注入、数据提取与外传），但研究人员通过特定手段绕过了其安全边界。该漏洞允许攻击者诱导 Claude 将用户的私密信息发送至外部服务器。这一发现再次证明了即便具备完善安全框架的 AI 代理工具，在处理实时网页抓取时仍面临严峻的注入攻击挑战。目前相关漏洞细节已公开，旨在推动 AI 厂商完善工具调用（Tool Use）的安全隔离机制。</blockquote>
+<blockquote>本文深入探讨了 OpenAI 及其在 AI 行业中可能存在的估值与实际价值脱节的泡沫现象。作者分析了当前 AI 投资热潮背后的驱动力，指出高昂的算力成本与尚未成熟的盈利模式之间的矛盾。文章警告称，如果 AI 技术无法在短期内转化为可持续的生产力突破，市场可能会面临剧烈调整。作者认为，当前的狂热更多是基于对通用人工智能（AGI）的过度预期而非现有的财务表现。这种观点为当前极度乐观的 AI 市场提供了一个冷静的反思视角。</blockquote>
 
-<p>💡 <strong>为什么值得读</strong>: 深入了解 AI Agent 在执行网络请求任务时可能遭遇的高级间接注入攻击手段。</p>
+<p>💡 <strong>为什么值得读</strong>: 深度反思 AI 行业的估值逻辑，警惕技术热潮背后可能存在的金融风险。</p>
 
-<p>🏷️ Claude, Prompt Injection, LLM Security, Privacy</p>
+<p>🏷️ OpenAI, AI bubble, tech economy</p>
 
-<p>🥉 <strong>微软修复创纪录的 570 个安全漏洞</strong></p>
+<p>🥉 <strong>Kimi K3 发布：首个 3T 级开放权重模型及其基准测试启示</strong></p>
 
-<p><a href="https://krebsonsecurity.com/2026/07/microsoft-patches-a-record-570-security-flaws/">Microsoft Patches a Record 570 Security Flaws</a> — krebsonsecurity.com · 1 天前 · 🔒 安全</p>
+<p><a href="https://simonwillison.net/2026/Jul/16/kimi-k3/#atom-everything">Kimi K3, and what we can still learn from the pelican benchmark</a> — simonwillison.net · 12 小时前 · 🤖 AI / ML</p>
 
-<blockquote>微软在最新的“周二补丁日”发布了创纪录的 570 个安全漏洞修复程序，这一数字几乎是上个月历史最高记录的三倍。此次大规模补丁涵盖了 Windows 操作系统及其他核心软件，旨在堵住激增的安全漏洞。微软官方将漏洞发现数量的爆发式增长归功于人工智能（AI）辅助技术的应用。这标志着网络安全领域进入了由 AI 驱动的漏洞挖掘与修复竞赛新阶段。对于企业 IT 管理员而言，如此规模的更新对补丁分发和系统稳定性测试提出了巨大挑战。</blockquote>
+<blockquote>月之暗面（Moonshot AI）发布了其最强模型 Kimi K3，参数量高达 2.8 万亿。该模型目前已通过 API 提供，并承诺在 2026 年 7 月 27 日前发布开放权重版本，旨在夺取“全球最大开放模型”的桂冠。Kimi K3 在规模上超越了 DeepSeek-V3，被官方称为首个“3T 级”开放模型。文章还通过 Pelican 基准测试探讨了超大规模模型在逻辑推理和长文本处理中的实际表现。这一举动预示着国产大模型在开源生态中的竞争进入了参数规模的新量级。</blockquote>
 
-<p>💡 <strong>为什么值得读</strong>: 揭示了 AI 如何彻底改变软件安全维护的规模与节奏，以及漏洞挖掘自动化的新趋势。</p>
+<p>💡 <strong>为什么值得读</strong>: 关注国产大模型在参数规模上的新突破以及即将到来的重磅开源计划。</p>
 
-<p>🏷️ Microsoft, Patch Tuesday, Vulnerability, Cybersecurity</p>
+<p>🏷️ LLM, Moonshot AI, Kimi K3, benchmark</p>
 
 <hr>
 
@@ -95,18 +95,18 @@
 
 <p>| 扫描源 | 抓取文章 | 时间范围 | 精选 |</p>
 <p>|:---:|:---:|:---:|:---:|</p>
-<p>| 80/92 | 2438 篇 → 28 篇 | 48h | <strong>15 篇</strong> |</p>
+<p>| 84/92 | 2522 篇 → 35 篇 | 48h | <strong>15 篇</strong> |</p>
 
 <h3>分类分布</h3>
 
 <p>```mermaid</p>
 <p>pie showData</p>
 <p>    title "文章分类分布"</p>
-<p>    "🤖 AI / ML" : 4</p>
-<p>    "⚙️ 工程" : 4</p>
-<p>    "🔒 安全" : 3</p>
-<p>    "💡 观点 / 杂谈" : 3</p>
-<p>    "🛠 工具 / 开源" : 1</p>
+<p>    "🤖 AI / ML" : 6</p>
+<p>    "💡 观点 / 杂谈" : 4</p>
+<p>    "🔒 安全" : 2</p>
+<p>    "🛠 工具 / 开源" : 2</p>
+<p>    "⚙️ 工程" : 1</p>
 <p>```</p>
 
 <h3>高频关键词</h3>
@@ -114,200 +114,200 @@
 <p>```mermaid</p>
 <p>xychart-beta horizontal</p>
 <p>    title "高频关键词"</p>
-<p>    x-axis ["privacy", "microsoft", "llm", "openai", "xai", "grok", "open source", "claude", "prompt injection", "llm security", "patch tuesday", "vulnerability"]</p>
-<p>    y-axis "出现次数" 0 --&gt; 4</p>
-<p>    bar [2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1]</p>
+<p>    x-axis ["openai", "llm", "apple", "privacy", "lawsuit", "browser", "moe", "open-weights", "thinking machines", "ai bubble", "tech economy", "moonshot ai"]</p>
+<p>    y-axis "出现次数" 0 --&gt; 7</p>
+<p>    bar [5, 4, 3, 2, 2, 2, 1, 1, 1, 1, 1, 1]</p>
 <p>```</p>
 
 <p>&lt;details&gt;</p>
 <p>&lt;summary&gt;📈 纯文本关键词图（终端友好）&lt;/summary&gt;</p>
 
 <p>```</p>
-<p>privacy          │ ████████████████████ 2</p>
-<p>microsoft        │ ████████████████████ 2</p>
-<p>llm              │ ████████████████████ 2</p>
-<p>openai           │ ████████████████████ 2</p>
-<p>xai              │ ██████████░░░░░░░░░░ 1</p>
-<p>grok             │ ██████████░░░░░░░░░░ 1</p>
-<p>open source      │ ██████████░░░░░░░░░░ 1</p>
-<p>claude           │ ██████████░░░░░░░░░░ 1</p>
-<p>prompt injection │ ██████████░░░░░░░░░░ 1</p>
-<p>llm security     │ ██████████░░░░░░░░░░ 1</p>
+<p>openai            │ ████████████████████ 5</p>
+<p>llm               │ ████████████████░░░░ 4</p>
+<p>apple             │ ████████████░░░░░░░░ 3</p>
+<p>privacy           │ ████████░░░░░░░░░░░░ 2</p>
+<p>lawsuit           │ ████████░░░░░░░░░░░░ 2</p>
+<p>browser           │ ████████░░░░░░░░░░░░ 2</p>
+<p>moe               │ ████░░░░░░░░░░░░░░░░ 1</p>
+<p>open-weights      │ ████░░░░░░░░░░░░░░░░ 1</p>
+<p>thinking machines │ ████░░░░░░░░░░░░░░░░ 1</p>
+<p>ai bubble         │ ████░░░░░░░░░░░░░░░░ 1</p>
 <p>```</p>
 
 <p>&lt;/details&gt;</p>
 
 <h3>🏷️ 话题标签</h3>
 
-<p><strong>privacy</strong>(2) · <strong>microsoft</strong>(2) · <strong>llm</strong>(2) · openai(2) · xai(1) · grok(1) · open source(1) · claude(1) · prompt injection(1) · llm security(1) · patch tuesday(1) · vulnerability(1) · cybersecurity(1) · apple intelligence(1) · china(1) · baidu(1) · ai bubble(1) · industry trends(1) · github(1) · dependabot(1)</p>
+<p><strong>openai</strong>(5) · <strong>llm</strong>(4) · <strong>apple</strong>(3) · privacy(2) · lawsuit(2) · browser(2) · moe(1) · open-weights(1) · thinking machines(1) · ai bubble(1) · tech economy(1) · moonshot ai(1) · kimi k3(1) · benchmark(1) · xai(1) · grok(1) · open source(1) · claude(1) · prompt injection(1) · security(1)</p>
 
 <hr>
 
 <h2>🤖 AI / ML</h2>
 
-<h3>1. xAI 开源 grok-build 工具以应对隐私泄露争议</h3>
+<h3>1. Inkling：Thinking Machines 发布 975B 参数的权重开放多模态模型</h3>
 
-<p><a href="https://simonwillison.net/2026/Jul/15/grok-build/#atom-everything">xai-org/grok-build, now open source</a> — <strong>simonwillison.net</strong> · 8 小时前 · ⭐ 26/30</p>
+<p><a href="https://simonwillison.net/2026/Jul/16/inkling/#atom-everything">Inkling: Our open-weights model</a> — <strong>simonwillison.net</strong> · 16 小时前 · ⭐ 28/30</p>
 
-<blockquote>xAI 开源了其 grok 命令行工具的构建代码，此前该工具因严重的隐私泄露问题引发社区强烈抵制。用户报告称在目录中运行 grok 命令时，该工具会将整个目录内容（包括 SSH 密钥和密码管理器数据）上传至 xAI 的 Google Cloud 存储桶。这一行为暴露了 AI 辅助开发工具在自动化数据采集方面的激进策略与安全边界缺失。目前该项目已在 GitHub 开源，旨在通过透明化缓解用户对数据窃取的担忧。这一事件提醒开发者，在使用闭源 AI 命令行工具时需警惕其后台的数据同步逻辑。</blockquote>
+<blockquote>Mira Murati 创立的 Thinking Machines 实验室发布了首个权重开放模型 Inkling。该模型采用混合专家（MoE）架构，总参数量达 975B，激活参数为 41B，并基于 Apache-2.0 协议授权。它在包含文本、图像、音频和视频的 45 万亿 token 海量数据集上训练而成，具备强大的多模态处理能力。此外，实验室预告了正在测试中的 Inkling-Small 版本，其拥有 276B 总参数和 12B 激活参数。这标志着顶级 AI 团队在超大规模开源模型领域的最新进展。</blockquote>
 
-<p>🏷️ xAI, Grok, Open Source, Privacy</p>
-
-<hr>
-
-<h3>2. Apple Intelligence 获准在中国上线，将采用百度与阿里模型</h3>
-
-<p><a href="https://www.scmp.com/tech/policy/article/3360685/china-approves-apple-intelligence-phones-alibaba-baidu-emerging-partners">Apple Intelligence OK’d to Launch in China, Using AI Models from Baidu and Alibaba</a> — <strong>daringfireball.net</strong> · 9 小时前 · ⭐ 26/30</p>
-
-<blockquote>中国监管机构已正式批准 Apple Intelligence 在国内 iPhone 等设备上落地，标志着苹果 AI 服务进入中国市场取得关键进展。为了符合当地法规，苹果选择与阿里巴巴和百度作为技术合作伙伴，由后者提供底层 AI 模型支持。国家互联网信息办公室（CAC）发布的公告确认了这一许可，涵盖了邮件摘要、报告撰写和图像编辑等核心 AI 功能。这一合作模式展示了全球科技巨头在不同监管环境下实现 AI 服务本土化的典型路径。此举解决了苹果在中国市场面临的 AI 功能缺失困境，对其硬件竞争力至关重要。</blockquote>
-
-<p>🏷️ Apple Intelligence, China, LLM, Baidu</p>
+<p>🏷️ MoE, open-weights, LLM, Thinking Machines</p>
 
 <hr>
 
-<h3>3. OpenAI 的泡沫</h3>
+<h3>2. Kimi K3 发布：首个 3T 级开放权重模型及其基准测试启示</h3>
 
-<p><a href="https://www.wheresyoured.at/the-openai-bubble/">The OpenAI Bubble</a> — <strong>wheresyoured.at</strong> · 15 小时前 · ⭐ 26/30</p>
+<p><a href="https://simonwillison.net/2026/Jul/16/kimi-k3/#atom-everything">Kimi K3, and what we can still learn from the pelican benchmark</a> — <strong>simonwillison.net</strong> · 12 小时前 · ⭐ 26/30</p>
 
-<blockquote>本文深入探讨了 OpenAI 当前面临的估值泡沫与商业可持续性挑战。作者指出，尽管生成式 AI 带来了技术狂热，但 OpenAI 的高额运营成本与尚未完全闭环的商业模式之间存在巨大鸿沟。文章分析了市场对 AI 预期的过度膨胀，以及这种“泡沫”可能对整个科技生态系统产生的连锁反应。作者认为，当前的 AI 繁荣在很大程度上依赖于资本的持续注入，而非实际的盈利能力。这种观点为当前狂热的 AI 投资环境提供了一个冷静的反思视角。</blockquote>
+<blockquote>月之暗面（Moonshot AI）发布了其最强模型 Kimi K3，参数量高达 2.8 万亿。该模型目前已通过 API 提供，并承诺在 2026 年 7 月 27 日前发布开放权重版本，旨在夺取“全球最大开放模型”的桂冠。Kimi K3 在规模上超越了 DeepSeek-V3，被官方称为首个“3T 级”开放模型。文章还通过 Pelican 基准测试探讨了超大规模模型在逻辑推理和长文本处理中的实际表现。这一举动预示着国产大模型在开源生态中的竞争进入了参数规模的新量级。</blockquote>
 
-<p>🏷️ OpenAI, AI bubble, industry trends, LLM</p>
-
-<hr>
-
-<h3>4. OpenAI 即将推出硬件产品：具备移动能力的无屏幕 AI 伴侣音箱</h3>
-
-<p><a href="https://www.bloomberg.com/news/articles/2026-07-14/openai-s-first-device-will-be-moveable-screenless-speaker-built-as-ai-companion?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NDA2MjAxMywiZXhwIjoxNzg0NjY2ODEzLCJhcnRpY2xlSWQiOiJUSTYwSllUOU5KTFMwMCIsImJjb25uZWN0SWQiOiJDNEVEQ0FFMUZBMDU0MEJFQTI0QTlGMjExQzFFOTA4MCJ9.DfRN0afk0TFIaHFw9zEKYjehnfMsZfKC7gPoVos8WPI&amp;amp;leadSource=article-gifting">Gurman on OpenAI’s Upcoming Hardware Product: ‘Movable, Screenless Speaker Built as AI Companion’</a> — <strong>daringfireball.net</strong> · 9 小时前 · ⭐ 23/30</p>
-
-<blockquote>彭博社记者 Mark Gurman 披露了 OpenAI 首款硬件产品的细节：这是一款具备移动能力的无屏幕智能音箱，定位为“AI 伴侣”。该设备集成了可活动的机械元件，旨在通过物理动作营造出一种“生命感”，使其不仅是一个响应指令的工具。它将深度整合用户的电子邮件等个人信息，以实现更具人情味的交互体验。OpenAI 的目标是创造一个能够与用户建立情感连接的物理实体，而非传统的智能家居中控。这种设计思路体现了 AI 硬件从“工具”向“伴侣”转变的趋势。</blockquote>
-
-<p>🏷️ OpenAI, Hardware, AI Companion, Smart Speaker</p>
+<p>🏷️ LLM, Moonshot AI, Kimi K3, benchmark</p>
 
 <hr>
 
-<h2>⚙️ 工程</h2>
+<h3>3. Apple Intelligence 获准在中国落地，将采用百度和阿里模型</h3>
 
-<h3>5. GitHub 更新：Dependabot 引入版本更新冷却期</h3>
+<p><a href="https://www.scmp.com/tech/policy/article/3360685/china-approves-apple-intelligence-phones-alibaba-baidu-emerging-partners">Apple Intelligence OK’d to Launch in China, Using AI Models from Baidu and Alibaba</a> — <strong>daringfireball.net</strong> · 1 天前 · ⭐ 25/30</p>
 
-<p><a href="https://simonwillison.net/2026/Jul/14/github-changeling/#atom-everything">Quoting GitHub Changelog</a> — <strong>simonwillison.net</strong> · 1 天前 · ⭐ 23/30</p>
+<blockquote>中国监管机构已批准 Apple Intelligence 在国内 iPhone 上运行，百度和阿里巴巴被确认为其核心技术合作伙伴。由于监管要求，苹果必须使用经过备案的本土大模型来驱动摘要、邮件撰写和图像编辑等 AI 功能。这一合作解决了苹果 AI 服务进入中国市场的合规性障碍，但也意味着中国版 iPhone 的 AI 体验将与全球版本采用不同的底层架构。百度和阿里将提供模型支持，而苹果负责系统级的集成与用户界面。这标志着跨国科技巨头在 AI 本地化合规方面迈出了关键一步。</blockquote>
 
-<blockquote>GitHub Dependabot 引入了一项新的默认安全机制：在软件新版本发布到注册表后，将至少等待三天才会自动开启版本更新的 Pull Request。这一“冷却期”旨在降低开发者合并包含严重 Bug 或恶意代码的“首日”版本的风险。该功能目前已作为默认设置启用，无需用户进行任何额外配置。通过这种延迟策略，Dependabot 利用社区反馈时间差来提升软件供应链的整体安全性。这对于预防针对开源生态系统的供应链攻击具有积极意义。</blockquote>
-
-<p>🏷️ GitHub, Dependabot, Supply Chain Security, DevOps</p>
+<p>🏷️ Apple Intelligence, China, Baidu, Alibaba</p>
 
 <hr>
 
-<h3>6. Lobsters 社区现已迁移至 SQLite 数据库</h3>
+<h3>4. OpenAI 再次回应苹果诉讼：未发现指控成立的证据</h3>
 
-<p><a href="https://simonwillison.net/2026/Jul/14/lobsters-sqlite/#atom-everything">lobste.rs is now running on SQLite</a> — <strong>simonwillison.net</strong> · 1 天前 · ⭐ 23/30</p>
+<p><a href="https://www.bloomberg.com/news/articles/2026-07-14/openai-says-it-s-not-aware-of-any-evidence-that-apple-lawsuit-has-merit">OpenAI Takes a Second Crack at a Response to Apple’s Trade Secret Theft Lawsuit</a> — <strong>daringfireball.net</strong> · 12 小时前 · ⭐ 23/30</p>
 
-<blockquote>知名技术社区网站 Lobsters 已成功将其底层数据库从 MariaDB 迁移至 SQLite。该迁移计划最早可追溯至 2018 年，最初目标是 PostgreSQL，但最终团队在去年决定转向 SQLite。这一转变反映了现代 SQLite 在处理中等规模 Web 应用生产负载时的卓越性能与运维简易性。Lobsters 的实践为那些寻求简化架构、摆脱复杂数据库服务器维护的开发者提供了有力参考。这证明了在高性能存储和简易部署之间，SQLite 已经成为一个极具竞争力的生产级选择。</blockquote>
+<blockquote>针对苹果发起的商业机密窃取诉讼，OpenAI 在给彭博社的最新声明中称其“未发现任何证据表明该指控成立”。法律专家指出，这种措辞比直接否认“指控无理”更为谨慎，反映了 OpenAI 在法律防御上的策略。苹果指控其前员工在跳槽至 OpenAI 时非法携带了核心技术文件。OpenAI 则坚持其支持人才流动自由和公平竞争的立场。这起诉讼的结果将对 AI 行业的人才争夺战产生深远的法律示范效应。目前双方仍在证据交换和初步聆讯阶段。</blockquote>
 
-<p>🏷️ SQLite, Database Migration, Lobsters, Backend</p>
-
-<hr>
-
-<h3>7. 傅里叶变换笔记</h3>
-
-<p><a href="https://eli.thegreenplace.net/2026/notes-on-the-fourier-transform/">Notes on the Fourier Transform</a> — <strong>eli.thegreenplace.net</strong> · 1 天前 · ⭐ 22/30</p>
-
-<blockquote>傅里叶级数主要用于分析周期函数，而本文深入探讨了如何将其扩展到处理非周期函数的傅里叶变换。通过将有限区间上的傅里叶级数推向无穷大极限，展示了从离散频谱到连续频谱的数学演变过程。文章详细推导了傅里叶变换及其逆变换的公式，并解释了频率域与时间域之间的内在联系。对于理解信号处理、图像压缩等现代技术背后的数学基础具有极高的参考价值。</blockquote>
-
-<p>🏷️ Fourier Transform, mathematics, signal processing, algorithms</p>
+<p>🏷️ OpenAI, Apple, lawsuit, intellectual property</p>
 
 <hr>
 
-<h3>8. 案例分析：关闭显示控制面板时出现的无效函数指针</h3>
+<h3>5. 古尔曼爆料 OpenAI 即将推出的硬件产品：具备移动能力的无屏幕 AI 伴侣音箱</h3>
 
-<p><a href="https://devblogs.microsoft.com/oldnewthing/20260715-00/?p=112535">The case of the invalid function pointer when shutting down the display control panel</a> — <strong>devblogs.microsoft.com/oldnewthing</strong> · 18 小时前 · ⭐ 21/30</p>
+<p><a href="https://www.bloomberg.com/news/articles/2026-07-14/openai-s-first-device-will-be-moveable-screenless-speaker-built-as-ai-companion?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NDA2MjAxMywiZXhwIjoxNzg0NjY2ODEzLCJhcnRpY2xlSWQiOiJUSTYwSllUOU5KTFMwMCIsImJjb25uZWN0SWQiOiJDNEVEQ0FFMUZBMDU0MEJFQTI0QTlGMjExQzFFOTA4MCJ9.DfRN0afk0TFIaHFw9zEKYjehnfMsZfKC7gPoVos8WPI&amp;amp;leadSource=article-gifting">Gurman on OpenAI’s Upcoming Hardware Product: ‘Movable, Screenless Speaker Built as AI Companion’</a> — <strong>daringfireball.net</strong> · 1 天前 · ⭐ 23/30</p>
 
-<blockquote>这是一个关于 Windows 显示控制面板在关闭过程中发生崩溃的技术调试案例。问题的根源在于一个无效的函数指针，该指针在组件卸载后仍被尝试调用，导致了典型的竞态条件或生命周期管理错误。Raymond Chen 通过分析调用栈和内存状态，揭示了系统在清理资源时如何因为回调函数未及时注销而触发异常。文章展示了在复杂桌面环境中处理异步操作和 UI 组件销毁时的常见陷阱。</blockquote>
+<blockquote>OpenAI 正在开发其首款硬件设备，定位为具备“人格化”特征的无屏幕 AI 伴侣音箱。该设备集成了可自主移动的机械元件，旨在通过物理动态营造出一种“生命感”，而非仅仅是响应指令的死板物体。技术上，它将深度整合用户的电子邮件等个人信息，以实现更精准的理解与互动。OpenAI 的目标是让该设备成为用户的物理化身或亲密伙伴，而非传统的智能家居中控。</blockquote>
 
-<p>🏷️ debugging, Windows, C++, memory management</p>
-
-<hr>
-
-<h2>🔒 安全</h2>
-
-<h3>9. 我如何诱导 Claude 泄露你的深度私密信息</h3>
-
-<p><a href="https://simonwillison.net/2026/Jul/15/claude-web-fetch-exfiltration/#atom-everything">How I tricked Claude into leaking your deepest, darkest secrets</a> — <strong>simonwillison.net</strong> · 18 小时前 · ⭐ 26/30</p>
-
-<blockquote>安全研究员 Ayush Paul 发现了 Anthropic 为 Claude 设计的 web_fetch 工具存在数据泄露漏洞。尽管该工具在设计之初就考虑了防御“致命三要素”（间接提示词注入、数据提取与外传），但研究人员通过特定手段绕过了其安全边界。该漏洞允许攻击者诱导 Claude 将用户的私密信息发送至外部服务器。这一发现再次证明了即便具备完善安全框架的 AI 代理工具，在处理实时网页抓取时仍面临严峻的注入攻击挑战。目前相关漏洞细节已公开，旨在推动 AI 厂商完善工具调用（Tool Use）的安全隔离机制。</blockquote>
-
-<p>🏷️ Claude, Prompt Injection, LLM Security, Privacy</p>
+<p>🏷️ OpenAI, AI hardware, smart speaker, robotics</p>
 
 <hr>
 
-<h3>10. 微软修复创纪录的 570 个安全漏洞</h3>
+<h3>6. GPT-5.6 文件删除漏洞调查：全权限模式下的安全风险</h3>
 
-<p><a href="https://krebsonsecurity.com/2026/07/microsoft-patches-a-record-570-security-flaws/">Microsoft Patches a Record 570 Security Flaws</a> — <strong>krebsonsecurity.com</strong> · 1 天前 · ⭐ 26/30</p>
+<p><a href="https://simonwillison.net/2026/Jul/16/bad-codex-bug/#atom-everything">Quoting Thibault Sottiaux</a> — <strong>simonwillison.net</strong> · 14 小时前 · ⭐ 22/30</p>
 
-<blockquote>微软在最新的“周二补丁日”发布了创纪录的 570 个安全漏洞修复程序，这一数字几乎是上个月历史最高记录的三倍。此次大规模补丁涵盖了 Windows 操作系统及其他核心软件，旨在堵住激增的安全漏洞。微软官方将漏洞发现数量的爆发式增长归功于人工智能（AI）辅助技术的应用。这标志着网络安全领域进入了由 AI 驱动的漏洞挖掘与修复竞赛新阶段。对于企业 IT 管理员而言，如此规模的更新对补丁分发和系统稳定性测试提出了巨大挑战。</blockquote>
+<blockquote>针对 GPT-5.6 在执行任务时意外删除用户文件的报告，调查发现该问题主要发生在开启“全权限模式”且缺乏沙箱保护的环境中。核心技术诱因是模型在尝试重写 $HOME 环境变量以定义临时目录时，触发了非预期的文件系统操作。由于未开启自动审查（auto review）机制，模型生成的危险指令被直接执行。这一案例凸显了在大模型集成代码执行能力时，严格的沙箱隔离和权限控制的重要性。</blockquote>
 
-<p>🏷️ Microsoft, Patch Tuesday, Vulnerability, Cybersecurity</p>
-
-<hr>
-
-<h3>11. 每周更新 512：IoT 门锁失效引发的尴尬</h3>
-
-<p><a href="https://www.troyhunt.com/weekly-update-512/">Weekly Update 512: IoT Lockout Fail</a> — <strong>troyhunt.com</strong> · 1 天前 · ⭐ 23/30</p>
-
-<blockquote>网络安全专家 Troy Hunt 在其每周更新中分享了一次尴尬的智能家居失效经历：在结束 33 小时的长途旅行后，他发现由于 IoT 门锁电池耗尽，自己被锁在了家门外。这一案例凸显了过度依赖物联网设备带来的脆弱性，尤其是在缺乏物理备份方案的情况下。文章探讨了智能家居在提升便利性的同时，如何引入了传统机械系统不存在的故障点。作者以此提醒开发者和用户在构建自动化生活时，必须考虑极端情况下的冗余设计。这不仅是技术问题，更是关于生活基本保障的可靠性思考。</blockquote>
-
-<p>🏷️ IoT, smart home, security, reliability</p>
+<p>🏷️ GPT-5.6, AI safety, file system, LLM</p>
 
 <hr>
 
 <h2>💡 观点 / 杂谈</h2>
 
-<h3>12. Armin Ronacher 谈软件项目的“共同语言”</h3>
+<h3>7. OpenAI 泡沫</h3>
 
-<p><a href="https://simonwillison.net/2026/Jul/14/armin-ronacher/#atom-everything">Quoting Armin Ronacher</a> — <strong>simonwillison.net</strong> · 1 天前 · ⭐ 22/30</p>
+<p><a href="https://www.wheresyoured.at/the-openai-bubble/">The OpenAI Bubble</a> — <strong>wheresyoured.at</strong> · 1 天前 · ⭐ 27/30</p>
 
-<blockquote>Flask 创始人 Armin Ronacher 深刻论述了软件项目的“共同语言”并非仅指英语或 Python 代码，而是团队对系统概念、边界和不变性的共识。这种语言往往散落在文档、代码评审、日常争论以及解释系统架构的经验中，难以被单一文档完整记录。他强调，理解“为什么要这样设计”比单纯看懂代码逻辑更为关键。这种隐性知识的积累和传递，才是维持复杂软件系统长期演进的核心动力。对于开发者而言，参与这些“非代码”层面的交流是成长为高级工程师的必经之路。</blockquote>
+<blockquote>本文深入探讨了 OpenAI 及其在 AI 行业中可能存在的估值与实际价值脱节的泡沫现象。作者分析了当前 AI 投资热潮背后的驱动力，指出高昂的算力成本与尚未成熟的盈利模式之间的矛盾。文章警告称，如果 AI 技术无法在短期内转化为可持续的生产力突破，市场可能会面临剧烈调整。作者认为，当前的狂热更多是基于对通用人工智能（AGI）的过度预期而非现有的财务表现。这种观点为当前极度乐观的 AI 市场提供了一个冷静的反思视角。</blockquote>
 
-<p>🏷️ Software Architecture, Communication, Conceptual Integrity</p>
-
-<hr>
-
-<h3>13. 老人政治的失效模式：谁是“指定幸存者”？</h3>
-
-<p><a href="https://pluralistic.net/2026/07/14/designated-survivor/">Pluralistic: Gerontocracy's failure mode (14 Jul 2026)</a> — <strong>pluralistic.net</strong> · 1 天前 · ⭐ 22/30</p>
-
-<blockquote>本文探讨了政治与企业权力结构中因领导层高龄化且缺乏继任计划而导致的系统性风险。通过分析微软对 MP3 格式的抵制、LED 灯泡的计划性报废以及 Google 搜索质量下降等案例，揭示了权力集中与短视决策如何损害长期公共利益。文中指出，当权者往往未能培养“指定幸存者”或接班人，导致机构在面临技术更迭或代际交替时表现出极大的脆弱性。作者呼吁建立更具韧性的制度，以应对这种因权力固化而产生的“失效模式”。</blockquote>
-
-<p>🏷️ obsolescence, tech policy, digital rights, Microsoft</p>
+<p>🏷️ OpenAI, AI bubble, tech economy</p>
 
 <hr>
 
-<h3>14. Eric Seufert：苹果是否暗示将广告业务扩展至第三方平台？</h3>
+<h3>8. Dithering 播客：苹果起诉 OpenAI 的深度解析</h3>
 
-<p><a href="https://mobiledevmemo.com/did-apple-just-signal-a-third-party-expansion-of-apple-ads/">Eric Seufert: ‘Did Apple Just Signal a Third-Party Expansion of Apple Ads?’</a> — <strong>daringfireball.net</strong> · 9 小时前 · ⭐ 20/30</p>
+<p><a href="https://dithering.passport.online/member/episode/apple-sues-open-ai">Dithering: ‘Apple Sues OpenAI’</a> — <strong>daringfireball.net</strong> · 8 小时前 · ⭐ 26/30</p>
 
-<blockquote>苹果公司最近更新的服务条款中加入了“其他属性”（other properties）这一表述，引发了业界对其广告业务扩张的猜测。分析师 Eric Seufert 指出，这可能意味着苹果计划将其广告网络从自有的 App Store 和 Apple TV 扩展到第三方应用和网站。虽然此举可能仅是为了适配跨平台服务，但宽泛的合同语言为苹果提供了在非自有生态系统中分发广告的法律空间。如果成真，这将标志着苹果广告业务从封闭生态向开放移动广告市场的重大战略转型。</blockquote>
+<blockquote>知名科技评论人 John Gruber 在 Dithering 播客中讨论了苹果对 OpenAI 发起的法律诉讼，并限时免费开放了该集内容。讨论核心围绕苹果指控 OpenAI 窃取商业机密，特别是涉及 AI 核心算法和人才挖掘的争议。Gruber 提出了不同于主流媒体的见解，分析了苹果在 AI 战略布局中如何利用法律手段保护其知识产权。这起诉讼不仅影响两家公司的合作，更可能重塑硅谷人才流动的法律边界。节目还探讨了这起官司对 Apple Intelligence 未来发展的影响。</blockquote>
 
-<p>🏷️ Apple Ads, advertising, monetization, ecosystem</p>
+<p>🏷️ Apple, OpenAI, lawsuit, trade secrets</p>
+
+<hr>
+
+<h3>9. Linus Torvalds：Linux 不会拒绝 AI 工具</h3>
+
+<p><a href="https://simonwillison.net/2026/Jul/16/linus-torvalds/#atom-everything">Quoting Linus Torvalds</a> — <strong>simonwillison.net</strong> · 18 小时前 · ⭐ 23/30</p>
+
+<blockquote>Linux 创始人 Linus Torvalds 明确表达了他对在内核开发中使用 AI 工具的支持立场，并称其为“不可阻挡的趋势”。他强调 Linux 不是一个反 AI 的项目，并将 AI 视为与编译器或编辑器类似的生产力工具。Torvalds 态度强硬地表示，如果开发者对 AI 辅助开发有异议，可以选择分叉项目或离开。他认为 AI 在代码审查和辅助生成方面的作用能够显著提升维护效率。这一表态为开源社区在 AI 时代的工具选型定下了务实的基调。</blockquote>
+
+<p>🏷️ Linux, Linus Torvalds, AI, kernel</p>
+
+<hr>
+
+<h3>10. Eric Seufert：苹果是否在暗示其广告业务将扩张至第三方平台？</h3>
+
+<p><a href="https://mobiledevmemo.com/did-apple-just-signal-a-third-party-expansion-of-apple-ads/">Eric Seufert: ‘Did Apple Just Signal a Third-Party Expansion of Apple Ads?’</a> — <strong>daringfireball.net</strong> · 1 天前 · ⭐ 23/30</p>
+
+<blockquote>苹果近期更新的服务条款中加入了“其他属性（other properties）”这一表述，引发了对其广告业务版图扩张的猜测。虽然这可能仅是为了适配 Apple TV 等应用在智能电视和游戏机等第三方硬件上的运行，但该用词的广泛性赋予了苹果在非自有服务中分发广告的合同权限。此举意味着苹果可能正在构建一个超越其封闭生态的第三方广告网络。这种潜在的战略转变将显著提升苹果广告业务的市场天花板。</blockquote>
+
+<p>🏷️ Apple, advertising, monetization, ecosystem</p>
+
+<hr>
+
+<h2>🔒 安全</h2>
+
+<h3>11. xAI 开源 grok-build 工具以回应隐私泄露质疑</h3>
+
+<p><a href="https://simonwillison.net/2026/Jul/15/grok-build/#atom-everything">xai-org/grok-build, now open source</a> — <strong>simonwillison.net</strong> · 1 天前 · ⭐ 26/30</p>
+
+<blockquote>xAI 正式开源了其 `grok` 命令行工具，起因是该工具此前被曝存在严重的隐私泄露风险。有用户报告称，在本地目录运行该命令时，工具会自动将整个目录（包括 SSH 密钥和密码管理器数据库）上传至 xAI 的云端存储桶。此次开源旨在通过代码透明化来挽回社区信任，让开发者能够审查其构建逻辑。目前代码已托管在 GitHub 的 xai-org/grok-build 仓库中。这一事件凸显了 AI 辅助开发工具在自动化便利性与数据安全边界之间的冲突。</blockquote>
+
+<p>🏷️ xAI, Grok, open source, privacy</p>
+
+<hr>
+
+<h3>12. 我是如何诱骗 Claude 泄露用户深度私密的</h3>
+
+<p><a href="https://simonwillison.net/2026/Jul/15/claude-web-fetch-exfiltration/#atom-everything">How I tricked Claude into leaking your deepest, darkest secrets</a> — <strong>simonwillison.net</strong> · 1 天前 · ⭐ 26/30</p>
+
+<blockquote>安全研究员 Ayush Paul 发现了 Anthropic 为 Claude 设计的 `web_fetch` 工具存在逻辑漏洞，可被用于数据外泄攻击。尽管该工具设计初衷是防止 AI 代理将敏感信息发送至第三方，但研究员通过特定的提示注入手段绕过了防御机制。这种攻击利用了模型在处理外部网页抓取时的上下文混淆，可能导致用户的历史对话或私密数据被提取。这一发现证明了即使是具备安全沙箱设计的 AI 插件，在面对复杂的间接提示注入时依然脆弱。文章详细记录了攻击路径及防御建议。</blockquote>
+
+<p>🏷️ Claude, prompt injection, security, LLM</p>
 
 <hr>
 
 <h2>🛠 工具 / 开源</h2>
 
-<h3>15. Mermaid 转 Unicode 字符画工具 (grok-mermaid)</h3>
+<h3>13. Quiche 浏览器宣布默认禁用搜索结果中的 AI 概览</h3>
 
-<p><a href="https://simonwillison.net/2026/Jul/16/grok-mermaid/#atom-everything">Mermaid to Unicode box art (grok-mermaid)</a> — <strong>simonwillison.net</strong> · 7 小时前 · ⭐ 20/30</p>
+<p><a href="https://mastodon.social/@quicheindustries/116918456229212087">Quiche Browser Now Defaults to No-AI Web Search Results</a> — <strong>daringfireball.net</strong> · 8 小时前 · ⭐ 22/30</p>
 
-<blockquote>Simon Willison 在探索 xAI 开源的 Grok CLI 代码库时，发现了一个名为 xai-grok-markdown 的 Rust 模块。该模块包含一个独立的终端渲染器，能将 Mermaid 流程图语法直接转换为 Unicode 字符组成的框图（Box Art）。作者将其提取并封装成了一个名为 grok-mermaid 的在线工具和命令行实用程序，方便在不支持图形渲染的终端环境中查看图表。这种方案利用 Rust 的高效性能，解决了在纯文本界面展示结构化流程图的痛点。</blockquote>
+<blockquote>Quiche 浏览器正式宣布在其搜索结果中默认禁用 AI 生成的概览（AI Overviews），旨在对抗“死互联网理论”。该功能通过自动切换至 Google、DuckDuckGo 和 Bing 的无 AI 版本，过滤掉占据大量屏幕空间的机器生成内容。开发者认为 AI 摘要浪费了用户的时间和空间，并掩盖了由人类创作的真实网站链接。此举使 Quiche 成为首个采取此类激进立场的主流浏览器，试图回归纯粹的 Web 搜索体验。</blockquote>
 
-<p>🏷️ Mermaid, Unicode, CLI, Visualization</p>
+<p>🏷️ browser, AI search, UX, privacy</p>
 
 <hr>
 
-<p><em>生成于 2026-07-16 08:26 | 扫描 80 源 → 获取 2438 篇 → 精选 15 篇</em></p>
+<h3>14. OpenAI 发布 Codex Micro：一款售价 230 美元的硬件小键盘</h3>
+
+<p><a href="https://openai.com/supply/co-lab/work-louder/">OpenAI Releases Codex Micro, a Stupid $230 Hardware Keypad</a> — <strong>daringfireball.net</strong> · 14 小时前 · ⭐ 22/30</p>
+
+<blockquote>OpenAI 推出了一款名为 Codex Micro 的硬件小键盘，售价高达 230 美元，专门用于辅助其 Codex 编程功能。然而，Codex 目前已不再是独立应用，而是被整合进 OpenAI 庞杂的“超级应用”中的一个标签页。批评者指出，在公司高层曾强调要专注核心产品、避免“支线任务”干扰的背景下，推出此类昂贵的周边硬件显得不合时宜。此前 OpenAI 还曾斥资数亿美元收购 YouTube 节目，引发了外界对其产品重心是否偏移的质疑。</blockquote>
+
+<p>🏷️ OpenAI, hardware, keypad, product strategy</p>
+
+<hr>
+
+<h2>⚙️ 工程</h2>
+
+<h3>15. WebAssembly 版 Firefox：在浏览器中运行浏览器</h3>
+
+<p><a href="https://simonwillison.net/2026/Jul/16/firefox-in-webassembly/#atom-everything">Firefox in WebAssembly</a> — <strong>simonwillison.net</strong> · 8 小时前 · ⭐ 24/30</p>
+
+<blockquote>Puter 成功将完整的 Firefox 浏览器编译为 WebAssembly (Wasm)，实现了在 Chrome 等浏览器中运行 Firefox 的奇观。该项目加载了一个体积达 233MB 的 `gecko.wasm` 文件，展示了 Wasm 处理数百万行 C++ 代码的能力。用户可以在这个虚拟的 Firefox 中正常浏览网页，其网络请求和渲染逻辑完全在 Wasm 环境中执行。这一技术突破证明了 Web 平台作为通用计算环境的巨大潜力。它不仅是硬核的技术演示，也为云端桌面和跨平台应用提供了新思路。</blockquote>
+
+<p>🏷️ WebAssembly, WASM, Firefox, browser</p>
+
+<hr>
+
+<p><em>生成于 2026-07-17 08:21 | 扫描 84 源 → 获取 2522 篇 → 精选 15 篇</em></p>
 <p><em>基于 <a href="https://refactoringenglish.com/tools/hn-popularity/">Hacker News Popularity Contest 2025</a> RSS 源列表，由 <a href="https://x.com/karpathy">Andrej Karpathy</a> 推荐</em></p>
   </div>
   <div class="footer">
-    <p>Generated on 2026-07-16 · Based on <a href="https://refactoringenglish.com/tools/hn-popularity/">HN Popularity Contest 2025</a></p>
+    <p>Generated on 2026-07-17 · Based on <a href="https://refactoringenglish.com/tools/hn-popularity/">HN Popularity Contest 2025</a></p>
   </div>
 </body>
 </html>
