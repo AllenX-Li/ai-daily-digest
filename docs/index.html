@@ -47,47 +47,47 @@
   </div>
   <hr>
   <div class="content">
-<h1>📰 Aug 21, 2026</h1>
+<h1>📰 Aug 22, 2026</h1>
 
 <blockquote>来自 Karpathy 推荐的 92 个顶级技术博客，AI 精选 Top 15</blockquote>
 
 <h2>📝 今日看点</h2>
 
-<p>今日技术动态聚焦于 AI 对软件生态与社会认知的深层重塑，从智能体引发的权力不对称到大模型驱动的软件扩展范式变革，行业正经历从工具应用向系统性重构的跨越。与此同时，工程安全与性能优化迈向精细化，UI 质量被提升至安全战略高度，而沙箱技术与原生 API 的演进则为运行不受信任代码提供了新方案。在 AI 生成内容爆发的背景下，维护代码的“概念完整性”与应对真相消解的认知危机成为开发者面临的新挑战。</p>
+<p>今日技术圈聚焦于 AI 深度集成与工程范式的演进，开发者正通过结构化上下文和 GEO 优化重塑与大模型的交互。与此同时，Bun 1.4 的稳定发布与 C++ 性能优化策略展示了底层工具链的持续进化。在行业博弈层面，苹果对欧盟监管的微弱让步与社交平台巧妙的增长黑客手段，共同揭示了流量霸权与合规压力下的生存现状。</p>
 
 <hr>
 
 <h2>🏆 今日必读</h2>
 
-<p>🥇 <strong>粗糙的界面是安全隐患</strong></p>
+<p>🥇 <strong>通过 agent.md 文件提升 LLM 辅助编程的代码质量</strong></p>
 
-<p><a href="https://blog.jim-nielsen.com/2026/sloppy-ui-is-security-liability/">A Sloppy Interface Is a Security Liability ￼</a> — blog.jim-nielsen.com · 11 小时前 · 🔒 安全</p>
+<p><a href="https://fabiensanglard.net/agent.md/index.html">My agent.md to improve LLM-assisted code quality</a> — fabiensanglard.net · 1 天前 · 🤖 AI / ML</p>
 
-<blockquote>探讨了软件界面质量与网络安全之间的直接联系。通过分析 Axios 维护者因仿冒 Microsoft Teams 界面而遭受网络钓鱼的案例，指出粗糙的 UI 设计会降低用户的警惕性。当正版软件本身存在视觉瑕疵或不一致时，攻击者更容易通过模拟这种“粗糙感”来欺骗用户。作者认为，提升 UI 的精致度和一致性不仅是美学问题，更是防御社会工程学攻击的关键防线。这种“视觉信任”的缺失，往往是安全链条中最薄弱的一环。</blockquote>
+<blockquote>LLM 在辅助编程时常因缺乏项目上下文而产生幻觉或使用过时 API。作者提出在项目根目录创建一个名为 `agent.md` 的结构化 Markdown 文件，专门存放项目特定的编码规范、库版本要求和架构决策。通过在提示词中引用该文件，LLM 能精准遵循如“使用原生 Fetch 而非 Axios”或“保持函数纯净”等私有指令。这种方法将通用的模型能力与具体的项目约束解耦，显著减少了手动纠错的频率。最终实现了一种低成本、高效率的“项目级系统提示词”管理方案。</blockquote>
 
-<p>💡 <strong>为什么值得读</strong>: 揭示了 UI 设计中常被忽视的安全维度，提醒开发者精致的细节是防范钓鱼攻击的隐形盾牌。</p>
+<p>💡 <strong>为什么值得读</strong>: 为开发者提供了一种简单且极具实操性的方法，通过结构化上下文管理来解决 AI 编程中的一致性难题。</p>
 
-<p>🏷️ AI security, interface design, vulnerabilities, LLM safety</p>
+<p>🏷️ LLM, coding assistant, prompt engineering, productivity</p>
 
-<p>🥈 <strong>ChatGPT 搜索现已大规模使用 site: 操作符</strong></p>
+<p>🥈 <strong>基于 Bun 1.4 新特性 Bun.WebView 构建类似 shot-scraper 的 JSON API</strong></p>
 
-<p><a href="https://simonwillison.net/2026/Aug/20/chatgpt-search-now-uses-the-siteoperator-at-scale/">ChatGPT search now uses the site:operator at scale</a> — simonwillison.net · 7 小时前 · 🤖 AI / ML</p>
+<p><a href="https://simonwillison.net/2026/Aug/20/bun-webview-json-api/">A shot-scraper-style JSON API on Bun 1.4's new Bun.WebView</a> — simonwillison.net · 1 天前 · ⚙️ 工程</p>
 
-<blockquote>介绍了 ChatGPT 搜索功能在信息检索策略上的重大转变，即开始大规模利用 `site:` 操作符进行定向搜索。新兴的生成引擎优化（GEO）工具 Promptwatch 监测到，ChatGPT 在处理特定查询时会频繁针对特定域名进行扇出式检索。这种机制意味着网站所有者需要重新审视其内容在 AI 检索中的可见性，而不仅仅是传统的 SEO。这一变化标志着 AI 搜索正从宽泛的网页抓取转向更具针对性的结构化数据提取，对内容分发策略具有深远影响。</blockquote>
+<blockquote>Bun 1.4 版本正式发布，这是自采用 Rust 重写后的首个稳定版，并引入了实验性的 `Bun.WebView` 功能。开发者利用该特性构建了一个类似 `shot-scraper` 的工具，能够通过 JSON API 驱动原生 Web 视图进行网页截图和数据抓取。与传统的无头浏览器方案相比，`Bun.WebView` 直接调用系统原生渲染引擎，显著降低了内存占用和启动延迟。该实验展示了 Bun 从单纯的服务端运行时向跨平台桌面应用开发领域扩张的潜力。</blockquote>
 
-<p>💡 <strong>为什么值得读</strong>: 深入了解 AI 搜索底层逻辑的变化，是掌握未来生成引擎优化（GEO）趋势的必读信息。</p>
+<p>💡 <strong>为什么值得读</strong>: 第一时间探索了 Bun 1.4 的重量级新特性，展示了高性能 JavaScript 运行时在桌面自动化领域的应用前景。</p>
 
-<p>🏷️ ChatGPT, GEO, SEO, search engine</p>
+<p>🏷️ Bun, WebView, web scraping, JavaScript runtime</p>
 
-<p>🥉 <strong>基于 Bun 1.4 新特性 Bun.WebView 构建的 JSON API 工具</strong></p>
+<p>🥉 <strong>苹果与欧盟就 DMA 达成支付条款协议：苹果几乎未作让步</strong></p>
 
-<p><a href="https://simonwillison.net/2026/Aug/20/bun-webview-json-api/">A shot-scraper-style JSON API on Bun 1.4's new Bun.WebView</a> — simonwillison.net · 15 小时前 · 🛠 工具 / 开源</p>
+<p><a href="https://daringfireball.net/2026/08/apple_eu_business_terms_conceding_little">★ Apple and European Commission Reach Agreement on App Payment Terms Under DMA, With Apple Conceding Very Little</a> — daringfireball.net · 1 天前 · 💡 观点 / 杂谈</p>
 
-<blockquote>探讨了 Bun 1.4 稳定版发布带来的核心变化，特别是备受关注的 Rust 重写后的性能表现。文章重点介绍了新引入的 `Bun.WebView` API，它允许开发者在 Bun 环境中直接调用原生 Web 视图。作者展示了如何利用该特性构建一个类似 `shot-scraper` 的工具，通过 JSON API 形式实现网页截图和数据抓取。这一实验证明了 Bun 在跨平台桌面应用和自动化工具开发领域具备了更强的原生集成能力，为开发者提供了更轻量级的替代方案。</blockquote>
+<blockquote>在欧盟《数字市场法案》（DMA）的压力下，苹果公司对其 App Store 支付条款进行了调整，但实际变动极小。苹果仅将第三方支付的佣金从 30% 降至 26%，而对于订阅一年后的 15% 佣金比例则完全没有下调。尽管面临监管高压，苹果仍通过复杂的条款设计保留了核心收入模式，仅作出了象征性的 4% 降幅让步。这反映了大型科技公司在应对区域性监管时，利用规则复杂性进行博弈的典型策略。</blockquote>
 
-<p>💡 <strong>为什么值得读</strong>: 快速了解 Bun 1.4 的重大更新及 Bun.WebView 在自动化抓取场景下的实战潜力。</p>
+<p>💡 <strong>为什么值得读</strong>: 揭示了苹果在监管压力下极具手腕的博弈结果，是关注移动生态和科技监管读者的必读动态。</p>
 
-<p>🏷️ Bun, WebView, scraping, API</p>
+<p>🏷️ Apple, DMA, App Store, regulation</p>
 
 <hr>
 
@@ -95,17 +95,17 @@
 
 <p>| 扫描源 | 抓取文章 | 时间范围 | 精选 |</p>
 <p>|:---:|:---:|:---:|:---:|</p>
-<p>| 83/92 | 2523 篇 → 21 篇 | 48h | <strong>15 篇</strong> |</p>
+<p>| 83/92 | 2524 篇 → 32 篇 | 48h | <strong>15 篇</strong> |</p>
 
 <h3>分类分布</h3>
 
 <p>```mermaid</p>
 <p>pie showData</p>
 <p>    title "文章分类分布"</p>
-<p>    "💡 观点 / 杂谈" : 5</p>
-<p>    "🤖 AI / ML" : 3</p>
-<p>    "🛠 工具 / 开源" : 3</p>
-<p>    "⚙️ 工程" : 3</p>
+<p>    "⚙️ 工程" : 5</p>
+<p>    "🤖 AI / ML" : 4</p>
+<p>    "💡 观点 / 杂谈" : 4</p>
+<p>    "🛠 工具 / 开源" : 1</p>
 <p>    "🔒 安全" : 1</p>
 <p>```</p>
 
@@ -114,200 +114,200 @@
 <p>```mermaid</p>
 <p>xychart-beta horizontal</p>
 <p>    title "高频关键词"</p>
-<p>    x-axis ["automation", "software architecture", "sandboxing", "ai", "ai security", "interface design", "vulnerabilities", "llm safety", "chatgpt", "geo", "seo", "search engine"]</p>
+<p>    x-axis ["llm", "c++", "templates", "optimization", "performance", "ux", "coding assistant", "prompt engineering", "productivity", "bun", "webview", "web scraping"]</p>
 <p>    y-axis "出现次数" 0 --&gt; 4</p>
-<p>    bar [2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1]</p>
+<p>    bar [2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1]</p>
 <p>```</p>
 
 <p>&lt;details&gt;</p>
 <p>&lt;summary&gt;📈 纯文本关键词图（终端友好）&lt;/summary&gt;</p>
 
 <p>```</p>
-<p>automation            │ ████████████████████ 2</p>
-<p>software architecture │ ████████████████████ 2</p>
-<p>sandboxing            │ ████████████████████ 2</p>
-<p>ai                    │ ████████████████████ 2</p>
-<p>ai security           │ ██████████░░░░░░░░░░ 1</p>
-<p>interface design      │ ██████████░░░░░░░░░░ 1</p>
-<p>vulnerabilities       │ ██████████░░░░░░░░░░ 1</p>
-<p>llm safety            │ ██████████░░░░░░░░░░ 1</p>
-<p>chatgpt               │ ██████████░░░░░░░░░░ 1</p>
-<p>geo                   │ ██████████░░░░░░░░░░ 1</p>
+<p>llm                │ ████████████████████ 2</p>
+<p>c++                │ ████████████████████ 2</p>
+<p>templates          │ ████████████████████ 2</p>
+<p>optimization       │ ████████████████████ 2</p>
+<p>performance        │ ████████████████████ 2</p>
+<p>ux                 │ ████████████████████ 2</p>
+<p>coding assistant   │ ██████████░░░░░░░░░░ 1</p>
+<p>prompt engineering │ ██████████░░░░░░░░░░ 1</p>
+<p>productivity       │ ██████████░░░░░░░░░░ 1</p>
+<p>bun                │ ██████████░░░░░░░░░░ 1</p>
 <p>```</p>
 
 <p>&lt;/details&gt;</p>
 
 <h3>🏷️ 话题标签</h3>
 
-<p><strong>automation</strong>(2) · <strong>software architecture</strong>(2) · <strong>sandboxing</strong>(2) · ai(2) · ai security(1) · interface design(1) · vulnerabilities(1) · llm safety(1) · chatgpt(1) · geo(1) · seo(1) · search engine(1) · bun(1) · webview(1) · scraping(1) · api(1) · ai agents(1) · negotiation(1) · future tech(1) · pytorch(1)</p>
-
-<hr>
-
-<h2>💡 观点 / 杂谈</h2>
-
-<h3>1. 引用 Jeremy Morrell：大模型时代的软件可扩展性</h3>
-
-<p><a href="https://simonwillison.net/2026/Aug/19/jeremy-morrell/">Quoting Jeremy Morrell</a> — <strong>simonwillison.net</strong> · 1 天前 · ⭐ 22/30</p>
-
-<blockquote>探讨了大语言模型（LLM）如何彻底改变 Web 软件的可扩展性范式。Jeremy Morrell 提出，LLM 极大地降低了编写插件和扩展的门槛，而现代沙箱技术则解决了部署这些不受信任代码的安全顾虑。开发者可以专注于构建稳固的应用核心，并允许用户通过 LLM 生成的扩展来定制化功能。这种模式预示着软件将从“功能堆砌”转向“核心+动态扩展”的演进方向。这种变革将使软件能够以极低的成本满足长尾用户的个性化需求。</blockquote>
-
-<p>🏷️ LLM, extensibility, software architecture, sandboxing</p>
-
-<hr>
-
-<h3>2. 概念完整性与代码行数统计</h3>
-
-<p><a href="https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/">Conceptual integrity and counting lines of code</a> — <strong>simonwillison.net</strong> · 1 天前 · ⭐ 22/30</p>
-
-<blockquote>总结了关于 AI 如何改变软件开发模式的深度对话，重点讨论了“概念完整性”在自动化编程时代的价值。作者指出，虽然 AI 可以瞬间生成成千上万行代码，但缺乏统一设计哲学的代码堆砌会导致系统崩溃。文章强调，开发者的核心职责正从“编写代码”转向“维护系统的概念一致性”和“架构把关”。在 AI 辅助下，代码行数不再是衡量生产力的指标，系统的可理解性和长期维护性变得愈发重要。这一观点挑战了传统的开发效率衡量标准。</blockquote>
-
-<p>🏷️ AI, software development, code quality, productivity</p>
-
-<hr>
-
-<h3>3. 真正的认知危机：AI 对现实的冲击</h3>
-
-<p><a href="https://pluralistic.net/2026/08/20/epistemic-void/">Pluralistic: The actual epistemic crisis (20 Aug 2026)</a> — <strong>pluralistic.net</strong> · 7 小时前 · ⭐ 22/30</p>
-
-<blockquote>深入剖析了 AI 技术引发的认知危机，将其描述为一种针对现有信息系统漏洞的“机会性感染”。作者认为，AI 生成内容的泛滥并非危机的根源，而是加剧了社会早已存在的信任崩塌和真相消解。文章探讨了在虚假信息成本趋近于零的背景下，人类如何辨别真实与虚构的严峻挑战。这种危机不仅是技术性的，更是社会和政治性的，威胁着我们达成共识的基础。作者呼吁建立更具韧性的信息生态系统来对抗这种“认知虚空”。</blockquote>
-
-<p>🏷️ AI ethics, epistemology, misinformation, society</p>
-
-<hr>
-
-<h3>4. 邪恶的平庸性：停止兜售（糟糕的）AI</h3>
-
-<p><a href="https://pluralistic.net/2026/08/19/banaility/">Pluralistic: The ordinariness of evil (19 Aug 2026)</a> — <strong>pluralistic.net</strong> · 1 天前 · ⭐ 22/30</p>
-
-<blockquote>探讨了现代科技与政治中“平庸之恶”的体现，呼吁停止推销那些名不副实且具有破坏性的 AI 技术。文章揭露了五角大楼在一年内损失 6.5 万亿美元的惊人财务黑洞，并指出选民身份验证本质上是选民压制手段。作者通过分析“不可优化性”的概念，批判了当前科技巨头对用户行为的过度操控。核心观点认为，真正的邪恶往往隐藏在官僚主义和技术平庸的日常运作之中。</blockquote>
-
-<p>🏷️ AI, ethics, corporate, critique</p>
-
-<hr>
-
-<h3>5. 我们的仆人会为我们代劳：为什么后稀缺乌托邦难以实现</h3>
-
-<p><a href="https://borretti.me/article/our-servants-will-do-that-for-us">Our Servants Will Do That For Us</a> — <strong>borretti.me</strong> · 1 天前 · ⭐ 21/30</p>
-
-<blockquote>深入探讨了为何技术进步带来的“后稀缺乌托邦”在现实中难以实现，挑战了自动化将终结劳动的乐观预测。文章指出，人类的需求具有无限扩张性，且许多社会地位和资源分配本质上是竞争性的，无法通过单纯的物质丰富来解决。作者分析了服务型经济的本质，认为即便技术高度发达，人类依然会追求由他人提供的“地位服务”。结论认为，稀缺性是人类社会的固有属性，而非单纯的技术问题。</blockquote>
-
-<p>🏷️ post-scarcity, automation, future of work, economics</p>
-
-<hr>
-
-<h2>🤖 AI / ML</h2>
-
-<h3>6. ChatGPT 搜索现已大规模使用 site: 操作符</h3>
-
-<p><a href="https://simonwillison.net/2026/Aug/20/chatgpt-search-now-uses-the-siteoperator-at-scale/">ChatGPT search now uses the site:operator at scale</a> — <strong>simonwillison.net</strong> · 7 小时前 · ⭐ 23/30</p>
-
-<blockquote>介绍了 ChatGPT 搜索功能在信息检索策略上的重大转变，即开始大规模利用 `site:` 操作符进行定向搜索。新兴的生成引擎优化（GEO）工具 Promptwatch 监测到，ChatGPT 在处理特定查询时会频繁针对特定域名进行扇出式检索。这种机制意味着网站所有者需要重新审视其内容在 AI 检索中的可见性，而不仅仅是传统的 SEO。这一变化标志着 AI 搜索正从宽泛的网页抓取转向更具针对性的结构化数据提取，对内容分发策略具有深远影响。</blockquote>
-
-<p>🏷️ ChatGPT, GEO, SEO, search engine</p>
-
-<hr>
-
-<h3>7. 不对称的智能体</h3>
-
-<p><a href="https://shkspr.mobi/blog/2026/08/asymmetric-agents/">Asymmetric Agents</a> — <strong>shkspr.mobi</strong> · 1 天前 · ⭐ 23/30</p>
-
-<blockquote>分析了 AI 智能体（Agents）在未来社会中可能引发的权力失衡问题。虽然 AI 承诺能为个人处理谈判、预订等繁琐任务，但当个人智能体面对企业级的高性能智能体时，会产生严重的“不对称性”。作者指出，如果企业的 AI 能够识别并操纵用户的 AI 偏好，那么技术进步反而可能加剧对消费者的剥削。这种不对称性意味着 AI 代理的普及并不等同于个人能力的对等提升，反而可能成为新的数字博弈场。文章呼吁在智能体普及前，需重新审视其背后的博弈论困境。</blockquote>
-
-<p>🏷️ AI agents, automation, negotiation, future tech</p>
-
-<hr>
-
-<h3>8. 使用内置的 GELU，不要自己手写！</h3>
-
-<p><a href="https://www.gilesthomas.com/2026/08/built-in-gelu">Use the built-in GELU, don't roll your own!</a> — <strong>gilesthomas.com</strong> · 1 天前 · ⭐ 23/30</p>
-
-<blockquote>分享了在 PyTorch 模型训练中通过替换自定义 GELU 激活函数获得的性能提升经验。作者发现，直接调用 PyTorch 官方内置的 `torch.nn.GELU` 函数，其运行速度远超开发者自行编写的等效实现。实验数据显示，这种简单的代码替换能显著缩短模型训练的总时长，且无需改变任何模型逻辑。这一发现强调了在深度学习框架中优先使用经过底层优化的原生算子的重要性。对于追求极致训练效率的开发者来说，这是一个极具性价比的优化点。</blockquote>
-
-<p>🏷️ PyTorch, GELU, performance, deep learning</p>
-
-<hr>
-
-<h2>🛠 工具 / 开源</h2>
-
-<h3>9. 基于 Bun 1.4 新特性 Bun.WebView 构建的 JSON API 工具</h3>
-
-<p><a href="https://simonwillison.net/2026/Aug/20/bun-webview-json-api/">A shot-scraper-style JSON API on Bun 1.4's new Bun.WebView</a> — <strong>simonwillison.net</strong> · 15 小时前 · ⭐ 23/30</p>
-
-<blockquote>探讨了 Bun 1.4 稳定版发布带来的核心变化，特别是备受关注的 Rust 重写后的性能表现。文章重点介绍了新引入的 `Bun.WebView` API，它允许开发者在 Bun 环境中直接调用原生 Web 视图。作者展示了如何利用该特性构建一个类似 `shot-scraper` 的工具，通过 JSON API 形式实现网页截图和数据抓取。这一实验证明了 Bun 在跨平台桌面应用和自动化工具开发领域具备了更强的原生集成能力，为开发者提供了更轻量级的替代方案。</blockquote>
-
-<p>🏷️ Bun, WebView, scraping, API</p>
-
-<hr>
-
-<h3>10. 介绍 Dashboard Touch：打造你自己的独立版 Touch ID</h3>
-
-<p><a href="https://anildash.com/2026/08/20/introducing-dashboard-touch/">Introducing Dashboard Touch, a build-your-own version of Touch ID</a> — <strong>anildash.com</strong> · 1 天前 · ⭐ 21/30</p>
-
-<blockquote>针对 Mac 用户希望在不使用苹果官方键盘的情况下拥有 Touch ID 功能的痛点，介绍了一种自制独立指纹识别模块的方案。作者回顾了以往拆解昂贵键盘以获取传感器的极端做法，并提出了更具可行性的替代路径。该方案旨在让使用机械键盘的极客也能享受无缝的生物识别认证体验。通过整合特定的硬件组件和驱动支持，用户可以构建一个既美观又实用的桌面认证终端。</blockquote>
-
-<p>🏷️ Touch ID, macOS, hardware, DIY</p>
-
-<hr>
-
-<h3>11. 树莓派 CM5 烧录夹具上手体验</h3>
-
-<p><a href="https://www.jeffgeerling.com/blog/2026/cm5-programming-jig/">Hands-on with Raspberry Pi's CM5 Programming Jig</a> — <strong>jeffgeerling.com</strong> · 1 天前 · ⭐ 20/30</p>
-
-<blockquote>详细评测了用于树莓派 Compute Module 5 (CM5) 的官方烧录夹具，旨在解决大规模部署时系统镜像烧录效率低下的问题。该夹具通过物理接触点简化了 CM5 模块的连接过程，无需频繁插拔底板即可完成固件更新。作者分享了在构建大规模 Pi 集群时的实战经验，对比了手动烧录与使用专用工具的效率差异。对于需要批量处理 CM5 模块的开发者或企业用户，这款工具是提升生产力的关键。</blockquote>
-
-<p>🏷️ Raspberry Pi, CM5, embedded, flashing</p>
+<p><strong>llm</strong>(2) · <strong>c++</strong>(2) · <strong>templates</strong>(2) · optimization(2) · performance(2) · ux(2) · coding assistant(1) · prompt engineering(1) · productivity(1) · bun(1) · webview(1) · web scraping(1) · javascript runtime(1) · apple(1) · dma(1) · app store(1) · regulation(1) · ai ethics(1) · ai slop(1) · big tech(1)</p>
 
 <hr>
 
 <h2>⚙️ 工程</h2>
 
-<h3>12. 更好的“自带电池”策略</h3>
+<h3>1. 基于 Bun 1.4 新特性 Bun.WebView 构建类似 shot-scraper 的 JSON API</h3>
 
-<p><a href="https://matklad.github.io/2026/08/20/better-batteries.html">Better Batteries</a> — <strong>matklad.github.io</strong> · 1 天前 · ⭐ 23/30</p>
+<p><a href="https://simonwillison.net/2026/Aug/20/bun-webview-json-api/">A shot-scraper-style JSON API on Bun 1.4's new Bun.WebView</a> — <strong>simonwillison.net</strong> · 1 天前 · ⭐ 25/30</p>
 
-<blockquote>探讨了编程语言标准库设计中“极简主义”与“大而全”的永恒争论。作者认为，争论标准库应该包含多少功能是误导性的，核心问题应在于如何构建具备高度可组合性和稳定性的基础组件。文章提出，优秀的标准库应当像“电池”一样提供即插即用的核心能力，同时不阻碍生态系统的多样化发展。通过重新定义标准库的职责，开发者可以更好地平衡语言的易用性与长期的维护成本。这种视角为现代编程语言的演进提供了新的哲学思考。</blockquote>
+<blockquote>Bun 1.4 版本正式发布，这是自采用 Rust 重写后的首个稳定版，并引入了实验性的 `Bun.WebView` 功能。开发者利用该特性构建了一个类似 `shot-scraper` 的工具，能够通过 JSON API 驱动原生 Web 视图进行网页截图和数据抓取。与传统的无头浏览器方案相比，`Bun.WebView` 直接调用系统原生渲染引擎，显著降低了内存占用和启动延迟。该实验展示了 Bun 从单纯的服务端运行时向跨平台桌面应用开发领域扩张的潜力。</blockquote>
 
-<p>🏷️ standard library, API design, software architecture</p>
-
-<hr>
-
-<h3>13. 使用 smolmachines 作为运行不受信任 Python 和 JavaScript 的沙箱</h3>
-
-<p><a href="https://simonwillison.net/2026/Aug/19/smolmachines-untrusted-sandbox/">smolmachines / smolvm as a sandbox for untrusted Python &amp; JavaScript</a> — <strong>simonwillison.net</strong> · 1 天前 · ⭐ 22/30</p>
-
-<blockquote>评估了 `smolmachines`（及其核心 `smolvm`）作为安全沙箱运行不受信任代码的潜力。作者利用 Claude Code 辅助研究，探索了在隔离环境中执行 Python 和 JavaScript 的具体实现路径。该方案旨在提供一个轻量级且快速的执行环境，以防止恶意代码对宿主系统造成破坏。研究重点在于如何在保证安全边界的前提下，尽可能降低沙箱运行的性能开销。这为需要在应用中集成第三方脚本执行功能的开发者提供了重要的技术参考。</blockquote>
-
-<p>🏷️ sandboxing, Python, JavaScript, security</p>
+<p>🏷️ Bun, WebView, web scraping, JavaScript runtime</p>
 
 <hr>
 
-<h3>14. 通过提取类型无关部分来减少 C++ 模板膨胀</h3>
+<h3>2. 实战演练：通过提取类型无关代码减少 C++ 模板膨胀</h3>
 
-<p><a href="https://devblogs.microsoft.com/oldnewthing/20260820-00/?p=112629">Reducing C++ template bloat by factoring out the type-dependent portions of the function</a> — <strong>devblogs.microsoft.com/oldnewthing</strong> · 16 小时前 · ⭐ 22/30</p>
+<p><a href="https://devblogs.microsoft.com/oldnewthing/20260821-00/?p=112632">Reducing C++ template bloat by factoring out the type-dependent portions of the function, practical exam</a> — <strong>devblogs.microsoft.com/oldnewthing</strong> · 16 小时前 · ⭐ 25/30</p>
 
-<blockquote>针对 C++ 模板导致的可执行文件体积膨胀问题，提出了一种将函数中与类型无关的代码提取到非模板基类或辅助函数中的优化策略。通过识别模板函数中的“合并点”，开发者可以将复杂的逻辑移出模板，仅保留必要的类型转换或特定类型操作。这种方法不仅能显著减少生成的机器码重复，还能缩短编译时间并提高指令缓存的效率。作者强调在编写泛型代码时，应时刻警惕那些不需要模板参数即可运行的逻辑片段。</blockquote>
+<blockquote>C++ 模板在提供泛型能力的同时，常因重复实例化导致二进制文件体积剧增。Raymond Chen 演示了如何通过将模板函数中与类型无关的逻辑剥离到非模板辅助函数中，来优化代码规模。这种方法利用了“战术性重构”，确保编译器只为核心逻辑生成一份机器码，而非为每个模板参数生成冗余副本。文中通过具体的代码示例展示了优化前后的对比，证明了该策略在大型项目中的有效性。结论指出，精细化的架构设计是平衡 C++ 开发效率与执行效率的关键。</blockquote>
 
-<p>🏷️ C++, templates, optimization, code bloat</p>
+<p>🏷️ C++, templates, optimization, performance</p>
+
+<hr>
+
+<h3>3. 揭秘 Bluesky 和 Threads 如何在 iOS 截屏中“植入”Logo</h3>
+
+<p><a href="https://timmarinin.net/2026/bluesky-screenshots/">How Bluesky and Threads Sneak Their Logos Into iOS Screenshots</a> — <strong>daringfireball.net</strong> · 1 天前 · ⭐ 23/30</p>
+
+<blockquote>Bluesky 和 Threads 等社交应用采用了一种巧妙的增长黑客手段来提升品牌曝光。通过监听 iOS 的截屏系统通知，应用会在用户按下截屏键的瞬间，动态地将界面上的“关注”按钮替换为官方 Logo。这种技术利用了 iOS UI 框架的响应机制，确保用户分享出去的截图自带品牌水印，而日常使用时则保持功能完整。开发者通过分析 Bluesky 的开源代码，还原了名为 `GrowthHack.tsx` 的组件实现细节。这种做法展示了移动端开发中产品增长与技术实现的深度结合。</blockquote>
+
+<p>🏷️ iOS, UI, screenshot, reverse engineering</p>
+
+<hr>
+
+<h3>4. 通过提取函数中类型无关部分来减少 C++ 模板膨胀</h3>
+
+<p><a href="https://devblogs.microsoft.com/oldnewthing/20260820-00/?p=112629">Reducing C++ template bloat by factoring out the type-dependent portions of the function</a> — <strong>devblogs.microsoft.com/oldnewthing</strong> · 1 天前 · ⭐ 23/30</p>
+
+<blockquote>C++ 模板在为不同类型实例化时容易导致二进制文件体积剧增，即所谓的“代码膨胀”。通过将模板函数中与模板参数类型无关的逻辑提取到非模板的辅助函数或基类中，可以有效减少重复生成的机器码。这种“寻找整合点”的技术不仅能缩小二进制体积，还能加快编译速度并提高 CPU 指令缓存的效率。开发者应识别模板中的通用逻辑，将其重构为接受 void* 或基类指针的统一实现，从而在保持泛型便利性的同时优化性能。</blockquote>
+
+<p>🏷️ C++, templates, optimization, binary size</p>
+
+<hr>
+
+<h3>5. 将 Steam Deck LCD 屏幕连接到树莓派上使用</h3>
+
+<p><a href="https://www.jeffgeerling.com/blog/2026/steam-deck-lcd-pi-hat/">Getting the Steam Deck LCD working on a Raspberry Pi</a> — <strong>jeffgeerling.com</strong> · 1 天前 · ⭐ 21/30</p>
+
+<blockquote>原版 Steam Deck 使用的 BOE 7 英寸 LCD 屏幕在二手市场仅需约 30 美元，具备 400 尼特亮度和 1280x800 分辨率（216 ppi），性价比极高。Jeff Geerling 展示了如何通过定制的驱动板（Pi HAT）将这块高质量屏幕连接到 Raspberry Pi 5 上。该方案克服了 MIPI DSI 接口兼容性和触摸屏驱动适配的难题，使 DIY 玩家能够利用廉价的工业级零件构建高性能手持设备。文章详细记录了硬件连接过程及初步的显示效果测试。</blockquote>
+
+<p>🏷️ Raspberry Pi, Steam Deck, hardware hacking, LCD</p>
+
+<hr>
+
+<h2>🤖 AI / ML</h2>
+
+<h3>6. 通过 agent.md 文件提升 LLM 辅助编程的代码质量</h3>
+
+<p><a href="https://fabiensanglard.net/agent.md/index.html">My agent.md to improve LLM-assisted code quality</a> — <strong>fabiensanglard.net</strong> · 1 天前 · ⭐ 26/30</p>
+
+<blockquote>LLM 在辅助编程时常因缺乏项目上下文而产生幻觉或使用过时 API。作者提出在项目根目录创建一个名为 `agent.md` 的结构化 Markdown 文件，专门存放项目特定的编码规范、库版本要求和架构决策。通过在提示词中引用该文件，LLM 能精准遵循如“使用原生 Fetch 而非 Axios”或“保持函数纯净”等私有指令。这种方法将通用的模型能力与具体的项目约束解耦，显著减少了手动纠错的频率。最终实现了一种低成本、高效率的“项目级系统提示词”管理方案。</blockquote>
+
+<p>🏷️ LLM, coding assistant, prompt engineering, productivity</p>
+
+<hr>
+
+<h3>7. 实验证明：读者无法识别带有水印的 AI 生成文本</h3>
+
+<p><a href="https://seangoedecke.com/readers-cant-identify-watermarked-ai-text/">Readers can't identify watermarked AI text</a> — <strong>seangoedecke.com</strong> · 1 天前 · ⭐ 24/30</p>
+
+<blockquote>关于 AI 文本水印是否会损害输出质量的争论一直不断，作者对此进行了实际测试。通过对比实验发现，普通读者完全无法分辨经过水印处理的文本与原始 AI 生成文本之间的差异。研究表明，现有的水印算法（如基于 Logits 偏移的方案）在保持语义连贯性和文笔流畅度方面已经非常成熟。这意味着水印技术可以在不牺牲用户体验的前提下，成为追踪 AI 内容的有效手段。结论支持了在行业内大规模推广 AI 水印以增强内容透明度的可行性。</blockquote>
+
+<p>🏷️ AI watermarking, LLM, AI safety, content detection</p>
+
+<hr>
+
+<h3>8. ChatGPT 搜索现已大规模使用 site: 操作符</h3>
+
+<p><a href="https://simonwillison.net/2026/Aug/20/chatgpt-search-now-uses-the-siteoperator-at-scale/">ChatGPT search now uses the site:operator at scale</a> — <strong>simonwillison.net</strong> · 1 天前 · ⭐ 23/30</p>
+
+<blockquote>ChatGPT 的搜索机制正在发生重大变化，开始频繁使用 `site:` 操作符来针对特定域名进行深度检索。这一趋势催生了“生成式引擎优化”（GEO）领域，即针对 AI 聊天机器人的搜索算法进行网站优化。Promptwatch 的监测数据显示，这种定向搜索策略旨在提高回答的准确性和权威性，但也改变了流量分配逻辑。网站所有者现在需要关注如何让自己的内容更容易被 LLM 的搜索插件选中并引用。这标志着互联网营销从传统的 SEO 时代正式跨入 GEO 时代。</blockquote>
+
+<p>🏷️ ChatGPT search, GEO, SEO, search engine</p>
+
+<hr>
+
+<h3>9. Pluralistic：AI 冲击下的真实认知危机</h3>
+
+<p><a href="https://pluralistic.net/2026/08/20/epistemic-void/">Pluralistic: The actual epistemic crisis (20 Aug 2026)</a> — <strong>pluralistic.net</strong> · 1 天前 · ⭐ 23/30</p>
+
+<blockquote>Cory Doctorow 深入探讨了 AI 对现实感造成的“认知危机”，认为这是一种针对信息生态系统的机会性感染。AI 产生的大量虚假信息并非问题的根源，而是利用了现有的信任缺失和真相商业化漏洞。文章指出，当权力和资本能够随意定义“事实”时，AI 只是加速了共识的瓦解。解决之道不在于单纯的技术过滤，而在于修复社会底层的知识生产和验证机制。作者强调，必须警惕技术巨头利用 AI 进一步垄断解释权，导致公共讨论空间的彻底崩塌。</blockquote>
+
+<p>🏷️ AI, epistemology, misinformation, ethics</p>
+
+<hr>
+
+<h2>💡 观点 / 杂谈</h2>
+
+<h3>10. 苹果与欧盟就 DMA 达成支付条款协议：苹果几乎未作让步</h3>
+
+<p><a href="https://daringfireball.net/2026/08/apple_eu_business_terms_conceding_little">★ Apple and European Commission Reach Agreement on App Payment Terms Under DMA, With Apple Conceding Very Little</a> — <strong>daringfireball.net</strong> · 1 天前 · ⭐ 25/30</p>
+
+<blockquote>在欧盟《数字市场法案》（DMA）的压力下，苹果公司对其 App Store 支付条款进行了调整，但实际变动极小。苹果仅将第三方支付的佣金从 30% 降至 26%，而对于订阅一年后的 15% 佣金比例则完全没有下调。尽管面临监管高压，苹果仍通过复杂的条款设计保留了核心收入模式，仅作出了象征性的 4% 降幅让步。这反映了大型科技公司在应对区域性监管时，利用规则复杂性进行博弈的典型策略。</blockquote>
+
+<p>🏷️ Apple, DMA, App Store, regulation</p>
+
+<hr>
+
+<h3>11. 为什么仅仅羞辱 AI 垃圾内容不足以阻止大科技公司的扩张</h3>
+
+<p><a href="https://anildash.com/2026/08/21/ai-slop-and-shame/">Why shaming people about AI slop isn’t enough to stop Big AI</a> — <strong>anildash.com</strong> · 1 天前 · ⭐ 25/30</p>
+
+<blockquote>当前社交媒体上充斥着对 AI 生成的低质量内容（AI Slop）的嘲讽和道德谴责，但这种“羞辱”策略难以撼动行业现状。作者指出，AI 的普及是由大科技公司掌握的巨额资本和基础设施驱动的，而非单纯的用户偏好。单纯的道德批判忽略了背后的权力不对等，无法解决 AI 对信息生态的结构性破坏。文章呼吁建立更具建设性的替代方案和政策干预，而非仅仅停留在文化层面的口诛笔伐。核心观点认为，对抗 AI 异化需要从改变生产关系和资源分配入手。</blockquote>
+
+<p>🏷️ AI ethics, AI slop, Big Tech, generative AI</p>
+
+<hr>
+
+<h3>12. 别再执着于开发 TUI 命令行界面了</h3>
+
+<p><a href="https://simonwillison.net/2026/Aug/21/stop-making-tuis/">Stop Making TUIs</a> — <strong>simonwillison.net</strong> · 14 小时前 · ⭐ 23/30</p>
+
+<blockquote>长期以来，开发者倾向于为内部工具编写终端用户界面（TUI），认为其开发效率高且极客感十足。然而，随着 Cursor 和 Claude 等 AI 编程助手的普及，构建原生 GUI（如 SwiftUI 应用）的门槛已降至近乎为零。GUI 在数据可视化、交互直观性和功能发现性上远超 TUI，且不再需要开发者手动处理复杂的终端字符渲染。作者建议开发者应利用 AI 能力转向 GUI 开发，以获得更好的使用体验和更高的生产力。这一观点挑战了传统黑客文化中“命令行至上”的思维定式。</blockquote>
+
+<p>🏷️ TUI, GUI, AI coding agents, UX</p>
+
+<hr>
+
+<h3>13. 永远不要在工作中发火</h3>
+
+<p><a href="https://seangoedecke.com/you-should-never-be-angry-at-work/">You should never be angry at work</a> — <strong>seangoedecke.com</strong> · 6 小时前 · ⭐ 21/30</p>
+
+<blockquote>在职场中保持情绪稳定是职业成功的核心要素，作者认为在工作中表达愤怒几乎总是一个错误。愤怒会损害个人的判断力，破坏同事间的信任关系，并显著削弱你在团队中的长期影响力。即使你的愤怒是有理有据的，它也无法帮助项目更有效地推进，反而可能让你被打上“难以合作”的标签。通过保持冷静和专业，开发者能更好地应对复杂的公司政治，并确保管理层对你的交付能力保持信心。</blockquote>
+
+<p>🏷️ career development, workplace culture, soft skills, professionalism</p>
+
+<hr>
+
+<h2>🛠 工具 / 开源</h2>
+
+<h3>14. Rust Glancer：内存占用降低两个数量级的轻量级 Rust LSP 服务器</h3>
+
+<p><a href="https://matklad.github.io/2026/08/21/rust-glancer.html">Rust Glancer</a> — <strong>matklad.github.io</strong> · 1 天前 · ⭐ 23/30</p>
+
+<blockquote>Rust Glancer 是一款为 Rust 语言开发的实验性轻量级 LSP 服务器，旨在解决主流工具资源消耗过大的问题。其核心优势在于极低的内存占用，相比 rust-analyzer 降低了两个数量级（约 100 倍）。该工具通过精简功能集，专注于提供极速的代码导航和基础补全，而非全量的语义分析。对于在低配设备上开发或追求极致 IDE 响应速度的开发者来说，这是一个极具潜力的替代方案。</blockquote>
+
+<p>🏷️ Rust, LSP, IDE, performance</p>
 
 <hr>
 
 <h2>🔒 安全</h2>
 
-<h3>15. 粗糙的界面是安全隐患</h3>
+<h3>15. 粗糙的界面设计是安全隐患</h3>
 
-<p><a href="https://blog.jim-nielsen.com/2026/sloppy-ui-is-security-liability/">A Sloppy Interface Is a Security Liability ￼</a> — <strong>blog.jim-nielsen.com</strong> · 11 小时前 · ⭐ 26/30</p>
+<p><a href="https://blog.jim-nielsen.com/2026/sloppy-ui-is-security-liability/">A Sloppy Interface Is a Security Liability ￼</a> — <strong>blog.jim-nielsen.com</strong> · 1 天前 · ⭐ 23/30</p>
 
-<blockquote>探讨了软件界面质量与网络安全之间的直接联系。通过分析 Axios 维护者因仿冒 Microsoft Teams 界面而遭受网络钓鱼的案例，指出粗糙的 UI 设计会降低用户的警惕性。当正版软件本身存在视觉瑕疵或不一致时，攻击者更容易通过模拟这种“粗糙感”来欺骗用户。作者认为，提升 UI 的精致度和一致性不仅是美学问题，更是防御社会工程学攻击的关键防线。这种“视觉信任”的缺失，往往是安全链条中最薄弱的一环。</blockquote>
+<blockquote>软件界面的精致程度直接影响系统的安全性，粗糙且不一致的 UI 往往成为钓鱼攻击的温床。以 Axios 维护者遭遇的 npm 供应链攻击为例，攻击者利用伪造的 Microsoft Teams 界面成功实施了钓鱼。当合法软件的 UI 缺乏细节打磨或存在视觉瑕疵时，用户很难分辨出恶意的伪造弹窗或登录页面。作者强调，提升界面质量不仅是为了美观，更是为了建立清晰的安全边界，降低用户因视觉误导而产生的安全风险。</blockquote>
 
-<p>🏷️ AI security, interface design, vulnerabilities, LLM safety</p>
+<p>🏷️ AI security, UX, vulnerability, software security</p>
 
 <hr>
 
-<p><em>生成于 2026-08-21 06:57 | 扫描 83 源 → 获取 2523 篇 → 精选 15 篇</em></p>
+<p><em>生成于 2026-08-22 06:51 | 扫描 83 源 → 获取 2524 篇 → 精选 15 篇</em></p>
 <p><em>基于 <a href="https://refactoringenglish.com/tools/hn-popularity/">Hacker News Popularity Contest 2025</a> RSS 源列表，由 <a href="https://x.com/karpathy">Andrej Karpathy</a> 推荐</em></p>
   </div>
   <div class="footer">
-    <p>Generated on 2026-08-21 · Based on <a href="https://refactoringenglish.com/tools/hn-popularity/">HN Popularity Contest 2025</a></p>
+    <p>Generated on 2026-08-22 · Based on <a href="https://refactoringenglish.com/tools/hn-popularity/">HN Popularity Contest 2025</a></p>
   </div>
 </body>
 </html>
