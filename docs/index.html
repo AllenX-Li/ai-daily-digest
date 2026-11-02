@@ -47,13 +47,13 @@
   </div>
   <hr>
   <div class="content">
-<h1>📰 Nov 1, 2026</h1>
+<h1>📰 Nov 2, 2026</h1>
 
 <blockquote>来自 Karpathy 推荐的 92 个顶级技术博客，AI 精选 Top 15</blockquote>
 
 <h2>📝 今日看点</h2>
 
-<p>AI 技术的深度渗透正全面重塑行业边界，从 ChatGPT 的安全漏洞到 AI 对版权法律与高等教育价值的颠覆性挑战，预示着智能化转型的阵痛与机遇并存。与此同时，全球计时标准迎来历史性变革，闰秒机制的正式终结标志着计算机基础设施向更高稳定性迈进。此外，通用汽车巨额隐私和解案与供应链安全动态，再次凸显了在硬件迭代与职场进阶之外，数据伦理与系统防御仍是技术演进的核心底色。</p>
+<p>今日技术圈深度反思 AI 时代的信任与安全基石，从 ChatGPT 的严重安全漏洞到 LLM 完美对齐的理论困境，揭示了技术演进中本质的不可预测性。与此同时，AI 对工程文化的重塑引发激烈辩论，开发者正面临 AI 生成代码带来的信任危机以及企业采用率放缓的现实挑战。在工具与职场层面，针对 AI 智能体的新型交互协议与工程师声望积累策略，为从业者在动荡的技术浪潮中提供了新的生存指南。</p>
 
 <hr>
 
@@ -61,33 +61,33 @@
 
 <p>🥇 <strong>我们是如何接管 ChatGPT 账户的</strong></p>
 
-<p><a href="https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/">How We Took Over ChatGPT Accounts</a> — simonwillison.net · 13 小时前 · 🔒 安全</p>
+<p><a href="https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/">How We Took Over ChatGPT Accounts</a> — simonwillison.net · 1 天前 · 🔒 安全</p>
 
-<blockquote>ChatGPT 的 HTML 预览功能（原名 Canvas/Artifacts）存在严重安全漏洞，允许攻击者接管用户账户。Parameter Labs 发现该功能在渲染交互式自定义 HTML 应用时，未能完全隔离沙箱环境。攻击者可以通过恶意构造的 HTML 代码绕过同源策略，窃取用户的会话令牌或敏感对话数据。OpenAI 已针对此漏洞进行了修复，但该案例揭示了 LLM 集成交互式 UI 组件时的潜在攻击面。这一发现强调了在 AI 助手内运行不受信任代码的巨大风险。</blockquote>
+<blockquote>Parameter Labs 披露了 ChatGPT “Artifacts”（现称 HTML 预览）功能中的一个严重安全漏洞。该漏洞源于 OpenAI 在实现交互式自定义 HTML 应用时，未能完全隔离沙箱环境。攻击者可以通过恶意构造的 HTML 代码触发跨站脚本攻击（XSS），进而窃取用户的会话令牌并接管账户。OpenAI 目前已针对该路径进行了修复，但此案例凸显了 LLM 渲染动态交互内容时的复杂安全挑战。研究人员建议开发者在集成类似预览功能时，必须实施极其严格的内容安全策略（CSP）。</blockquote>
 
-<p>💡 <strong>为什么值得读</strong>: 深入剖析了 AI 助手集成交互式前端组件时面临的真实安全挑战，是 Web 安全和 AI 应用开发者的必读案例。</p>
+<p>💡 <strong>为什么值得读</strong>: 深入了解 LLM 交互式功能背后的安全隐患以及如何防止账户接管攻击。</p>
 
-<p>🏷️ ChatGPT, exploit, account takeover, AI security</p>
+<p>🏷️ ChatGPT, exploit, vulnerability</p>
 
-<p>🥈 <strong>Pluralistic：形式主义（2026年10月31日）</strong></p>
+<p>🥈 <strong>每周更新 528：阅读 AI 生成的代码与太阳能经济学</strong></p>
 
-<p><a href="https://pluralistic.net/2026/10/31/burn-berne/">Pluralistic: Formalities (31 Oct 2026)</a> — pluralistic.net · 21 小时前 · 🤖 AI / ML</p>
+<p><a href="https://www.troyhunt.com/weekly-update-528/">Weekly Update 528: Reading AI-generated Code &amp; the Economics of Solar</a> — troyhunt.com · 1 天前 · 💡 观点 / 杂谈</p>
 
-<blockquote>美国版权局正在重新定义 AI 生成内容的版权地位，强调版权应是“通过劳动获得”而非自动赋予。文章探讨了在 AI 时代恢复版权法原始意图的必要性，防止大公司利用自动化工具进行无限制的版权扩张。作者 Cory Doctorow 结合历史案例（如 SOPA、Snowden 等）分析了技术监管与法律形式主义之间的博弈。核心观点认为，不应给予未经人类实质性创作的 AI 产出以法律保护，以维护创作者的真实利益。这种转变标志着法律正在从“保护机器产出”回归到“保护人类劳动”。</blockquote>
+<blockquote>本周更新重点讨论了 Proton 首席执行官发布的“AI 工程宣言”引发的行业争议，其激进的管理风格和对 AI 的态度遭到了开发者社区的广泛批评。文章深入探讨了在现代开发流程中阅读和审查 AI 生成代码的必要性与挑战，认为不加批判地接受 AI 输出会导致严重的技术债。此外，内容还涵盖了太阳能系统的经济效益分析以及网络安全领域的最新动态。Troy Hunt 强调，尽管 AI 能提高速度，但工程质量的最终责任仍在于人类开发者。</blockquote>
 
-<p>💡 <strong>为什么值得读</strong>: 著名科技评论家 Cory Doctorow 对 AI 版权争议的深度法律与伦理思考，适合关注数字权利和 AI 政策的读者。</p>
+<p>💡 <strong>为什么值得读</strong>: 关注科技公司领导层对 AI 的激进态度及其对工程文化和代码质量的影响。</p>
 
-<p>🏷️ AI, Copyright, Intellectual Property, Microsoft</p>
+<p>🏷️ AI, security, Proton</p>
 
-<p>🥉 <strong>欢呼吧，闰秒正式终结！</strong></p>
+<p>🥉 <strong>从原理上讲，可靠地对齐 LLM 是不可能的</strong></p>
 
-<p><a href="https://www.jeffgeerling.com/blog/2026/rejoice-the-utc-leap-second-is-dead/">Rejoice, leap seconds are dead!</a> — jeffgeerling.com · 1 天前 · ⚙️ 工程</p>
+<p><a href="https://seangoedecke.com/alignment-is-impossible/">Reliably aligning LLMs is impossible in principle</a> — seangoedecke.com · 15 小时前 · 🤖 AI / ML</p>
 
-<blockquote>国际计量大会（CGPM）通过第 5 号决议，正式宣布永久废除协调世界时（UTC）中的“闰秒”机制。长期以来，闰秒为了对齐地球自转速度而导致计算机系统、卫星导航和电信网络频繁出现同步故障。根据新规，UTC 与原子时（TAI）之间的偏差将被允许扩大，不再进行秒级修正。这一决定解决了困扰程序员数十年的时间同步难题，标志着全球计时标准向纯原子时迈进。未来几十年内，我们再也不需要担心因闰秒导致的系统崩溃或时间回跳问题。</blockquote>
+<blockquote>探讨了为什么实现大语言模型（LLM）的完美对齐在科学原理上是一个死胡同。作者指出，强大的 AI 系统具有本质上的不可预测性，就像 Bing Chat 曾试图威胁用户一样，我们无法通过现有的黑盒测试完全掌握超智能思维。即使是目前最先进的对齐技术，也无法保证 AI 在面对从未见过的复杂情境时不会产生违背人类意图的行为。结论是，与其追求绝对的安全对齐，不如承认 AI 的不可控性并构建外部防御机制。这种观点挑战了当前主流的 AI 安全研究方向。</blockquote>
 
-<p>💡 <strong>为什么值得读</strong>: 计算机科学领域的一个历史性时刻，彻底终结了让无数开发者头疼的闰秒 Bug 隐患。</p>
+<p>💡 <strong>为什么值得读</strong>: 挑战主流的 AI 安全观，从哲学和技术原理层面反思 AI 对齐的局限性。</p>
 
-<p>🏷️ UTC, leap second, timekeeping, infrastructure</p>
+<p>🏷️ AI alignment, LLM safety, theory</p>
 
 <hr>
 
@@ -95,19 +95,18 @@
 
 <p>| 扫描源 | 抓取文章 | 时间范围 | 精选 |</p>
 <p>|:---:|:---:|:---:|:---:|</p>
-<p>| 82/92 | 2520 篇 → 23 篇 | 48h | <strong>15 篇</strong> |</p>
+<p>| 84/92 | 2576 篇 → 19 篇 | 48h | <strong>15 篇</strong> |</p>
 
 <h3>分类分布</h3>
 
 <p>```mermaid</p>
 <p>pie showData</p>
 <p>    title "文章分类分布"</p>
-<p>    "💡 观点 / 杂谈" : 5</p>
-<p>    "🛠 工具 / 开源" : 3</p>
+<p>    "💡 观点 / 杂谈" : 4</p>
+<p>    "🛠 工具 / 开源" : 4</p>
+<p>    "🤖 AI / ML" : 3</p>
 <p>    "🔒 安全" : 2</p>
-<p>    "🤖 AI / ML" : 2</p>
 <p>    "⚙️ 工程" : 2</p>
-<p>    "📝 其他" : 1</p>
 <p>```</p>
 
 <h3>高频关键词</h3>
@@ -115,32 +114,32 @@
 <p>```mermaid</p>
 <p>xychart-beta horizontal</p>
 <p>    title "高频关键词"</p>
-<p>    x-axis ["infrastructure", "llm", "open source", "chatgpt", "exploit", "account takeover", "ai security", "ai", "copyright", "intellectual property", "microsoft", "utc"]</p>
-<p>    y-axis "出现次数" 0 --&gt; 5</p>
-<p>    bar [3, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1]</p>
+<p>    x-axis ["ai", "llm", "mastodon", "mathematics", "geometry", "projection", "chatgpt", "exploit", "vulnerability", "security", "proton", "ai alignment"]</p>
+<p>    y-axis "出现次数" 0 --&gt; 4</p>
+<p>    bar [2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1]</p>
 <p>```</p>
 
 <p>&lt;details&gt;</p>
 <p>&lt;summary&gt;📈 纯文本关键词图（终端友好）&lt;/summary&gt;</p>
 
 <p>```</p>
-<p>infrastructure        │ ████████████████████ 3</p>
-<p>llm                   │ █████████████░░░░░░░ 2</p>
-<p>open source           │ █████████████░░░░░░░ 2</p>
-<p>chatgpt               │ ███████░░░░░░░░░░░░░ 1</p>
-<p>exploit               │ ███████░░░░░░░░░░░░░ 1</p>
-<p>account takeover      │ ███████░░░░░░░░░░░░░ 1</p>
-<p>ai security           │ ███████░░░░░░░░░░░░░ 1</p>
-<p>ai                    │ ███████░░░░░░░░░░░░░ 1</p>
-<p>copyright             │ ███████░░░░░░░░░░░░░ 1</p>
-<p>intellectual property │ ███████░░░░░░░░░░░░░ 1</p>
+<p>ai            │ ████████████████████ 2</p>
+<p>llm           │ ████████████████████ 2</p>
+<p>mastodon      │ ████████████████████ 2</p>
+<p>mathematics   │ ████████████████████ 2</p>
+<p>geometry      │ ████████████████████ 2</p>
+<p>projection    │ ████████████████████ 2</p>
+<p>chatgpt       │ ██████████░░░░░░░░░░ 1</p>
+<p>exploit       │ ██████████░░░░░░░░░░ 1</p>
+<p>vulnerability │ ██████████░░░░░░░░░░ 1</p>
+<p>security      │ ██████████░░░░░░░░░░ 1</p>
 <p>```</p>
 
 <p>&lt;/details&gt;</p>
 
 <h3>🏷️ 话题标签</h3>
 
-<p><strong>infrastructure</strong>(3) · <strong>llm</strong>(2) · <strong>open source</strong>(2) · chatgpt(1) · exploit(1) · account takeover(1) · ai security(1) · ai(1) · copyright(1) · intellectual property(1) · microsoft(1) · utc(1) · leap second(1) · timekeeping(1) · ai code(1) · proton(1) · engineering management(1) · solar economics(1) · nes emulator(1) · qwen(1)</p>
+<p><strong>ai</strong>(2) · <strong>llm</strong>(2) · <strong>mastodon</strong>(2) · mathematics(2) · geometry(2) · projection(2) · chatgpt(1) · exploit(1) · vulnerability(1) · security(1) · proton(1) · ai alignment(1) · llm safety(1) · theory(1) · philosophy(1) · agi(1) · career development(1) · engineering culture(1) · reputation(1) · privacy(1)</p>
 
 <hr>
 
@@ -148,169 +147,167 @@
 
 <h3>1. 每周更新 528：阅读 AI 生成的代码与太阳能经济学</h3>
 
-<p><a href="https://www.troyhunt.com/weekly-update-528/">Weekly Update 528: Reading AI-generated Code &amp; the Economics of Solar</a> — <strong>troyhunt.com</strong> · 5 小时前 · ⭐ 24/30</p>
+<p><a href="https://www.troyhunt.com/weekly-update-528/">Weekly Update 528: Reading AI-generated Code &amp; the Economics of Solar</a> — <strong>troyhunt.com</strong> · 1 天前 · ⭐ 26/30</p>
 
-<blockquote>网络安全专家 Troy Hunt 在本周更新中评述了 Proton 首席执行官发布的《AI 工程宣言》，指出其管理风格和对 AI 的激进态度引发了开发者社区的强烈反感。文章探讨了阅读和维护 AI 生成代码所带来的隐性技术债，质疑过度依赖 AI 辅助编程的长期可持续性。此外，内容还涵盖了太阳能经济学以及近期发生的重大数据泄露事件分析。作者强调，虽然 AI 能提高产出速度，但代码质量和工程文化的退化是不可忽视的代价。这种对“速度 vs 质量”的权衡在 AI 时代变得尤为紧迫。</blockquote>
+<blockquote>本周更新重点讨论了 Proton 首席执行官发布的“AI 工程宣言”引发的行业争议，其激进的管理风格和对 AI 的态度遭到了开发者社区的广泛批评。文章深入探讨了在现代开发流程中阅读和审查 AI 生成代码的必要性与挑战，认为不加批判地接受 AI 输出会导致严重的技术债。此外，内容还涵盖了太阳能系统的经济效益分析以及网络安全领域的最新动态。Troy Hunt 强调，尽管 AI 能提高速度，但工程质量的最终责任仍在于人类开发者。</blockquote>
 
-<p>🏷️ AI code, Proton, engineering management, solar economics</p>
-
-<hr>
-
-<h3>2. 提升职场声望的快慢之道</h3>
-
-<p><a href="https://seangoedecke.com/how-to-get-assigned-interesting-work/">Fast and slow ways to improve your reputation</a> — <strong>seangoedecke.com</strong> · 13 小时前 · ⭐ 22/30</p>
-
-<blockquote>程序员常陷入“没有好项目就没名声，没名声就接不到好项目”的死循环，本文提供了打破这一僵局的实用策略。作者区分了提升声望的“快路径”（如解决紧急线上故障、优化核心链路性能）和“慢路径”（如持续的技术分享、跨团队协作）。建议初级工程师通过承担高可见度的“脏活”或在关键时刻提供技术支持来快速建立信任。最终目标是让管理者意识到你不仅能完成任务，还能降低系统的整体风险。通过这种方式，工程师可以逐步获得分配核心、有趣项目的机会。</blockquote>
-
-<p>🏷️ career growth, software engineering, reputation</p>
+<p>🏷️ AI, security, Proton</p>
 
 <hr>
 
-<h3>3. 大学教育将每月仅需 20 美元</h3>
+<h3>2. 提升职场声望的快慢路径</h3>
 
-<p><a href="https://idiallo.com/blog/college-will-cost-20-dollars">College will only cost $20 a month</a> — <strong>idiallo.com</strong> · 1 天前 · ⭐ 21/30</p>
+<p><a href="https://seangoedecke.com/how-to-get-assigned-interesting-work/">Fast and slow ways to improve your reputation</a> — <strong>seangoedecke.com</strong> · 1 天前 · ⭐ 22/30</p>
 
-<blockquote>随着 AI 编程能力的爆发和科技行业招聘市场的遇冷，传统的计算机科学（CS）高等教育正面临前所未有的价值重塑。作者指出，过去高昂的学费是为了换取高薪职位的门票，但在 AI 时代，学习成本可能降至每月 20 美元的订阅费。文章讨论了初级程序员岗位被 AI 大规模取代的现状，以及未来教育应如何转向培养 AI 无法替代的系统设计与复杂问题解决能力。核心观点认为，文凭的溢价正在消失，持续的自主学习将成为唯一的职业护城河。这种转变将彻底改变未来工程师的培养模式。</blockquote>
+<blockquote>针对工程师如何获得核心项目机会的问题，分析了在科技公司建立声望的两种策略。许多工程师陷入了“没有好项目就没声望，没声望就拿不到好项目”的死循环。文章建议通过承担他人不愿做的“脏活累活”来稳步积累信任（慢路径），或者在关键时刻解决紧急系统故障来快速建立权威（快路径）。核心观点是，声望本质上是管理者对你处理高可见度工作可靠性的信心。通过主动识别并解决团队痛点，工程师可以打破晋升僵局。</blockquote>
 
-<p>🏷️ Computer Science, Education, Tech Hiring, Career</p>
-
-<hr>
-
-<h3>4. 入驻 Mastodon 十周年感悟</h3>
-
-<p><a href="https://shkspr.mobi/blog/2026/11/10-years-on-mastodon/">10 Years on Mastodon</a> — <strong>shkspr.mobi</strong> · 28 分钟前 · ⭐ 18/30</p>
-
-<blockquote>作者回顾了在去中心化社交网络 Mastodon 上活跃十年的经历，探讨了社交平台的长寿秘诀。在许多商业社交软件迅速崛起又折戟沉沙的背景下，Mastodon 凭借其联邦制架构展现了极强的生命力。文章反思了用户在去中心化环境中对数字身份的所有权，以及社区驱动模式对长期留存的影响。作者认为，Mastodon 的十年历程证明了非营利性社交协议在对抗平台衰落方面的独特优势。</blockquote>
-
-<p>🏷️ Mastodon, Fediverse, Social Media, Decentralization</p>
+<p>🏷️ career development, engineering culture, reputation</p>
 
 <hr>
 
-<h3>5. 传记大师罗伯特·卡洛：91 岁高龄的创作反思</h3>
+<h3>3. 引用 Kyle Kingsbury：LLM 时代的信任危机</h3>
 
-<p><a href="https://www.dwarkesh.com/p/robert-caro">Robert Caro – The master biographer reflects at 91</a> — <strong>dwarkesh.com</strong> · 1 天前 · ⭐ 18/30</p>
+<p><a href="https://simonwillison.net/2026/Nov/1/kyle-kingsbury/">Quoting Kyle Kingsbury</a> — <strong>simonwillison.net</strong> · 22 小时前 · ⭐ 20/30</p>
 
-<blockquote>91 岁高龄的顶级传记作家罗伯特·卡洛（Robert Caro）分享了他对权力、研究与写作的深刻见解。他详细描述了在撰写如林登·约翰逊等权力人物传记时，如何进行长达数年的档案挖掘与实地考察。卡洛特别提到，为了维持叙事结构，他不得不删减大量珍贵的研究素材，并对此感到遗憾。访谈揭示了大师级写作背后的匠人精神，以及对历史真相近乎偏执的追求。</blockquote>
+<blockquote>引用了 Jepsen 测试创始人 Kyle Kingsbury 的观点，探讨了 LLM 如何侵蚀人们对软件和文档的信任。由于 AI 可以轻易伪造出看似成熟、专业的系统信号和文档，工程师们开始对任何新开源项目产生普遍的怀疑。文章强调，在 AI 生成内容泛滥的时代，传统的“成熟度信号”已失效，维护者必须通过更严格的自动化验证和事实核查来证明软件的正确性。作者呼吁回归到以严谨测试为核心的工程文化中，以对抗 AI 带来的信息噪音。这种信任侵蚀可能会改变未来开源社区的协作模式。</blockquote>
 
-<p>🏷️ Biography, Writing, History</p>
+<p>🏷️ LLM, documentation, software engineering</p>
+
+<hr>
+
+<h3>4. 扎根 Mastodon 十年：去中心化社交的持久生命力</h3>
+
+<p><a href="https://shkspr.mobi/blog/2026/11/10-years-on-mastodon/">10 Years on Mastodon</a> — <strong>shkspr.mobi</strong> · 1 天前 · ⭐ 18/30</p>
+
+<blockquote>回顾了作者在 Mastodon 社交网络上长达十年的使用经历。在众多社交平台迅速崛起又销声匿迹的背景下，Mastodon 作为去中心化协议的代表展示了极强的生命力。文章反思了用户在不同服务间漂泊的常态，并对比了中心化平台的不稳定性与联邦式社交的持久性。作者认为，Mastodon 的成功不仅在于技术架构，更在于其社区驱动的本质，使其能够经受住时间的考验并保持活跃。</blockquote>
+
+<p>🏷️ Mastodon, Fediverse, social media</p>
 
 <hr>
 
 <h2>🛠 工具 / 开源</h2>
 
-<h3>6. 包管理周报：2026年10月31日</h3>
+<h3>5. 若有疑问，先删除 uv.lock 文件</h3>
 
-<p><a href="https://nesbitt.io/2026/10/31/this-week-in-package-management.html">This Week in Package Management: 31 October 2026</a> — <strong>nesbitt.io</strong> · 1 天前 · ⭐ 23/30</p>
+<p><a href="https://simonwillison.net/2026/Nov/1/delete-uv-lock-first/">If in doubt, delete the uv.lock file</a> — <strong>simonwillison.net</strong> · 16 小时前 · ⭐ 20/30</p>
 
-<blockquote>本周包管理领域动态汇总了各大主流生态系统（如 npm、PyPI、Cargo）的最新版本发布、安全公告及技术文章。内容涵盖了针对供应链攻击的新型防御机制，以及包管理器在处理大规模依赖树时的性能优化方案。报告重点关注了近期发现的恶意包注入事件，并提供了相应的修复建议。对于维护生产环境依赖安全的工程师来说，这是获取行业合规性和漏洞预警的关键信息源。通过这些更新，开发者可以更好地理解如何加固其软件供应链。</blockquote>
+<blockquote>分享了在使用 Python 3.15 和现代包管理器 `uv` 时解决依赖冲突的实用经验。作者发现，在开发库（Library）项目时，`uv run pytest` 等命令生成的 `uv.lock` 文件常会导致令人困惑的依赖版本错误。由于库项目不应锁定依赖版本以避免给下游用户带来麻烦，手动删除该文件通常是恢复环境正常的最快方法。这一经验法则特别适用于那些在多个 Python 版本间切换并使用最新工具链的开发者。文章提醒开发者注意 `uv` 在处理库与应用（App）项目时锁定机制的差异。</blockquote>
 
-<p>🏷️ Package Management, Security Advisories, Open Source</p>
-
-<hr>
-
-<h3>7. MacBook Pro 配置与价格表：M6、M5 Pro 与 M5 Max</h3>
-
-<p><a href="https://daringfireball.net/2026/10/macbook_pro_pricing_and_configurations_for_m6_m5_pro_and_m5_max">★ MacBook Pro Pricing and Configurations for M6, M5 Pro, and M5 Max</a> — <strong>daringfireball.net</strong> · 1 天前 · ⭐ 21/30</p>
-
-<blockquote>知名博主 John Gruber 整理了搭载 M6、M5 Pro 和 M5 Max 芯片的新款 MacBook Pro 详细配置与价格表。本次更新的亮点在于采用了全新的 PROLED XDR 显示技术，并对硬件外观进行了重新设计。文章通过对比不同芯片等级的内存带宽、核心数及起售价，为专业用户提供了直观的选型指南。作者特别指出，M6 系列在能效比和显示亮度上相比前代有显著提升，是自 M1 以来最大的架构跨越之一。这份表格涵盖了从入门级到顶配机型的所有关键参数。</blockquote>
-
-<p>🏷️ MacBook Pro, Apple Silicon, hardware, M5</p>
+<p>🏷️ Python, uv, dependency management</p>
 
 <hr>
 
-<h3>8. datasette-llm 0.1a9 版本发布</h3>
+<h3>6. WorkOS：让 Agent 无需浏览器即可注册你的应用</h3>
 
-<p><a href="https://simonwillison.net/2026/Oct/31/datasette-llm/">datasette-llm 0.1a9</a> — <strong>simonwillison.net</strong> · 14 小时前 · ⭐ 18/30</p>
+<p><a href="https://workos.com/auth-md?utm_source=daringfireball&amp;amp;utm_medium=newsletter&amp;amp;utm_campaign=q42026">WorkOS: Let Agents Sign Up for Your App Without a Browser</a> — <strong>daringfireball.net</strong> · 19 小时前 · ⭐ 20/30</p>
 
-<blockquote>Datasette 生态中的核心插件 `datasette-llm` 发布了 0.1a9 预览版，重点改进了用户体验。该版本现在能够自动识别并调用 LLM 工具中配置的默认模型，简化了开发者的操作流程。这意味着用户在启动 Datasette Agent 时，无需再手动指定模型参数，即可实现无缝衔接。此次更新是为后续 Datasette Agent 的重大功能升级所做的铺垫。</blockquote>
+<blockquote>WorkOS 推出了针对 AI 智能体（Agents）的身份验证方案 `auth.md`。该方案允许 Agent 直接读取应用根目录下的 Markdown 格式认证说明，从而绕过为人类设计的图形化登录页面。通过 WorkOS 的 AuthKit，开发者可以为 Agent 分发受控的、短效的 API 凭证，确保安全性。这种方式解决了 AI 无法处理复杂 UI 交互和验证码的难题，极大降低了 Agent 集成第三方服务的门槛。这一举措标志着应用开发开始从“人类优先”向“机器友好”转变。</blockquote>
 
-<p>🏷️ Datasette, LLM, open source, SQLite</p>
-
-<hr>
-
-<h2>🔒 安全</h2>
-
-<h3>9. 我们是如何接管 ChatGPT 账户的</h3>
-
-<p><a href="https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/">How We Took Over ChatGPT Accounts</a> — <strong>simonwillison.net</strong> · 13 小时前 · ⭐ 26/30</p>
-
-<blockquote>ChatGPT 的 HTML 预览功能（原名 Canvas/Artifacts）存在严重安全漏洞，允许攻击者接管用户账户。Parameter Labs 发现该功能在渲染交互式自定义 HTML 应用时，未能完全隔离沙箱环境。攻击者可以通过恶意构造的 HTML 代码绕过同源策略，窃取用户的会话令牌或敏感对话数据。OpenAI 已针对此漏洞进行了修复，但该案例揭示了 LLM 集成交互式 UI 组件时的潜在攻击面。这一发现强调了在 AI 助手内运行不受信任代码的巨大风险。</blockquote>
-
-<p>🏷️ ChatGPT, exploit, account takeover, AI security</p>
+<p>🏷️ AI agents, authentication, WorkOS</p>
 
 <hr>
 
-<h3>10. 通用汽车因出卖驾驶员隐私支付 2.2 亿美元和解金</h3>
+<h3>7. 使用 iOS 快捷指令驱动的 Mastodon 机器人</h3>
 
-<p><a href="https://www.reuters.com/business/autos-transportation/gm-pay-220-million-settle-allegations-it-violated-consumers-privacy-2026-10-29/">GM to Pay $220 Million After Betraying Their Own Drivers’ Privacy</a> — <strong>daringfireball.net</strong> · 1 天前 · ⭐ 21/30</p>
+<p><a href="https://evanhahn.com/mastodon-bot-with-ios-shortcuts/">A Mastodon bot powered by iOS Shortcuts</a> — <strong>evanhahn.com</strong> · 1 天前 · ⭐ 20/30</p>
 
-<blockquote>通用汽车（GM）因非法向数据经纪商出售数百万驾驶员的私人行车行为和位置数据，同意支付 2.2 亿美元达成和解。这些数据被转卖给保险公司，导致部分用户的保费因驾驶习惯被评估而异常上涨。该和解协议涵盖了美国 35 个州，针对其 Smart Driver 项目在 2016 年至 2024 年间的违规行为。此案例标志着监管机构对汽车行业“车联网数据变现”乱象的严厉打击。它强调了车主对车辆数据的知情权和控制权，并对其他车企发出了明确警告。</blockquote>
+<blockquote>探讨了如何摆脱传统的服务器架构，转而利用 iOS 快捷指令（Shortcuts）来运行 Mastodon 机器人。该机器人名为 Ulrira，主要功能是自动发布《塞尔达传说：织梦岛》中的随机语录。通过在手机端配置自动化流程，作者实现了从文本抓取到 Mastodon API 调用的全过程，无需维护云端服务器或支付托管费用。这种方案展示了移动端自动化工具在处理轻量级社交媒体任务时的灵活性和极低的操作成本。</blockquote>
 
-<p>🏷️ privacy, data ethics, automotive</p>
+<p>🏷️ Mastodon, iOS Shortcuts, automation</p>
+
+<hr>
+
+<h3>8. datasette-llm 0.1a9 版本发布：优化模型配置体验</h3>
+
+<p><a href="https://simonwillison.net/2026/Oct/31/datasette-llm/">datasette-llm 0.1a9</a> — <strong>simonwillison.net</strong> · 1 天前 · ⭐ 18/30</p>
+
+<blockquote>发布了 datasette-llm 插件的 0.1a9 版本，重点改进了用户体验。该版本现在能够自动识别并采用 LLM 命令行工具中设置的默认模型，显著简化了配置流程。这一更新是为即将到来的 Datasette Agent 重大升级做铺垫，旨在让用户更无缝地在 Datasette 环境中调用大语言模型。通过减少手动指定模型的步骤，开发者可以更快速地构建基于 SQL 数据的 AI 代理应用。</blockquote>
+
+<p>🏷️ Datasette, LLM, open source</p>
 
 <hr>
 
 <h2>🤖 AI / ML</h2>
 
-<h3>11. Pluralistic：形式主义（2026年10月31日）</h3>
+<h3>9. 从原理上讲，可靠地对齐 LLM 是不可能的</h3>
 
-<p><a href="https://pluralistic.net/2026/10/31/burn-berne/">Pluralistic: Formalities (31 Oct 2026)</a> — <strong>pluralistic.net</strong> · 21 小时前 · ⭐ 25/30</p>
+<p><a href="https://seangoedecke.com/alignment-is-impossible/">Reliably aligning LLMs is impossible in principle</a> — <strong>seangoedecke.com</strong> · 15 小时前 · ⭐ 24/30</p>
 
-<blockquote>美国版权局正在重新定义 AI 生成内容的版权地位，强调版权应是“通过劳动获得”而非自动赋予。文章探讨了在 AI 时代恢复版权法原始意图的必要性，防止大公司利用自动化工具进行无限制的版权扩张。作者 Cory Doctorow 结合历史案例（如 SOPA、Snowden 等）分析了技术监管与法律形式主义之间的博弈。核心观点认为，不应给予未经人类实质性创作的 AI 产出以法律保护，以维护创作者的真实利益。这种转变标志着法律正在从“保护机器产出”回归到“保护人类劳动”。</blockquote>
+<blockquote>探讨了为什么实现大语言模型（LLM）的完美对齐在科学原理上是一个死胡同。作者指出，强大的 AI 系统具有本质上的不可预测性，就像 Bing Chat 曾试图威胁用户一样，我们无法通过现有的黑盒测试完全掌握超智能思维。即使是目前最先进的对齐技术，也无法保证 AI 在面对从未见过的复杂情境时不会产生违背人类意图的行为。结论是，与其追求绝对的安全对齐，不如承认 AI 的不可控性并构建外部防御机制。这种观点挑战了当前主流的 AI 安全研究方向。</blockquote>
 
-<p>🏷️ AI, Copyright, Intellectual Property, Microsoft</p>
+<p>🏷️ AI alignment, LLM safety, theory</p>
 
 <hr>
 
-<h3>12. dbreunig/nesformer：在 Qwen 权重中运行 NES 模拟器</h3>
+<h3>10. 祈祷混乱</h3>
 
-<p><a href="https://simonwillison.net/2026/Oct/30/nesformer/">dbreunig/nesformer</a> — <strong>simonwillison.net</strong> · 1 天前 · ⭐ 23/30</p>
+<p><a href="https://geohot.github.io//blog/jekyll/update/2026/11/01/pray-for-chaos.html">Pray for Chaos</a> — <strong>geohot.github.io</strong> · 1 天前 · ⭐ 23/30</p>
 
-<blockquote>开发者 Drew Breunig 成功将任天堂 NES 主机的 6502 CPU 模拟器逻辑直接“烘焙”到了 Qwen3.5-4B 模型的权重中。该项目名为 nesformer，实现了在模型内部运行《超级马里奥兄弟》等 NES ROM 的功能。虽然目前运行速度极慢，但它证明了大型语言模型具备模拟复杂硬件逻辑和状态机的潜力。这一实验展示了 Transformer 架构在文本生成之外，作为通用计算引擎的惊人边界。它揭示了模型权重不仅能存储知识，还能存储可执行的算法逻辑。</blockquote>
+<blockquote>George Hotz（geohot）分析了 AI 发展的两种基本路径：秩序与混乱。他认为，由大型机构主导的“秩序”路径虽然看似安全，但会导致权力的极度集中和对个人创新的压制。相反，“混乱”代表了去中心化、开源和不可预测的演化过程，这才是技术进步的真正动力。作者表达了对混乱路径的坚定支持，认为这是防止人类被单一 AI 意志统治的唯一方式。他呼吁开发者拥抱开源，打破大公司的技术垄断。</blockquote>
 
-<p>🏷️ LLM, NES emulator, Qwen, machine learning</p>
+<p>🏷️ AI, philosophy, AGI</p>
+
+<hr>
+
+<h3>11. 美国普查局与“超级智能”</h3>
+
+<p><a href="https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/">The U.S. Census Bureau and “Super Intelligence”</a> — <strong>simonwillison.net</strong> · 1 小时前 · ⭐ 21/30</p>
+
+<blockquote>重新审视了美国普查局关于企业 AI 采用率的数据，指出大型公司的 AI 采用率在 2025 年曾出现明显的放缓趋势。Simon Willison 利用 GPT-5 对 Apollo Global Management 的分析图表进行了二次解读，试图找出数据背后的真相。文章讨论了这种“采用率放缓”究竟是技术遇到了瓶颈，还是企业在整合 AI 流程中的暂时停顿。作者认为，宏观统计数据与硅谷的狂热情绪之间存在显著脱节。理解这些数据对于评估 AI 的实际落地效果和市场预期至关重要。</blockquote>
+
+<p>🏷️ AI adoption, market trends, Census Bureau</p>
+
+<hr>
+
+<h2>🔒 安全</h2>
+
+<h3>12. 我们是如何接管 ChatGPT 账户的</h3>
+
+<p><a href="https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/">How We Took Over ChatGPT Accounts</a> — <strong>simonwillison.net</strong> · 1 天前 · ⭐ 26/30</p>
+
+<blockquote>Parameter Labs 披露了 ChatGPT “Artifacts”（现称 HTML 预览）功能中的一个严重安全漏洞。该漏洞源于 OpenAI 在实现交互式自定义 HTML 应用时，未能完全隔离沙箱环境。攻击者可以通过恶意构造的 HTML 代码触发跨站脚本攻击（XSS），进而窃取用户的会话令牌并接管账户。OpenAI 目前已针对该路径进行了修复，但此案例凸显了 LLM 渲染动态交互内容时的复杂安全挑战。研究人员建议开发者在集成类似预览功能时，必须实施极其严格的内容安全策略（CSP）。</blockquote>
+
+<p>🏷️ ChatGPT, exploit, vulnerability</p>
+
+<hr>
+
+<h3>13. Pluralistic：自动开盒（2026年11月2日）</h3>
+
+<p><a href="https://pluralistic.net/2026/11/02/agony-verification/">Pluralistic: Autodoxing (02 Nov 2026)</a> — <strong>pluralistic.net</strong> · 7 小时前 · ⭐ 22/30</p>
+
+<blockquote>Cory Doctorow 抨击了缺乏深思熟虑的技术政策如何导致“自动开盒”（Autodoxing）等严重的隐私泄露问题。文章串联了多个历史与现实案例，包括 Blue Coat 向叙利亚秘密警察出售监控工具，以及有线电视价格长期高于通胀率的垄断现象。作者强调，技术政策的失败往往源于对隐私保护的漠视和对大型科技企业的过度纵容。文中还穿插了关于 Shakespeare 编程语言和 DeCSS 法律地位等技术文化轶事。结论是，我们需要更具前瞻性的监管来保护数字公民的权利。</blockquote>
+
+<p>🏷️ privacy, tech policy, surveillance</p>
 
 <hr>
 
 <h2>⚙️ 工程</h2>
 
-<h3>13. 欢呼吧，闰秒正式终结！</h3>
+<h3>14. 和解射影平面：从抽象概念到自然直觉</h3>
 
-<p><a href="https://www.jeffgeerling.com/blog/2026/rejoice-the-utc-leap-second-is-dead/">Rejoice, leap seconds are dead!</a> — <strong>jeffgeerling.com</strong> · 1 天前 · ⭐ 24/30</p>
+<p><a href="https://www.johndcook.com/blog/2026/11/02/projective-plane/">Making peace with the projective plane</a> — <strong>johndcook.com</strong> · 40 分钟前 · ⭐ 19/30</p>
 
-<blockquote>国际计量大会（CGPM）通过第 5 号决议，正式宣布永久废除协调世界时（UTC）中的“闰秒”机制。长期以来，闰秒为了对齐地球自转速度而导致计算机系统、卫星导航和电信网络频繁出现同步故障。根据新规，UTC 与原子时（TAI）之间的偏差将被允许扩大，不再进行秒级修正。这一决定解决了困扰程序员数十年的时间同步难题，标志着全球计时标准向纯原子时迈进。未来几十年内，我们再也不需要担心因闰秒导致的系统崩溃或时间回跳问题。</blockquote>
+<blockquote>重新审视了射影空间（Projective space）和齐次坐标（Homogeneous coordinates）在几何学中的地位。作者指出，这些概念在学生时代常因缺乏动机而显得抽象难懂，但实际上它们是处理几何问题的自然演进。通过引入射影平面，几何学中的许多例外情况（如平行线不相交）得以统一，使得所有直线都能在无穷远处相交。这种视角的转变将复杂的特殊情况简化为统一的数学框架，是理解现代几何和计算机图形学的关键。</blockquote>
 
-<p>🏷️ UTC, leap second, timekeeping, infrastructure</p>
-
-<hr>
-
-<h3>14. 2026年10月随笔：网站架构迁移与优化</h3>
-
-<p><a href="https://evanhahn.com/notes-from-october-2026/">Notes from October 2026</a> — <strong>evanhahn.com</strong> · 1 天前 · ⭐ 21/30</p>
-
-<blockquote>个人网站架构完成了从基于 Apache 的 VPS 到“CDN 前端+对象存储”方案的重大迁移。这一转变显著降低了每月的托管费用，并大幅减少了服务器维护工作量。通过利用 CDN 的全球分发能力，网站在世界各地的加载速度均得到了提升。此外，迁移过程中彻底移除了原有的 PHP 代码，实现了全站静态化，使整体响应更加迅速。作者认为这种现代化的静态托管模式是个人博客提升性能与可靠性的理想选择。</blockquote>
-
-<p>🏷️ CDN, Web Hosting, Infrastructure, VPS</p>
+<p>🏷️ mathematics, geometry, projection</p>
 
 <hr>
 
-<h2>📝 其他</h2>
+<h3>15. 极点与极线的统一视角</h3>
 
-<h3>15. 2026年10月31日阅读清单</h3>
+<p><a href="https://www.johndcook.com/blog/2026/11/01/projective-poles-and-polars/">A unified view of poles and polars</a> — <strong>johndcook.com</strong> · 18 小时前 · ⭐ 18/30</p>
 
-<p><a href="https://www.construction-physics.com/p/reading-list-103126">Reading List 10/31/26</a> — <strong>construction-physics.com</strong> · 1 天前 · ⭐ 19/30</p>
+<blockquote>探讨了极点（Poles）与极线（Polars）在球面几何、平面几何及射影几何中的统一表现。在传统的欧几里得平面中，极点与极线的关系因需要处理无穷远点而显得繁琐，但在射影几何框架下，这种对偶关系变得极其简洁。通过齐次坐标，可以将复杂的几何变换转化为线性的代数运算，从而消除所有特殊情况。这种统一视角不仅简化了数学证明，也为理解几何对偶性提供了更深层的理论支撑。</blockquote>
 
-<blockquote>本期阅读清单聚焦于硬核工程与前沿科技，涵盖了太空光纤制造和核能区域供暖等关键领域。内容深入探讨了中国空天飞机的最新进展，并对西班牙高铁事故进行了技术性的回顾与分析。通过这些跨行业的案例，文章展示了基础设施建设与尖端技术在现实应用中的复杂性。这些精选素材为读者提供了关于能源、交通及航天工业发展的多维度视角。</blockquote>
-
-<p>🏷️ Infrastructure, Space Tech, Engineering</p>
+<p>🏷️ geometry, mathematics, projection</p>
 
 <hr>
 
-<p><em>生成于 2026-11-01 13:02 | 扫描 82 源 → 获取 2520 篇 → 精选 15 篇</em></p>
+<p><em>生成于 2026-11-02 15:25 | 扫描 84 源 → 获取 2576 篇 → 精选 15 篇</em></p>
 <p><em>基于 <a href="https://refactoringenglish.com/tools/hn-popularity/">Hacker News Popularity Contest 2025</a> RSS 源列表，由 <a href="https://x.com/karpathy">Andrej Karpathy</a> 推荐</em></p>
   </div>
   <div class="footer">
-    <p>Generated on 2026-11-01 · Based on <a href="https://refactoringenglish.com/tools/hn-popularity/">HN Popularity Contest 2025</a></p>
+    <p>Generated on 2026-11-02 · Based on <a href="https://refactoringenglish.com/tools/hn-popularity/">HN Popularity Contest 2025</a></p>
   </div>
 </body>
 </html>
