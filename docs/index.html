@@ -47,47 +47,47 @@
   </div>
   <hr>
   <div class="content">
-<h1>📰 Nov 8, 2026</h1>
+<h1>📰 Nov 9, 2026</h1>
 
 <blockquote>来自 Karpathy 推荐的 92 个顶级技术博客，AI 精选 Top 15</blockquote>
 
 <h2>📝 今日看点</h2>
 
-<p>今日技术圈正经历从 AI 狂热向理性回归的深度反思，业界开始审视大模型在复杂系统设计中的局限性，并对 AI 产品的成本效益及潜在泡沫提出警示。工程领域则持续深耕底层细节，聚焦热补丁安全、浏览器预取优化及供应链安全，力求在不确定的技术环境中构建稳定性。此外，以新款 MacBook Pro 为代表的硬件革新与针对科技巨头垄断的行业治理讨论，共同展现了技术演进与社会责任的交织。</p>
+<p>AI 浪潮正从狂热转向深度反思，业界开始警惕 AI 泡沫破裂及软件知识产权因开发门槛降低而面临的估值危机。开发者在实战中愈发关注 LLM 在复杂系统设计中的局限性，并针对 AI 爬虫和冗余信息展开技术防御。与此同时，关于核心硬件厂商的舆论波动与移动生态的封闭化困局，进一步加剧了技术圈对未来安全与开放性的不确定感。</p>
 
 <hr>
 
 <h2>🏆 今日必读</h2>
 
-<p>🥇 <strong>大语言模型在设计 AI 系统方面表现糟糕</strong></p>
+<p>🥇 <strong>LLM 并不擅长设计 AI 系统</strong></p>
 
-<p><a href="https://seangoedecke.com/llms-are-terrible-at-designing-ai-systems/">LLMs are terrible at designing AI systems</a> — seangoedecke.com · 13 小时前 · 🤖 AI / ML</p>
+<p><a href="https://seangoedecke.com/llms-are-terrible-at-designing-ai-systems/">LLMs are terrible at designing AI systems</a> — seangoedecke.com · 1 天前 · 🤖 AI / ML</p>
 
-<blockquote>大语言模型虽然擅长编写常规程序，但在设计涉及自身的 AI 系统架构时往往会失败。它们倾向于套用确定性的符号逻辑，忽略了 LLM 本质上的非确定性、幻觉风险以及上下文窗口限制。许多模型生成的方案在处理 RAG（检索增强生成）或 Agent 流程时过于理想化，无法应对现实中的延迟和准确性挑战。开发者必须意识到，构建 AI 系统需要从“确定性编程”转向“概率性思维”，而这正是目前 LLM 的短板。</blockquote>
+<blockquote>LLM 在编写传统确定性程序时表现出色，但在设计涉及自身的 AI 系统架构时往往会失败。它们倾向于套用符号逻辑和硬编码规则，而忽视了 AI 系统核心的概率性特征和非确定性输出。开发者常发现 LLM 无法处理长上下文窗口的延迟权衡，也难以构建必要的评估反馈循环。这种局限性源于训练数据中缺乏高质量的 AI 系统设计模式，导致模型在面对需要“AI 思维”的问题时依然沿用旧有的软件工程范式。</blockquote>
 
-<p>💡 <strong>为什么值得读</strong>: 揭示了“用 AI 设计 AI”的局限性，帮助开发者避开过度工程化和不切实际的架构陷阱。</p>
+<p>💡 <strong>为什么值得读</strong>: 揭示了 LLM 在处理非确定性系统设计时的认知盲点，帮助开发者避开“用传统思维做 AI”的坑。</p>
 
-<p>🏷️ LLM, system design, software architecture</p>
+<p>🏷️ LLM, system-design, AI, architecture</p>
 
-<p>🥈 <strong>既然可以挂起所有线程，为什么热补丁更新还要纠结原子性？</strong></p>
+<p>🥈 <strong>软件知识产权的大减值</strong></p>
 
-<p><a href="https://devblogs.microsoft.com/oldnewthing/20261106-00/?p=112838/">Why are we all worked up about atomicity when applying hot-patches if we can just suspend all the threads?</a> — devblogs.microsoft.com/oldnewthing · 1 天前 · ⚙️ 工程</p>
+<p><a href="https://martinalderson.com/posts/the-great-software-ip-writedown/?utm_source=rss&amp;amp;utm_medium=rss&amp;amp;utm_campaign=feed">The great software IP writedown</a> — martinalderson.com · 1 天前 · 💡 观点 / 杂谈</p>
 
-<blockquote>在进行热补丁（Hot-patching）时，仅靠挂起所有线程并不能完全保证安全。挂起操作只能阻止当前已存在的线程，却无法拦截新线程的创建或外部驱动程序对内存的访问。此外，如果线程恰好在被修改的代码指令中间被挂起，或者 CPU 的指令缓存（I-cache）未同步，都会导致系统崩溃。因此，实现真正的原子操作是确保在线更新不破坏系统一致性的唯一可靠途径。</blockquote>
+<blockquote>软件行业长期以来的高毛利建立在开发人才稀缺性的基础之上，而 AI Agent 的崛起正在打破这一壁垒。随着代码生成成本趋近于零，传统软件知识产权（IP）的护城河正迅速瓦解，导致现有软件资产面临大规模估值减记。文章指出，当构建软件不再是难题时，代码本身的价值将大幅缩水，市场竞争将从“谁能写出代码”转向“谁拥有分发渠道和独特数据”。这种范式转移预示着软件商业模式将从卖许可转向更深层次的服务与集成。</blockquote>
 
-<p>💡 <strong>为什么值得读</strong>: 深入探讨了 Windows 底层机制中热补丁的复杂性，是理解并发与系统稳定性的极佳案例。</p>
+<p>💡 <strong>为什么值得读</strong>: 深刻分析了 AI 如何从经济学底层逻辑重塑软件行业的价值分配与商业护城河。</p>
 
-<p>🏷️ hot-patching, atomicity, multithreading, Windows</p>
+<p>🏷️ AI agents, software IP, economics</p>
 
-<p>🥉 <strong>Datasette 修复：停止向 Firefox 的 HTML 页面发送 link: rel=next 响应头</strong></p>
+<p>🥉 <strong>黄仁勋背叛了英伟达，而不仅仅是他的家人</strong></p>
 
-<p><a href="https://simonwillison.net/2026/Nov/7/link-rel-next/">datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages</a> — simonwillison.net · 13 小时前 · ⚙️ 工程</p>
+<p><a href="https://www.nytimes.com/2026/11/06/us/politics/chinese-spy-agency-nvidia-jensen-huang.html?unlocked_article_code=1.O1E.DRyO.9mNcxhaxhtlI">Jensen Huang Betrayed Nvidia, Not Just His Family</a> — daringfireball.net · 15 小时前 · 📝 其他</p>
 
-<blockquote>Datasette 在处理表格分页时发现，Firefox 浏览器会根据 HTTP 响应头中的 link: rel=next 自动触发预取（Prefetch）请求。这种行为导致服务器在用户尚未点击下一页时就承受了额外的负载，甚至可能引发非预期的副作用。为了解决这一问题，Datasette 在 #3046 号 Issue 中决定针对 Firefox 客户端禁用该响应头。这一案例提醒开发者，不当的预取指令可能会在特定浏览器环境下演变成变相的“拒绝服务攻击”。</blockquote>
+<blockquote>据《纽约时报》2026 年的虚构/预测性报道，英伟达首席执行官黄仁勋因涉嫌与一名被美国情报部门认定为中国间谍的女性保持亲密关系而面临审查。英伟达发言人对此予以否认，强调公司并未向客户分享机密信息，也未受客户指使向美国政府施压以改变对华芯片销售政策。然而，报道指出中国政府一直在积极推广华为等国产替代方案，并严格限制英伟达产品的进口。这一事件引发了华盛顿对半导体巨头与地缘政治风险之间关联的高度关注。</blockquote>
 
-<p>💡 <strong>为什么值得读</strong>: 展示了一个细微的 Web 标准实现差异如何导致生产环境的性能问题，对优化 Web 服务器负载有参考价值。</p>
+<p>💡 <strong>为什么值得读</strong>: 关注半导体巨头英伟达在复杂地缘政治背景下可能面临的极端领导层风险与政策冲击。</p>
 
-<p>🏷️ HTTP headers, Firefox, prefetching, Datasette</p>
+<p>🏷️ Nvidia, Jensen-Huang, geopolitics</p>
 
 <hr>
 
@@ -95,18 +95,19 @@
 
 <p>| 扫描源 | 抓取文章 | 时间范围 | 精选 |</p>
 <p>|:---:|:---:|:---:|:---:|</p>
-<p>| 82/92 | 2545 篇 → 21 篇 | 48h | <strong>15 篇</strong> |</p>
+<p>| 83/92 | 2571 篇 → 26 篇 | 48h | <strong>15 篇</strong> |</p>
 
 <h3>分类分布</h3>
 
 <p>```mermaid</p>
 <p>pie showData</p>
 <p>    title "文章分类分布"</p>
-<p>    "💡 观点 / 杂谈" : 5</p>
+<p>    "⚙️ 工程" : 4</p>
+<p>    "💡 观点 / 杂谈" : 3</p>
 <p>    "🛠 工具 / 开源" : 3</p>
-<p>    "📝 其他" : 3</p>
 <p>    "🤖 AI / ML" : 2</p>
-<p>    "⚙️ 工程" : 2</p>
+<p>    "📝 其他" : 2</p>
+<p>    "🔒 安全" : 1</p>
 <p>```</p>
 
 <h3>高频关键词</h3>
@@ -114,200 +115,202 @@
 <p>```mermaid</p>
 <p>xychart-beta horizontal</p>
 <p>    title "高频关键词"</p>
-<p>    x-axis ["llm", "apple", "macbook pro", "hardware", "system design", "software architecture", "hot-patching", "atomicity", "multithreading", "windows", "http headers", "firefox"]</p>
-<p>    y-axis "出现次数" 0 --&gt; 4</p>
-<p>    bar [2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1]</p>
+<p>    x-axis ["ai", "nvidia", "geopolitics", "hardware", "llm", "system-design", "architecture", "ai agents", "software ip", "economics", "jensen-huang", "security"]</p>
+<p>    y-axis "出现次数" 0 --&gt; 5</p>
+<p>    bar [3, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1]</p>
 <p>```</p>
 
 <p>&lt;details&gt;</p>
 <p>&lt;summary&gt;📈 纯文本关键词图（终端友好）&lt;/summary&gt;</p>
 
 <p>```</p>
-<p>llm                   │ ████████████████████ 2</p>
-<p>apple                 │ ████████████████████ 2</p>
-<p>macbook pro           │ ████████████████████ 2</p>
-<p>hardware              │ ████████████████████ 2</p>
-<p>system design         │ ██████████░░░░░░░░░░ 1</p>
-<p>software architecture │ ██████████░░░░░░░░░░ 1</p>
-<p>hot-patching          │ ██████████░░░░░░░░░░ 1</p>
-<p>atomicity             │ ██████████░░░░░░░░░░ 1</p>
-<p>multithreading        │ ██████████░░░░░░░░░░ 1</p>
-<p>windows               │ ██████████░░░░░░░░░░ 1</p>
+<p>ai            │ ████████████████████ 3</p>
+<p>nvidia        │ █████████████░░░░░░░ 2</p>
+<p>geopolitics   │ █████████████░░░░░░░ 2</p>
+<p>hardware      │ █████████████░░░░░░░ 2</p>
+<p>llm           │ ███████░░░░░░░░░░░░░ 1</p>
+<p>system-design │ ███████░░░░░░░░░░░░░ 1</p>
+<p>architecture  │ ███████░░░░░░░░░░░░░ 1</p>
+<p>ai agents     │ ███████░░░░░░░░░░░░░ 1</p>
+<p>software ip   │ ███████░░░░░░░░░░░░░ 1</p>
+<p>economics     │ ███████░░░░░░░░░░░░░ 1</p>
 <p>```</p>
 
 <p>&lt;/details&gt;</p>
 
 <h3>🏷️ 话题标签</h3>
 
-<p><strong>llm</strong>(2) · <strong>apple</strong>(2) · <strong>macbook pro</strong>(2) · hardware(2) · system design(1) · software architecture(1) · hot-patching(1) · atomicity(1) · multithreading(1) · windows(1) · http headers(1) · firefox(1) · prefetching(1) · datasette(1) · ai bubble(1) · market trends(1) · ai(1) · tech industry(1) · critique(1) · tech labor(1)</p>
-
-<hr>
-
-<h2>💡 观点 / 杂谈</h2>
-
-<h3>1. 引用 Nilay Patel：AI 产品的价值尚不足以抵消其成本</h3>
-
-<p><a href="https://simonwillison.net/2026/Nov/6/nilay-patel/">Quoting Nilay Patel</a> — <strong>simonwillison.net</strong> · 1 天前 · ⭐ 22/30</p>
-
-<blockquote>Nilay Patel 尖锐地指出，目前的 AI 产品质量还不足以让用户接受其背后的巨大代价。为了换取一些平庸的 AI 搜索概览或低质量的深度伪造内容，社会不应该忍受数据中心带来的噪音和能源消耗。他认为所谓的“AI Agent”目前仍是空中楼阁，并未以用户需要的方式落地。各大科技公司投入巨额资金，却产出了大量被其称为“Slop”的无用信息。</blockquote>
-
-<p>🏷️ AI, tech industry, critique</p>
-
-<hr>
-
-<h3>2. 反对技术寡头：为科技行业发明新的劳动手册</h3>
-
-<p><a href="https://pluralistic.net/2026/11/07/aeiou-but-sometimes-why/">Pluralistic: JS Tan and Clarissa Redwine's "Against Tech Oligarchy" (07 Nov 2026)</a> — <strong>pluralistic.net</strong> · 1 天前 · ⭐ 22/30</p>
-
-<blockquote>本文评述了 JS Tan 和 Clarissa Redwine 的著作《反对技术寡头》，探讨了在科技巨头垄断下如何构建新的劳动者抗争策略。文章深入分析了“平台腐烂化”（Enshittification）如何从产品延伸至劳动领域，以及股东至上主义如何驱动 Google 等公司走向平庸。此外，内容还涉及了内核崩溃、版权虚假宣传等多个技术与社会交织的议题。作者呼吁通过集体行动来制衡科技巨头对互联网生态和劳动市场的侵蚀。</blockquote>
-
-<p>🏷️ tech labor, oligarchy, ethics</p>
-
-<hr>
-
-<h3>3. 触碰与光芒：新款 MacBook Pro 与 PROLED XDR 显示屏评测</h3>
-
-<p><a href="https://daringfireball.net/2026/11/touch_and_glow">★ Touch and Glow</a> — <strong>daringfireball.net</strong> · 1 天前 · ⭐ 21/30</p>
-
-<blockquote>John Gruber 评价了苹果在洛杉矶举行的“Pro and Tell”活动，重点关注搭载 PROLED XDR 显示屏的新款 MacBook Pro。文章详细讨论了新款显示技术在亮度、对比度及色彩表现上的提升，并审视了当前 Macintosh 平台的整体发展状态。作者认为这些更新进一步巩固了 MacBook Pro 作为专业创意工具的领先地位。通过对硬件细节的深度剖析，展现了苹果在高端笔记本市场的最新策略。</blockquote>
-
-<p>🏷️ Apple, MacBook Pro, Macintosh</p>
-
-<hr>
-
-<h3>4. 与设计师协作的艺术与挑战</h3>
-
-<p><a href="https://seangoedecke.com/working-with-designers/">Working with designers</a> — <strong>seangoedecke.com</strong> · 1 天前 · ⭐ 19/30</p>
-
-<blockquote>工程师与设计师在文化背景和思维方式上存在显著差异，这种互补性是高效产品团队的基石。然而，一个团队中若存在多名设计师往往会导致决策冲突和效率下降，因此建议保持“一队一师”的配置。文章对过度推崇的“设计系统（Design Systems）”持保留意见，认为其可能限制创意并增加不必要的维护成本。有效的协作依赖于明确的职责边界和对彼此专业领域的尊重，而非单纯依靠流程工具。这种跨职能的动态平衡决定了最终产品的用户体验质量。</blockquote>
-
-<p>🏷️ design, collaboration, engineering culture</p>
-
-<hr>
-
-<h3>5. 关于餐厅 QR 码菜单及酒店电子房卡的思考</h3>
-
-<p><a href="https://shkspr.mobi/blog/2026/11/some-thoughts-on-restaurant-menu-qr-codes/">Some thoughts on restaurant menu QR codes</a> — <strong>shkspr.mobi</strong> · 34 分钟前 · ⭐ 15/30</p>
-
-<blockquote>数字化浪潮正强行改变餐饮与住宿体验，餐厅普及的 QR 码菜单和酒店推行的塑料电子房卡引发了用户体验的反思。作者批评这些技术剥夺了物理交互的质感，且在安全性与便利性上未必优于传统实体钥匙。电子系统不仅增加了对智能设备的依赖，还在紧急情况下（如防身或断电）显得脆弱无用。文章呼吁在追求数字化的过程中，应保留那些经过时间验证、更具人性化的物理设计。这种对“技术侵入”的抵制，反映了用户对简单、可靠生活方式的回归渴望。</blockquote>
-
-<p>🏷️ QR codes, UX, privacy</p>
-
-<hr>
-
-<h2>🛠 工具 / 开源</h2>
-
-<h3>6. 软件包管理周报：2026 年 11 月 7 日</h3>
-
-<p><a href="https://nesbitt.io/2026/11/07/this-week-in-package-management.html">This Week in Package Management: 7 November 2026</a> — <strong>nesbitt.io</strong> · 1 天前 · ⭐ 21/30</p>
-
-<blockquote>本周软件包管理领域汇总了多个主流生态系统的更新动态与安全预警。内容涵盖了 npm、Cargo 等包管理器的最新版本发布说明，以及针对供应链攻击的专项安全建议。文章还精选了多篇关于依赖管理最佳实践的技术文章，旨在帮助开发者应对日益复杂的软件供应链风险。这是跟踪包管理工具演进和安全漏洞的重要信息源。</blockquote>
-
-<p>🏷️ package management, security advisories, ecosystem</p>
-
-<hr>
-
-<h3>7. 苹果支持：关于配备 PROLED XDR 显示屏的 MacBook Pro 发光 Logo 设置</h3>
-
-<p><a href="https://support.apple.com/en-us/149248">Apple Support: ‘About the Illuminated Apple Logo on MacBook Pro With PROLED XDR Display’</a> — <strong>daringfireball.net</strong> · 1 天前 · ⭐ 19/30</p>
-
-<blockquote>针对配备新型 PROLED XDR 显示屏的 MacBook Pro，苹果提供了控制机身背面 Apple Logo 发光状态的官方指南。用户可以通过终端（Terminal）输入特定的 defaults 命令来彻底关闭 Logo 照明，以适应全黑环境或特定光照需求。该功能涉及 com.apple.CoreBrightness 域下的 LEBacklightMode 参数，将其设为 0 即可熄灭，删除该配置即可恢复默认。这一技术细节揭示了苹果在硬件灯效控制上为专业用户留出的自定义空间。操作过程需具备管理员权限，且仅适用于特定显示技术的机型。</blockquote>
-
-<p>🏷️ macOS, Terminal, hardware</p>
-
-<hr>
-
-<h3>8. 静态网站生成器为何如此“古怪”</h3>
-
-<p><a href="https://evanhahn.com/static-site-generators-are-weird/">Static site generators are weird</a> — <strong>evanhahn.com</strong> · 1 天前 · ⭐ 19/30</p>
-
-<blockquote>静态网站具备速度快、易维护和安全性高等天然优势，但主流生成器（SSG）如 Jekyll、Gatsby 和 Hugo 的实现方式往往过于复杂。开发者被迫学习特定框架的模板语法、文件目录结构以及数据处理逻辑，这增加了不必要的认知负担。文章指出，许多 SSG 试图将简单的文件转换过程抽象成复杂的黑盒系统，背离了静态站点的简洁初衷。作者呼吁回归更直观、更符合直觉的构建方式，减少对特定工具链的深度依赖。这种对“过度工程化”的反思，促使我们重新审视 Web 开发的本质。</blockquote>
-
-<p>🏷️ SSG, web development, Jekyll</p>
-
-<hr>
-
-<h2>📝 其他</h2>
-
-<h3>9. 访谈录：在 Full Stack Creator 节目中畅谈新款 MacBook Pro</h3>
-
-<p><a href="https://www.youtube.com/watch?v=f2GZtWuUPl0">Yours Truly on Full Stack Creator, Talking About the New MacBook Pros With PROLED XDR Displays</a> — <strong>daringfireball.net</strong> · 15 小时前 · ⭐ 20/30</p>
-
-<blockquote>John Gruber 在 Full Stack Creator 节目中与 Tyler Stalman 等人探讨了配备 PROLED XDR 显示屏的新款 MacBook Pro。访谈不仅涉及硬件参数，还穿插了对理光（Ricoh）GR 系列紧凑型相机的致敬。Gruber 分享了他在 2010 年使用初代 GR-D 拍摄史蒂夫·乔布斯与沃尔特·莫斯伯格合影的轶事。通过这些跨越时空的科技故事，展现了专业工具对创作者的持久价值。</blockquote>
-
-<p>🏷️ MacBook Pro, Apple, hardware</p>
-
-<hr>
-
-<h3>10. 《杀出重围》（Deus Ex）：沃伦·斯佩克特的传奇与未来预言</h3>
-
-<p><a href="https://www.filfre.net/2026/11/deus-ex/">Deus Ex</a> — <strong>filfre.net</strong> · 1 天前 · ⭐ 20/30</p>
-
-<blockquote>本文回顾了经典游戏《杀出重围》（Deus Ex）的开发历程及其核心主创沃伦·斯佩克特（Warren Spector）的故事。文章探讨了该作在 2000 年发布时引起的轰动，以及它如何通过沉浸式模拟（Immersive Sim）玩法定义了一个时代。主创团队分享了关于游戏叙事与现实世界走向惊人一致的看法，特别是关于阴谋论和技术统治的探讨。时至今日，其深邃的世界观和高自由度的设计依然是游戏设计界的标杆。</blockquote>
-
-<p>🏷️ Deus Ex, game design, tech history</p>
-
-<hr>
-
-<h3>11. 建筑物理阅读清单：2026年11月7日</h3>
-
-<p><a href="https://www.construction-physics.com/p/reading-list-1172026">Reading List 11/7/2026</a> — <strong>construction-physics.com</strong> · 23 小时前 · ⭐ 18/30</p>
-
-<blockquote>本期阅读清单聚焦于跨行业的宏观趋势与技术瓶颈，涵盖了佛罗里达州房产税回滚政策及其对建筑业的影响。技术层面分析了全球印制电路板（PCB）的预期短缺危机，以及特斯拉 Cybertruck 项目可能面临的终结。文章还深度审视了碳捕集与封存（CCS）技术进展缓慢的现状，探讨了环保目标与工程落地之间的巨大鸿沟。这是一份结合了政策、供应链与前沿能源技术的综合情报汇总。通过这些碎片化的信息，读者可以拼凑出未来几年工业发展的复杂图景。</blockquote>
-
-<p>🏷️ PCB, Tesla, carbon storage</p>
-
-<hr>
-
-<h2>🤖 AI / ML</h2>
-
-<h3>12. 大语言模型在设计 AI 系统方面表现糟糕</h3>
-
-<p><a href="https://seangoedecke.com/llms-are-terrible-at-designing-ai-systems/">LLMs are terrible at designing AI systems</a> — <strong>seangoedecke.com</strong> · 13 小时前 · ⭐ 27/30</p>
-
-<blockquote>大语言模型虽然擅长编写常规程序，但在设计涉及自身的 AI 系统架构时往往会失败。它们倾向于套用确定性的符号逻辑，忽略了 LLM 本质上的非确定性、幻觉风险以及上下文窗口限制。许多模型生成的方案在处理 RAG（检索增强生成）或 Agent 流程时过于理想化，无法应对现实中的延迟和准确性挑战。开发者必须意识到，构建 AI 系统需要从“确定性编程”转向“概率性思维”，而这正是目前 LLM 的短板。</blockquote>
-
-<p>🏷️ LLM, system design, software architecture</p>
-
-<hr>
-
-<h3>13. AI 泡沫正在破裂吗？</h3>
-
-<p><a href="https://dfarq.homeip.net/is-ai-crashing/?utm_source=rss&amp;#038;utm_medium=rss&amp;#038;utm_campaign=is-ai-crashing">Is AI crashing?</a> — <strong>dfarq.homeip.net</strong> · 1 小时前 · ⭐ 23/30</p>
-
-<blockquote>文章探讨了 AI 行业是否正面临类似当年互联网泡沫（Dotcom crash）的崩盘危机。作者回顾了技术史上的兴衰周期，指出当前市场对 AI 的预期与实际产出之间存在巨大鸿沟。尽管 AI 在某些领域表现出色，但其高昂的算力成本和尚未明确的盈利模式引发了广泛质疑。目前尚无法断定泡沫是否已经破裂，但行业内的焦虑情绪正在显著上升。</blockquote>
-
-<p>🏷️ AI bubble, market trends, LLM</p>
+<p><strong>ai</strong>(3) · <strong>nvidia</strong>(2) · <strong>geopolitics</strong>(2) · hardware(2) · llm(1) · system-design(1) · architecture(1) · ai agents(1) · software ip(1) · economics(1) · jensen-huang(1) · security(1) · bot-blocking(1) · scraping(1) · web-traffic(1) · pull-request(1) · claude(1) · workflow(1) · sqlite(1) · rust(1)</p>
 
 <hr>
 
 <h2>⚙️ 工程</h2>
 
-<h3>14. 既然可以挂起所有线程，为什么热补丁更新还要纠结原子性？</h3>
+<h3>1. 强力封禁工具：以简单陷阱击退基础爬虫</h3>
 
-<p><a href="https://devblogs.microsoft.com/oldnewthing/20261106-00/?p=112838/">Why are we all worked up about atomicity when applying hot-patches if we can just suspend all the threads?</a> — <strong>devblogs.microsoft.com/oldnewthing</strong> · 1 天前 · ⭐ 26/30</p>
+<p><a href="https://shkspr.mobi/blog/2026/11/blunt-banhammer-blocks-basic-bots-ballistically/">Blunt Banhammer Blocks Basic Bots Ballistically</a> — <strong>shkspr.mobi</strong> · 3 小时前 · ⭐ 24/30</p>
 
-<blockquote>在进行热补丁（Hot-patching）时，仅靠挂起所有线程并不能完全保证安全。挂起操作只能阻止当前已存在的线程，却无法拦截新线程的创建或外部驱动程序对内存的访问。此外，如果线程恰好在被修改的代码指令中间被挂起，或者 CPU 的指令缓存（I-cache）未同步，都会导致系统崩溃。因此，实现真正的原子操作是确保在线更新不破坏系统一致性的唯一可靠途径。</blockquote>
+<blockquote>针对个人网站 OpenBenches.org 每月因 AI 爬虫抓取数据和图片而产生的 2.5TB 巨额流量，作者开发了一套名为 B 的简单陷阱工具。该工具通过识别并拦截非人类访问行为，成功将恶意机器人流量降低了 80% 以上。这种“简单粗暴”的防御机制有效遏制了那些无视 robots.txt 协议的“寄生式”AI 爬虫。实验证明，在 AI 疯狂抓取数据的当下，开发者需要更主动的手段来保护服务器资源。</blockquote>
 
-<p>🏷️ hot-patching, atomicity, multithreading, Windows</p>
-
-<hr>
-
-<h3>15. Datasette 修复：停止向 Firefox 的 HTML 页面发送 link: rel=next 响应头</h3>
-
-<p><a href="https://simonwillison.net/2026/Nov/7/link-rel-next/">datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages</a> — <strong>simonwillison.net</strong> · 13 小时前 · ⭐ 23/30</p>
-
-<blockquote>Datasette 在处理表格分页时发现，Firefox 浏览器会根据 HTTP 响应头中的 link: rel=next 自动触发预取（Prefetch）请求。这种行为导致服务器在用户尚未点击下一页时就承受了额外的负载，甚至可能引发非预期的副作用。为了解决这一问题，Datasette 在 #3046 号 Issue 中决定针对 Firefox 客户端禁用该响应头。这一案例提醒开发者，不当的预取指令可能会在特定浏览器环境下演变成变相的“拒绝服务攻击”。</blockquote>
-
-<p>🏷️ HTTP headers, Firefox, prefetching, Datasette</p>
+<p>🏷️ bot-blocking, scraping, web-traffic</p>
 
 <hr>
 
-<p><em>生成于 2026-11-08 13:08 | 扫描 82 源 → 获取 2545 篇 → 精选 15 篇</em></p>
+<h3>2. SQLite 扩展 parse_number() 实现对比：C 与 Rust</h3>
+
+<p><a href="https://simonwillison.net/2026/Nov/8/sqlite-parse-number-c-vs-rust/">parse_number() as a SQLite extension: C vs Rust</a> — <strong>simonwillison.net</strong> · 17 小时前 · ⭐ 23/30</p>
+
+<blockquote>作者探索了为 SQLite 编写自定义扩展以解析 -$1,234.56 或 12.5% 等复杂格式字符串为数字的方法。通过对比 C 语言和 Rust 语言的实现，发现 C 语言版本在二进制体积和集成便捷性上更具优势，而 Rust 则提供了更强的内存安全性。在 Claude 3.5 Sonnet 的辅助下，即使不精通这两种语言的开发者也能快速生成高性能的数据库扩展。实验最终产出了可直接用于数据清洗和聚合的 SQLite 插件。</blockquote>
+
+<p>🏷️ SQLite, Rust, C, extension</p>
+
+<hr>
+
+<h3>3. 最优毒力与安卓系统的封闭化困局</h3>
+
+<p><a href="https://dynomight.net/android/">Optimal virulence and the Android lockdown</a> — <strong>dynomight.net</strong> · 15 小时前 · ⭐ 20/30</p>
+
+<blockquote>文章借用生物学中的“最优毒力”概念，探讨了安卓系统在通用计算能力上日益严苛的限制与封锁。作者指出，平台方正在通过锁定权限和限制侧载来削弱用户的控制权，试图在榨取商业价值与维持用户留存之间寻找平衡点。这种“温水煮青蛙”式的封闭化趋势，导致移动设备逐渐背离了通用计算机的初衷，转变为受控的消费终端。文章深入分析了这种生态演化对开发者自由度和软件多样性的长远负面影响。</blockquote>
+
+<p>🏷️ Android, computing, lockdown</p>
+
+<hr>
+
+<h3>4. 逆向工程一款老式二极管-晶体管逻辑（DTL）芯片</h3>
+
+<p><a href="http://www.righto.com/feeds/7533579802505281921/comments/default">Reverse engineering a vintage diode-transistor logic chip</a> — <strong>righto.com</strong> · 23 小时前 · ⭐ 20/30</p>
+
+<blockquote>这篇文章详细记录了对 1965 年 Signetics 600 系列 ST680A 芯片的逆向工程过程。作者通过显微镜观察芯片内部结构，确认其采用了过时的二极管-晶体管逻辑（DTL）技术来实现四个与非门（NAND gates）。DTL 是 TTL 逻辑流行之前的关键技术，该芯片展示了早期集成电路如何利用分立元件的逻辑思路进行微缩化。通过电路图还原，读者可以清晰看到二极管、晶体管和电阻在硅片上的布局与连接方式，揭示了半导体工业早期的设计哲学。</blockquote>
+
+<p>🏷️ reverse-engineering, hardware, IC</p>
+
+<hr>
+
+<h2>💡 观点 / 杂谈</h2>
+
+<h3>5. 软件知识产权的大减值</h3>
+
+<p><a href="https://martinalderson.com/posts/the-great-software-ip-writedown/?utm_source=rss&amp;amp;utm_medium=rss&amp;amp;utm_campaign=feed">The great software IP writedown</a> — <strong>martinalderson.com</strong> · 1 天前 · ⭐ 26/30</p>
+
+<blockquote>软件行业长期以来的高毛利建立在开发人才稀缺性的基础之上，而 AI Agent 的崛起正在打破这一壁垒。随着代码生成成本趋近于零，传统软件知识产权（IP）的护城河正迅速瓦解，导致现有软件资产面临大规模估值减记。文章指出，当构建软件不再是难题时，代码本身的价值将大幅缩水，市场竞争将从“谁能写出代码”转向“谁拥有分发渠道和独特数据”。这种范式转移预示着软件商业模式将从卖许可转向更深层次的服务与集成。</blockquote>
+
+<p>🏷️ AI agents, software IP, economics</p>
+
+<hr>
+
+<h3>6. “剃羊毛”过载：AI 时代下的技术琐事困境</h3>
+
+<p><a href="https://feed.tedium.co/link/15204/17518143/yak-shaving-ai-mental-health-effects">Yak-Shaving Overload</a> — <strong>tedium.co</strong> · 13 小时前 · ⭐ 19/30</p>
+
+<blockquote>作者探讨了在处理过时硬件（如旧款 Linux 平板）时陷入“剃羊毛”（Yak-Shaving）式技术琐事的心理与实践困境。文章指出，尽管 AI 工具本应提高效率，但在处理冷门或复杂的调试场景时，AI 提供的错误引导反而可能让开发者进入更深的技术死胡同。这种现象引发了对技术人员心理健康和生产力陷阱的深刻反思。作者警示，在 AI 辅助编程时代，识别并拒绝无效的技术探索变得比以往任何时候都更加困难。</blockquote>
+
+<p>🏷️ yak-shaving, Linux, productivity</p>
+
+<hr>
+
+<h3>7. Web 的潜力已绰绰有余：基于 Three.js 的创意实践</h3>
+
+<p><a href="https://simonwillison.net/2026/Nov/9/hn-50421091/">The Web Is More Than Enough, by Paul Ford</a> — <strong>simonwillison.net</strong> · 11 小时前 · ⭐ 18/30</p>
+
+<blockquote>Simon Willison 响应了 Paul Ford 关于“Web 性能已足以承载复杂应用”的观点，并展示了其快速开发的实践成果。他利用 Three.js 库在短时间内构建了一个以裸鳃类动物为主题的法贝热彩蛋 3D 交互模型。该案例证明了现代浏览器在处理复杂图形和 3D 渲染方面的强大能力，无需原生应用支持即可实现极高的创意上限。文章强调了 Web 技术栈作为通用开发平台的成熟度，鼓励开发者重新审视浏览器的技术边界。</blockquote>
+
+<p>🏷️ web, development, browser</p>
+
+<hr>
+
+<h2>🛠 工具 / 开源</h2>
+
+<h3>8. 使用 details 标签隐藏 AI 生成的冗长 PR 描述</h3>
+
+<p><a href="https://simonwillison.net/2026/Nov/9/details-summary/">Hide your slop PR descriptions behind &lt;details&gt;&lt;summary&gt;</a> — <strong>simonwillison.net</strong> · 11 小时前 · ⭐ 23/30</p>
+
+<blockquote>随着 Claude Code 和 Codex 等 AI 编程工具的普及，自动生成的 Pull Request (PR) 描述虽然详尽，但往往因篇幅过长而变成“信息垃圾”。作者建议利用 HTML 的 &lt;details&gt; 和 &lt;summary&gt; 标签将这些 AI 生成的内容折叠起来。这样既能保持 PR 列表的整洁，方便审阅者快速获取核心变更，又保留了详细的文档供深入查阅。这种做法平衡了自动化文档的便利性与人类阅读的效率需求。</blockquote>
+
+<p>🏷️ AI, pull-request, Claude, workflow</p>
+
+<hr>
+
+<h3>9. 对话 Full Stack Creator：聊聊配备 PROLED XDR 显示屏的新款 MacBook Pro</h3>
+
+<p><a href="https://www.youtube.com/watch?v=f2GZtWuUPl0">Yours Truly on Full Stack Creator, Talking About the New MacBook Pros With PROLED XDR Displays</a> — <strong>daringfireball.net</strong> · 1 天前 · ⭐ 19/30</p>
+
+<blockquote>资深苹果评论家 John Gruber 在 Full Stack Creator 节目中分享了对新款 M4 系列 MacBook Pro 的深度见解。讨论重点围绕新款屏幕的视觉表现、SDR 亮度提升以及在实际专业创作流中的体验。节目中还穿插了对理光 GR 系列经典相机的致敬，并回顾了作者 20 年前拍摄史蒂夫·乔布斯的珍贵往事。通过对硬件细节的感性描述，揭示了苹果最新笔记本电脑在专业市场中的技术迭代与产品定位。</blockquote>
+
+<p>🏷️ MacBook-Pro, Apple, hardware</p>
+
+<hr>
+
+<h3>10. Ninety 平台发布：开源项目价值交换新尝试</h3>
+
+<p><a href="https://nesbitt.io/2026/11/09/introducing-ninety.html">Introducing Ninety</a> — <strong>nesbitt.io</strong> · 3 小时前 · ⭐ 19/30</p>
+
+<blockquote>Ninety 是一个新推出的平台，旨在探索开源软件资产的价值化与管理新模式。目前该平台已支持 curl、OpenSSL、lodash 和 PHP 等核心开源库的“交易”或治理参与。虽然具体运行机制尚待进一步披露，但其目标显然是为这些关键基础设施提供新的财务支持或所有权激励。这种尝试反映了开发者社区在面对开源可持续性挑战时，正试图引入更具市场化色彩的解决方案。</blockquote>
+
+<p>🏷️ open-source, trading, ecosystem</p>
+
+<hr>
+
+<h2>🤖 AI / ML</h2>
+
+<h3>11. LLM 并不擅长设计 AI 系统</h3>
+
+<p><a href="https://seangoedecke.com/llms-are-terrible-at-designing-ai-systems/">LLMs are terrible at designing AI systems</a> — <strong>seangoedecke.com</strong> · 1 天前 · ⭐ 26/30</p>
+
+<blockquote>LLM 在编写传统确定性程序时表现出色，但在设计涉及自身的 AI 系统架构时往往会失败。它们倾向于套用符号逻辑和硬编码规则，而忽视了 AI 系统核心的概率性特征和非确定性输出。开发者常发现 LLM 无法处理长上下文窗口的延迟权衡，也难以构建必要的评估反馈循环。这种局限性源于训练数据中缺乏高质量的 AI 系统设计模式，导致模型在面对需要“AI 思维”的问题时依然沿用旧有的软件工程范式。</blockquote>
+
+<p>🏷️ LLM, system-design, AI, architecture</p>
+
+<hr>
+
+<h3>12. AI 泡沫正在破裂吗？</h3>
+
+<p><a href="https://dfarq.homeip.net/is-ai-crashing/?utm_source=rss&amp;#038;utm_medium=rss&amp;#038;utm_campaign=is-ai-crashing">Is AI crashing?</a> — <strong>dfarq.homeip.net</strong> · 1 天前 · ⭐ 22/30</p>
+
+<blockquote>站在 2026 年的时间点上，作者回顾并探讨了 AI 行业是否正面临类似当年互联网泡沫（dot-com crash）的崩盘。文章分析了市场对大模型预期过高与实际落地产出之间的落差，以及算力投入与收益不成正比的现状。尽管目前尚难定论这是否是一次彻底的崩溃，但行业内的悲观情绪和增长放缓已初见端倪。作者通过对比历史周期，警示开发者和投资者关注技术热潮背后的经济规律。</blockquote>
+
+<p>🏷️ AI bubble, market trends, AI</p>
+
+<hr>
+
+<h2>📝 其他</h2>
+
+<h3>13. 黄仁勋背叛了英伟达，而不仅仅是他的家人</h3>
+
+<p><a href="https://www.nytimes.com/2026/11/06/us/politics/chinese-spy-agency-nvidia-jensen-huang.html?unlocked_article_code=1.O1E.DRyO.9mNcxhaxhtlI">Jensen Huang Betrayed Nvidia, Not Just His Family</a> — <strong>daringfireball.net</strong> · 15 小时前 · ⭐ 24/30</p>
+
+<blockquote>据《纽约时报》2026 年的虚构/预测性报道，英伟达首席执行官黄仁勋因涉嫌与一名被美国情报部门认定为中国间谍的女性保持亲密关系而面临审查。英伟达发言人对此予以否认，强调公司并未向客户分享机密信息，也未受客户指使向美国政府施压以改变对华芯片销售政策。然而，报道指出中国政府一直在积极推广华为等国产替代方案，并严格限制英伟达产品的进口。这一事件引发了华盛顿对半导体巨头与地缘政治风险之间关联的高度关注。</blockquote>
+
+<p>🏷️ Nvidia, Jensen-Huang, geopolitics</p>
+
+<hr>
+
+<h3>14. 英伟达 CEO 黄仁勋因涉间谍丑闻接受调查</h3>
+
+<p><a href="https://www.nytimes.com/2026/11/08/technology/nvidia-investigation-jensen-huang-china.html?unlocked_article_code=1.O1E.Soow.6UjrM7Ch-C8L">Nvidia CEO Jensen Huang Was Banging a Chinese Spy, Who Was Feeding Information Back to Beijing</a> — <strong>daringfireball.net</strong> · 18 小时前 · ⭐ 24/30</p>
+
+<blockquote>英伟达董事会已正式启动对首席执行官黄仁勋的内部调查，此前他承认与一名名为 Alice Huang 的商业高管存在亲密关系。美国情报机构监测发现，该女性实际上是为北京提供信息的间谍，这引发了严重的国家安全担忧。调查的核心在于黄仁勋是否在交往过程中无意间泄露了关键的技术机密或政策信息。目前英伟达正努力应对这一可能对其全球业务和政府关系产生毁灭性影响的丑闻。</blockquote>
+
+<p>🏷️ Nvidia, security, geopolitics</p>
+
+<hr>
+
+<h2>🔒 安全</h2>
+
+<h3>15. 糟糕的公钥奇招：反思 SSL/TLS 的复杂性</h3>
+
+<p><a href="https://maurycyz.com/projects/badcert/">Horible public key tricks:</a> — <strong>maurycyz.com</strong> · 1 天前 · ⭐ 22/30</p>
+
+<blockquote>文章抨击了当前 SSL/TLS 体系中 ACME 协议的繁琐性，指出证书定期过期和复杂的自动化配置给网站维护带来了巨大负担。作者认为，现有的证书颁发机制依赖明文连接，本身就存在安全逻辑上的讽刺。文中探讨了一些非传统的公钥处理技巧，试图寻找一种比现行 CA 体系更简洁、更持久的身份验证方案。这反映了开发者对现代 Web 安全基础设施中“维护陷阱”的深度不满。</blockquote>
+
+<p>🏷️ SSL, TLS, cryptography, public-key</p>
+
+<hr>
+
+<p><em>生成于 2026-11-09 15:52 | 扫描 83 源 → 获取 2571 篇 → 精选 15 篇</em></p>
 <p><em>基于 <a href="https://refactoringenglish.com/tools/hn-popularity/">Hacker News Popularity Contest 2025</a> RSS 源列表，由 <a href="https://x.com/karpathy">Andrej Karpathy</a> 推荐</em></p>
   </div>
   <div class="footer">
-    <p>Generated on 2026-11-08 · Based on <a href="https://refactoringenglish.com/tools/hn-popularity/">HN Popularity Contest 2025</a></p>
+    <p>Generated on 2026-11-09 · Based on <a href="https://refactoringenglish.com/tools/hn-popularity/">HN Popularity Contest 2025</a></p>
   </div>
 </body>
 </html>
